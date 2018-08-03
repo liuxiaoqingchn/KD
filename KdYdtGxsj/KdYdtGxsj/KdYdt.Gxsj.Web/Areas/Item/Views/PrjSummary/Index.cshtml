@@ -1,0 +1,54 @@
+﻿@model List<PrjSumReport>
+@{
+    int i = 0;
+}
+@using (Html.BeginPageTitle())
+{
+}
+<div style="margin:8px;height:50px;" align="center" width="100%">
+    @using (Html.BeginForm("Index", "ExpReport"))
+    {
+        @Html.AntiForgeryToken()
+        <div class="col-md-4">
+            <div class="input-group kd-field-search text-left">
+                <span class="input-group-addon">填表时间</span>
+                <input class="form-control text-box date" data-bind="kpq_RelDate" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" data-type="date" id="kpq_RelDate" name="kpq_RelDate" role="form" type="text">
+                <span class="input-group-addon">至</span>
+                <input class="form-control text-box date" data-bind="kpq_RelDate_2" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" data-type="date" id="kpq_RelDate_2" name="kpq_RelDate_2" role="form" type="text">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" role="button">
+                <i class="glyphicon glyphicon-search" aria-hidden="true"></i>查询
+            </button>
+        </div>
+    }
+</div>
+@using (Html.BeginDataTable())
+{
+    using (Html.BeginDataTableHeader(false))
+    {
+        @Html.BbTHeadRow(false, "序号", "评标专家姓名", "被推荐为评委组长次数", "累计评标次数", "评标后反馈意见", "评标后反馈意见不满意事项说明及涉及工程")
+    }
+    using (Html.BeginDataTableBody())
+    {
+        foreach(PrjSumReport item in Model)
+        {
+            using (Html.BeginDataTableRow(item, false))
+            {
+                <th>@(++i)</th>
+                @Html.TdText(item.BidExpName)
+                @Html.TdText(item.Recommend)
+                @Html.TdText(item.BidEvalua)
+                <td class="kd-cell-text">
+                    满意   @item.Satisfy  次
+                    一般   @item.Commonly    次
+                    不满意 @item.NoSatisfy     次
+                </td>
+                <td class="kd-cell-text">
+                    @item.Description
+                </td>
+            }
+        }
+    }
+}

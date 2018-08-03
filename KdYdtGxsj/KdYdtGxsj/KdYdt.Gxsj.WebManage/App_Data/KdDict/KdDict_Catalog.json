@@ -1,0 +1,191 @@
+﻿[
+  {
+    "TreeName": "行政单位部门",
+    "TreeCode": "UserDept",
+    "SortNum": -10,
+    "Notes": "系统使用单位的组织结构树状字典"
+  },
+  {
+    "TreeName": "职务职位",
+    "TreeCode": "UserDuty",
+    "SortNum": -5,
+    "Notes": "系统使用单位的职务职位树状字典"
+  },
+  //{
+  //  "TreeName": "办文-缓急程度",
+  //  "TreeCode": "DocInstancy"
+  //},
+  //{
+  //  "TreeName": "办文-保密等级",
+  //  "TreeCode": "DocSecrecy"
+  //},
+  //{
+  //  "TreeName": "办文-保密等级XXXXX",
+  //  "TreeCode": "DocSecrecyXXX"
+  //},
+  //{
+  //  "TreeName": "办文-保密等级222",
+  //  "TreeCode": "DocSecrecy222"
+  //},
+  //{
+  //  "TreeName": "办文-收发方式",
+  //  "TreeCode": "DocMode"
+  //},
+  //{
+  //  "TreeName": "办文-载体形式",
+  //  "TreeCode": "DocFileTypes"
+  //},
+  //{
+  //  "TreeName": "办文-公开方式",
+  //  "TreeCode": "DocPublishWay"
+  //},
+  //{
+  //  "TreeName": "办文-发布平台",
+  //  "TreeCode": "DocIssueWays"
+  //},
+
+  //{
+  //  "TreeName": "资料中心--资料类型",
+  //  "TreeCode": "DatumType",
+  //  "SortNum": 100
+  //},
+  //{
+  //  "TreeName": "资料中心--资料种类",
+  //  "TreeCode": "DatumType1",
+  //  "SortNum": 110
+  //},
+  //{
+  //  "TreeName": "办文--公文分类",
+  //  "TreeCode": "DocKind",
+  //  "SortNum": 120
+  //},
+  //{
+  //  "TreeName": "办文--公文来源",
+  //  "TreeCode": "DocSource",
+  //  "SortNum": 130
+  //},
+  //{
+  //  "TreeName": "发文—发文分类",
+  //  "TreeCode": "DocSendClassify",
+  //  "SortNum": 150
+  //},
+  //{
+  //  "TreeName": "收文--收文分类",
+  //  "TreeCode": "DocReceiveClassify",
+  //  "SortNum": 160
+  //} ,
+  {
+    "TreeName": "信息公开--保密等级",
+    "TreeCode": "PublicSecrets",
+    "SortNum": 560
+  },
+  {
+    "TreeName": "资料查询办理部门",
+    "TreeCode": "TransactDept",
+    "SortNum": 570
+  },
+  {
+    "TreeName": "业务范畴",
+    "TreeCode": "BusinessLine",
+    "SortNum": 580
+  },
+  {
+    "TreeName": "等级",
+    "TreeCode": "Rank",
+    "SortNum": 590
+  },
+  {
+    "TreeName": "效力状况",
+    "TreeCode": "EffectSituation",
+    "SortNum": 600
+  },
+  {
+    "TreeName": "性别",
+    "TreeCode": "PersonSex",
+    "SortNum": 610
+  },
+  {
+    "TreeName": "性质",
+    "TreeCode": "PrjNature",
+    "SortNum": 620
+  },
+  {
+    "TreeName": "招标方式",
+    "TreeCode": "TenderMthod",
+    "SortNum": 630
+  },
+  {
+    "TreeName": "是否",
+    "TreeCode": "Boolean",
+    "SortNum": 640
+  },
+  {
+    "TreeName": "进度",
+    "TreeCode": "ProgressSpeed",
+    "SortNum": 650
+  },
+  {
+    "TreeName": "投标属性",
+    "TreeCode": "ManageMode",
+    "SortNum": 660
+  },
+  {
+    "TreeName": "变更内容",
+    "TreeCode": "ChangeContent",
+    "SortNum": 670
+  },
+  {
+    "TreeName": "保函或保证金",
+    "TreeCode": "IsBondBid",
+    "SortNum": 680
+  },
+  {
+    "TreeName": "投标类型",
+    "TreeCode": "TenderType",
+    "SortNum": 690
+  },
+  {
+    "TreeName": "任务进度",
+    "TreeCode": "TaskStatus",
+    "SortNum": 700
+
+  },
+  {
+    "TreeName": "资格审查方法",
+    "TreeCode": "QualCheckType",
+    "SortNum": 710
+
+  },
+  {
+    "TreeName": "是否中标",
+    "TreeCode": "IsBid",
+    "SortNum": 720
+
+  },
+  {
+    "TreeName": "标书费管理-投标方式",
+    "TreeCode": "BidMode",
+    "SortNum": 730
+
+  },
+  {
+    "TreeName": "是否公开招标",
+    "TreeCode": "IsOpen",
+    "SortNum": 740
+
+  },
+  {
+    "TreeName": "资质类别",
+    "TreeCode": "AptitudeType",
+    "SortNum": 750
+
+  },
+  {
+    "TreeName": "资质等级",
+    "TreeCode": "AptitudeClass",
+    "SortNum": 760
+
+  }
+  
+
+]

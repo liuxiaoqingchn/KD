@@ -1,0 +1,51 @@
+﻿@model  KdDataResponse<PrjItem>
+
+@using (Html.BeginPageTitle())
+{
+    @Html.BbBtnLinkAdd()
+    @*@Html.BbBtnLinkDelete()*@
+    @Html.BbBtnGridDelete(this.Model)
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch(this.Model, true))
+    {
+        @Html.BbSearchFor(x => x.PrjCode)
+        @Html.BbSearchFor(x => x.PrjName)
+        @Html.BbSearchFor(x => x.BuildUnit)
+        @Html.BbSearchFor(x => x.TenderUnit)
+        @Html.BbSearchFor(x => x.BuyUnit)
+        @Html.BbSearchFor(x => x.EngScale)
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(true))
+        {
+            @Html.BbTHeadFor(x => x.IsKdYdt)
+            @Html.BbTHeadFor(x => x.PrjCode)
+            @Html.BbTHeadFor(x => x.PrjName)
+            @Html.BbTHeadFor(x => x.BuildUnit)
+            @Html.BbTHeadFor(x => x.TenderMthod)
+            @Html.BbTHeadFor(x => x.EngScale)
+            @Html.BbTHeadFor(x => x.BidOpenDate)
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (PrjItem item in Model)
+            {
+                using (Html.BeginDataTableRow(item, true))
+                {
+                    @Html.TdIconInvert(item.IsKdYdt)
+                    <td>@item.PrjCode</td>
+                    <td>@Html.ActionLink(item.PrjName, "Edit", new { id = item.Id })</td>
+                    <td>@item.BuildUnit</td>
+                    <td>@item.TenderMthod</td>
+                    <td>@item.EngScale</td>
+                    <td>@item.BidOpenDate.ToDateString()</td>
+                }
+            }
+        }
+    }
+}

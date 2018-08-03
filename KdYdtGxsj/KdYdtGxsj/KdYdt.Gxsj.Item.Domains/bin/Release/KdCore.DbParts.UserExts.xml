@@ -1,0 +1,1063 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KdCore.DbParts.UserExts</name>
+    </assembly>
+    <members>
+        <member name="T:KdCore.Data.Users.KdIpAddress">
+            <summary> 
+             数据库表：IP 地理位置记录（BaseIp） 
+            </summary>
+        </member>
+        <member name="T:KdCore.Data.Users.KdDbUsersContext">
+            <summary>
+            用户常用扩展数据记录数据库模型
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdDbUsersContext.EnableUserLink">
+            <summary>
+            获取或设置是否启用用户自定义链接收藏，【涉及到数据库中的新建或删除数据表，会造成用户数据丢失，更改设置请慎重】
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdDbUsersContext.EnableUserPath">
+            <summary>
+            获取或设置是否启用用户短地址转换
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdDbUsersContext.EnableIpAddress">
+            <summary>
+            获取或设置是否启用 IP 地址识别管理，【涉及到数据库中的新建或删除数据表，会造成用户数据丢失，更改设置请慎重】
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Users.KdDbUsersContext.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Users.KdDbUsersContext.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="nameOrConnectString">数据库连接字符串或连接配置名称</param>
+        </member>
+        <member name="M:KdCore.Data.Users.KdDbUsersContext.CreateModel(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            初始化数据模型定义
+            </summary>
+            <param name="builder">模型构造程序</param>
+        </member>
+        <member name="M:KdCore.Data.Users.KdDbUsersContext.InitDbTableColumns">
+            <summary>
+            初始化数据库表列顺序及索引设置
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Users.KdDbUsersContext.InitFuzzyQuerys">
+            <summary>
+            模糊查询方法初始化
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Users.KdDbUsersContext.FuzzyUserTask(System.String)">
+            <summary>
+            初始化模糊查询方法
+            </summary>
+            <param name="word"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.Users.KdDbUsersContext.FuzzyUserFollow(System.String)">
+            <summary>
+            初始化模糊查询方法
+            </summary>
+            <param name="word"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.Users.KdDbUsersContext.FuzzyUserPm(System.String)">
+            <summary>
+            初始化模糊查询方法
+            </summary>
+            <param name="word"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Data.Users.KdUserLink">
+            <summary>
+             数据库表：自定义工具图标（KdUserLink）
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserLink.LinkName">
+            <summary>
+            链接名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserLink.LinkType">
+            <summary>
+            链接类型
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserLink.LinkUrl">
+            <summary>
+            链接对应 URL
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserLink.ScopeLevel">
+            <summary>
+            系统设置项：生效范围等级
+            最小值1，最大值999，其中1表示全局设置
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserLink.LevelName">
+            <summary>
+            获取或设置生效范围级别名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserLink.LevelId">
+            <summary>
+            设置生效范围关联对象主键ID
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserLink.IconImage">
+            <summary>
+            链接图标图片
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserLink.LinkOpenType">
+            <summary>
+            打开类型
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserLink.LinkMenuId">
+            <summary>
+            关联菜单主键
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Users.KdUserLink.GetDataTitle">
+            <summary>
+            获取当前数据的标题名称，用于生成待办事项等关联数据时使用，或数据删除时提示显示等
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Data.Users.KdUserPm">
+            <summary>
+             站内短消息保存数据实体
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserPm.PmTitle">
+            <summary>
+            短消息标题
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserPm.PmContent">
+            <summary>
+            短消息内容
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserPm.IsRichText">
+            <summary>
+            是否富文本（包含格式标记等）
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserPm.ReceiveUserIds">
+            <summary>
+            短消息接收用户主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserPm.ReceiveUserNames">
+            <summary>
+            短消息接收用户姓名
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserPm.HasReadMark">
+            <summary>
+            是否已有人阅读，有人阅读后不可再进行修改
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserPm.Backup1">
+            <summary>
+            备用字段，导入原系统的阅读数据[ReadInfo]
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserPm.Backup2">
+            <summary>
+            备用字段，导入原系统的阅读数据[DeleteInfo]
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Users.KdUserPm.GetDataTitle">
+            <summary>
+            获取当前数据的标题名称，用于生成待办事项等关联数据时使用，或数据删除时提示显示等
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Data.Users.KdUserPath">
+            <summary>
+             数据库表：长短路径映射
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserPath.OwnerUserId">
+            <summary>
+            数据记录所属用户主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserPath.OwnerUserName">
+            <summary>
+            数据记录所属用户名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserPath.KeyLength">
+            <summary>
+            获取或设置短链接 Key 长度
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserPath.PathKey">
+            <summary>
+            短路径标识
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserPath.PathTitle">
+            <summary>
+            短路径名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserPath.PathShort">
+            <summary>
+            短路径地址
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserPath.PathLong">
+            <summary>
+            长路径地址
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Users.KdUserPath.IsPrivate">
+            <summary>
+            是否私有数据，私有数据仅记录所属用户自己可以访问
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Users.KdUserPath.CreateKey(System.Int32)">
+            <summary>
+            创建一个短链接 Key
+            </summary>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Data.EditModels.KdUserFollowEdit">
+            <summary>
+            用户关注事项
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserFollowEdit.FixedTop">
+            <summary>
+            置顶显示
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserFollowEdit.ItemName">
+            <summary>
+            关注事项名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserFollowEdit.ItemGroup">
+            <summary>
+            关注事项分组
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserFollowEdit.Notes">
+            <summary>
+            获取或设置备注，通常用于保存用户主动输入的一些备注说明
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserFollowEdit.Remarks">
+            <summary>
+            获取或设置说明，通常用于保存系统程序运行过程中产生的一些说明注释
+            </summary>
+        </member>
+        <member name="T:KdCore.Data.EditModels.KdUserPlanComplete">
+            <summary>
+            日程安排数据编辑实体
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanComplete.IsCompleted">
+            <summary>
+            是否完成
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanComplete.CompleteTime">
+            <summary>
+            完成时间
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanComplete.CompleteStatus">
+            <summary>
+            完成情况
+            </summary>
+        </member>
+        <member name="T:KdCore.Data.EditModels.KdUserPlanEdit">
+            <summary>
+            日程安排数据编辑实体
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.PlanDate">
+            <summary>
+            计划安排日期
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.PlanName">
+            <summary>
+            计划安排标题
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.PlanPlace">
+            <summary>
+            计划地点
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.PlanSummary">
+            <summary>
+            内容摘要
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.IsPrivate">
+            <summary>
+            是否私人事务
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.PlanGroup">
+            <summary>
+            计划分组名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.TimeStatus">
+            <summary>
+            计划时段用户忙碌状态
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.IsFullDay">
+            <summary>
+            是否全天计划
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.RepeatMode">
+            <summary>
+            重复模式：天、周、月、年
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.RepeatCycles">
+            <summary>
+            重复间隔：几天、几周、几月、几年
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.RepeatStop">
+            <summary>
+            重复终止日期
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.InvolvedUserIds">
+            <summary>
+            参与用户主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.InvolvedUserNames">
+            <summary>
+            参与用户姓名
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.InvolvedDeptIds">
+            <summary>
+            参与部门主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.InvolvedDeptNames">
+            <summary>
+            参与部门名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.InvolvedCorpIds">
+            <summary>
+            参与单位主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.InvolvedCorpNames">
+            <summary>
+            参与单位名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.OtherPersonNames">
+            <summary>
+            其他参与人员姓名
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.OtherDeptNames">
+            <summary>
+            其他参与部门名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPlanEdit.OtherCorpNames">
+            <summary>
+            其他参与单位名称
+            </summary>
+        </member>
+        <member name="T:KdCore.Data.EditModels.KdUserPmEdit">
+            <summary>
+             站内短消息编辑数据实体
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPmEdit.PmTitle">
+            <summary>
+            短消息标题
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPmEdit.PmContent">
+            <summary>
+            短消息内容
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPmEdit.IsRichText">
+            <summary>
+            是否富文本（包含格式标记等）
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPmEdit.ReceiveUserIds">
+            <summary>
+            短消息接收用户主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserPmEdit.ReceiveUserNames">
+            <summary>
+            短消息接收用户姓名
+            </summary>
+        </member>
+        <member name="T:KdCore.Data.DbServices.KdDbUsersService">
+            <summary>
+            系统用户常用扩展业务数据处理程序，包含待办事项、留言、收藏、工作日设定、日程安排等
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.Register(System.String,System.Boolean)">
+            <summary>
+            注册用户常用扩展业务的数据库及业务设置
+            </summary>
+            <param name="dbNameOrConnectionString">数据库连接名称或连接字符串</param>   
+            <param name="beginPeriodicTask">是否启动定时检查待办事项办理状态的周期性任务</param>
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbUsersService.TaskProvider">
+            <summary>
+            待办事项的数据服务
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbUsersService.TimerTaskOverdue">
+            <summary>
+            待办事项状态检查计时器
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.BeginPeriodicTask(System.Nullable{System.TimeSpan})">
+            <summary>
+            开始执行待办事项状态的定期检查任务
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.CheckOverdueUserTasks">
+            <summary>
+            检测即将到期或已过期未办理的待办事项，发送短信提醒，并设置状态标识
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.CheckExpireNotifies">
+            <summary>
+            检测已过期未读提醒通知，设置为过期状态
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.CheckUserTaskOverdue">
+            <summary>
+            检测即将到期或已过期未办理的待办事项，发送短信提醒，并设置状态标识
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.CheckUserNotifyExpire">
+            <summary>
+            检测已过期未读提醒通知，设置为过期状态，不再主动提醒用户查看
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.GetWorkDaysFromDb(System.DateTime,System.DateTime)">
+            <summary>
+            获取指定日期范围的工作日设置记录
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.GetWorkDays(System.DateTime,System.DateTime)">
+            <summary>
+            获取指定日期范围的工作日设置记录
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.SaveWorkDays(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            保存指定日期范围的工作日设置记录
+            </summary>
+            <param name="saveValues"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.ClearWorkDays(System.DateTime,System.DateTime)">
+            <summary>
+            清除指定日期范围的工作日设置记录
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.ClearWorkDays(System.Int32)">
+            <summary>
+            清除指定年份范围的工作日设置记录
+            </summary>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbUsersService.TaskQueryNoTracking">
+            <summary>
+            获取或设置使用 <see cref="M:KdCore.Data.DbServices.KdDbUsersService.QueryUserTasks(System.Linq.Expressions.Expression{System.Func{KdCore.Data.Tasks.KdUserTask,System.Boolean}})"/> 查询数据时是否是否跟踪维护数据（详查 EntityFramework 有关内容）
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbUsersService.TaskQueryTagDisabled">
+            <summary>
+            获取或设置使用 <see cref="M:KdCore.Data.DbServices.KdDbUsersService.QueryUserTasks(System.Linq.Expressions.Expression{System.Func{KdCore.Data.Tasks.KdUserTask,System.Boolean}})"/> 查询数据时是否包含 TagDisabled = true 的数据
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.GetUserTask(System.String)">
+            <summary>
+            获取指定主键的待办事项
+            </summary>
+            <param name="taskId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.GetUserTasks(System.String[])">
+            <summary>
+            根据主键获取待办事项
+            </summary>
+            <param name="taskIds">待办事项记录主键</param> 
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.QueryUserTasks(System.Linq.Expressions.Expression{System.Func{KdCore.Data.Tasks.KdUserTask,System.Boolean}})">
+            <summary>
+            获取指定主键的待办事项
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.QueryUserTasks(KdCore.Data.Tasks.IKdTaskOption)">
+            <summary>
+            获取指定主键的待办事项
+            </summary>
+            <param name="option"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.QueryUserTasks(System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+            <summary>
+            查询待办事项
+            </summary>
+            <param name="userId"></param>
+            <param name="todo">是否仍在待办状态</param>
+            <param name="onlyView">是否仅需查阅的</param>
+            <param name="valueIgnoreCount">查询待办事项的忽略计数状态的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.QueryUserTasks(System.String,System.String,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            获取符合条件的待办事项
+            </summary>
+            <param name="itemId">直接关联的数据项主键</param>
+            <param name="receiverId">待办人用户主键</param>
+            <param name="sourceId">最终关联的源数据主键</param>
+            <param name="onlyView">是否仅需查阅的</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.CancelUserTasks(System.Collections.Generic.List{KdCore.Data.Tasks.KdUserTask})">
+            <summary>
+            取消待办事项，并返回取消的待办事项记录；
+            同时尝试删除关联的短信
+            </summary>
+            <param name="taskList">待办事项</param> 
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.CancelUserTasks(System.String[])">
+            <summary>
+            取消待办事项，并返回取消的待办事项记录；
+            同时尝试删除关联的短信
+            </summary>
+            <param name="userTaskIds">待办事项记录主键</param> 
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.CancelUserTasks(System.String,System.String,System.String)">
+            <summary>
+            取消待办事项，并返回取消的待办事项记录；
+            同时尝试删除关联的短信
+            </summary>
+            <param name="itemId">直接关联的数据项主键</param>
+            <param name="receiverId">待办人用户主键</param>
+            <param name="sourceId">最终关联的源数据主键</param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.RestartUserTasks(System.Collections.Generic.List{KdCore.Data.Tasks.KdUserTask})">
+            <summary>
+            取消待办事项，并返回取消的待办事项记录
+            </summary>
+            <param name="taskList">待办事项</param> 
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.RestartUserTasks(System.String[])">
+            <summary>
+            重新激活已取消的待办事项，并返回重新激活的待办事项记录
+            </summary>
+            <param name="userTaskIds">待办事项记录主键</param> 
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.RestartUserTasks(System.String,System.String,System.String)">
+            <summary>
+            重新激活已取消的待办事项，并返回重新激活的待办事项记录
+            </summary>
+            <param name="itemId">直接关联的数据项主键</param>
+            <param name="receiverId">待办人用户主键</param>
+            <param name="sourceId">最终关联的源数据主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.HandleUserTasks(KdCore.Data.BbTaskStatus,System.String,System.String,System.String)">
+            <summary>
+            办理待办事项（不区分主办还是传阅），并返回办理的待办事项记录
+            </summary>
+            <param name="taskStatus"></param>
+            <param name="itemId">直接关联的数据项主键</param>
+            <param name="receiverId">待办人用户主键</param>
+            <param name="sourceId">最终关联的源数据主键</param>
+            
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.ReadUserTasks(KdCore.Data.BbTaskStatus,System.String,System.String,System.String)">
+            <summary>
+            办理仅需阅读的待办事项，并返回办理的待办事项记录
+            </summary>
+            <param name="taskStatus"></param>
+            <param name="unitSign">待办事项关联的功能单元标识</param>
+            <param name="receiverId">待办人用户主键</param>
+            <param name="sourceId">最终关联的源数据主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.UpdateTaskStatus(KdCore.Data.BbTaskStatus,System.String,System.String,System.String)">
+            <summary>
+            更新待办事项的办理状态
+            </summary>
+            <param name="taskStatus"></param> 
+            <param name="itemId">直接关联的数据项主键</param>
+            <param name="receiverId">待办人用户主键</param>
+            <param name="sourceId">最终关联的源数据主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.AddTasks(KdCore.Data.Tasks.KdUserTask[])">
+            <summary>
+            批量添加待办事项
+            </summary>
+            <param name="userTasks"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.UpdateTasks(KdCore.Data.Tasks.KdUserTask[])">
+            <summary>
+            批量更新待办事项
+            </summary>
+            <param name="userTasks"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.SaveTasks(KdCore.Data.Tasks.KdUserTask[])">
+            <summary>
+            批量保存待办事项，请注意设置数据的保存模式 <see cref="P:KdCore.Data.Entity.KdEntityBase.SaveMode"/>
+            </summary>
+            <param name="userTasks"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.GetSourceTasks(System.String,System.String,System.String)">
+            <summary>
+            查询与指定对象主键相关的待办事项集合
+            </summary>
+            <param name="sourceId"></param>
+            <param name="unitSign"></param>
+            <param name="sourceType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.GetSourceTasks(System.String,KdCore.Data.Tasks.IKdTaskOption)">
+            <summary>
+            查询与指定对象主键相关的待办事项集合
+            </summary>
+            <param name="sourceId"></param>
+            <param name="queryTaskOption"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.GetUserTasks(System.String,System.String,System.String)">
+            <summary>
+            查询待办事项
+            </summary>
+            <param name="itemId"></param>
+            <param name="userId"></param>
+            <param name="sourceId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.GetUserTasks(System.String,System.String,System.String,System.String[])">
+            <summary>
+            查询指定用户与指定对象主键相关的待办事项集合
+            </summary>
+            <param name="receiverId">待办事项的待办人主键</param>
+            <param name="unitSign">待办事项关联的功能单元标识</param>
+            <param name="sourceType">待办事项关联的事项数据类型标识</param>
+            <param name="sourceIds">待办事项关联的事项数据主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.DeleteUserTask(KdCore.Data.Tasks.KdUserTask)">
+            <summary>
+            删除待办事项，同时尝试删除关联的短信
+            </summary>
+            <param name="task"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.DeleteTasks(System.Linq.Expressions.Expression{System.Func{KdCore.Data.Tasks.KdUserTask,System.Boolean}})">
+            <summary>
+            删除待办事项，同时尝试删除关联的短信
+            </summary>
+            <param name="predicate">待办事项删除筛选条件，如果筛选条件为空，则不执行删除操作</param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.DeleteTasks(KdCore.Data.Tasks.KdUserTask[])">
+            <summary>
+            删除待办事项，同时尝试删除关联的短信
+            </summary>
+            <param name="userTasks">要删除的待办事项</param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.DeleteTasksResult(System.Linq.Expressions.Expression{System.Func{KdCore.Data.Tasks.KdUserTask,System.Boolean}},System.Object)">
+            <summary>
+            删除待办事项，同时尝试删除关联的短信
+            </summary>
+            <param name="predicate">要删除的待办事项的查询条件</param>
+            <param name="deleteSource">删除操作的数据来源</param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.DeleteTaskByItems(System.String[])">
+            <summary>
+            删除数据源事项所有关联的待办事项，源事项如关联多种事项请慎用;
+            同时尝试删除关联的短信
+            </summary>
+            <param name="itemIds">要删除的待办事项的 <see cref="P:KdCore.Data.Tasks.KdUserTask.ItemId"/> 的值</param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.DeleteTaskBySources(System.String[])">
+            <summary>
+            删除数据源对象所有关联的待办事项，源对象如关联多种事项请慎用；
+            如流程审批的多个步骤多个审批人，同一个SourceId会有很多的待办事项;
+            同时尝试删除关联的短信
+            </summary>
+            <param name="sourceIds">要删除的待办事项的 <see cref="P:KdCore.Data.Tasks.KdUserTask.SourceId"/> 的值</param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.UpdateSourceTasks``1(KdCore.Data.Tasks.IKdEntityTasks,KdCore.Data.Tasks.IKdTaskOption,System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            更新数据对象关联的所有待办事项
+            通常该操作都与数据对象的更新放在同一事务中，因此，此操作不做提交操作，请在不使用事务时手动提交保存
+            </summary>
+            <typeparam name="TKdUser"></typeparam>
+            <param name="source"></param>
+            <param name="taskOption"></param> 
+            <param name="receivers"></param> 
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.AbortUserTask(System.Collections.Generic.List{System.String})">
+            <summary>
+            中止待办事项
+            </summary>
+            <param name="userTaskIds"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.HandleUserTask(KdCore.Data.Tasks.KdUserTask,KdCore.Data.BbTaskStatus)">
+            <summary>
+            办理待办事项
+            </summary>
+            <param name="userTask"></param>
+            <param name="taskStatus"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.HandleUserTask(KdCore.Data.BbTaskStatus,System.String,System.String,System.String)">
+            <summary>
+            办理待办事项
+            </summary>
+            <param name="taskStatus"></param>
+            <param name="itemId"></param>
+            <param name="userId"></param>
+            <param name="sourceId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.UpdateTaskStatus(KdCore.Data.Tasks.KdUserTask,KdCore.Data.BbTaskStatus)">
+            <summary>
+            更新待办事项的办理状态
+            </summary>
+            <param name="userTask"></param>
+            <param name="taskStatus"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.BatchReadOnlyView(System.String,System.String[])">
+            <summary>
+            批量设置传阅类型的待办事项为已阅
+            </summary>
+            <param name="unitSign">待办事项关联的功能单元标识</param> 
+            <param name="userTaskIds">要设置已阅状态的待办事项主键</param>
+            <returns></returns> 
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.QueryUserNotify(KdCore.Data.Users.IKdUser,System.String,System.Nullable{System.DateTime},System.Boolean)">
+            <summary>
+            用户提醒消息查询
+            </summary>
+            <param name="user"></param>
+            <param name="prevNotifyId"></param>
+            <param name="timeLimit"></param>
+            <param name="onlyToBeRead"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.LoadUserNotifies(KdCore.Data.Users.IKdUser,System.String,System.Nullable{System.DateTime},System.Int32)">
+            <summary>
+            加载用户待阅提醒消息
+            </summary>
+            <param name="user"></param>
+            <param name="prevNotifyId"></param>
+            <param name="timeLimit"></param>
+            <param name="maxCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.LoadUserNotify(KdCore.Data.Users.IKdUser,System.String,System.Nullable{System.DateTime})">
+            <summary>
+            加载用户第一条待阅提醒消息（期限范围内时间最早的那一条）
+            </summary>
+            <param name="user"></param>
+            <param name="prevNotifyId"></param>
+            <param name="timeLimit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.SaveUserNotifies(KdCore.Data.Users.KdUserNotify,KdCore.Data.Users.IKdUser[])">
+            <summary>
+            发送提醒消息给指定用户
+            </summary>
+            <param name="notify"></param>
+            <param name="users"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.ReadUserNotify(KdCore.Data.Users.IKdUser,System.String)">
+            <summary>
+            用户标识指定主键的提醒消息为已读状态
+            </summary>
+            <param name="user"></param>
+            <param name="notifyId"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbUsersService.SourceType_UserPm">
+            <summary>
+            获取或设置站内留言的SourceType
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.SaveResult(KdCore.Data.EditModels.KdUserPmEdit,KdCore.Data.Tasks.IKdTaskOption)">
+            <summary>
+            保存站内留言
+            </summary>
+            <param name="editModel">用户提交的留言数据</param>
+            <param name="taskOption">待办事项的选项设置</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.GetUserPm(System.String)">
+            <summary>
+            获取站内留言
+            </summary>
+            <param name="pmId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.PmForward(System.String)">
+            <summary>
+             转发站内留言
+            </summary>
+            <param name="pmId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.DeleteUserPms(System.String[])">
+            <summary>
+            删除站内留言
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.QueryUserTasksForPm(System.String,System.Nullable{System.Boolean})">
+            <summary>
+            查询指定用户的留言数据
+            </summary>
+            <param name="userId"></param>
+            <param name="unread"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbUsersService.SourceType_UserPlan">
+            <summary>
+            获取或设置站内留言的SourceType
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.GetUserPlanMonth(System.Nullable{System.Int32},System.String)">
+            <summary>
+            查询指定用户日程安排的月份视图
+            </summary>
+            <param name="monthIndex"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.GetUserPlanWeek(System.Nullable{System.Int32},System.String)">
+            <summary>
+            查询指定用户日程安排的星期视图
+            </summary>
+            <param name="weekIndex"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.GetUserPlansToday(System.String)">
+            <summary>
+            获取指定用户今天的日程安排
+            </summary>
+            <param name="planUserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.EnsurePlanRepeatMode(KdCore.Data.Tasks.KdUserPlan)">
+            <summary>
+            确认日程安排的循环模式
+            </summary>
+            <param name="plan"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.RepeatUserPlan(KdCore.Data.Tasks.KdUserPlan,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            根绝循环时间范围循环生成日程安排数据项
+            </summary>
+            <param name="plan"></param>
+            <param name="startDay"></param>
+            <param name="endDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.SaveUserPlan(KdCore.Data.EditModels.KdUserPlanEdit)">
+            <summary>
+            保存日程安排事项
+            </summary>
+            <param name="editModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.GetUserPlanView(System.String,System.String)">
+            <summary>
+            获取日程安排查看展示视图
+            </summary>
+            <param name="id"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.GetUserPlans(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            获取用户在指定日期范围内的日程安排列表
+            </summary>
+            <param name="userId"></param>
+            <param name="dateStart"></param>
+            <param name="dateEnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.CompleteUserPlan(KdCore.Data.EditModels.KdUserPlanComplete)">
+            <summary>
+            完成日程安排事项
+            </summary>
+            <param name="editModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.DeleteUserPlan(System.String,System.Boolean)">
+            <summary>
+            删除日程安排事项
+            </summary>
+            <param name="id"></param>
+            <param name="withRepeatPlans"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.GetUserFollow``1(``0,System.String)">
+            <summary>
+            查询收藏关注记录
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="entity"></param>
+            <param name="unitSign"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.FollowUrl``1(``0,System.String,System.String,System.String,System.String)">
+            <summary>
+            添加/取消关注收藏
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="entity"></param>
+            <param name="url"></param>
+            <param name="itemGroup"></param>
+            <param name="unitSign"></param>
+            <param name="unitName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.QueryFollow(System.String,System.Linq.Expressions.Expression{System.Func{KdCore.Data.Users.KdUserFollow,System.Boolean}})">
+            <summary>
+            查询收藏关注的数据记录
+            </summary>
+            <param name="sourceId"></param>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.DeleteFollow(System.String,System.Linq.Expressions.Expression{System.Func{KdCore.Data.Users.KdUserFollow,System.Boolean}})">
+            <summary>
+            清除收藏关注的数据记录
+            </summary>
+            <param name="sourceId"></param>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.SaveResult(KdCore.Data.EditModels.KdUserFollowEdit)">
+            <summary>
+            保存我的收藏编辑结果
+            </summary>
+            <param name="editModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.ImportIp(System.String,System.Boolean)">
+            <summary>
+            分析服务器上的ip地址库文件，导入到数据库中
+            </summary>
+            <param name="filePath">文件的物理路径</param>
+            <param name="deleteFile">导入完成后是否删除文件</param>
+            <returns>导入成功的ip地址数量</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.DeleteAllIp">
+            <summary>
+            清除所有的IP地址数据
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.ConvertIP4ToNumber(System.String)">
+            <summary>
+            把ip地址转换成long
+            </summary>
+            <param name="ip4"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.GetIpAddress(System.String)">
+            <summary>
+            根据IP地址获取IP地址的记录
+            </summary>
+            <param name="ip">如113.203.22.11</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.GetIpDetails(System.String)">
+            <summary>
+            根据IP地址获取IP地址的详细描述
+            </summary>
+            <param name="ip">如113.203.22.11</param>
+            <returns>IP地址的详细描述</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.DeleteUserLink(System.Collections.IEnumerable,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            根据当前操作人的权限，删除相应的工具箱数据
+            </summary>
+            <param name="ids"></param>
+            <param name="deleteUser"></param>
+            <param name="deleteDept"></param>
+            <param name="deleteCorp"></param>
+            <param name="deleteGlobal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbUsersService.GetMyLinks(KdCore.Data.Users.KdUser,System.Nullable{System.Boolean})">
+            <summary>
+            获取用户所有能查看的工具箱信息
+            </summary>
+            <param name="user">指定用户</param> 
+            <param name="valid">仅获取有效数据</param> 
+            <returns></returns>
+        </member>
+    </members>
+</doc>

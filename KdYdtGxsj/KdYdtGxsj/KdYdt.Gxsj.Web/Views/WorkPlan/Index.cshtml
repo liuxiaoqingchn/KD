@@ -1,0 +1,88 @@
+﻿@model OaWorkPlanWeek
+
+@if (!Model.IsSubmitted)
+{
+    @section scripts{
+        <script>
+            function weekSubmit(btn) {
+                var text = "提交后将不能再进行任何修改，包括添加和删除！<br />确认要提交您 "
+                    + $("#weekTitle").text() + " 吗？";
+                bb.dlgConfirm(text, "系统提示", function () {
+                    loading();
+                    $("#IsSubmit").val(1);
+                    $("form").submit();
+                });
+                return false;
+            }
+        </script>
+    }
+}
+
+@using (Html.BbBeginForm("Edit", new { id = Model.Index }))
+{
+    <div class="pull-right">
+        @if (!Model.IsSubmitted)
+        {
+            @Html.BbBtnSave(null, "暂存")
+            <input type="hidden" name="IsSubmit" id="IsSubmit" value="0" />
+            @Html.JsButton(BbShowPattern.Warning, "提交", "weekSubmit", "提交后无法修改和删除，请确认无误后再提交。如果暂不提交，可点击“暂存”按钮进行保存已填写内容", IconAwesome.Check_Square_O)
+        }
+        @*@Html.BbBtnLinkReport("汇总统计", new { id = Model.Index })*@
+    </div>
+
+    <h2>
+        <small>@Html.GetUser().UserTitle</small>
+        <span id="weekTitle">@Model.DateStart.ToDateString(Model.DateEnd) @string.Format("第{0}周计划安排", Model.Week)</span>
+    </h2>
+
+    <nav>
+        <ul class="pager">
+            <li class="previous btn-group">
+                <a href="@Url.Action("Index", new { id = Model.Index - 2 })"><i class="fa fa-angle-double-left"></i>前两周</a>
+                <a href="@Url.Action("Index", new { id = Model.Index - 1 })"><i class="fa fa-angle-left"></i>前一周</a>
+            </li>
+            <li>
+                <a class="btn btn-default" href="@Url.Action("Index", new { id = string.Empty })">
+                    <i class="fa fa-dot-circle-o"></i>本周
+                </a>
+            </li>
+            <li class="next btn-group">
+                <a href="@Url.Action("Index", new { id = Model.Index + 2 })">后两周<i class="fa fa-angle-double-right"></i></a>
+                <a href="@Url.Action("Index", new { id = Model.Index + 1 })">后一周<i class="fa fa-angle-right"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <table class="table table-bordered table-condensed weekview weekedit">
+        <thead>
+            <tr>
+                <th class="worktime">时间</th>
+                @foreach (DateTime date in Model.WeekDays)
+                {
+                    <th class="@(date.IsWeekEnd("weekend", "workday"))">
+                        @Html.Raw(date.ToString("dddd<br />(MM月dd日)"))
+                    </th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="worktime">上午</td>
+                @foreach (DateTime date in Model.WeekDays)
+                {
+                    <td class="@(date.IsWeekEnd("weekend", "workday"))">
+                        <textarea name="Item_@(date.ToString("yyyy.MM.dd"))_09" class="form-control" style="height:100%" @Html.AddAttrReadonly(Model.IsSubmitted)>@Model.GetPlanContent(date, true)</textarea>
+                    </td>
+                }
+            </tr>
+            <tr>
+                <td class="worktime">下午</td>
+                @foreach (DateTime date in Model.WeekDays)
+                {
+                    <td class="@(date.IsWeekEnd("weekend", "workday"))">
+                        <textarea name="Item_@(date.ToString("yyyy.MM.dd"))_14" class="form-control" style="height:100%" @Html.AddAttrReadonly(Model.IsSubmitted)>@Model.GetPlanContent(date, false)</textarea>
+                    </td>
+                }
+            </tr>
+        </tbody>
+    </table>
+}

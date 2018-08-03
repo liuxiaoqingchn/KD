@@ -1,0 +1,464 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KdCore.Web.Controllers</name>
+    </assembly>
+    <members>
+        <member name="T:KdCore.Web.Controllers.KdBaseController`1">
+            <summary>
+            项目常用控制器基类
+            </summary>
+            <typeparam name="TKdDbService"></typeparam>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdBaseController`1.HtmlExportToFile(System.String,System.String,System.String,System.String)">
+            <summary>
+            导出 HTML
+            </summary>
+            <param name="htmlSource"></param>
+            <param name="extName"></param>
+            <param name="fileName"></param>
+            <param name="fileTitle"></param>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdBaseController`1.ExportWord(System.String,System.String,System.String)">
+            <summary>
+            导出Word
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdBaseController`1.ExportExcel(System.String,System.String,System.String)">
+            <summary>
+            导出Excel
+            </summary>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdEntityController`3">
+            <summary>
+            单表实体的增删改查功能的控制器基类
+            </summary>
+            <typeparam name="TKdDbService"></typeparam>
+            <typeparam name="TEntity"></typeparam>
+            <typeparam name="TEditModel"></typeparam>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdEntityController`3.OnDataEntityView``1(``0)">
+            <summary>
+            用于详细数据显示的准备处理；不区分编辑新增还是只读等模式
+            并加载相关的待办事项数据
+            </summary>
+            <typeparam name="TEntityBase"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdEntityController`3.OnDataEntityView(`1)">
+            <summary>
+            用于详细数据显示的准备处理；不区分编辑新增还是只读等模式
+            并加载相关的待办事项数据
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdEntityController`3.GetDataResponse(System.Boolean,System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}}[])">
+            <summary>
+            用于列表显示的数据查询筛选，将会根据当前用户的授权情况进行筛选过滤
+            </summary>
+            <param name="onlyValid"></param> 
+            <param name="predicates"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdEntityController`3.GetDataResponse(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}}[])">
+            <summary>
+            用于列表显示的数据查询筛选，将会根据当前用户的授权情况进行筛选过滤
+            </summary>
+            <param name="predicates"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdEntityController`3.GetDataSaveResult(`2)">
+            <summary>
+            对提交的编辑视图数据进行保存，并返回处理结果
+            </summary>
+            <param name="editModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdEntityController`3.Index(System.String)">
+            <summary>
+            获取数据列表界面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdEntityController`3.Edit(System.String)">
+            <summary>
+            获取数据编辑界面
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdEntityController`3.Edit(`2)">
+            <summary>
+            提交保存数据编辑结果
+            </summary>
+            <param name="editModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdEntityController`3.Delete(System.String[])">
+            <summary>
+            提交删除数据
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdEntityController`3.Follow(System.String)">
+            <summary>
+            提交用户收藏状态更改
+            </summary>
+            <param name="id"></param> 
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdLogsBaseController">
+            <summary>
+            系统日志查阅管理 Controller 基类
+            </summary>
+        </member>
+        <member name="P:KdCore.Web.Controllers.KdLogsBaseController.LogsProvider">
+            <summary>
+            待办事项数据操作提供程序
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdLogsBaseController.GetPageSizeDefault(System.String)">
+            <summary>
+            获取分页默认每页数据条数
+            </summary>
+            <param name="actionCode">当前请求的 Action</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdLogsBaseController.Index">
+            <summary>
+            获取列表显示的日志界面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdLogsBaseController.Detail(System.String,System.String)">
+            <summary>
+            查阅一条/一批详细的日志记录
+            </summary>
+            <param name="id"></param>
+            <param name="taskId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdLogsBaseController.Delete(System.String)">
+            <summary>
+            删除一条/一批详细的日志记录
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdLogsBaseController.Clear">
+            <summary>
+            清理过期的日志记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Web.Mvc.KdCoreController">
+            <summary>
+            MVC Controller 扩展封装的数据库操作核心基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController.OnInitialized(System.Web.Routing.RequestContext)">
+            <summary>
+            初始化请求时调用的方法，用来初始化一些配置等
+            </summary>
+            <param name="requestContext"></param>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController.KdPickUsers(KdCore.Data.Users.KdUserLimit,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            用户选择 Div 对话框
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController.KdPickItems(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            部门等数据字典选择 Div 对话框
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController.UserConfirm(System.String)">
+            <summary>
+            记录用户当前的操作确认
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController.FilesCount(KdCore.Data.Annexs.KdAnnexRequest)">
+            <summary>
+            查询文件个数
+            </summary>
+            <param name="fileRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController.HttpKeepAlive">
+            <summary>
+            获取当前系统是否使用保持连接，确保当前登录用户不至于长时间未操作自动退出登录
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="T:KdCore.Web.Mvc.KdCoreController`1">
+            <summary>
+            MVC Controller 扩展封装的数据库操作核心基类
+            </summary>
+        </member>
+        <member name="F:KdCore.Web.Mvc.KdCoreController`1._dbService">
+            <summary>
+            当前操作的主服务程序
+            </summary>
+        </member>
+        <member name="P:KdCore.Web.Mvc.KdCoreController`1.DbService">
+            <summary>
+            获取或设置当前操作的主服务程序
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.DbJsonBackup``1(System.String,System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            备份当前系统中的用户数据
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.DbJsonLoad``1(System.String,System.Boolean,System.String)">
+            <summary>
+            重新初始化当前系统中的用户数据
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.GetDataQuery``1(System.Boolean,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}[])">
+            <summary>
+            用户数据的查询筛选，将会根据当前用户的授权情况进行筛选过滤；
+            注意：未过滤用户页面输入的查询条件
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="onlyValid">过滤掉已删除或已标识为无效数据，仅显示未标记为删除的数据</param>
+            <param name="predicates">用户查询筛选条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.GetDataQuery``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}[])">
+            <summary>
+            用户数据的查询筛选，将会根据当前用户的授权情况进行筛选过滤
+            注意：未过滤用户页面输入的查询条件
+            </summary>
+            <typeparam name="TEntity"></typeparam> 
+            <param name="predicates">用户查询筛选条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.GetDataResponse``1(System.Boolean,System.Nullable{System.Boolean},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}[])">
+            <summary>
+            用于列表显示的数据查询筛选，将会根据当前用户的授权情况进行筛选过滤
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="onlyValid">过滤掉已删除或已标识为无效数据，仅显示未标记为删除的数据</param>
+            <param name="usePaging">是否使用分页显示</param>
+            <param name="predicates">用户查询筛选条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.GetDataResponse``1(System.Boolean,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}[])">
+            <summary>
+            用于列表显示的数据查询筛选，将会根据当前用户的授权情况进行筛选过滤
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="onlyValid">过滤掉已删除或已标识为无效数据，仅显示未标记为删除的数据</param> 
+            <param name="predicates">用户查询筛选条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.GetDataResponse``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}[])">
+            <summary>
+            用于列表显示的数据查询筛选，将会根据当前用户的授权情况进行筛选过滤
+            </summary>
+            <typeparam name="TEntity"></typeparam> 
+            <param name="predicates">用户查询筛选条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.DataListView``1(System.Boolean,System.Nullable{System.Boolean},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}[])">
+            <summary>
+            用于列表显示的数据查询筛选，将会自动过滤掉标记为已删除或已标识为无效的数据，并根据当前用户的授权情况进行筛选过滤；
+            然后将查询结果封装到 ViewResult 对象
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="onlyValid">过滤掉已删除或已标识为无效数据，仅显示未标记为删除的数据</param> 
+            <param name="usePaging">是否使用分页显示</param>
+            <param name="predicates"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.DataListView``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}[])">
+            <summary>
+            用于列表显示的数据查询筛选，将会自动过滤掉标记为已删除或已标识为无效的数据，并根据当前用户的授权情况进行筛选过滤；
+            然后将查询结果封装到 ViewResult 对象
+            </summary>
+            <typeparam name="TEntity"></typeparam> 
+            <param name="predicates"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.GetOwnerQuery``1(System.Boolean,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}[])">
+            <summary>
+            用户数据的查询筛选，将会根据当前用户的授权情况进行筛选过滤；
+            注意：未过滤用户页面输入的查询条件
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="onlyValid">过滤掉已删除或已标识为无效数据，仅显示未标记为删除的数据</param>
+            <param name="predicates">用户查询筛选条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.GetOwnerQuery``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}[])">
+            <summary>
+            用户数据的查询筛选，将会根据当前用户的授权情况进行筛选过滤
+            注意：未过滤用户页面输入的查询条件
+            </summary>
+            <typeparam name="TEntity"></typeparam> 
+            <param name="predicates">用户查询筛选条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.GetOwnerResponse``1(System.Boolean,System.Nullable{System.Boolean},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}[])">
+            <summary>
+            用于列表显示的数据查询筛选，将会根据当前用户的授权情况进行筛选过滤
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="onlyValid">过滤掉已删除或已标识为无效数据，仅显示未标记为删除的数据</param>
+            <param name="usePaging">是否使用分页显示</param>
+            <param name="predicates">用户查询筛选条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.GetOwnerResponse``1(System.Boolean,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}[])">
+            <summary>
+            用于列表显示的数据查询筛选，将会根据当前用户的授权情况进行筛选过滤
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="onlyValid">过滤掉已删除或已标识为无效数据，仅显示未标记为删除的数据</param> 
+            <param name="predicates">用户查询筛选条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.GetOwnerResponse``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}[])">
+            <summary>
+            用于列表显示的数据查询筛选，将会根据当前用户的授权情况进行筛选过滤
+            </summary>
+            <typeparam name="TEntity"></typeparam> 
+            <param name="predicates">用户查询筛选条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.OwnerListView``1(System.Boolean,System.Nullable{System.Boolean},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}[])">
+            <summary>
+            用于列表显示的数据查询筛选，将会自动过滤掉标记为已删除或已标识为无效的数据，并根据当前用户的授权情况进行筛选过滤；
+            然后将查询结果封装到 ViewResult 对象
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="onlyValid">过滤掉已删除或已标识为无效数据，仅显示未标记为删除的数据</param> 
+            <param name="usePaging">是否使用分页显示</param>
+            <param name="predicates"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.OwnerListView``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}[])">
+            <summary>
+            用于列表显示的数据查询筛选，将会自动过滤掉标记为已删除或已标识为无效的数据，并根据当前用户的授权情况进行筛选过滤；
+            然后将查询结果封装到 ViewResult 对象
+            </summary>
+            <typeparam name="TEntity"></typeparam> 
+            <param name="predicates"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.DataEntityView``1(``0,System.String,System.String)">
+            <summary>
+            获取并显示新增或编辑数据的处理方法
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.DataEntityView``1(System.String,System.String,System.String)">
+            <summary>
+            获取并显示新增或编辑数据的处理方法
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.GetDataSaveResult``2(``1)">
+            <summary>
+            对提交的编辑视图数据进行保存，并返回处理结果
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <typeparam name="TEditModel"></typeparam> 
+            <param name="editModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.CheckModelState``2(``1)">
+            <summary>
+            验证用户提交的数据是否符合要求，不符合时重新查询数据库的当前，并与用户提交数据合并，用于返回页面显示
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <typeparam name="TEditModel"></typeparam>
+            <param name="editModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.DataSaveView``2(``1)">
+            <summary>
+            常规的数据保存操作
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <typeparam name="TEditModel"></typeparam>
+            <param name="editModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.GetMsgOnDeleteIdsIsEmpty``1">
+            <summary>
+            获取删除数据时未选择数据的提示信息
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.GetDataResultOnDeleteIdsIsEmpty``1">
+            <summary>
+            获取删除数据时未选择数据的提示信息
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.DataDbDelete``1(System.String[])">
+            <summary>
+            执行真实的删除操作（删除后数据库无数据），并返回操作结果； 
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="ids"></param>
+            <returns><see cref="T:KdCore.Data.KdDataResult"/></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.DataDelete``1(System.String[])">
+            <summary>
+            执行假删除操作，并返回操作结果
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="ids"></param>
+            <returns><see cref="T:KdCore.Data.KdDataResult"/></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.JsonDbDelete``1(System.String[])">
+            <summary>
+            执行真实的删除操作（删除后数据库无数据），并返回 Json 操作结果
+            </summary>
+            <param name="ids"></param>
+            <returns><see cref="T:System.Web.Mvc.JsonResult"/></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.JsonDelete``1(System.String[])">
+            <summary>
+            执行假删除操作（删除后数据库数据仅标识为删除），并返回 Json 操作结果
+            </summary>
+            <param name="ids"></param>
+            <returns><see cref="T:System.Web.Mvc.JsonResult"/></returns>
+        </member>
+        <member name="P:KdCore.Web.Mvc.KdCoreController`1.FollowProvider">
+            <summary>
+            收藏关注数据处理提供程序
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.LoadFollow``1(``0)">
+            <summary>
+            查询收藏关注状态
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.FollowUrl``1(System.String)">
+            <summary>
+            添加收藏关注
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController`1.JsonFollowUrl``1(System.String)">
+            <summary>
+            提交用户收藏状态更改
+            </summary>
+            <param name="id"></param> 
+            <returns></returns> 
+        </member>
+    </members>
+</doc>

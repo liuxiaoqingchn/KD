@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5701597D-7EA9-4F89-928A-BA3259F382DD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KdYdt.Gxsj.Item.Domains</RootNamespace>
+    <AssemblyName>KdYdt.Gxsj.Item.Domains</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="KdCore.Base">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.Data">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.Data.EntityFramework">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.DbParts.Commons">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.DbParts.Commons.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.DbParts.UserExts">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.DbParts.UserExts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assist\EnumBaseItem.cs" />
+    <Compile Include="EditModels\PrjFacilityEdit.cs" />
+    <Compile Include="EditModels\PrjPraiseEdit.cs" />
+    <Compile Include="EditModels\PrjAptitudeEdit.cs" />
+    <Compile Include="EditModels\PrjAttractEdit.cs" />
+    <Compile Include="EditModels\SupplierEdit.cs" />
+    <Compile Include="Models\BaseProject.cs" />
+    <Compile Include="Models\BidNotice.cs" />
+    <Compile Include="Models\BidQualCheck.cs" />
+    <Compile Include="Models\BidResult.cs" />
+    <Compile Include="Models\PayBiding.cs" />
+    <Compile Include="Models\PayPact.cs" />
+    <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Models\PrjPraise.cs" />
+    <Compile Include="Models\PrjFacility.cs" />
+    <Compile Include="Models\PrjAptitude.cs" />
+    <Compile Include="Models\PrjAttract.cs" />
+    <Compile Include="Models\PrjSign.cs" />
+    <Compile Include="Models\PrjBond.cs" />
+    <Compile Include="Models\PayIncome.cs" />
+    <Compile Include="Models\PaySpend.cs" />
+    <Compile Include="Models\BidPresen.cs" />
+    <Compile Include="Models\BidSituation.cs" />
+    <Compile Include="Models\PrjCorp.cs" />
+    <Compile Include="Models\BidDefence.cs" />
+    <Compile Include="Models\PrjPlan.cs" />
+    <Compile Include="Models\PrjPerson.cs" />
+    <Compile Include="Models\PrjRegister.cs" />
+    <Compile Include="Models\PrjResult.cs" />
+    <Compile Include="Models\PrjSealBid.cs" />
+    <Compile Include="Models\PrjTask.cs" />
+    <Compile Include="Models\PrjItem.cs" />
+    <Compile Include="Models\PrjBiding.cs" />
+    <Compile Include="Models\BidWaste.cs" />
+    <Compile Include="Services\PrjDbItemService.cs" />
+    <Compile Include="Services\PrjDbItemContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EditModels\BaseProjectEdit.cs" />
+    <Compile Include="EditModels\BidNoticeEdit.cs" />
+    <Compile Include="EditModels\BidQualCheckEdit.cs" />
+    <Compile Include="EditModels\BidResultEdit.cs" />
+    <Compile Include="EditModels\PayBidingEdit.cs" />
+    <Compile Include="EditModels\PayPactEdit.cs" />
+    <Compile Include="EditModels\PrjSignEdit.cs" />
+    <Compile Include="EditModels\PayIncomeEdit.cs" />
+    <Compile Include="EditModels\PaySpendEdit.cs" />
+    <Compile Include="EditModels\PrjBidingEdit.cs" />
+    <Compile Include="EditModels\BidPresenEdit.cs" />
+    <Compile Include="EditModels\BidSituationEdit.cs" />
+    <Compile Include="EditModels\PrjBondEdit.cs" />
+    <Compile Include="EditModels\PrjCorpEdit.cs" />
+    <Compile Include="EditModels\BidDefenceEdit.cs" />
+    <Compile Include="EditModels\PrjPlanEdit.cs" />
+    <Compile Include="EditModels\PrjPersonEdit.cs" />
+    <Compile Include="EditModels\PrjSealBidEdit.cs" />
+    <Compile Include="EditModels\PrjTaskEdit.cs" />
+    <Compile Include="EditModels\PrjItemEdit.cs" />
+    <Compile Include="EditModels\BidWasteEdit.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\BondOccReport.cs" />
+    <Compile Include="ViewModels\PactSumReport.cs" />
+    <Compile Include="ViewModels\IncomeSumReport.cs" />
+    <Compile Include="ViewModels\PaySumReport.cs" />
+    <Compile Include="ViewModels\PersonSumReport.cs" />
+    <Compile Include="ViewModels\PrjTender.cs" />
+    <Compile Include="ViewModels\PrjSumReport.cs" />
+    <Compile Include="ViewModels\TaskSummaryReport.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

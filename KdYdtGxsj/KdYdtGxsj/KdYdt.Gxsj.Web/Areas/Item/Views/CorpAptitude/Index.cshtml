@@ -1,0 +1,54 @@
+﻿@{
+    Layout = null;
+}
+
+
+@model  KdDataResponse<PrjAptitude>
+
+@using (Html.BeginPageTitle())
+{
+    @Html.BbBtnLinkAdd()
+    @Html.BbBtnGridDelete(this.Model)
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch(this.Model, true))
+    {
+        @Html.BbSearchFor(x => x.AptitudeName)
+        @Html.BbSearchFor(x => x.AptitudeID)
+        @Html.BbSearchFor(x => x.CorpName)
+        @Html.BbSearchFor(x => x.AptitudeType)
+        @Html.BbSearchFor(x => x.AptitudeClass)
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(true))
+        {
+            @Html.BbTHeadFor(x => x.AptitudeID)
+            @Html.BbTHeadFor(x => x.AptitudeName)
+            @Html.BbTHeadFor(x => x.AptitudeType)
+            @Html.BbTHeadFor(x => x.AptitudeClass)
+            @Html.BbTHeadFor(x => x.CredentialDate)
+            @Html.BbTHeadFor(x => x.GrantDate)
+            @Html.BbTHeadFor(x => x.OfficeName)
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (PrjAptitude item in Model)
+            {
+                using (Html.BeginDataTableRow(item, true))
+                {
+                    <td>@item.AptitudeID</td>
+                    <td>@Html.ActionLink(item.AptitudeName, "Edit", new { id = item.Id })</td>
+                    <td>@item.AptitudeType</td>
+                    <td>@item.AptitudeClass</td>
+                    <td>@item.CredentialDate</td>
+                    <td>@item.GrantDate</td>
+                    <td>@item.OfficeName</td>
+                }
+            }
+        }
+    }
+}

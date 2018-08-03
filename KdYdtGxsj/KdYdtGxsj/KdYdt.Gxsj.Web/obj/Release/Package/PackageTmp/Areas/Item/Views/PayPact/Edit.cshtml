@@ -1,0 +1,90 @@
+﻿@model  PayPact
+@section scripts{
+    <script>
+        $(function () {
+
+        });
+        function TypeChange(btn) {
+            if ($(btn).val() == 'true') {
+                $("#sup").attr("class", "");
+                $("#ser").attr("class", "hide");
+            }
+            if ($(btn).val() == 'false') {
+                $("#sup").attr("class", "hide");
+                $("#ser").attr("class", "");
+            }
+        }
+    </script>
+}
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnSubmit()
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">合同信息</span>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="row">
+                    @*@Html.BbDlgPickerFor(x => x.PrjCode, "PrjBidPick", x => x.PrjCode, 1, "#divcontent",4, "立项编号", new { controller = "PrjPicks" } )*@
+                    @Html.SjPickPrjBidFor(x => x.ProjectId, x => x.PrjCode, 1)
+                    @Html.BbRadioListFor(x => x.IsOpen, 4, 0, false, new { ReadOnly = true })
+                    @Html.BbTextBoxFor(x => x.PrjName, 10)
+                </div>
+                <div style="display:none">
+                    @Html.BbTextBoxFor(x => x.ProjectId)
+                    @Html.BbTextBoxFor(x => x.PrjSignId)
+                </div>
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.PactCode, 4)
+                @Html.BbTextBoxFor(x => x.PactName, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.BidDate, 4)
+                @Html.BbTextBoxFor(x => x.BidMoney, null, "万元", 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.AwardUnit, 4)
+                @Html.BbTextBoxFor(x => x.PactMoney, null, "万元", 4)
+            </div>
+            <div class="row">
+                @Html.BbUserPickFor(x => x.PrjPersonId, x => x.PrjPersonName, 1)
+                @Html.BbTextBoxFor(x => x.PactRecordNo, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.StartsDate, 4)
+                @Html.BbTextBoxFor(x => x.FinishDate, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.PactSignDate, 4)
+                @Html.BbTextBoxFor(x => x.PrjDay, null, "天", 4)
+            </div>
+            <div class="row">
+                @Html.BbUserPickFor(x => x.PactPersonId, x => x.PactPersonName, 1)
+                @Html.BbTextBoxFor(x => x.PactDate, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Explain, 10)
+            </div>
+            <div class="row">
+                @Html.BfHiddenFor(x => x.PrjStatus)
+            </div>
+            @Html.AnnexUnit()
+            @Html.RowModifier()
+        </div>
+    </div>
+
+}
+
+@Html.AnnexUpload()

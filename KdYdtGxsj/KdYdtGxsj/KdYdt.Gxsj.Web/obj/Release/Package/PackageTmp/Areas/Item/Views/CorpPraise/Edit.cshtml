@@ -1,0 +1,53 @@
+﻿
+@model   PrjPraise
+
+
+
+
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnSubmit()
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">获奖信息</span>
+        </div>
+        <div class="panel-body">
+
+            <div class="row">
+                @Html.SjPickCorpFor(x => x.CorpId, x => x.CorpName, 1)
+                @*@Html.BbDlgPickerFor(x => x.CorpId, "SelectCorp", x => x.CorpName, 1, "#content", 10, "企业名称", new { controller = "SelectCorp" }, null, null, new { required = true })*@
+               @* @Html.BbDlgPickerFor(x => x.PrjCode, "PrjItemPick", x => x.PrjName, 1, "#content", 4, "项目名称", new { controller = "PrjPicks" }, null, null, new { required = true })*@
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.PraiseName, 4)
+                @Html.BbTextBoxFor(x => x.PraiseDate, 4)
+            </div>
+            <div class="row">
+                @Html.BbRadioListFor(x => x.PraiseOffice, 4)
+                @Html.BbRadioListFor(x => x.PraiseType, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.PraiseProject, 4)
+
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Remark, 10)
+            </div>
+            @Html.AnnexUnit()
+            @Html.RowModifier()
+        </div>
+    </div>
+
+}
+
+@Html.AnnexUpload()

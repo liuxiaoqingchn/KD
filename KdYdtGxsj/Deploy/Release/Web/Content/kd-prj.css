@@ -1,0 +1,18 @@
+﻿
+/*.form-control.text-box, .form-control { background-color: #FFFFDD; }*/
+/*.form-control.text-box { border-style: none; border-bottom: 1px solid #000; }*/
+/*.form-horizontal .control-label { text-align: center; }*/
+
+/*.field-group { border-bottom: 1px solid #ccc; }*/
+/*.form-group { margin-bottom: auto; margin-right: auto; }*/
+
+/*td:hover, th:hover { color: #222; }*/
+/*.table-kd { color: #133f8b; }*/
+
+/*.row-page-title { vertical-align: middle; }*/
+/*.row-page-title .btn-toolbar { margin-top: 20px; margin-bottom: 10px; }*/
+
+.page-header.navbar .page-logo { width: 320px; }
+
+.input-group input.form-control.text-box.date { max-width: 138px; }
+.input-group input.form-control.text-box.datetime { max-width: 142px; }

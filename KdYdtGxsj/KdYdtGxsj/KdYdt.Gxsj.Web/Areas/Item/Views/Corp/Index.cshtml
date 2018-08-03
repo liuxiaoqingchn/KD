@@ -1,0 +1,47 @@
+﻿@model  KdDataResponse<PrjCorp>
+
+@using (Html.BeginPageTitle())
+{
+    @Html.BbBtnLinkAdd()
+    @Html.BbBtnGridDelete(this.Model)
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch())
+    {
+        @Html.BbSearchFor(x => x.CorpCode)
+        @Html.BbSearchFor(x => x.CorpName)
+        @Html.BbSearchFor(x => x.LinkMan) 
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(true))
+        {
+            @Html.BbTHeadFor(x => x.CorpCode)
+            @Html.BbTHeadFor(x => x.CorpName)
+            @Html.BbTHeadFor(x => x.LinkMan)
+            @Html.BbTHeadFor(x => x.LinkPhone)
+            @Html.BbTHeadFor(x => x.LegalPerson)
+            @Html.BbTHeadFor(x => x.RegFund)
+            @Html.BbTHeadFor(x => x.RegDate)
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (PrjCorp item in Model)
+            {
+                using (Html.BeginDataTableRow(item, true))
+                {
+                    <td>@item.CorpCode</td>
+                    <td>@Html.ActionLink(item.CorpName, "Edit", new { id = item.Id})</td>
+                    <td>@item.LinkMan</td>
+                    <td>@item.LinkPhone</td> 
+                    <td>@item.LegalPerson</td>
+                    <td>@item.RegFund</td>
+                    <td>@item.RegDate</td>
+                }
+            }
+        }
+    }
+}

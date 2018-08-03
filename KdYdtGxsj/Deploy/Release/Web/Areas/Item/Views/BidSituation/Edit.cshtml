@@ -1,0 +1,42 @@
+﻿@model  BidSituation
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnSubmit()
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-info">
+        <div class="panel-heading" data-collapse="false">
+            <span class="panel-title">开标情况</span>
+        </div>
+        <div class="panel-body" id="content">
+            <div class="row">
+                @Html.BbDlgPickerFor(x => x.ProjectId, "PrjSignPick", x => x.PrjName, 1, "#content", 4, "项目名称", new { controller = "PrjPicks" }, null, null)
+                @Html.BbTextBoxFor(x => x.PrjCode)
+                @Html.HiddenFor(x => x.PrjCode)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.BidDate, 4)
+                @Html.BbTextBoxFor(x => x.MeetAddr, 4)
+            </div>
+            <div class="row">
+                @Html.BbUserPickFor(x => x.CheckPersonId, x => x.CheckPersonName)
+                @Html.BbTextBoxFor(x => x.CheckDate, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Explain, 10)
+            </div>
+            @Html.RowModifier()
+            @Html.AnnexUnit()
+
+        </div>
+    </div>
+}
+@Html.AnnexUpload()

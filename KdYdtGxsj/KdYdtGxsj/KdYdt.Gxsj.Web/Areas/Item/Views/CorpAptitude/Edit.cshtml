@@ -1,0 +1,52 @@
+﻿
+@model   PrjAptitude
+
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnSubmit()
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">企业资质</span>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                @Html.SjPickCorpFor(x => x.CorpId, x => x.CorpName, 1)
+                @*@Html.BbDlgPickerFor(x => x.CorpId, "SelectCorp", x => x.CorpName, 1, "#content", 10, "企业名称", new { controller = "SelectCorp" }, null, null, new { required = true })*@
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.AptitudeName, 4)
+                @Html.BbTextBoxFor(x => x.AptitudeID, 4)
+            </div>
+            <div class="row">
+                @Html.BbRadioListFor(x => x.AptitudeType, 4)
+                @Html.BbRadioListFor(x => x.AptitudeClass, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.CredentialDate, 4)
+                @Html.BbTextBoxFor(x => x.GrantDate, 4)
+
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.OfficeName, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Remark, 10)
+            </div>
+            @Html.AnnexUnit()
+            @Html.RowModifier()
+        </div>
+    </div>
+
+}
+
+@Html.AnnexUpload()

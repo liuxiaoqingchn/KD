@@ -1,0 +1,46 @@
+﻿@model  KdDataResponse<PayIncome>
+
+@using (Html.BeginPageTitle())
+{
+    @Html.BbBtnLinkAdd()
+    @Html.BbBtnGridDelete(this.Model)
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch())
+    {
+        @Html.BbSearchFor(x => x.PrjCode)
+        @Html.BbSearchFor(x => x.PrjName)
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(true))
+        {
+            @Html.BbTHeadFor(x => x.PrjCode)
+            @Html.BbTHeadFor(x => x.PrjName)
+            @Html.BbTHeadFor(x => x.DataCost)
+            @Html.BbTHeadFor(x => x.TechniqueCost)
+            @Html.BbTHeadFor(x => x.BusinessCost)
+            @Html.BbTHeadFor(x => x.ManagerCost)
+            @Html.BbTHeadFor(x => x.HandlingData)
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (PayIncome item in Model)
+            {
+                using (Html.BeginDataTableRow(item, true))
+                {
+                    <td>@item.PrjCode</td>
+                    <td>@Html.ActionLink(item.PrjName, "Edit", new { id = item.Id })</td>
+                    <td>@item.DataCost</td>
+                    <td>@item.TechniqueCost</td>
+                    <td>@item.BusinessCost</td>
+                    <td>@item.ManagerCost</td>
+                    <td>@item.HandlingData</td>
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+﻿@model KdDataResponse<KdUserTask>
+
+@using (Html.BeginDataTable())
+{
+    using (Html.BeginDataTableHeader())
+    {
+        @Html.BbTHead("类型", "ItemName")
+        @Html.BbTHead("公告标题", "SourceName")
+        @Html.BbTHead("发布时间", "CreateTime")
+        @Html.BbTHead("发布部门", "CreatorDeptName")
+        @Html.BbTHead("发布人", "CreatorUserName")
+        @Html.BbTHead("阅读", "HandleStatus")
+        if (Html.IsAdminUser())
+        {
+            @Html.BbTHead("待阅人", "ReceiverName")
+        }
+    }
+
+    using (Html.BeginDataTableBody())
+    {
+        foreach (KdUserTask item in Model)
+        {
+            using (Html.BeginDataTableRow(item))
+            {
+                @Html.TdWord(item.ItemName)
+                @Html.TdTextHref(item.SourceName, Url.GetUrlReturn(item.TaskUrl))
+                @Html.TdDateTime(item.CreateTime)
+                @Html.TdWord(item.CreatorDeptName)
+                @Html.TdWord(item.CreatorUserName)
+                @Html.TdIcon(item.TaskIsOvered())
+                if (Html.IsAdminUser())
+                {
+                    @Html.TdWord(item.ReceiverTitle)
+                }
+            }
+        }
+    }
+}

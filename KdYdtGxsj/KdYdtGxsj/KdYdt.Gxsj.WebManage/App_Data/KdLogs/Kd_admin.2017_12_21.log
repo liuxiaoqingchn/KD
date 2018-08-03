@@ -1,0 +1,27 @@
+﻿2017-12-21 14:50:28.7698046 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-12-21 14:50:28.7727753 Critical KdUtil - IIS Version: 10.0; Integrated Pipeline: True; VirtualPathRoot: /
+2017-12-21 14:50:28.7727753 Critical KdUtil - TargetFramework: 4.6; AppDomainAppVirtualPath: /
+2017-12-21 14:50:28.7727753 Critical KdUtil - BinDirectory: E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\;
+2017-12-21 14:50:29.0618074 Notice KdDbDictsContext - DbContext.OnModelCreating: [DC_KdDbDictsContext_528E2WGNHST5]Data Source=.;database=KdYdtGxsj;uid=sa;pwd=123
+2017-12-21 14:50:29.8677750 Alert KdDbDictsContext - SaveChanges[DC_KdDbDictsContext_528E2WGNHST5][]: KdCore.Data.Dicts.KdDbDictsContext
+2017-12-21 14:50:29.8787773 Notice KdDbAuthsContext - DbContext.OnModelCreating: [DC_KdDbAuthsContext_528E46VBVCKX]Data Source=.;database=KdYdtGxsj;uid=sa;pwd=123
+2017-12-21 14:50:29.9197766 Alert KdDbAuthsContext - SaveChanges[DC_KdDbAuthsContext_528E46VBVCKX][]: KdCore.Data.Auths.KdDbAuthsContext
+2017-12-21 14:50:29.9227774 Notice KdDbLogsContext - DbContext.OnModelCreating: [DC_KdDbLogsContext_528EI087CJKX]Data Source=.;database=KdYdtGxsjLogs;uid=sa;pwd=123
+2017-12-21 14:50:30.0277747 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_528EI087CJKX][]: KdCore.Data.Logs.KdDbLogsContext
+2017-12-21 14:50:30.0327753 Notice KdDbAnnexsContext - DbContext.OnModelCreating: [DC_KdDbAnnexsContext_528EEQWLJ49X]Data Source=.;database=KdYdtGxsj;uid=sa;pwd=123
+2017-12-21 14:50:30.0718067 Alert KdDbAnnexsContext - SaveChanges[DC_KdDbAnnexsContext_528EEQWLJ49X][]: KdCore.Data.Annexs.KdDbAnnexsContext
+2017-12-21 14:50:30.0907744 Notice KdDbUsersContext - DbContext.OnModelCreating: [DC_KdDbUsersContext_528EA7QXPIPT]Data Source=.;database=KdYdtGxsj;uid=sa;pwd=123
+2017-12-21 14:50:30.1928058 Alert KdDbUsersContext - SaveChanges[DC_KdDbUsersContext_528EA7QXPIPT][]: KdCore.Data.Users.KdDbUsersContext
+2017-12-21 14:50:31.2998983 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_528E96QR6CH1][]: KdCore.Data.Logs.KdDbLogsContext
+2017-12-21 14:50:31.4127784 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_528E96QR6CH1][]Data Source=.;database=KdYdtGxsjLogs;uid=sa;
+2017-12-21 14:50:38.2699761 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_528E1CA5BYPT][]: KdCore.Data.Logs.KdDbLogsContext
+2017-12-21 14:50:38.2910668 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_528E1CA5BYPT][]Data Source=.;database=KdYdtGxsjLogs;uid=sa;
+2017-12-21 14:51:15.1238712 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_528EVQR35KQ5][]: KdCore.Data.Logs.KdDbLogsContext
+2017-12-21 14:51:15.1338703 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_528EVQR35KQ5][]Data Source=.;database=KdYdtGxsjLogs;uid=sa;
+2017-12-21 14:51:15.1618707 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_528EN41GECO6][]: KdCore.Data.Logs.KdDbLogsContext
+2017-12-21 14:51:15.1758713 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_528EN41GECO6][]Data Source=.;database=KdYdtGxsjLogs;uid=sa;
+2017-12-21 14:51:15.1938679 Notice UsersController -  管理员（内置） CurrDataScope: Full
+2017-12-21 14:51:16.0826023 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_528EA6MVXW5L][DS_KdDbDictsService_528E0NOX3J32]Data Source=.;database=KdYdtGxsj;uid=sa;
+2017-12-21 14:51:20.4126091 Alert KdDbAuthsContext - DbContext.OnDispose: [DC_KdDbAuthsContext_528EXFW8HI1Y][DS_KdDbAuthsService_528EMR389K7K]Data Source=.;database=KdYdtGxsj;uid=sa;
+2017-12-21 14:51:20.4126091 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_528EPUKJP3NQ][]: KdCore.Data.Logs.KdDbLogsContext
+2017-12-21 14:51:20.4185930 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_528EPUKJP3NQ][]Data Source=.;database=KdYdtGxsjLogs;uid=sa;

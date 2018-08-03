@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{95E1F503-B30B-4EFD-B63B-3EBE7F48B068}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KdYdt.Gxsj.WebManage</RootNamespace>
+    <AssemblyName>KdYdt.Gxsj.WebManage</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Manage</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;Manage</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.Base">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.Data">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.Data.EntityFramework">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.DbParts.Commons">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.DbParts.Commons.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.DbParts.UserExts">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.DbParts.UserExts.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.UITheme">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.UITheme.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.Web.Mvc">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.Web.Resource, Version=1.1.0.5, Culture=neutral, PublicKeyToken=279a6f076cadf4a8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\Resources\KdCore.Web.Resource.dll</HintPath>
+    </Reference>
+    <Reference Include="KdWeb.Common">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdWeb.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="KdWeb.Common.Resource">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdWeb.Common.Resource.dll</HintPath>
+    </Reference>
+    <Reference Include="KdWeb.Common.UserExts">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdWeb.Common.UserExts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Microsoft.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Core">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Microsoft.OData.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Edm">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Microsoft.OData.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Spatial">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Microsoft.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\System.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\System.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.SelfHost">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.Http.SelfHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Tracing">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.Http.Tracing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.OData">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.WebPages">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\kd-prj.css" />
+    <Content Include="Content\login-pc.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="App_Data\KdMenu\KdMenu_Default.json" />
+    <Content Include="App_Data\KdMenu\KdMenu_Catalog.json" />
+    <Content Include="App_Data\KdDict\KdDict_Catalog.json" />
+    <Content Include="App_Data\KdMenu\KdMenu_PrjManage.json" />
+    <Content Include="App_Data\KdMenu\KdMenu_Admin.json" />
+    <Content Include="App_Data\KdGlobal.profile" />
+    <None Include="Properties\PublishProfiles\正式部署.pubxml" />
+    <Content Include="img\kd-logo-bar-top.png" />
+    <Content Include="img\kd-logo-login.png" />
+    <Content Include="App_Data\kdliccod.key" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Properties\PublishProfiles\测试部署.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\DeptsController.cs" />
+    <Compile Include="Controllers\DictsController.cs" />
+    <Compile Include="Controllers\DutysController.cs" />
+    <Compile Include="Controllers\FilesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LogsController.cs" />
+    <Compile Include="Controllers\MenusController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\SysCfgController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\WorkDaysController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="KdWebAppConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\DataInit\KdDbAuths\" />
+    <Folder Include="App_Data\DataInit\KdDbDicts\" />
+    <Folder Include="App_Data\DataInit\KdDbFlowSigns\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2234/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

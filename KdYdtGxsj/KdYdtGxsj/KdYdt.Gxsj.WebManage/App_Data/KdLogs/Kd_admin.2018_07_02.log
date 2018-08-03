@@ -1,0 +1,223 @@
+﻿2018-07-02 18:42:37.89637 [T00001][Critical] KdAppContext - 已加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-07-02 18:42:39.78232 [T00001][Critical] KdWebContext - RegisterWebMvc Namespaces: 
+                      KdCore.Web.Errors.Controllers
+                      KdYdt.Gxsj.WebManage.Controllers
+2018-07-02 18:42:39.78432 [T00001] [Major]   KdUnitManager - 初始化系统功能模块设置……
+2018-07-02 18:42:40.06457 [T00001] [Major]   KdUnitManager - 初始化系统模块设置结束
+              从本地运行程序中识别出功能模块：13 个
+              从远程获取到文件中识别功能模块定义：51 个
+              初始化功能模块：13 个，功能操作：1491 个
+2018-07-02 18:42:40.06756 [T00001] [Major]   KdMenu - 初始化系统菜单……
+2018-07-02 18:42:40.32487 [T00001] [Major]   KdMenu - 共计初始化系统菜单：3 个
+2018-07-02 18:42:40.40466 [T00001] [Major]   KdMenu - 菜单 OA系统菜单[Default] 共计加载菜单项 21 个
+2018-07-02 18:42:40.57520 [T00001] [Major]   KdMenu - 菜单 项目管理菜单[PrjManage] 共计加载菜单项 46 个
+2018-07-02 18:42:40.57520 [T00001] [Major]   KdMenu - 菜单 后台管理菜单[Admin] 共计加载菜单项 8 个
+2018-07-02 18:42:40.57520 [T00001] [Major]   KdMenu - 初始化系统菜单设置结束。
+2018-07-02 18:42:40.61809 [T00001][Critical] BbMvcManager - 当前系统运行环境：
+                      IIS Version: 10.0
+                      Integrated Pipeline: True
+                      TargetFramework: 4.6
+                      BaseDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\
+                      BinDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\
+                      AppDomainAppVirtualPath: /
+                      RootPathVirtual: ~
+                      RootPathPhysics: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\
+                      AppData VirtualPath: ~/App_Data;
+                      AppData PhysicsPath: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data;
+                      系统全局配置文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile;
+                      数据字典配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdDict;
+                      系统菜单配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdMenu;
+                      系统默认菜单文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdMenu\KdMenu_Admin.json;
+                      系统运行日志文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdLogs\Kd_admin.2018_07_02.log;
+                      数据库初始化JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataInit;
+                      数据库备份JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataBackup;
+                      用户个人文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Data_User;
+                      报表模板默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Templates;
+                      报表输出默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Reports;
+                      附件上传默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\User_Uploads;
+                      文件覆盖时自动备份的文件夹名称: History;
+2018-07-02 18:42:41.93556 [T00010][CodeMark] HomeController - 【Http-GET:57LI9YGP63T0】已耗时：0.1476033秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F167445741]
+              [Url] http://localhost:2234/
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+2018-07-02 18:42:41.95354 [T00010][Critical] KdUtil - 调试模式运行，忽略版本更新检测
+2018-07-02 18:42:42.42526 [T00010][CodeMark] HomeController - 【Http-GET:57LI9YGP63T0】已耗时：0.1476033秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F167445741]
+              [Url] http://localhost:2234/
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 0.6343 秒
+2018-07-02 18:42:42.43523 [T00009][CodeMark] HomeController - 【Http-GET:57LIVBNM3K0A】已耗时：0.0029904秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F167A6316E]
+              [Url] http://localhost:2234/Home/Login
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+2018-07-02 18:42:50.60438 [T00009][CodeMark] HomeController - 【Http-GET:57LIVBNM3K0A】已耗时：0.0029904秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F167A6316E]
+              [Url] http://localhost:2234/Home/Login
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 8.1721 秒【缓慢】
+2018-07-02 18:45:11.82193 [T00014][Critical] KdAppContext - 已加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-07-02 18:45:14.01207 [T00014][Critical] KdWebContext - RegisterWebMvc Namespaces: 
+                      KdCore.Web.Errors.Controllers
+                      KdYdt.Gxsj.WebManage.Controllers
+2018-07-02 18:45:14.01506 [T00014] [Major]   KdUnitManager - 初始化系统功能模块设置……
+2018-07-02 18:45:14.19259 [T00014] [Major]   KdUnitManager - 初始化系统模块设置结束
+              从本地运行程序中识别出功能模块：13 个
+              从远程获取到文件中识别功能模块定义：51 个
+              初始化功能模块：13 个，功能操作：1491 个
+2018-07-02 18:45:14.19558 [T00014] [Major]   KdMenu - 初始化系统菜单……
+2018-07-02 18:45:14.47284 [T00014] [Major]   KdMenu - 共计初始化系统菜单：3 个
+2018-07-02 18:45:14.59950 [T00014] [Major]   KdMenu - 菜单 OA系统菜单[Default] 共计加载菜单项 21 个
+2018-07-02 18:45:14.86479 [T00014] [Major]   KdMenu - 菜单 项目管理菜单[PrjManage] 共计加载菜单项 46 个
+2018-07-02 18:45:14.86479 [T00014] [Major]   KdMenu - 菜单 后台管理菜单[Admin] 共计加载菜单项 8 个
+2018-07-02 18:45:14.86479 [T00014] [Major]   KdMenu - 初始化系统菜单设置结束。
+2018-07-02 18:45:14.90369 [T00014][Critical] BbMvcManager - 当前系统运行环境：
+                      IIS Version: 10.0
+                      Integrated Pipeline: True
+                      TargetFramework: 4.6
+                      BaseDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\
+                      BinDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\
+                      AppDomainAppVirtualPath: /
+                      RootPathVirtual: ~
+                      RootPathPhysics: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\
+                      AppData VirtualPath: ~/App_Data;
+                      AppData PhysicsPath: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data;
+                      系统全局配置文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile;
+                      数据字典配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdDict;
+                      系统菜单配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdMenu;
+                      系统默认菜单文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdMenu\KdMenu_Admin.json;
+                      系统运行日志文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdLogs\Kd_admin.2018_07_02.log;
+                      数据库初始化JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataInit;
+                      数据库备份JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataBackup;
+                      用户个人文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Data_User;
+                      报表模板默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Templates;
+                      报表输出默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Reports;
+                      附件上传默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\User_Uploads;
+                      文件覆盖时自动备份的文件夹名称: History;
+2018-07-02 18:45:15.07722 [T00018][CodeMark] HomeController - 【Http-POST:57LIGXWUUQSE】已耗时：0.1356364秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F1C28D93DD]
+              [Url] http://localhost:2234/Home/Login
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Home/Login
+2018-07-02 18:45:15.10315 [T00018][Critical] KdUtil - 调试模式运行，忽略版本更新检测
+2018-07-02 18:45:16.47947 [T00018][CodeMark] HomeController - 【Http-POST:57LIGXWUUQSE】已耗时：0.1356364秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F1C28D93DD]
+              [Url] http://localhost:2234/Home/Login
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求处理完成】执行时间 1.5359 秒
+2018-07-02 18:45:16.50141 [T00010][CodeMark] UsersController - 【Http-GET:57LIQ3ISC1W4】已耗时：0.0029898秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F1C37AD3E5]
+              [Url] http://localhost:2234/Users
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Home/Login
+2018-07-02 18:45:26.08877 [T00010][CodeMark] UsersController - 【Http-GET:57LIQ3ISC1W4】已耗时：0.0029898秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F1C37AD3E5]
+              [Url] http://localhost:2234/Users
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 9.5903 秒【缓慢】
+2018-07-02 18:45:56.02527 [T00011][CodeMark] RolesController - 【Http-GET:57LI4YY0TQNW】已耗时：0.0049871秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F1DB09627C]
+              [Url] http://localhost:2234/Roles
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Users
+2018-07-02 18:45:56.82513 [T00011][CodeMark] RolesController - 【Http-GET:57LI4YY0TQNW】已耗时：0.0049871秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F1DB09627C]
+              [Url] http://localhost:2234/Roles
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.8048 秒
+2018-07-02 18:45:59.53389 [T00016][CodeMark] MenusController - 【Http-GET:57LIWPDJ12EL】已耗时：0.0029903秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F1DD210FDA]
+              [Url] http://localhost:2234/Menus
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Roles
+2018-07-02 18:46:00.25196 [T00016][CodeMark] MenusController - 【Http-GET:57LIWPDJ12EL】已耗时：0.0029903秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F1DD210FDA]
+              [Url] http://localhost:2234/Menus
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.7211 秒
+2018-07-02 18:46:02.84304 [T00008][CodeMark] MenusController - 【Http-POST:57LIKT5GNGWB】已耗时：0.0019951秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F1DF1A2666]
+              [Url] http://localhost:2234/Menus/FrontAsync?___act=Index
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus
+2018-07-02 18:46:15.49021 [T00008][CodeMark] MenusController - 【Http-POST:57LIKT5GNGWB】已耗时：0.0019951秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F1DF1A2666]
+              [Url] http://localhost:2234/Menus/FrontAsync?___act=Index
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 12.6492 秒【异常缓慢】
+2018-07-02 19:06:51.99487 [T00014][Critical] KdAppContext - 已加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-07-02 19:06:53.03410 [T00014][Critical] KdWebContext - RegisterWebMvc Namespaces: 
+                      KdCore.Web.Errors.Controllers
+                      KdYdt.Gxsj.WebManage.Controllers
+2018-07-02 19:06:53.03808 [T00014] [Major]   KdUnitManager - 初始化系统功能模块设置……
+2018-07-02 19:06:53.14979 [T00014] [Major]   KdUnitManager - 初始化系统模块设置结束
+              从本地运行程序中识别出功能模块：13 个
+              从远程获取到文件中识别功能模块定义：51 个
+              初始化功能模块：13 个，功能操作：1491 个
+2018-07-02 19:06:53.15178 [T00014] [Major]   KdMenu - 初始化系统菜单……
+2018-07-02 19:06:53.31933 [T00014] [Major]   KdMenu - 共计初始化系统菜单：3 个
+2018-07-02 19:06:53.41607 [T00014] [Major]   KdMenu - 菜单 OA系统菜单[Default] 共计加载菜单项 21 个
+2018-07-02 19:06:53.65045 [T00014] [Major]   KdMenu - 菜单 项目管理菜单[PrjManage] 共计加载菜单项 46 个
+2018-07-02 19:06:53.65045 [T00014] [Major]   KdMenu - 菜单 后台管理菜单[Admin] 共计加载菜单项 8 个
+2018-07-02 19:06:53.65045 [T00014] [Major]   KdMenu - 初始化系统菜单设置结束。
+2018-07-02 19:06:53.66142 [T00014][Critical] BbMvcManager - 当前系统运行环境：
+                      IIS Version: 10.0
+                      Integrated Pipeline: True
+                      TargetFramework: 4.6
+                      BaseDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\
+                      BinDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\
+                      AppDomainAppVirtualPath: /
+                      RootPathVirtual: ~
+                      RootPathPhysics: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\
+                      AppData VirtualPath: ~/App_Data;
+                      AppData PhysicsPath: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data;
+                      系统全局配置文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile;
+                      数据字典配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdDict;
+                      系统菜单配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdMenu;
+                      系统默认菜单文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdMenu\KdMenu_Admin.json;
+                      系统运行日志文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdLogs\Kd_admin.2018_07_02.log;
+                      数据库初始化JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataInit;
+                      数据库备份JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataBackup;
+                      用户个人文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Data_User;
+                      报表模板默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Templates;
+                      报表输出默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Reports;
+                      附件上传默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\User_Uploads;
+                      文件覆盖时自动备份的文件夹名称: History;
+2018-07-02 19:06:53.79705 [T00074][CodeMark] UsersController - 【Http-GET:57LJH6WO7U1I】已耗时：0.1037223秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F4C8ABABD0]
+              [Url] http://localhost:2234/Users
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus
+2018-07-02 19:06:53.83396 [T00074][Critical] KdUtil - 调试模式运行，忽略版本更新检测
+2018-07-02 19:07:01.27747 [T00074][CodeMark] UsersController - 【Http-GET:57LJH6WO7U1I】已耗时：0.1037223秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F4C8ABABD0]
+              [Url] http://localhost:2234/Users
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 7.5801 秒【较慢】
+2018-07-02 19:07:15.46017 [T00070][CodeMark] UsersController - 【Http-GET:57LJD29BCMEH】已耗时：0.0069806秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F4D5A35A46]
+              [Url] http://localhost:2234/Users/Edit?___act=Index
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Users
+2018-07-02 19:07:16.50138 [T00070][CodeMark] UsersController - 【Http-GET:57LJD29BCMEH】已耗时：0.0069806秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F4D5A35A46]
+              [Url] http://localhost:2234/Users/Edit?___act=Index
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 1.0482 秒
+2018-07-02 19:07:27.64784 [T00070][CodeMark] UsersController - 【Http-POST:57LJPH92VCQA】已耗时：0.0049865秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F4DCE75907]
+              [Url] http://localhost:2234/Users/Edit?___act=Index
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Users/Edit?___act=Index
+2018-07-02 19:07:39.52681 [T00070][CodeMark] UsersController - 【Http-POST:57LJPH92VCQA】已耗时：0.0049865秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F4DCE75907]
+              [Url] http://localhost:2234/Users/Edit?___act=Index
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 11.8840 秒【缓慢】
+2018-07-02 19:08:11.72905 [T00076][CodeMark] UsersController - 【Http-GET:57LJBKSBNZTC】已耗时：0.0049868秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F4F72D9B7E]
+              [Url] http://localhost:2234/Users?___act=Edit&isback=True
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Users/Edit/201870210CE3000058E6E1B578FA472082C070E0FE137C71?___act=Index
+2018-07-02 19:08:11.73207 [T00076][CodeMark] UsersController - 【Http-GET:57LJBKSBNZTC】已耗时：0.0049868秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F4F72D9B7E]
+              [Url] http://localhost:2234/Users?___act=Edit&isback=True
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.0080 秒
+2018-07-02 19:08:11.73803 [T00070][CodeMark] UsersController - 【Http-GET:57LJN0FFTK0N】已耗时：0.0009981秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F4F72F95EF]
+              [Url] http://localhost:2234/Users
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Users/Edit/201870210CE3000058E6E1B578FA472082C070E0FE137C71?___act=Index
+2018-07-02 19:08:11.85674 [T00070][CodeMark] UsersController - 【Http-GET:57LJN0FFTK0N】已耗时：0.0009981秒【Session:eyui54r21gwkuf4xkusxej12】[1D411F4F72F95EF]
+              [Url] http://localhost:2234/Users
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.1197 秒

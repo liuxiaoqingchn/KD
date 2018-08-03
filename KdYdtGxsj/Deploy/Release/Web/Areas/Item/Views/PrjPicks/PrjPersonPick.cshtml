@@ -1,0 +1,41 @@
+﻿@model KdDataResponse<PrjPerson>
+@{
+    Layout = null;
+}
+
+@using (Html.BeginDlgSelect())
+{
+    @Html.BbDlgSearchHeader(true, "人员信息")
+    <div class="modal-body">
+        <div class="row">
+            @Html.BbSearchFor(x => x.PersonName, "姓名")
+            @Html.BbSearchFor(x => x.PersonNumberID, "身份证号")
+        </div>
+        @using (Html.BeginDataTable())
+        {
+            @Html.BbTHeadRow(true, "姓名", "身份证号", "所属企业", "证书编号")
+
+            using (Html.BeginDataTableBody())
+            {
+                foreach (PrjPerson item in Model)
+                {
+                    using (Html.BeginDataSelectRow(item, new
+                    {
+                        data_PrjPersonId = item.Id,
+                        data_PrjPersonName = item.PersonName,
+                        data_PrjCorpName = item.CorpName,
+                        data_PrjCorpId = item.CorpName,
+                        data_IdCard = item.PersonNumberID
+                    }))
+                    {
+                        @Html.TdText(item.PersonName)
+                        @Html.TdText(item.PersonNumberID)
+                        @Html.TdText(item.CorpName)
+                        @Html.TdText(item.CredentialID)
+                    }
+                }
+            }
+        }
+    </div>
+    @Html.BbDlgFooter(true)
+}

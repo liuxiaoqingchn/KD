@@ -1,0 +1,45 @@
+﻿
+@model  PrjPerson
+
+
+@{Layout = null; }
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        @using (Html.BbAjaxForm())
+        {
+            @Html.BbDlgHeader("人员信息")
+            @Html.HiddenFor(x => x.Id)
+            <div class="modal-body">
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.CorpName, 4, new { ReadOnly = true })
+                    @Html.BbTextBoxFor(x => x.CorpCode, 4, new { ReadOnly = true })
+                </div>
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.PersonName, 4, new { ReadOnly = true })
+                    @Html.BbTextBoxFor(x => x.PersonNumberID, 4, new { ReadOnly = true })
+                </div>
+                <div class="row">
+                    @Html.BbRadioListFor(x => x.PersonSex, 4)
+                    @Html.BbTextBoxFor(x => x.LinkPhone, 4, new { ReadOnly = true })
+                </div>
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.CredentialID, 4, new { ReadOnly = true })
+                    @Html.BbTextBoxFor(x => x.CredentialDate, 4, new { ReadOnly = true })
+
+                </div>
+                <div class="row">
+                    @Html.BbRadioListFor(x => x.Rank, 6)
+                    @Html.BbCheckBoxFor(x => x.ISLocking)
+                </div>
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.Remark, 10, new { ReadOnly = true })
+                </div>
+                @Html.AnnexUnit()
+                @Html.RowModifier()
+            </div>
+            @Html.BbDlgFooter()
+        }
+    </div>
+</div>
+

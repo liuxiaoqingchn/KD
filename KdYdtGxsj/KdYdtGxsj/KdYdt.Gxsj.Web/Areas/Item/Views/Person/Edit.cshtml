@@ -1,0 +1,51 @@
+﻿@model   PrjPerson
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnSubmit()
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">人员信息</span>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                @Html.SjPickCorpFor(x => x.CorpId, x => x.CorpName, 1)
+                @*@Html.BbDlgPickerFor(x => x.CorpId, "SelectCorp", x => x.CorpName, 1, "#content", 10,"企业名称", new { controller = "SelectCorp" }, null, null, new { required = true })*@
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.PersonName, 4)
+                @Html.BbTextBoxFor(x => x.PersonNumberID, 4)
+            </div>
+            <div class="row">
+                @Html.BbRadioListFor(x => x.PersonSex, 4)
+                @Html.BbTextBoxFor(x => x.LinkPhone, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.CredentialID, 4)
+                @Html.BbTextBoxFor(x => x.CredentialDate, 4)
+               
+            </div>
+            <div class="row">
+                @Html.BbRadioListFor(x => x.Rank,4)
+                @Html.BbRadioListFor(x => x.ISLocking,4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Remark, 10)
+            </div>
+            @Html.AnnexUnit()
+            @Html.RowModifier()
+        </div>
+    </div>
+
+}
+
+@Html.AnnexUpload()

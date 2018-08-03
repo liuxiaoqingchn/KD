@@ -1,0 +1,57 @@
+﻿
+@model   PrjAttract
+
+
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnSubmit()
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">招商平台</span>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.AttractName, 4, 0, null, null, null, new { required = true })
+                @Html.BbTextBoxFor(x => x.AttractUrl, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.AttractUnit, 4)
+                @Html.BbTextBoxFor(x => x.AttractPwd, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.AttractPerson, 4)
+                @Html.BbTextBoxFor(x => x.AttractTel, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.AttBusPerson, 4)
+                @Html.BbTextBoxFor(x => x.AttBusTel, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.AttBusbusiness, 4)
+                @Html.BbTextBoxFor(x => x.CreatorDate, 4)
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.Remark, 10)
+                </div>
+
+                @Html.AnnexUnit()
+                @Html.RowModifier()
+            </div>
+        </div>
+    </div>
+}
+
+@Html.AnnexUpload()
+
+
+
+

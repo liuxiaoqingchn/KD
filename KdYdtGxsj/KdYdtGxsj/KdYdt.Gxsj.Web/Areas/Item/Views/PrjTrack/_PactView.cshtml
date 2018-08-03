@@ -1,0 +1,54 @@
+﻿@model PayPact
+<div class="panel panel-info">
+    <div class="panel-heading"><span class="panel-title">(合同管理)结束</span></div>
+    <div class="panel-body">
+
+        <div class="row">
+            <div class="row">
+                @Html.SjPickPrjBidFor(x => x.ProjectId, x => x.PrjCode, 1)
+                @Html.BbRadioListFor(x => x.IsOpen@*, 4, 0, false, new { ReadOnly = true }*@)
+                @Html.BbTextBoxFor(x => x.PrjName, 10)
+            </div>
+            <div style="display:none">
+                @Html.BbTextBoxFor(x => x.ProjectId)
+                @Html.BbTextBoxFor(x => x.PrjSignId)
+            </div>
+        </div>
+        <div class="row">
+            @Html.BbTextBoxFor(x => x.PactCode, 4)
+            @Html.BbTextBoxFor(x => x.PactName, 4)
+        </div>
+        <div class="row">
+            @Html.BbTextBoxFor(x => x.BidDate, 4)
+            @Html.BbTextBoxFor(x => x.BidMoney, null, "万元", 4)
+        </div>
+        <div class="row">
+            @Html.BbTextBoxFor(x => x.AwardUnit, 4)
+            @Html.BbTextBoxFor(x => x.PactMoney, null, "万元", 4)
+        </div>
+        <div class="row">
+            @Html.BbUserPickFor(x => x.PrjPersonId, x => x.PrjPersonName, 1)
+            @Html.BbTextBoxFor(x => x.PactRecordNo, 4)
+        </div>
+        <div class="row">
+            @Html.BbTextBoxFor(x => x.StartsDate, 4)
+            @Html.BbTextBoxFor(x => x.FinishDate, 4)
+        </div>
+        <div class="row">
+            @Html.BbTextBoxFor(x => x.PactSignDate, 4)
+            @Html.BbTextBoxFor(x => x.PrjDay, null, "天", 4)
+        </div>
+        <div class="row">
+            @Html.BbUserPickFor(x => x.PactPersonId, x => x.PactPersonName, 1)
+            @Html.BbTextBoxFor(x => x.PactDate, 4)
+        </div>
+        <div class="row">
+            @Html.BbTextBoxFor(x => x.Explain, 10)
+        </div>
+        <div class="row">
+            @Html.BfHiddenFor(x => x.PrjStatus)
+        </div>
+
+        @Html.RowModifier()
+    </div>
+</div>

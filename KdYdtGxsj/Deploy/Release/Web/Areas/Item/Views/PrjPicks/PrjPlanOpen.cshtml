@@ -1,0 +1,44 @@
+﻿@model KdDataResponse<PrjPlan>
+
+@{Layout = null;}
+@using (Html.BeginDlgSelect())
+{
+    @Html.BbDlgSearchHeader(true, "项目立项")
+    <div class="modal-body">
+        <div class="row">
+            @Html.BbSearchFor(x => x.PrjCode, "立项编号")
+            @Html.BbSearchFor(x => x.PrjName, "项目名称")
+        </div>
+        @using (Html.BeginDataTable())
+        {
+            @Html.BbTHeadRow(true, "立项编号", "项目名称", "招标方式", "工程规模/造价")
+
+            using (Html.BeginDataTableBody())
+            {
+                foreach (PrjPlan item in Model)
+                {
+                    using (Html.BeginDataSelectRow(item, new
+                    {
+                        data_ProjectId = item.Id,
+                        data_PrjCode = item.PrjCode,
+                        data_PrjName = item.PrjName,
+
+                        data_EngScale = item.EngScale,
+                        data_TenderMthod = item.TenderMthod,
+                        data_TenderUnit = item.TenderUnit,
+                        data_ManageMode = item.ManageMode,
+                        data_BuildUnit = item.BuildUnit
+                    }))
+                    {
+                        @*@Html.TdText(item.IsOpen)*@
+                        @Html.TdText(item.PrjCode)
+                        @Html.TdText(item.PrjName)
+                        @Html.TdText(item.TenderMthod)
+                        @Html.TdText(item.EngScale)
+                    }
+                }
+            }
+        }
+    </div>
+    @Html.BbDlgFooter(true)
+}

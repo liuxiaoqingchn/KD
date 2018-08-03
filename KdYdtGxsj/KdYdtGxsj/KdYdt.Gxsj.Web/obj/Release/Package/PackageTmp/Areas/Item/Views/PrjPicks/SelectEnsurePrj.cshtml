@@ -1,0 +1,63 @@
+﻿@model KdDataResponse<BidPrjConfirm>
+
+@{Layout = null;}
+@using (Html.BeginDlgSelect())
+{
+    @Html.BbDlgSearchHeader(true, "项目信息")
+    <div class="modal-body">
+        <div class="row">
+            @Html.BbSearchFor(x => x.PrjName, "项目名称")
+        </div>
+        @using (Html.BeginDataTable())
+        {
+            @Html.BbTHeadRow(true, "项目编号", "项目名称", "资质要求", "工程规模/造价", "采购单位", "开标日期")
+
+            using (Html.BeginDataTableBody())
+            {
+                foreach (BidPrjConfirm item in Model)
+                {
+                    using (Html.BeginDataSelectRow(item, new
+                    {
+                        data_EnsureId = item.Id,
+                        data_PrjCode = item.PrjCode,
+                        data_Num = item.Id,
+                        data_PrjName = item.PrjName,
+                        data_NoticTime = item.NoticTime,
+                        data_ConstructionUnit = item.ConstructionUnit,
+                        data_EngScale = item.EngScale,
+                        data_IsPreElectionBid = item.IsPreElectionBid,
+                        data_Bond = item.Bond,
+                        data_PreRegistrant = item.PreRegistrant,
+                        data_BiddingMthod = item.BiddingMthod,
+                        data_BuyUnit = item.BuyUnit,
+                        data_BidUnit = item.BidUnit,
+                        data_DeadlineAnswer = item.DeadlineAnswer,
+                        data_OpenBidTime = item.OpenBidTime,
+                        data_VisitDate = item.VisitDate,
+                        data_OpenBidDate = item.OpenBidDate,
+                        data_QuaRequirements = item.QuaRequirements,
+                        data_BuilderRequest = item.BuilderRequest,
+                        data_OtherTendConditions = item.OtherTendConditions,
+                        data_Mark = item.Mark,
+                        data_TenderAttribute=item.TenderAttribute,
+                        data_TenderType=item.TenderType,
+                        data_TenderUnit=item.TenderUnit,
+                        data_ScaleConstruction=item.ScaleConstruction,
+                        data_Builder=item.Builder,
+                        data_BidEvaMethod=item.BidEvaMethod,
+                        data_BidRemark=item.BidRemark,
+                    }))
+                    {
+                        @Html.TdText(item.PrjCode)
+                        @Html.TdText(item.PrjName)
+                        @Html.TdText(item.QuaRequirements)
+                        @Html.TdText(item.EngScale)
+                        @Html.TdText(item.BuyUnit)
+                        @Html.TdText(item.OpenBidDate)
+                    }
+                }
+            }
+        }
+    </div>
+    @Html.BbDlgFooter(true)
+}

@@ -1,0 +1,55 @@
+﻿
+@model   BidNotice
+
+
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnSubmit()
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">项目信息</span>
+        </div>
+        <div class="panel-body" id="content">
+            <div style="display:none;">
+                @Html.BbTextBoxFor(x => x.PrjCode, 4)
+            </div>
+            <div class="row">
+                @Html.BbDlgPickerFor(x => x.PrjName, "SelectEnsurePrj", x => x.PrjName, 1, "#content", 10, null, new { controller = "SelectProject" }, null, null, new { required = true })
+            </div>
+            <div class="row">
+                @Html.BbDictDropDownFor(x => x.ChangeContent, "ChangeContent")
+                @Html.BbTextBoxFor(x => x.Others, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.PreContent, 10)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.AfterContent, 10)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.ChangeReason, 10)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.ChangePerson, 4)
+                @Html.BbTextBoxFor(x => x.ChangeDate, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.BidNoticeMark, 10)
+            </div>
+            @Html.AnnexUnit()
+            @Html.RowModifier()
+        </div>
+    </div>
+}
+
+@Html.AnnexUpload()

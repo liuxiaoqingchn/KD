@@ -1,0 +1,139 @@
+﻿
+@model  PayBiding
+
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnSubmit()
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">标书费收取情况</span>
+        </div>
+        <div class="panel-body">
+            <div id="content">
+                <div class="row">
+                    @Html.SjPickPrjFor(x => x.ProjectId, x => x.PrjName, 1)
+                    @*@Html.BbDlgPickerFor(x => x.ProjectId, "PrjSignPick", x => x.PrjName, 1, "#content", 4, "项目名称", new { controller = "PrjPicks" }, null, null)*@
+                    @Html.BbTextBoxFor(x => x.PrjCode)
+                    @Html.HiddenFor(x => x.PrjCode)
+                </div>
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.TenderUnit, 4)
+                    @Html.BbTextBoxFor(x => x.EngScale, 4)
+                </div>
+            </div>
+            <div class="row">
+                @Html.BbDictCheckboxListFor(x => x.BidMode,4)
+                @Html.BbTextBoxFor(x => x.TotalMoney, null, "万元")
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.TargetCount, null, "家")
+                @Html.BbTextBoxFor(x => x.AccompanyCount, null, "家")
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.MainUnit, 4)
+                @Html.BbTextBoxFor(x => x.SecondaryUnit, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.MainUnit, 4)
+                @Html.BbTextBoxFor(x => x.SecondaryUnit, 4)
+            </div>
+            <div class="row">
+                @Html.BbUserPickFor(x => x.HandlingId, x => x.HandlingName, 1)
+                @Html.BbTextBoxFor(x => x.HandlingDate, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Explain)
+            </div>
+            @Html.AnnexUnit()
+            @Html.RowModifier()
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">主标-纸质标</span>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.MainPaperSign, null, "万元")
+                @Html.BbTextBoxFor(x => x.MainPaperBond, null, "万元")
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.MainPaperBiding, null, "万元")
+                @Html.BbTextBoxFor(x => x.MainPaperBidSeals, null, "万元")
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.MainPaperOther, null, "万元")
+                @Html.BbTextBoxFor(x => x.MainPaperTotal, null, "万元")
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">副标-纸质标</span>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.VicePaperSign, null, "万元")
+                @Html.BbTextBoxFor(x => x.VicePaperBond, null, "万元")
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.VicePaperBiding, null, "万元")
+                @Html.BbTextBoxFor(x => x.VicePaperBidSeals, null, "万元")
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.VicePaperOther, null, "万元")
+                @Html.BbTextBoxFor(x => x.VicePaperTotal, null, "万元")
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">主标-电子标</span>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.MainElectrSign, null, "万元")
+                @Html.BbTextBoxFor(x => x.MainElectrBond, null, "万元")
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.MainElectrBiding, null, "万元")
+                @Html.BbTextBoxFor(x => x.MainElectrBidSeals, null, "万元")
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.MainElectrOther, null, "万元")
+                @Html.BbTextBoxFor(x => x.MainElectrTotal, null, "万元")
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">副标-电子标</span>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.ViceElectrSign, null, "万元")
+                @Html.BbTextBoxFor(x => x.ViceElectrBond, null, "万元")
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.ViceElectrBiding, null, "万元")
+                @Html.BbTextBoxFor(x => x.ViceElectrBidSeals, null, "万元")
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.ViceElectrOther, null, "万元")
+                @Html.BbTextBoxFor(x => x.ViceElectrTotal, null, "万元")
+            </div>
+        </div>
+    </div>
+}
+
+@Html.AnnexUpload()

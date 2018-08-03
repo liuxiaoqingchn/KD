@@ -1,0 +1,18 @@
+﻿@model OaSumupReview
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        @using (Html.BbAjaxForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            @Html.BbDlgHeader("我的审批意见")
+            <div class="modal-body">
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.ReviewResult, 10, 0, new { rows = 12 })
+                </div>
+            </div>
+            @Html.BbDlgFooterSubmit()
+        }
+    </div>
+</div>

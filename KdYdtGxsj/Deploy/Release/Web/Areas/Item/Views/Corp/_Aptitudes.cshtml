@@ -1,0 +1,34 @@
+﻿@model  List<PrjAptitude>
+
+
+<div class="panel panel-info">
+    <div class="panel-heading" @Html.DataCollapse(true)>
+        <span class="panel-title">企业资质</span>
+    </div>
+    @using (Html.BeginDataTable())
+    {
+        int i = 1;
+        @Html.BbTHeadRow("", "资质证书号", "资质证书名", "资质类别", "资质等级", "签发机关", "发证日期", "有效日期")
+        if (!Model.IsNull())
+        {
+            using (Html.BeginDataTableBody())
+            {
+                foreach (PrjAptitude item in Model)
+                {
+                    using (Html.BeginDataTableRow(item, false))
+                    {
+                        @Html.TdNumCenter(i)
+                        @Html.TdNumSn(item.AptitudeID)
+                        @Html.TdNumSn(Html.BbLnkDlgAction("AptitudeView", item.AptitudeName, new { id = item.Id }, IconAwesome.NoneKD, "点击查看详情"))
+                        @Html.TdNumSn(item.AptitudeType)
+                        @Html.TdNumSn(item.AptitudeClass)
+                        @Html.TdNumSn(item.OfficeName)
+                        @Html.TdNumSn(item.GrantDate)
+                        @Html.TdNumSn(item.CredentialDate)
+                    }
+                    i++;
+                }
+            }
+        }
+    }
+</div>

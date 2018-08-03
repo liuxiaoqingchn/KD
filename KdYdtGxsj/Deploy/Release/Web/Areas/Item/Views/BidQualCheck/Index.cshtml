@@ -1,0 +1,49 @@
+﻿@model  KdDataResponse<BidQualCheck>
+@{
+    Layout = null;
+}
+@using (Html.BeginPageTitle())
+{
+    @Html.BbBtnLinkAdd()
+    @Html.BbBtnGridDelete(this.Model)
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch(this.Model, true))
+    {
+        @Html.BbSearchFor(x => x.PrjCode)
+        @Html.BbSearchFor(x => x.PrjName)
+        @Html.BbSearchFor(x => x.QualCheckType)
+        @Html.BbSearchFor(x => x.CheckPersonName)
+        @Html.BbSearchFor(x => x.CheckDate)
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(true))
+        {
+            @Html.BbTHeadFor(x => x.PrjCode)
+            @Html.BbTHeadFor(x => x.PrjName)
+            @Html.BbTHeadFor(x => x.QualCheckTypeName)
+            @Html.BbTHeadFor(x => x.QualDate)
+            @Html.BbTHeadFor(x => x.CheckPersonName)
+            @Html.BbTHeadFor(x => x.CheckDate)
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (BidQualCheck item in Model)
+            {
+                using (Html.BeginDataTableRow(item, true))
+                {
+                    <td>@item.PrjCode</td>
+                    <td>@Html.ActionLink(item.PrjName, "Edit", new { id = item.Id })</td>
+                    <td>@item.QualCheckTypeName</td>
+                    <td>@item.QualDate.ToDateString()</td>
+                    <td>@item.CheckPersonName</td>
+                    <td>@item.CheckDate.ToDateString()</td>
+                }
+            }
+        }
+    }
+}

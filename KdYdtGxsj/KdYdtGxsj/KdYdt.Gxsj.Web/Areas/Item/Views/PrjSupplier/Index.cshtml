@@ -1,0 +1,45 @@
+﻿@model  KdDataResponse<Supplier>
+
+@using (Html.BeginPageTitle())
+{
+    @Html.BbBtnLinkAdd()
+    @Html.BbBtnGridDelete(this.Model)
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch(this.Model, true))
+    {
+        @Html.BbSearchFor(x => x.SupName)
+        @Html.BbSearchFor(x => x.SupPerson)
+        @Html.BbSearchFor(x => x.SupPraiseType)
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(true))
+        {
+            @Html.BbTHeadFor(x => x.SupName)
+            @Html.BbTHeadFor(x => x.SupPerson)
+            @Html.BbTHeadFor(x => x.SupTel)
+            @Html.BbTHeadFor(x => x.SupProjectCount)
+            @Html.BbTHeadFor(x => x.SupProjectSum)
+            @Html.BbTHeadFor(x => x.SupPraiseType)
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (Supplier item in Model)
+            {
+                using (Html.BeginDataTableRow(item, true))
+                {
+                    <td>@Html.ActionLink(item.SupName, "Edit", new { id = item.Id })</td>
+                    <td>@item.SupPerson</td>
+                    <td>@item.SupTel</td>
+                    <td>@item.SupProjectCount</td>
+                    <td>@item.SupProjectSum</td>
+                    <td>@item.SupPraiseType</td>
+                }
+            }
+        }
+    }
+}

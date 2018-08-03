@@ -1,0 +1,46 @@
+﻿@model  KdDataResponse<BidWaste>
+
+@using (Html.BeginPageTitle())
+{
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch(this.Model, true))
+    {
+        @Html.BbSearchFor(x => x.PrjCode)
+        @Html.BbSearchFor(x => x.PrjName)
+        @Html.BbSearchFor(x => x.WithPersonName)
+        @Html.BbSearchFor(x => x.DeliUnit)
+        @Html.BbSearchFor(x => x.SignDate)
+        @Html.BbSearchFor(x => x.WasteData)
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(false))
+        {
+            @Html.BbTHeadFor(x => x.PrjCode)
+            @Html.BbTHeadFor(x => x.PrjName)
+            @Html.BbTHeadFor(x => x.WithPersonName)
+            @Html.BbTHeadFor(x => x.DeliUnit)
+            @Html.BbTHeadFor(x => x.SignDate)
+            @Html.BbTHeadFor(x => x.WasteData)
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (BidWaste item in Model)
+            {
+                using (Html.BeginDataTableRow(item, false))
+                {
+                    <td>@item.PrjCode</td>
+                    <td>@Html.ActionLink(item.PrjName, "Edit", new { id = item.Id })</td>
+                    <td>@item.WithPersonName</td>
+                    <td>@item.DeliUnit</td>
+                    <td>@item.SignDate.ToDateString()</td>
+                    <td>@item.WasteData.ToDateString()</td>
+                }
+            }
+        }
+    }
+}

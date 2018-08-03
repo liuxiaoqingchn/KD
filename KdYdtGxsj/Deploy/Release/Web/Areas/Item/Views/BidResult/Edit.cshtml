@@ -1,0 +1,95 @@
+﻿@model  BidResult
+
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnSubmit()
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">定标结果</span>
+        </div>
+        <div class="panel-body">
+
+            @Html.BfHiddenFor(x => x.PrjPersonId)
+            @Html.BfHiddenFor(x => x.PrjPersonName)
+            @Html.BfHiddenFor(x => x.DeliId)
+            @Html.BfHiddenFor(x => x.DeliUnit)
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.PrjCode, null, null, 4, 0, new { ReadOnly = true })
+                @Html.BbRadioListFor(x => x.IsOpen, 4, 0, false, new { ReadOnly = true })
+                @Html.BbTextBoxFor(x => x.PrjName, null, null, 4, 0, new { ReadOnly = true })
+                @Html.BbTextBoxFor(x => x.ResultDate, 4)
+            </div>
+            <div class="row">
+                @Html.BbUserPickFor(x => x.WithPersonId, x => x.WithPersonName)
+                @Html.BbRadioListFor(x => x.IsBid)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.NoticeCode, 4)
+                @Html.BbTextBoxFor(x => x.BidUnit, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.BidDate, 4)
+                @Html.BbTextBoxFor(x => x.BidMoney, null, "万元", 4)
+            </div>
+            <div class="row">
+                @Html.BbUserPickFor(x => x.ReceiveId, x => x.ReceiveName, 1)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.ResultExplain, 10)
+            </div>
+            <div class="row">
+                @Html.BfHiddenFor(x=>x.PrjStatus)
+            </div>
+            @Html.AnnexUnit()
+        </div>
+    </div>
+
+    if (!Model.IsOpen)
+    { 
+        <div class="panel panel-info">
+            <div class="panel-heading" @Html.DataCollapse(true)>
+                <span class="panel-title">报名信息</span>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.BondMoney, null, "万元", 2, 0, new { ReadOnly = true })
+                    @Html.BbTextFor(x => x.BondReturnDate, 2)
+                    @*@Html.BbCheckBoxFor(x => x.IsBond, 0, new { ReadOnly = true })*@
+                    @Html.BbRadioListFor(x => x.IsBond, 2, 0, false, new { ReadOnly = true })
+                </div>
+                <div class="row">
+                    @Html.BbTextFor(x => x.SignStartData)
+                    @Html.BbTextFor(x => x.SignEndData)
+                </div>
+                <div class="row">
+                    @Html.BbTextFor(x => x.SignAddress)
+                    @Html.BbRadioListFor(x => x.IsTender, 2, 0, false, new { ReadOnly = true })
+                </div>
+                <div class="row">
+                    @Html.BbTextFor(x => x.QualAuditMode)
+                    @Html.BbTextFor(x => x.ReviewDate)
+                </div>
+                <div class="row">
+                    @Html.BbTextFor(x => x.DeliUnit)
+                    @Html.BbTextFor(x => x.SignDate)
+                </div>
+                <div class="row">
+                    @Html.BbTextFor(x => x.BidExplain, 10)
+                </div>
+            </div>
+        </div>
+    }
+}
+
+@Html.AnnexUpload()

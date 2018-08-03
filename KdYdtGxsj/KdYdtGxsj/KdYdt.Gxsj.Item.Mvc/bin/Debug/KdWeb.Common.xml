@@ -1,0 +1,1766 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KdWeb.Common</name>
+    </assembly>
+    <members>
+        <member name="T:KdCore.Web.Controllers.KdDutysBaseController">
+            <summary>
+            用户职务配置管理 Controller 基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDutysBaseController.Index">
+            <summary>
+            获取显示用户部门列表
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDutysBaseController.Edit(System.String)">
+            <summary>
+            获取显示用户部门列表
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDutysBaseController.Edit(System.String,KdCore.Data.EditModels.KdTreeNodeEdit)">
+            <summary>
+            提交保存数据字典中的数据项编辑结果
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDutysBaseController.Delete(System.String[])">
+            <summary>
+            删除数据字典中的数据项
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDutysBaseController.Reinit(System.String)">
+            <summary>
+            重置数据字典缓存
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDutysBaseController.Backup(System.String)">
+            <summary>
+            备份当前系统中的数据字典配置
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDutysBaseController.Load(System.String)">
+            <summary>
+            重新初始化当前系统中的用户数据
+            </summary>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdDeptsBaseController">
+            <summary>
+            用户部门配置管理 Controller 基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDeptsBaseController.Index">
+            <summary>
+            获取显示用户部门列表
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDeptsBaseController.Edit(System.String)">
+            <summary>
+            获取显示用户部门列表
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDeptsBaseController.Edit(System.String,KdCore.Data.EditModels.KdTreeNodeEdit)">
+            <summary>
+            提交保存数据字典中的数据项编辑结果
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDeptsBaseController.Delete(System.String[])">
+            <summary>
+            删除数据字典中的数据项
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDeptsBaseController.Reinit(System.String)">
+            <summary>
+            重置数据字典缓存
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDeptsBaseController.Backup(System.String)">
+            <summary>
+            备份当前系统中的数据字典配置
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDeptsBaseController.Load(System.String)">
+            <summary>
+            重新初始化当前系统中的用户数据
+            </summary>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdHomeBaseController">
+            <summary>
+            系统首页
+            </summary>
+        </member>
+        <member name="P:KdCore.Web.Controllers.KdHomeBaseController.UrlIndexRedirect">
+            <summary>
+            获取进入首页后自动跳转地址 URL
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdHomeBaseController.GetUrlHomeIndex">
+            <summary>
+            获取当前系统的用户首页链接地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdHomeBaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            重写默认的页面标题
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdHomeBaseController.Index">
+            <summary>
+            系统首页显示或跳转
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdHomeBaseController.Login">
+            <summary>
+            登录页面显示或跳转
+            </summary>
+            <remarks>登录提交验证已放入基类处理</remarks>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdHomeBaseController.Login(KdCore.Data.ViewModels.KdUserLogin)">
+            <summary>
+            用户登录默认处理
+            </summary>
+            <param name="loginView"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdHomeBaseController.Logout">
+            <summary>
+            用户注销默认处理
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdHomeBaseController.KdVerExplain">
+            <summary>
+            系统升级版本更新说明填写页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdHomeBaseController.KdVerExplain(KdCore.Data.Apps.KdVersionExplain)">
+            <summary>
+            系统升级版本更新说明填写页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdHomeBaseController.CertSSL">
+            <summary>
+            获取当前系统是否使用HTTPS安全连接
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdHomeBaseController.Reinit">
+            <summary>
+            前后台分离时响应后台管理系统的同步系统配置文件并更新系统缓存
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdHomeBaseController.UserToken">
+            <summary>
+            获取用户令牌对应用户的数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdHomeBaseController.ImgVerify">
+            <summary>
+            获取登录图片验证码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdHomeBaseController.MyReload">
+            <summary>
+            刷新个人设置
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdHomeBaseController.ChgPwd">
+            <summary>
+            获取修改密码界面
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdHomeBaseController.ChgPwd(KdCore.Data.EditModels.KdChgPwd)">
+            <summary>
+            提交修改密码
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdHomeBaseController.UserNotify(System.String,System.String)">
+            <summary>
+            标记系统提醒消息已读，并根据参数确定是否返回下一条提醒
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdDictsBaseController">
+            <summary>
+            数据字典配置管理 Controller 基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDictsBaseController.BuildTabHeader(System.Collections.Generic.List{KdCore.Data.KdListItem},System.String)">
+            <summary>
+            生成分类标签：待发短信、已发短信
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDictsBaseController.Index(System.String)">
+            <summary>
+            获取显示数据字典列表
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDictsBaseController.Edit(System.String)">
+            <summary>
+            获取显示数据字典项列表，以及数据项编辑界面
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDictsBaseController.Edit(System.String,KdCore.Data.EditModels.KdDictItemEdit)">
+            <summary>
+            提交保存数据字典中的数据项编辑结果
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDictsBaseController.Delete(System.String[])">
+            <summary>
+            删除数据字典中的数据项
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDictsBaseController.Reinit">
+            <summary>
+            重置数据字典缓存
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDictsBaseController.FrontAsync">
+            <summary>
+            前后台分离时与前端系统同步当前设置
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDictsBaseController.Backup(System.String)">
+            <summary>
+            备份当前系统中的数据字典配置
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDictsBaseController.Load(System.String)">
+            <summary>
+            重新初始化当前系统中的用户数据
+            </summary>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdLogsBaseController">
+            <summary>
+            系统日志查阅管理 Controller 基类
+            </summary>
+        </member>
+        <member name="P:KdCore.Web.Controllers.KdLogsBaseController.LogsProvider">
+            <summary>
+            待办事项数据操作提供程序
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdLogsBaseController.GetPageSizeDefault(System.String)">
+            <summary>
+            获取分页默认每页数据条数
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdLogsBaseController.Index">
+            <summary>
+            获取列表显示的日志界面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdLogsBaseController.Detail(System.String,System.String)">
+            <summary>
+            查阅一条/一批详细的日志记录
+            </summary>
+            <param name="id"></param>
+            <param name="taskId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdLogsBaseController.Delete(System.String)">
+            <summary>
+            删除一条/一批详细的日志记录
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdLogsBaseController.Clear">
+            <summary>
+            清理过期的日志记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdMenusBaseController">
+            <summary>
+            菜单管理模块 Controller 基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdMenusBaseController.Index">
+            <summary>
+            获取菜单列表显示界面
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdMenusBaseController.Edit(System.String)">
+            <summary>
+            获取显示数据字典项列表，以及数据项边界界面
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdMenusBaseController.Edit(KdCore.Data.EditModels.KdMenuItemEdit)">
+            <summary>
+            提交保存修改的菜单项配置
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdMenusBaseController.Delete(System.String[],System.String)">
+            <summary>
+            删除选择的菜单项设置，删除菜单节点的子菜单项将上移到菜单根节点
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdMenusBaseController.Reinit">
+            <summary>
+            刷新当前系统菜单缓存，并在前后台分离时获取前端系统的模块设置
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdMenusBaseController.ReBuild">
+            <summary>
+            忽略现有菜单设置，强制重新自动生成初始化默认菜单
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdMenusBaseController.FrontAsync">
+            <summary>
+            前后台分离时与前端系统同步当前设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdProfileBaseController">
+            <summary>
+            个人配置管理 Controller 基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdProfileBaseController.OnGetMainPageItems(System.Collections.Generic.List{System.Web.Mvc.SelectListItem})">
+            <summary>
+            对登录后可使用的首页集合进行处理
+            </summary>
+            <param name="mainPageItems"></param>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdProfileBaseController.PrepareView(KdCore.Data.EditModels.KdUserProfileEdit)">
+            <summary>
+            页面显示数据准备
+            </summary>
+            <param name="profile"></param>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdProfileBaseController.Index">
+            <summary>
+            获取个人设置界面显示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdProfileBaseController.Index(KdCore.Data.EditModels.KdUserProfileEdit,System.Web.Mvc.FormCollection)">
+            <summary>
+            提交保存个人设置
+            </summary>
+            <param name="profile"></param>
+            <param name="form"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdRolesBaseController">
+            <summary>
+            系统角色配置管理 Controller 基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdRolesBaseController.Index">
+            <summary>
+            获取显示系统角色列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdRolesBaseController.Edit(System.String)">
+            <summary>
+            获取角色编辑界面
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdRolesBaseController.Edit(KdCore.Data.EditModels.KdRoleEdit,System.String)">
+            <summary>
+            提交保存角色编辑结果
+            </summary>
+            <param name="editModel"></param>
+            <param name="ownerCorpCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdRolesBaseController.Delete(System.String[])">
+            <summary>
+            删除角色
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdRolesBaseController.Config(System.String)">
+            <summary>
+            获取角色权限配置界面
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdRolesBaseController.Config(System.String,System.String[])">
+            <summary>
+            提交角色权限配置结构
+            </summary>
+            <param name="id"></param>
+            <param name="authSigns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdRolesBaseController.Users(System.String)">
+            <summary>
+            获取设置角色下用户的界面
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdRolesBaseController.Users(System.String,System.String[])">
+            <summary>
+            提交角色下用户的设置结果
+            </summary>
+            <param name="id"></param>
+            <param name="userIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdRolesBaseController.Backup">
+            <summary>
+            备份当前角色设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdRolesBaseController.Load">
+            <summary>
+            重新初始化角色设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdGlobalBaseController">
+            <summary>
+            系统整体配置管理 Controller 基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdGlobalBaseController.GetGlobalProfile">
+            <summary>
+            获取当前的系统配置，为显示界面做数据准备
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdGlobalBaseController.Index">
+            <summary>
+            获取系统配置查看及编辑界面
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdGlobalBaseController.Modify(KdCore.Data.KdAppProfile)">
+            <summary>
+            提交保存系统配置编辑结果
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdGlobalBaseController.Reinit">
+            <summary>
+            重新初始化缓存
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdGlobalBaseController.FrontAsync">
+            <summary>
+            前后台分离时与前端系统同步当前设置
+            </summary>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdUsersBaseController">
+            <summary>
+            用户管理模块 Controller 基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdUsersBaseController.Index">
+            <summary>
+            获取用户数据的列表显示
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdUsersBaseController.Edit(System.String)">
+            <summary>
+            获取用户的编辑界面
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdUsersBaseController.Edit(KdCore.Data.EditModels.KdUserEdit)">
+            <summary>
+            提交保存用户编辑结果
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdUsersBaseController.Delete(System.String[])">
+            <summary>
+            删除选择的用户数据
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdUsersBaseController.ChgPwd(System.String)">
+            <summary>
+            保存重新设置用户密码(此处为管理员操作，无需原始密码验证)
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdUsersBaseController.ChgPwd(KdCore.Data.EditModels.KdChgPwd)">
+            <summary>
+            保存重新设置用户密码(此处为管理员操作，无需原始密码验证)
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdUsersBaseController.UnlockPwd(System.String)">
+            <summary>
+            解除用户登录密码错误锁定
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdUsersBaseController.Refresh">
+            <summary>
+            整理更新用户数据，包括补齐拼音全称，拼音缩写，重新初始化排序等等
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdUsersBaseController.Spell">
+            <summary>
+            更新用户姓名的拼音及缩写
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdUsersBaseController.Backup">
+            <summary>
+            备份当前系统中的用户数据
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdUsersBaseController.Load">
+            <summary>
+            重新初始化当前系统中的用户数据
+            </summary>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdDisksBaseController">
+            <summary>
+            资料中心 Controller 基类
+            </summary>
+        </member>
+        <member name="P:KdCore.Web.Controllers.KdDisksBaseController.DiskType">
+            <summary>
+            获取当前资料中心的文件类型标识
+            </summary>
+        </member>
+        <member name="P:KdCore.Web.Controllers.KdDisksBaseController.DbAnnexsService">
+            <summary>
+            附件数据服务程序
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDisksBaseController.GetDiskFolder(System.String)">
+            <summary>
+            获取指定主键的文档视图，并初步验证权限
+            </summary>
+            <param name="id"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDisksBaseController.Index(System.String)">
+            <summary>
+            获取数据列表显示界面
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDisksBaseController.Edit(System.String)">
+            <summary>
+            显示文件或文件夹标题、是否公开等设置的编辑界面
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDisksBaseController.Edit(System.String,KdCore.Data.Annexs.KdUserFile)">
+            <summary>
+            提交保存文件标题说明等属性
+            </summary>
+            <param name="sid"></param>
+            <param name="editModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdDisksBaseController.Delete(System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdFilesBaseController">
+            <summary>
+            文件上传 Controller 基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdFilesBaseController.Upload(KdCore.Data.Annexs.KdAnnexContext)">
+            <summary>
+            接收上传文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdFilesBaseController.Download(System.String)">
+            <summary>
+            下载已上传文件
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdFilesBaseController.Thumbnail(System.String)">
+            <summary>
+            预览/查看已上传文件
+            </summary>
+            <param name="id"></param>
+            <returns></returns> 
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdFilesBaseController.Preview(System.String)">
+            <summary>
+            预览/查看已上传文件
+            </summary>
+            <param name="id"></param>
+            <returns></returns> 
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdFilesBaseController.Count(KdCore.Data.Annexs.KdAnnexRequest)">
+            <summary>
+            查询文件个数
+            </summary>
+            <param name="fileRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdFilesBaseController.Delete(System.String)">
+            <summary>
+            删除已上传文件
+            TODO:任何人都可以删除文件，需要解决处理安全问题
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdFilesBaseController.Watermark(System.String)">
+            <summary> 
+            给已上传文件添加水印
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdFilesBaseController.AnnexUpload(KdCore.Data.Annexs.IKdEntityAnnex,System.String,System.Boolean)">
+            <summary>
+            获取已上传文件集合
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdFilesBaseController.AnnexUpload(KdCore.Data.Annexs.IKdEntityAnnex,System.String,System.String,System.String)">
+            <summary>
+            获取已上传文件集合
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdFilesBaseController.UploadAnnex(KdCore.Data.Annexs.IKdEntityAnnex,System.String)">
+            <summary>
+            接收上传文件
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdFilesBaseController.UploadAnnex(KdCore.Data.Annexs.KdAnnexContext)">
+            <summary>
+            接收上传文件
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdFilesBaseController.CreateFileDbEntity">
+            <summary>
+            创建上传文件记录实体数据的一个实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdFilesBaseController.UploadFile(KdCore.Data.Annexs.KdAnnexContext,System.Collections.Generic.List{KdCore.Data.KdUploadFile})">
+            <summary>
+            保存上传文件
+            </summary>
+            <param name="context"></param>
+            <param name="listStatus"></param>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdSmsBaseController">
+            <summary>
+            短信管理 Controller 基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdSmsBaseController.BuildTabHeader(System.Boolean)">
+            <summary>
+            生成分类标签：待发短信、已发短信
+            </summary>
+            <param name="isSend"></param>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdSmsBaseController.GetPageSizeDefault(System.String)">
+            <summary>
+            获取分页默认每页数据条数
+            </summary>
+            <param name="actionCode">当前请求的 Action</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdSmsBaseController.Index(System.String)">
+            <summary>
+            获取列表数据显示
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdSmsBaseController.Test">
+            <summary>
+            短信接口测试，并在日志文件中记录测试结果
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdSmsBaseController.Edit">
+            <summary>
+            获取短信发送界面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdSmsBaseController.Edit(KdCore.Data.Sms.KdSmsSend)">
+            <summary>
+            提交保存发送的短信
+            </summary>
+            <param name="sms"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdSmsBaseController.Send">
+            <summary>
+            立刻检测未发送的短信进行提交发送
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdSmsBaseController.ReSend(System.String[])">
+            <summary>
+            重新发送选择的短信
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdSmsBaseController.Delete(System.String[])">
+            <summary>
+            删除待发短信
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdSmsBaseController.DeleteEnforce(System.String[])">
+            <summary>
+            删除已发短信
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdSmsBaseController.KdPickUsers(KdCore.Data.Users.KdUserLimit)">
+            <summary>
+            用户/部门等选择范围
+            </summary>
+            <param name="limit"></param> 
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdVersionsExplainController">
+            <summary>
+            程序更新版本历史
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdVersionsExplainController.GetEmbedViewFolderName">
+            <summary>
+            获取嵌入的视图文件所在的文件夹名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdVersionsExplainController.Index(System.String)">
+            <summary>
+            程序更新版本历史
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdVersionsExplainController.Detail(System.String)">
+            <summary>
+            一次程序版本更新的详细记录
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdVersionsExplainController.History(System.String)">
+            <summary>
+            针对某一特定程序集的更新历史记录
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdVersionsExplainController.Explain(System.String)">
+            <summary>
+            指定更新批次标识的更新说明
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdUserGroupController">
+            <summary>
+            用户分组个人设置
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdUserGroupController.GetUserGroupOwnerCode">
+            <summary>
+            获取当前模块用户分组的识别标识
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdUserGroupController.Index(System.Nullable{System.Int32})">
+            <summary>
+            获取用户分组列表
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdUserGroupController.Edit(System.String)">
+            <summary>
+            获取用户分组边接界面
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdUserGroupController.Edit(KdCore.Data.EditModels.KdUserGroupEdit)">
+            <summary>
+            保存编辑的用户分组结果
+            </summary>
+            <param name="edit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdUserGroupController.Delete(System.String)">
+            <summary>
+            删除选择的用户分组
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Web.Mvc.KdBaseController">
+            <summary>
+            项目常用控制器基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdBaseController.ExportWord(System.String,System.String,System.String)">
+            <summary>
+            导出Word
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdBaseController.ExportExcel(System.String,System.String,System.String)">
+            <summary>
+            导出Excel
+            </summary>
+        </member>
+        <member name="T:KdCore.Web.Mvc.KdBaseController`1">
+            <summary>
+            MVC Controller 扩展封装的数据库操作核心基类
+            </summary>
+        </member>
+        <member name="F:KdCore.Web.Mvc.KdBaseController`1._dbService">
+            <summary>
+            当前操作的主服务程序
+            </summary>
+        </member>
+        <member name="P:KdCore.Web.Mvc.KdBaseController`1.DbService">
+            <summary>
+            获取或设置当前操作的主服务程序
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdBaseController`1.ExportWord(System.String,System.String,System.String)">
+            <summary>
+            导出Word
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdBaseController`1.ExportExcel(System.String,System.String,System.String)">
+            <summary>
+            导出Excel
+            </summary>
+        </member>
+        <member name="T:KdCore.Web.Mvc.KdCoreController">
+            <summary>
+            MVC Controller 扩展封装的数据库操作核心基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController.OnInitialized(System.Web.Routing.RequestContext)">
+            <summary>
+            初始化请求时调用的方法，用来初始化一些项目配置等
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController.KdPickUsers(KdCore.Data.Users.KdUserLimit,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            用户选择 Div 对话框
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController.GetPickItemsViewNameForDialog(System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            获取树形结构数据选择 Div 对话框当前使用的视图名称
+            </summary>
+            <param name="itemsTypeCode"></param>
+            <param name="itemsField"></param>
+            <param name="queryId"></param>
+            <param name="pickProperty"></param>
+            <param name="treeMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController.GetPickItemsViewNameForDataItem(System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            获取树形结构数据选择 Div 对话框当前使用的视图名称
+            </summary>
+            <param name="itemsTypeCode"></param>
+            <param name="itemsField"></param>
+            <param name="queryId"></param>
+            <param name="pickProperty"></param>
+            <param name="treeMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController.KdPickItems(System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            数据项选择 Div 对话框
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController.GetPickNodesViewNameForDialog(System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            获取树形结构数据选择 Div 对话框当前使用的视图名称
+            </summary>
+            <param name="itemsTypeCode"></param>
+            <param name="itemsField"></param>
+            <param name="queryId"></param>
+            <param name="pickProperty"></param>
+            <param name="treeMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController.GetPickNodesViewNameForDataItem(System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            获取树形结构数据选择 Div 对话框当前使用的视图名称
+            </summary>
+            <param name="itemsTypeCode"></param>
+            <param name="itemsField"></param>
+            <param name="queryId"></param>
+            <param name="pickProperty"></param>
+            <param name="treeMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController.KdPickNodes(System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            树形结构数据选择 Div 对话框
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController.UserConfirm(System.String)">
+            <summary>
+            记录用户当前的操作确认
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController.FilesCount(KdCore.Data.Annexs.KdAnnexRequest)">
+            <summary>
+            查询文件个数
+            </summary>
+            <param name="fileRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController.HttpKeepAlive">
+            <summary>
+            获取当前系统是否使用保持连接，确保当前登录用户不至于长时间未操作自动退出登录
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdCoreController.HtmlExportToFile(System.String,System.String,System.String,System.String)">
+            <summary>
+            导出 HTML
+            </summary>
+            <param name="htmlSource"></param>
+            <param name="extName"></param>
+            <param name="fileName"></param>
+            <param name="fileTitle"></param>
+        </member>
+        <member name="T:KdCore.Web.Mvc.KdEntityController`3">
+            <summary>
+            项目常用控制器基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdEntityController`3.GetEntityService``1">
+            <summary>
+            重写基类方法，强制当前数据管理程序类型为指定类型
+            </summary>
+            <typeparam name="TEntityBase"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdEntityController`3.OnGetDataQuery``1(System.Linq.IQueryable{``0})">
+            <summary>
+            获取当前页面常用的数据查询筛选时，对数据筛选的进一步处理
+            </summary>
+            <typeparam name="TEntityBase"></typeparam>
+            <param name="query">待处理的数据查询筛选</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdEntityController`3.OnGetDataQuery(System.Linq.IQueryable{`1})">
+            <summary>
+            获取当前页面常用的数据查询筛选时，对数据筛选的进一步处理
+            </summary>
+            <param name="query">待处理的数据查询筛选</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdEntityController`3.OnDataEntityView``1(``0)">
+            <summary>
+            用于详细数据显示的准备处理；不区分编辑新增还是只读等模式
+            </summary>
+            <typeparam name="TEntityBase"></typeparam>
+            <param name="baseEntity"></param>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdEntityController`3.OnDataEntityView(`1)">
+            <summary>
+            用于详细数据显示的准备处理；不区分编辑新增还是只读等模式
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdEntityController`3.Index(System.String)">
+            <summary>
+            获取数据列表界面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdEntityController`3.Edit(System.String)">
+            <summary>
+            获取数据编辑界面
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdEntityController`3.Edit(`2)">
+            <summary>
+            提交保存数据编辑结果
+            </summary>
+            <param name="editModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdEntityController`3.Delete(System.String[])">
+            <summary>
+            提交删除数据
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Mvc.KdEntityController`3.Follow(System.String)">
+            <summary>
+            提交用户收藏状态更改
+            </summary>
+            <param name="id"></param> 
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Web.Errors.Controllers.KdErrorsController">
+            <summary>
+            系统自定义错误跳转 Controller 基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Errors.Controllers.KdErrorsController.Index(System.String,System.String)">
+            <summary>
+            错误处理后的跳转页面
+            </summary>
+        </member>
+        <member name="T:KdCore.Data.EditModels.KdUserProfileEdit">
+            <summary>
+            个人设置
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserProfileEdit.RealName">
+            <summary>
+            用户真实姓名
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserProfileEdit.UserMobile">
+            <summary>
+            用户手机号码
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserProfileEdit.PageSize">
+            <summary>
+            分页每页显示条数
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserProfileEdit.CssTheme">
+            <summary>
+            页面主题样式Css文件名
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserProfileEdit.CssFontSize">
+            <summary>
+            页面字体大小样式Css文件名
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserProfileEdit.DataLayout">
+            <summary>
+            数据显示布局方式
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserProfileEdit.Url_UserHomePage">
+            <summary>
+            用户设定的系统登录后显示的首页地址
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EditModels.KdUserProfileEdit.Theme_TodoStateLamp">
+            <summary>
+            获取或设置事项待办状态亮灯显示方案
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EditModels.KdUserProfileEdit.LoadProfile(KdCore.Data.Users.IKdUser)">
+            <summary>
+            加载用户的个人设置
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EditModels.KdUserProfileEdit.SaveProfile(KdCore.Data.Users.IKdUser,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            设置用户的个人设置
+            </summary>
+            <param name="user"></param>
+            <param name="form"></param>
+        </member>
+        <member name="T:KdWeb.Common.KdHtmlCommon">
+            <summary>
+            项目中常用的 HTML 处理方法
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.PartialLogin(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出用户登录 HTML
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameLogin"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.Partial_LayoutCSS(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出布局页上要额外加载的 CSS
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameLayoutCSS"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.Partial_LayoutJS(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出布局页上要额外加载的 JS
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameLayoutJS"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.Partial_ReportCSS(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出报表布局页上要额外加载的 CSS
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameReportCSS"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.Partial_ReportJS(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出报表布局页上要额外加载的 JS
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameReportJS"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.Partial_ReportWatermark(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出报表布局页上要的 水印设置
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameReportWatermark"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.Partial_ReportToolbar(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出报表布局页上要的 按钮工具栏
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameReportToolbar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.Partial_ReportBtnsLeft(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出报表布局页上要的 按钮工具栏中的自定义按钮
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameReportPrjBtns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.Partial_ReportBtnsRight(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出报表布局页上要的 按钮工具栏中的自定义按钮
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameReportPrjBtns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.Partial_ReportBtnsPrjLeft(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出报表布局页上要的 按钮工具栏中的自定义按钮
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameReportPrjBtns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.Partial_ReportBtnsPrjRight(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出报表布局页上要的 按钮工具栏中的自定义按钮
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameReportPrjBtns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.Partial_ReportBtnsCurrPage(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出按钮工具栏中的 HTML 保存为 Excel 的自定义按钮
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameReportBtnsCurrPage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.Partial_BtnHtmlSaveExcel(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出按钮工具栏中的 HTML 保存为 Excel 的自定义按钮
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameBtnHtmlSaveExcel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.Partial_BtnHtmlSaveWord(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出按钮工具栏中的 HTML 保存为 Word 的自定义按钮
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameBtnHtmlSaveWord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.PartialLeftMenus(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出左侧菜单 HTML
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameLeftMenus"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.PartialHeader(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出页眉 HTML
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameHeader"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.PartialFooter(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出页脚 HTML
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameFooter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.PartialTopBarUser(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出顶部用户工具栏 HTML
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameBarUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.PartialTopBarUserTool(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出顶部工具栏 HTML
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameBarUserTool"></param> 
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdHtmlCommon.ViewName_BarUserExts">
+            <summary>
+            获取或设置用户扩展工具栏分部视图名称
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdHtmlCommon.PartialBarUserExts(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出顶部用户扩展工具栏 HTML
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameBarUserExts"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdWeb.Common.KdViewsCommon">
+            <summary>
+            项目常用资源文件管理；
+            泛型方式（不能使用静态类型）注册程序集使用的标识类
+            </summary>
+        </member>
+        <member name="T:KdWeb.Common.KdWebResourceHelper">
+            <summary>
+            Asp.Net MVC 辅助处理工具
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_JQuery(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean},System.Int32,System.String,System.String,System.String)">
+            <summary>
+            根据浏览器版本加载不同jQuery版本文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <param name="ieVersion"></param>
+            <param name="newVersion"></param>
+            <param name="oldVersion"></param>
+            <param name="folderPath"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Html5_Modernizr">
+            <summary>
+            提供 HTML5 检测 JavaScript 脚本
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Html5_Modernizr(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载提供 HTML5 支持 JavaScript 脚本
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Html5_BoostIE">
+            <summary>
+            提供 HTML5 支持 JavaScript 脚本
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Html5_BoostIE(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载提供 HTML5 支持 JavaScript 脚本
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Html5_BoostIE_Auto(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean},System.Boolean)">
+            <summary>
+            自动判断浏览器类型和版本，加载提供 HTML5 支持 JavaScript 脚本
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <param name="addModernizr"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Login">
+            <summary>
+            登录页面 JavaScript 文件，包括 kdapp.login-x.x.x.js
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Login(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载登录页面 JavaScript 文件，包括 kdapp.login-x.x.x.js
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_ChgPwd">
+            <summary>
+            登录页面 JavaScript 文件，包括 kdapp.chgPwd-x.x.x.js
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_ChgPwd(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载登录页面 JavaScript 文件，包括 kdapp.chgPwd-x.x.x.js
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.CssPath_Plugin_JQueryUI">
+            <summary>
+             jQueryUI 插件 CSS 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.CSS_Plugin_JQueryUI(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载 jQueryUI 插件 CSS 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Plugin_JQueryUI">
+            <summary>
+             jQueryUI 插件 JavaScript 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Plugin_JQuery_UI(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载 jQueryUI 插件 JavaScript 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Plugin_JQuery_Validate">
+            <summary>
+             jQuery 验证插件 JavaScript 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Plugin_JQuery_Validate(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载 jQuery 验证插件 JavaScript 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Plugin_JQuery_Ext">
+            <summary>
+             jQuery 扩展插件 JavaScript 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Plugin_JQuery_Ext(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载 jQuery 扩展插件 JavaScript 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.CssPath_Plugin_Bootstrap">
+            <summary>
+             Bootstrap 插件 CSS 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.CSS_Plugin_Bootstrap(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载 Bootstrap 插件 CSS 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Plugin_Bootstrap">
+            <summary>
+             Bootstrap 插件 JavaScript 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Plugin_Bootstrap(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载 Bootstrap 插件 JavaScript 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.CssPath_Plugin_BB">
+            <summary>
+            BlueBird 插件 CSS 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.CSS_Plugin_BB(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载BlueBird 插件 CSS 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Plugin_BB">
+            <summary>
+            BlueBird 插件 JavaScript 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Plugin_BB(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载BlueBird 插件 JavaScript 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.CssPath_Plugin_FrameUI">
+            <summary>
+            项目 UI 框架插件 CSS 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.CSS_Plugin_FrameUI(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载项目 UI 框架插件 CSS 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Plugin_FrameUI">
+            <summary>
+            项目办事流程 JavaScript 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Plugin_FrameUI(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载项目 UI 框架插件 JavaScript 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.CssPath_Plugin_MobileUI">
+            <summary>
+            项目 UI 框架插件 CSS 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.CSS_Plugin_MobileUI(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载项目 UI 框架插件 CSS 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Plugin_MobileUI">
+            <summary>
+            项目办事流程 JavaScript 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Plugin_MobileUI(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载项目 UI 框架插件 JavaScript 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.CssPath_Plugin_KdBase">
+            <summary>
+            项目通用插件 CSS 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.CSS_Plugin_KdBase(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载项目通用插件 CSS 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.CssPath_Plugin_KdDevp">
+            <summary>
+            项目通用插件 CSS 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.CSS_Plugin_KdDevp(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载项目通用插件 CSS 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.CssPath_Plugin_KdApp">
+            <summary>
+            项目通用插件 CSS 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.CSS_Plugin_KdApp(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载项目通用插件 CSS 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Plugin_KdApp">
+            <summary>
+            项目通用插件 JavaScript 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Plugin_KdApp(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载项目通用插件 JavaScript 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.CssPath_Plugin_Upload">
+            <summary>
+            项目上传插件的 JavaScript 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.CSS_Plugin_Upload(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载项目上传插件的 JavaScript 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Plugin_Upload">
+            <summary>
+            项目上传插件的 JavaScript 文件
+            </summary>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Plugin_Upload_Minify">
+            <summary>
+            项目上传插件的 JavaScript 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Plugin_Upload(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载项目上传插件的 JavaScript 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Plugin_HasFileUpload(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            根据当前请求是否包含文件上传，自动判断是否加载项目上传插件的 JavaScript 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.CssPath_Plugin_UEditor">
+            <summary>
+            项目 UEditor 插件 CSS 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.CSS_Plugin_UEditor(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载项目 UEditor 插件 CSS 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Plugin_UEditor">
+            <summary>
+            项目 UEditor 插件 JavaScript 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Plugin_UEditor(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载项目 UEditor 插件 JavaScript 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.CssPath_Plugin_ZTree">
+            <summary>
+             ZTree 插件 CSS 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.CSS_Plugin_ZTree(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载 ZTree 插件 CSS 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Plugin_ZTree">
+            <summary>
+             ZTree 插件 JavaScript 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Plugin_ZTree(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载 ZTree 插件 JavaScript 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Plugin_KD_Tables">
+            <summary>
+            html table 处理 JavaScript 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Plugin_KD_Tables(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载 html table 处理 JavaScript 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Plugin_KD_CommonTreeEdit">
+            <summary>
+            html 通用树结构编辑 JavaScript 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Plugin_KD_CommonTreeEdit(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载 html 通用树结构编辑 JavaScript 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.CssPath_Plugin_Report">
+            <summary>
+            项目统计报表插件 CSS 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.CSS_Plugin_Report(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载项目统计报表插件 CSS 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Plugin_Report">
+            <summary>
+            项目统计报表 JavaScript 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Plugin_Report(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载项目统计报表插件 JavaScript 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.CssPath_Plugin_FlowSigns">
+            <summary>
+            项目签批流程插件 CSS 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.CSS_Plugin_FlowSigns(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载项目签批流程插件 CSS 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Plugin_FlowSigns">
+            <summary>
+            项目签批流程插件 JavaScript 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Plugin_FlowSigns(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载项目签批流程插件 JavaScript 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.CssPath_Plugin_FlowBizs">
+            <summary>
+            项目业务办理流程插件 CSS 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.CSS_Plugin_FlowBizs(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载项目业务办理流程插件 CSS 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdWeb.Common.KdWebResourceHelper.JsPath_Plugin_FlowBizs">
+            <summary>
+            项目办事流程 JavaScript 文件
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_Plugin_FlowBizs(System.Web.Mvc.UrlHelper,System.Nullable{System.Boolean})">
+            <summary>
+            加载项目业务办理流程插件 JavaScript 文件
+            </summary>
+            <param name="urlHelper"></param>
+            <param name="useMinifyFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdWebResourceHelper.JS_KdConst(System.Web.Mvc.UrlHelper)">
+            <summary>
+            加载项目通用 JavaScript 常量
+            </summary>
+            <param name="urlHelper"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,3795 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KdCore.Flow.Signs</name>
+    </assembly>
+    <members>
+        <member name="T:KdCore.Flow.Signs.BbFlowPhase">
+            <summary>
+            被审批对象对于当前用户的审批状态 
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbFlowPhase.None">
+            <summary>
+            不存在审批，未发起审批
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbFlowPhase.IsRunning">
+            <summary>
+            正在审批办理中
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbFlowPhase.IsOver">
+            <summary>
+            已办理完成
+            </summary>
+        </member>
+        <member name="T:KdCore.Flow.Signs.IKdEntityFlowSign">
+            <summary>
+            流程审批对象的标识接口
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.IKdEntityFlowSign.FlowPhase">
+            <summary>
+            获取或设置当前审批的流程审批整体进度状态
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.IKdEntityFlowSign.SignPhase">
+            <summary>
+            获取或设置对当前对象进行审批时的标题名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.IKdEntityFlowSign.TimeLamp">
+            <summary>
+            获取或设置进度情况指示灯标识状态
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.IKdEntityFlowSign.FlowStatusDesc">
+            <summary>
+            获取或设置对当前对象进行审批时的标题名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.IKdEntityFlowSign.FlowWork">
+            <summary>
+            当前对象的审批状态记录
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.IKdEntityFlowSign.FlowHistory">
+            <summary>
+            当前对象的所有审批步骤记录，含已删除已撤销等等
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.IKdEntityFlowSign.FlowContext">
+            <summary>
+            审批对象的流程审批上下文
+            </summary>
+        </member>
+        <member name="T:KdCore.Flow.Signs.BbFlowSignGuide">
+            <summary>
+            审批流程定义
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGuide.FlowName">
+            <summary>
+            获取或设置流程名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGuide.FlowCode">
+            <summary>
+            获取或设置流程识别标识
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGuide.UnitCodes">
+            <summary>
+            获取或设置流程使用范围（对应的功能单元）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGuide.SmsNotify">
+            <summary>
+            获取或设置是否发送短信提醒
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGuide.StartCheckFiles">
+            <summary>
+            获取或设置发起审批时检查是否已上传附件
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGuide.SubmitConfirm">
+            <summary>
+            获取或设置提交前弹出对话框确认是否提交
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGuide.OverredCancel">
+            <summary>
+            获取或设置是否允许流程结束后撤销
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGuide.NotifyAllHandlers">
+            <summary>
+            获取或设置流程结束后通知所有参与审批的主办人
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGuide.SmsName">
+            <summary>
+            短信通知名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGuide.AllSteps">
+            <summary>
+            获取或设置流程下定义的步骤
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.BbFlowSignGuide.ToListItem(System.Boolean)">
+            <summary>
+            转换为ListItem，用于下拉列表
+            </summary>
+            <param name="moreDataMode">是否使用包含较多数据的模式进行转换</param>
+            <returns></returns>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGuide.StartStep">
+            <summary>
+            获取流程开始步骤
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGuide.EndStep">
+            <summary>
+            获取流程结束步骤
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.BbFlowSignGuide.GetStepById(System.String)">
+            <summary>
+            获取当前流程的指定步骤
+            </summary>
+            <param name="flowStepId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.BbFlowSignGuide.AddStep(KdCore.Flow.Signs.BbFlowSignStep)">
+            <summary>
+            添加流程步骤，但不执行保存到数据库的操作
+            </summary>
+            <param name="step"></param>
+        </member>
+        <member name="M:KdCore.Flow.Signs.BbFlowSignGuide.GetDataTitle">
+            <summary>
+            获取当前数据的标题名称，用于生成待办事项等关联数据时使用，或数据删除时提示显示等
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Flow.Signs.KdBaseSignContext`1">
+            <summary>
+            行政签批流程的办理操作上下文封装，带有泛型的办理数据类型
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdBaseSignContext`1.Entity">
+            <summary>
+            获取当前审批对象的泛型类型对象
+            </summary>
+        </member>
+        <member name="T:KdCore.Flow.Signs.KdBaseSignContext`2">
+            <summary>
+            行政签批流程的办理操作上下文封装，带有泛型的办理数据类型及其数据处理程序
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <typeparam name="TDbService"></typeparam>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdBaseSignContext`2.DbService">
+            <summary>
+            获取当前审批对象使用的 DbService 数据处理程序(泛型)
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdBaseSignContext`2.SourceService">
+            <summary>
+            当前办理对象所使用的 DbService 数据处理程序
+            </summary>
+        </member>
+        <member name="T:KdCore.Flow.Signs.KdSignContext">
+            <summary>
+            传阅审批步骤的生成处理
+            </summary>
+            <summary>
+            主办审批步骤的生成处理
+            </summary>
+            <summary>
+            审批上下文环境：初始化
+            </summary>
+            <summary>
+            流程审批处理器
+             1、第一次界面加载时，需要显示：
+                历史审批步骤记录(是否可以撤销)，
+                当前审批流程(是否可以更改流程以及可更改范围)，
+                签收状态
+                当前审批步骤，
+                当前办理期限，
+                下一步骤（默认及可选范围），
+                主办人（默认或可选范围），
+                传阅人（默认或可选范围），
+                下步默认办理期限，
+                显示提交按钮的类型(提交、返回、中止)
+             2、用户更改选择时，提交数据：选择的新流程、新步骤，返回结果应与初次加载除历史审批步骤记录外一致
+             3、提交审批结果，返回审批提交是否成功的结果信息 
+             4、短信相关等业务处理所需数据及委托方法
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.FlowOverdue">
+            <summary>
+            检查流程的审批状态，并对过期未办理的自动设置为审批通过，可继续进行下一步处理
+            </summary>
+            <returns>审批处理是否成功</returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.FlowOverdueInTrans">
+            <summary>
+            内部检查流程的审批状态，并对过期未办理的自动设置为审批通过
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnSourceOverdue">
+            <summary>
+            超过审批办理期限时的自动处理
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnAnalyseNextStepForOverdue">
+            <summary>
+            在审批超过办理期限时解析自动办结所需的下一流程步骤
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnGetSourceStatus(KdCore.Flow.Signs.IKdEntityFlowSign)">
+            <summary>
+            查询审批状态记录
+            </summary>
+            <param name="source">被审批的数据对象</param> 
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnGetSourceSignItems(KdCore.Flow.Signs.IKdEntityFlowSign,KdCore.Data.Tasks.IKdTaskOption)">
+            <summary>
+            查询审批步骤记录
+            </summary>
+            <param name="source">被审批的数据对象</param> 
+            <param name="taskOption">待办事项的选项设置</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnGetSourceApproval(KdCore.Flow.Signs.IKdEntityFlowSign,KdCore.Data.Tasks.IKdTaskOption)">
+            <summary>
+            查询审批状态记录和审批步骤记录
+            </summary>
+            <param name="source">被审批的数据对象</param> 
+            <param name="taskOption">待办事项的选项设置</param>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.LoadAllExistsSms">
+            <summary>
+            加载所有数据库中与当前流程相关的待办事项和短信数据
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnGetDisplaySignItems">
+            <summary>
+            获取在页面上显示的审批记录及顺序
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnArrangeExistSignItems(System.Collections.Generic.List{KdCore.Flow.Signs.KdFlowSignItem})">
+            <summary>
+            对现有审批记录进行归类
+            </summary>
+            <param name="allExistSignItems">当前审批对象的全部历史审批记录</param>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.EnsureCurrSignItems(System.Boolean)">
+            <summary>
+            确认当前审批步骤或传阅步骤
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.EnsureCurrSignItems(System.Boolean,System.String)">
+            <summary>
+            确认当前审批步骤或传阅步骤
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.GetSignItemFirst(System.Collections.Generic.IEnumerable{KdCore.Flow.Signs.KdFlowSignItem},System.String)">
+            <summary>
+            获取审批步骤集合中指定用户需要最优先办理的审批步骤
+            </summary>
+            <param name="signItems"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.JudgeFlowPhase(KdCore.Flow.Signs.KdFlowSignItem,System.Boolean)">
+            <summary>
+            对当前流程的状态判定
+            </summary>
+            <returns>是否需要重新加载审批数据</returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.JudgeWorkMode(System.Boolean)">
+            <summary>
+            对当前审批模式的判定
+            </summary>
+            <returns>是否需要重新加载审批数据</returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.FlowView">
+            <summary>
+            初始化用户的审批环境数据
+            </summary>
+            <returns>审批处理是否成功</returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.FlowViewInTrans(System.Collections.Generic.List{KdCore.Flow.Signs.KdFlowSignItem})">
+            <summary>
+            查看审批事务处理内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.FlowCancel(System.Boolean,System.Boolean)">
+            <summary>
+            撤销审批，并处理相关数据
+            </summary>
+            <param name="handleSelf">是否只能撤销本人提交的审批</param>
+            <param name="checkCanCancel">是否检查是否允许撤销</param> 
+            <returns>审批处理是否成功</returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.InitCancelable(System.Boolean)">
+            <summary>
+            初始化已审批步骤是否允许撤销
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.InitCancelContent(System.Boolean,System.Boolean)">
+            <summary>
+            初始化撤销操作的相关数据
+            </summary>
+            <param name="handleSelf"></param>
+            <param name="checkCanCancel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnCancelCheck(KdCore.Flow.Signs.KdFlowSignItem,System.Boolean,System.Boolean)">
+            <summary>
+            检查审批步骤能否撤销
+            </summary>
+            <param name="signItem">要撤销的审批步骤</param>
+            <param name="handleSelf">是否只能撤销本人办理的审批记录</param>
+            <param name="checkCanCancel">是否检查 CanCancel 属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.FlowCancelInTrans">
+            <summary>
+            内部审批数据处理
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnSourceCancel">
+            <summary>
+            撤销审批步骤 
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnCopyNewItem(KdCore.Flow.Signs.KdFlowSignItem)">
+            <summary>
+            复制一条审批记录；
+            框架项目实际运行中多次发现直接使用实体映射赋值会发生错误
+            </summary>
+            <param name="signItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnGetUsersForReader(KdCore.Flow.Signs.BbFlowSignStep,KdCore.Flow.Signs.KdFlowSignItem)">
+            <summary>
+            检查并添加流程设置的传阅人，如上步主办、流程发起人等
+            </summary>
+            <param name="currSignStep">传阅关联的主办审批步骤的流程步骤</param>
+            <param name="currSignItem">传阅关联的主办审批步骤</param> 
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnGetDefaultUsersForReader">
+            <summary>
+            获取当前步骤的默认传阅人
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnCreateUserTaskForReader(KdCore.Flow.Signs.BbFlowSignStep,KdCore.Flow.Signs.KdFlowSignItem,KdCore.Data.Users.IKdUser)">
+            <summary>
+            创建传阅步骤的待办事项（单个）
+            </summary>
+            <param name="currSignStep">传阅关联的主办审批步骤的流程步骤</param>
+            <param name="currSignItem">传阅关联的主办审批步骤</param>
+            <param name="receiver">传阅步骤的接收人，待办事项的待办人</param>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnCreateSignItemsForReader(KdCore.Flow.Signs.BbFlowSignStep,KdCore.Flow.Signs.KdFlowSignItem)">
+            <summary>
+            创建传阅步骤（本次审批的全部传阅），并添加相关的待办事项和相关短信数据
+            </summary>
+            <param name="currStep">传阅关联的主办审批步骤的流程步骤</param>
+            <param name="currSignItem">传阅关联的主办审批步骤</param> 
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnAddSignItemsForReader">
+            <summary>
+            添加传阅步骤到数据库，并添加相关的待办事项和相关短信数据；
+            必须在审批步骤更新前执行，会修改当前步骤是否包含传阅的属性 
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnGetUsersForHandler">
+            <summary>
+            获取流程步骤的主办人，请将下步主办人设置在 UserHandlers 属性
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnGetDefaultUsersForHandler">
+            <summary>
+            查询步骤默认主办人
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnCreateSignItemForHandler(KdCore.Flow.Signs.BbFlowSignStep,KdCore.Flow.Signs.KdFlowSignItem,KdCore.Data.Users.IKdUser)">
+            <summary>
+            创建主办步骤（单个）
+            </summary>
+            <param name="nextSignStep">主办审批步骤的下一步流程步骤</param>
+            <param name="currSignItem">当前正在审批的主办审批步骤</param> 
+            <param name="receiver">主办步骤接收人</param>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>   
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnCreateUserTaskForHandler(KdCore.Flow.Signs.BbFlowSignStep,KdCore.Flow.Signs.KdFlowSignItem,KdCore.Data.Users.IKdUser)">
+            <summary>
+            创建主办步骤的待办事项（单个）
+            </summary>
+            <param name="nextStep">主办审批步骤的下一步流程步骤</param>
+            <param name="currSignItem">当前正在审批的主办审批步骤</param> 
+            <param name="receiver">主办步骤接收人</param>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>   
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnCreateSignItemsForHandler(KdCore.Flow.Signs.BbFlowSignStep,KdCore.Flow.Signs.KdFlowSignItem)">
+            <summary>
+            创建主办步骤（本次审批的全部主办），并添加相关的待办事项和相关短信数据
+            </summary>
+            <param name="nextStep">主办审批步骤的下一步流程步骤</param>
+            <param name="currSignItem">当前正在审批的主办审批步骤</param>  
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns> 
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnGetRejectSignItem(System.Collections.Generic.List{KdCore.Flow.Signs.KdFlowSignItem},KdCore.Flow.Signs.KdFlowSignItem)">
+            <summary>
+            查询可以驳回的上一审批步骤
+            </summary>
+            <param name="existSignItems"></param>
+            <param name="currSignItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnAddSignItemsForHandler">
+            <summary>
+            保存下一步的审批步骤到数据库，并检查保存待办事项和短信数据
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnAnalyseNextStepForComment">
+            <summary>
+            提交传阅意见，或提交补签意见
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnAnalyseNextStepForAgree">
+            <summary>
+            审批通过，正常进入用户选择的下一步
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnAnalyseNextStepForReject">
+            <summary>
+            审批驳回到上一步骤
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnAnalyseNextStepForRestart">
+            <summary>
+            审批驳回到流程发起人
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnAnalyseNextStepForAbort">
+            <summary>
+            审批被中止，审批结果为不通过
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.FlowHandle``2(``1,System.Boolean,System.Boolean)">
+            <summary>
+            提交审批，并处理相关数据
+            </summary>
+            <param name="editModel">审批时用户提交的审批对象（直接从页面获取的，不能是从数据库查询的）</param>
+            <param name="handleSelf">只能办理本人的待办审批</param>
+            <param name="authVerify">是否验证权限</param>
+            <returns>审批处理是否成功</returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.FlowHandleInTrans``2(``1)">
+            <summary>
+            内部审批数据处理
+            </summary>
+            <param name="editModel">修改后的审批对象，需要保存时使用</param>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.ValidateInput">
+            <summary>
+            验证用户输入
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnSourceHandle">
+            <summary>
+            提交审批步骤 
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnAutoOverCurrStepSignItems">
+            <summary>
+            处理当前同批次的审批步骤自动完成，根据提交的类型判断完结的方式：补签、办结、中止、驳回等
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.UpdateBindUserTasks(KdCore.Flow.Signs.KdFlowSignItem,System.Boolean)">
+            <summary>
+            更新指定审批步骤相关的待办事项的办理状态
+            </summary>
+            <param name="signItem"></param>
+            <param name="executeUpdate"></param>
+            <returns>检查有要更新数据状态的待办事项</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnAutoOverCurrFlowSignItems">
+            <summary>
+            处理当前同批次的审批步骤自动完成，根据提交的类型判断完结的方式：补签、办结、中止、驳回等
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnAutoOverCurrUserSignItems">
+            <summary>
+            办结当前审批人所有的主办以及传阅
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnAddFlowSignItem(KdCore.Flow.Signs.KdFlowSignItem)">
+            <summary>
+            保存审批步骤到数据，并同时检查是否包含待办事项、短信等也一并保存到数据库
+            </summary>
+            <param name="signItem">审批步骤（可能是主办，也可能是传阅）</param>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>   
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnHandleSignItem(KdCore.Flow.Signs.KdFlowSignItem,KdCore.Data.BbTaskStatus,System.String,System.Boolean)">
+            <summary>
+            办结当前步骤；因该操作直接就保存到了数据库，办结前需已经处理好前后步骤间的关系关联
+            </summary>
+            <param name="signItem">当前步骤</param> 
+            <param name="handleStatus">审批办理状态</param>
+            <param name="comment">审批意见</param> 
+            <param name="isNewStep">是否新添加实例</param>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnSaveFlowWork">
+            <summary>
+            保存审批对象的当前流程审批状态
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.UpdateSourceStatus">
+            <summary>
+            处理更新审批对象与当前流程审批状态有关的数据
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnUpdateSourceStatus">
+            <summary>
+            处理更新审批对象与当前流程审批状态数据时，需要的额外处理
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnGetRestartName(System.String,KdCore.Flow.Signs.BbFlowSignStep)">
+            <summary>
+            获取驳回发起人步骤的显示名称
+            </summary>
+            <param name="tempName"></param>
+            <param name="restartStep"></param>
+            <returns>驳回发起人步骤的显示名称</returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnGetRejectName(System.String,KdCore.Flow.Signs.BbFlowSignStep)">
+            <summary>
+            获取驳回上一步骤的显示名称
+            </summary>
+            <param name="tempName"></param>
+            <param name="rejectStep"></param>
+            <returns>驳回上一步骤的显示名称</returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.BuildSourceFlowWork">
+            <summary>
+            生成审批对象的当前流程审批状态
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.BuildSourceFlowStatusDesc(KdCore.Flow.Signs.KdFlowSignWork,KdCore.Flow.Signs.KdFlowSignItem,System.Collections.Generic.List{KdCore.Flow.Signs.KdFlowSignItem},System.Collections.Generic.List{KdCore.Flow.Signs.KdFlowSignItem})">
+            <summary>
+            生成审批对象的当前流程审批状态详细描述
+            </summary>
+            <param name="signWork"></param>
+            <param name="lastSignItem"></param>
+            <param name="lastStepSignItems"></param>
+            <param name="allSignItems"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.BindFlowSource(KdCore.Flow.Signs.KdFlowSignRecord)">
+            <summary>
+            给审批记录附加审批对象的属性
+            </summary>
+            <param name="record"></param>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.BindFlowSource(KdCore.Flow.Signs.KdFlowSignWork)">
+            <summary>
+            给审批记录附加审批对象的属性
+            </summary>
+            <param name="signWork"></param>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.BindFlowSource(KdCore.Flow.Signs.KdFlowSignItem)">
+            <summary>
+            给审批记录附加审批对象的属性
+            </summary>
+            <param name="signItem"></param>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.BuildSignItemForHandler(KdCore.Flow.Signs.BbFlowSignStep,KdCore.Flow.Signs.KdFlowSignItem,KdCore.Data.Users.IKdUser)">
+            <summary>
+            创建主办步骤（单个）
+            </summary>
+            <param name="nextSignStep">主办审批步骤的下一步流程步骤</param>
+            <param name="currSignItem">当前正在审批的主办审批步骤</param> 
+            <param name="receiver">主办步骤接收人</param>
+            <returns>主办步骤</returns>   
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.BuildSignItemForReader(KdCore.Flow.Signs.BbFlowSignStep,KdCore.Flow.Signs.KdFlowSignItem,KdCore.Data.Users.IKdUser)">
+            <summary>
+            创建传阅步骤（单个）
+            </summary>
+            <param name="currSignStep">传阅关联的主办审批步骤的流程步骤</param>
+            <param name="currSignItem">传阅关联的主办审批步骤</param>
+            <param name="receiver">传阅步骤的接收人</param>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnCreateUserTask(KdCore.Flow.Signs.BbFlowSignStep,KdCore.Flow.Signs.KdFlowSignItem,KdCore.Data.Users.IKdUser)">
+            <summary>
+            创建审批记录对应的待办事项（单个）
+            </summary>
+            <param name="flowStep">审批步骤的对应流程步骤</param>
+            <param name="currSignItem">当前正在审批的审批步骤</param> 
+            <param name="receiver">步骤接收人</param>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>   
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.SmsDispatchHandler">
+            <summary>
+            通知申办人的短信发送类型标识
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.SmsDispatchReader">
+            <summary>
+            通知申办人的短信发送类型标识
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.SmsPrefix">
+            <summary>
+            短信提醒开头附加前缀
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.SmsClearContent(System.String)">
+            <summary>
+            短信内容整理，如清理重复词汇、过滤敏感字符等
+            </summary>
+            <param name="smsContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.GetDateString(System.DateTime)">
+            <summary>
+            获取格式化显示的日期字符串
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.GetTimeString(System.DateTime)">
+            <summary>
+            获取格式化显示的时间字符串
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.GetUserDeptTitle(KdCore.Data.Users.IKdUser)">
+            <summary>
+            获取用户带部门标识的名称描述
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.GetCreatorTitle(KdCore.Data.IKdEntityCreate)">
+            <summary>
+            获取数据创建人的名称描述
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.SendSmsNotice(KdCore.Data.Tasks.KdUserTask,System.String)">
+            <summary>
+            生成并提交短信到数据库（因短信一旦真正发送无法撤销，所以必须等整个事务提交成功后再检查发送）
+            </summary>
+            <param name="userTask"></param> 
+            <param name="smsContent">需要发送的短信内容</param>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.GetSmsPartPrefix(KdCore.Data.Tasks.KdUserTask,KdCore.Flow.Signs.KdFlowSignItem)">
+            <summary>
+            获取发送短信的头部附加信息
+            </summary>
+            <param name="userTask"></param>
+            <param name="signItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.GetSmsPartSource(KdCore.Data.IKdEntityCreate,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            获取发送短信的关联文档信息
+            </summary>
+            <param name="smsSource"></param>
+            <param name="sourceTitle"></param>
+            <param name="isReader"></param>
+            <param name="isNow">发送短线提示的待办事项是否是当前新添加的数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.GetSmsPartSuffix(KdCore.Data.Tasks.KdUserTask,KdCore.Flow.Signs.KdFlowSignItem)">
+            <summary>
+            获取发送短信的末尾附加信息
+            </summary>
+            <param name="userTask"></param>
+            <param name="signItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.SmsSendCheck(KdCore.Data.Users.IKdUser,KdCore.Flow.Signs.KdFlowSignItem)">
+            <summary>
+            检查是否需要发送短信
+            </summary>
+            <param name="user"></param>
+            <param name="signItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.SmsSendCheck(KdCore.Data.Users.IKdUser,KdCore.Data.Tasks.KdUserTask)">
+            <summary>
+            检查是否需要发送短信
+            </summary>
+            <param name="user"></param>
+            <param name="userTask"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.SendSmsForTaskAdded(KdCore.Data.Users.IKdUser,KdCore.Data.Tasks.KdUserTask,KdCore.Flow.Signs.KdFlowSignItem)">
+            <summary>
+            在添加待办理事项时生成提醒短信并保存
+            </summary>
+            <param name="user">当前操作流程审批的用户</param>
+            <param name="userTask">需要发短信的待办事项</param>
+            <param name="signItem">需要发短信的审批步骤</param>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.SendSmsForTaskCancelled(KdCore.Data.Users.IKdUser,KdCore.Data.Tasks.KdUserTask,KdCore.Flow.Signs.KdFlowSignItem)">
+            <summary>
+            在待办理事项被撤销时生成提醒短信并保存
+            </summary>
+            <param name="user">当前操作流程审批的用户</param>
+            <param name="userTask">需要发短信的待办事项</param>
+            <param name="signItem">需要发短信的审批步骤</param>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.SendSmsForTaskRestarted(KdCore.Data.Users.IKdUser,KdCore.Data.Tasks.KdUserTask,KdCore.Flow.Signs.KdFlowSignItem)">
+            <summary>
+            在待办理事项因撤销又被重新激活时生成提醒短信并保存
+            </summary>
+            <param name="user">当前操作流程审批的用户</param>
+            <param name="userTask">需要发短信的待办事项</param>
+            <param name="signItem">需要发短信的审批步骤</param>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.SendSmsForTaskChanged(KdCore.Data.Users.IKdUser,KdCore.Data.Tasks.KdUserTask,KdCore.Flow.Signs.KdFlowSignItem)">
+            <summary>
+            在待办理事项因他人操作或超过办理时限而自动办结时生成提醒短信并保存
+            </summary>
+            <param name="user">当前操作流程审批的用户</param>
+            <param name="userTask">需要发短信的待办事项</param>
+            <param name="signItem">需要发短信的审批步骤</param>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.InitContext(System.Boolean,System.Boolean)">
+            <summary>
+            初始化审批上下文环境
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.ResetSignContext">
+            <summary>
+            在用户提交审批失败时，重置当前的审批上下文环境
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.FlowResolves(System.Boolean,System.Boolean)">
+            <summary>
+            初始化当前用户的审批状态数据
+            </summary>
+            <returns>是否继续处理后续操作，如需要重新加载审批环境的话，就不用再继续后续处理</returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.DelayedAuthVerify">
+            <summary>
+            因审批流程而被延迟的权限验证
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.ArrangeFlowSignItems(System.Boolean,System.Boolean)">
+            <summary>
+            重新整理现有的流程审批数据
+            </summary>
+            <param name="handleSelf">是否只能办理本人审批</param>
+            <param name="checkFlowChanged">是否检查流程状态变化情况</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.FixTaskOption">
+            <summary>
+            检查确认待办事项的URL链接
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.GetUnitFlowMenus(System.String)">
+            <summary>
+            查询获取可用流程
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.InitFlowMenus">
+            <summary>
+            初始化流程可选范围及菜单项
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.InitCurrStep">
+            <summary>
+            初始化当前审批步骤
+            如果尚未尚未审批，则跳过初始化，当前流程及步骤的默认值均为null
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.InitNextSteps">
+            <summary>
+            设置可选的下一流程步骤
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnEnsureSmsStatus">
+            <summary>
+            确认短信通知发送状态，调用前必须确认当前步骤和下一步骤（不能再变动，不然短信状态会出错）
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnGetQuickIdeaItems(KdCore.Flow.Signs.KdSignContext,KdCore.Data.Users.IKdUser,KdCore.Flow.Signs.BbFlowSignGuide,KdCore.Flow.Signs.BbFlowSignStep,System.String,System.String,System.Int32)">
+            <summary>
+            获取当前审批步骤需要显示的常用审批意见
+            </summary>
+            <param name="context">当前审批上下文环境</param>
+            <param name="currUser">当前进行审批的用户</param>
+            <param name="currFlow">当前审批的流程</param>
+            <param name="currStep">当前审批的流程步骤</param>
+            <param name="unitSign">当前审批的功能单元</param>
+            <param name="sourceType">当前审批的类型</param>
+            <param name="maxCount">最大显示条数</param>
+            <returns>常用审批意见列表</returns>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.Logger">
+            <summary>
+            日志记录类
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.LockCode">
+            <summary>
+            进程锁锁定对象
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.InitTime">
+            <summary>
+            初始化时间
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.Global">
+            <summary>
+            获取当前流程全局配置
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.IsBatch">
+            <summary>
+            获取或设置是否批处理审批，一次审批多条数据（通常应该是同一审批对象类型的数据）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.DebugMode">
+            <summary>
+            获取或设置是否调试模式，调试模式时直接加载待办事项和短信数据
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.SignPhase">
+            <summary>
+            当前审批对象对于当前审批人的审批状态
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.WorkMode">
+            <summary>
+            当前审批对象对于当前审批人的审批状态
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.Reload">
+            <summary>
+            获取是否是否需要重新加载数据；
+            当前审批是否已经有了变化，需要中止继续进行，重新加载数据提供给用户核准后，再重新进行审批
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.CurrUser">
+            <summary>
+            当前的进行审批操作的用户
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.Source">
+            <summary>
+            获取或设置流程审批的对象 
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.OverdueNoticeHours">
+            <summary>
+            超过审批办理期限时，进行提醒的小时数
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.OverdueAlertHours">
+            <summary>
+            超过审批办理期限时，进行警告的小时数
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.AuthWork">
+            <summary>
+            是否对当前审批数据有编辑权限授权
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.AuthView">
+            <summary>
+            是否对当前审批数据有查阅权限授权
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.HasFlow">
+            <summary>
+            获取或设置对当前被审批对象是否已存在审批记录
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.FlowRequest">
+            <summary>
+            获取或设置当前审批的流程设置和用户输入数据
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.StopWaittingToStart">
+            <summary>
+            获取或设置是否更改审批流程暂停等特殊状态
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.SubmitMode">
+            <summary>
+            获取或设置用户审批提交方式
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.SignComment">
+            <summary>
+            获取或设置当前审批的审批意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.SignItemId">
+            <summary>
+            获取或设置用户当前审批步骤的主键，如果提交的步骤主键与解析的步骤不一致，则表明流程审批的状态有变化，需要整体刷新页面
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.NextFlowId">
+            <summary>
+            获取或设置进行审批的流程主键（用户选择）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.NextStepId">
+            <summary>
+            获取或设置用户选择的下一步审批步骤的主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.HandlerUserIds">
+            <summary>
+            获取或设置已经选择的主办人主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.HandlerDeptIds">
+            <summary>
+            获取或设置已经选择的主办部门主键
+            </summary> 
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.ReaderUserIds">
+            <summary>
+            获取或设置已经选择的传阅人主键
+            </summary> 
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.ReaderDeptIds">
+            <summary>
+            获取或设置已经选择的传阅部门主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.Success">
+            <summary>
+            流程审批进行的是否顺利
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.HasError">
+            <summary>
+            审批过程中是否存在错误，存在错误时应中止当前审批事务的继续执行，并返回适当的提示信息
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.ErrorMessage">
+            <summary>
+            审批时出现的错误信息
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.Exception">
+            <summary>
+            审批过程中发生的异常信息
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.FlowService">
+            <summary>
+            当前审批所使用的审批处理程序
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.UserProvider">
+            <summary>
+            当前办理所使用的用户查询处理程序
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.TaskProvider">
+            <summary>
+            当前办理所使用的待办事项处理程序
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.SmsProvider">
+            <summary>
+            当前办理所使用的短信处理程序
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.SourceService">
+            <summary>
+            当前审批对象所使用的 DbService 数据处理程序
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.TaskOption">
+            <summary>
+            获取或设置与审批关联的待办事项的设置选项
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.CurrFlow">
+            <summary>
+            获取当前审批流程，除没有可选流程外，永远不可能为null
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.CurrStep">
+            <summary>
+            获取当前审批步骤
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.CurrSignItem">
+            <summary>
+            获取当前审批步骤
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.LastSignItem">
+            <summary>
+            获取最后一次的主办审批步骤
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.FlowItems">
+            <summary>
+            获取或设置可选流程菜单项
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.StepItems">
+            <summary>
+            获取或设置可选下一步菜单项
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.KdSignContext._nextFlow">
+            <summary>
+            下一步审批流程
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.NextFlow">
+            <summary>
+            获取下一步审批流程，默认等于当前审批流程
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.NextSteps">
+            <summary>
+            下一审批步骤的可选列表
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.NextStep">
+            <summary>
+            下一审批步骤
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.KdSignContext._needHandlers">
+            <summary>
+            是否需要显示主办人
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.NeedHandlers">
+            <summary>
+            是否需要显示主办人选择和办理期限输入
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.UserHandlers">
+            <summary>
+            获取或设置主办人
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.KdSignContext._needReaders">
+            <summary>
+            是否需要显示传阅
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.NeedReaders">
+            <summary>
+            是否需要显示传阅人选择
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.UserReaders">
+            <summary>
+            获取或设置传阅人
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.AllExistUserTasks">
+            <summary>
+            当前审批对象的全部历史待办事项(含无效的，如已撤销步骤)
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.AllExistSignItems">
+            <summary>
+            当前审批对象的全部历史审批记录(含无效的，如已撤销步骤)
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.AllValidSignItems">
+            <summary>
+            当前审批对象的全部历史审批记录(仅有效的，不包含已撤销步骤等) 
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.AllHandleSignItems">
+            <summary>
+            当前审批对象的全部历史主办审批记录（不含已撤销的步骤） 
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.AllReadSignItems">
+            <summary>
+            当前审批对象的全部历史传阅审批记录（不含已撤销的步骤） 
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.CurrStepSignItems">
+            <summary>
+            当前审批对象的当前审批实例的同一步骤多主办人的步骤集合，未审批时不存在
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.CurrStepSignItemsOnRunning">
+            <summary>
+            当前审批对象的当前审批实例的同一步骤多主办人的步骤集合中所有等待审批的审批步骤，未审批时不存在
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.StartSignItem">
+            <summary>
+            流程审批的起始审批步骤
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.RejectSignItem">
+            <summary>
+            流程审批当前审批步骤可能存在的驳回上一步的审批步骤（审批顺序上可能不是上一步骤，而是前好几步的步骤）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.EndSignItem">
+            <summary>
+            流程审批的结束审批步骤
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.RejectStep">
+            <summary>
+            流程审批当前审批步骤可能存在的驳回上一步的流程步骤
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.NextHandleSignItems">
+            <summary>
+            获取或设置当前审批步骤的下一步的主办审批步骤
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.SmsEnable">
+            <summary>
+            获取当前的系统环境设置是否允许发送短信
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.SmsTaskHandlers">
+            <summary>
+            获取或设置是否启用主办短信通知
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.SmsTaskReaders">
+            <summary>
+            获取或设置是否启用传阅短信通知
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.SmsTaskCancelled">
+            <summary>
+            获取或设置在用户撤销时是否发送短信提醒相关待办用户
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignContext.SmsTaskChanged">
+            <summary>
+            获取或设置在待办事项状态发生改变时是否发送短信提醒相关待办用户
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.KdSignContext._initOptions">
+            <summary>
+            是否已经初始化
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.SetOptions(KdCore.Data.DbServices.KdDbFlowSignsService,KdCore.Flow.Signs.KdEntitySigns,KdCore.Data.Tasks.IKdTaskOption,KdCore.Flow.Signs.KdSignRequest,KdCore.Data.IBbDataService)">
+            <summary>
+            配置当前审批
+            </summary>
+            <param name="service"></param>
+            <param name="source"></param>
+            <param name="taskOption"></param>
+            <param name="request"></param>
+            <param name="sourceService"></param>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnSourceSave``1(``0)">
+            <summary>
+            在审批时，对审批对象数据的保存处理方法;  
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnHandleStart">
+            <summary>
+            本次审批开始前的业务处理
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnHandleFinished">
+            <summary>
+            本次审批完成后的业务处理
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnCancelStart">
+            <summary>
+            本次撤销开始前的业务处理
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnCancelFinished">
+            <summary>
+            本次撤销完成后的业务处理
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnOverdueStart">
+            <summary>
+            本次审批过期自动处理开始前的业务处理
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnOverdueFinished">
+            <summary>
+            本次审批过期自动处理完成后的业务处理
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnFlowPassOvered">
+            <summary>
+            整个流程审批以通过的方式办理完成后的业务处理 
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnFlowAbortOvered">
+            <summary>
+            整个流程审批以中止的方式办理完成后的业务处理 
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnFlowRestarted">
+            <summary>
+            整个流程审批重新启动后的业务处理 
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.OnFlowRejected">
+            <summary>
+            整个流程审批驳回后的业务处理 
+            </summary>
+            <returns>业务处理是否成功，如果返回false则中止后续审批提交，整个审批流程回滚</returns>  
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.ClearCacheSignItems(System.Boolean)">
+            <summary>
+            清除当前的审批记录查询结果
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.ClearCacheCurrStepSignItems">
+            <summary>
+            清除当前的审批记录查询结果
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.Error(System.String,System.String[])">
+            <summary>
+            设置执行审批的错误信息
+            </summary>
+            <param name="errMessage"></param>
+            <param name="errMessageParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.Error(System.Exception,System.String,System.String[])">
+            <summary>
+            设置执行审批的错误信息
+            </summary>
+            <param name="exception"></param>
+            <param name="errMessage"></param>
+            <param name="errMessageParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.GetReloadMessage">
+            <summary>
+            获取需要重新加载页面时的提示信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.NeedReload(System.String,System.String[])">
+            <summary>
+            标识当前审批上下文已经需要重新加载
+            </summary>
+            <param name="message"></param>
+            <param name="messageParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.GetStartStepLimitTime">
+            <summary>
+            获取用于发起人的办理期限，用于亮灯标识计算
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.GetNextStepLimitTime">
+            <summary>
+            获取用于下一步骤主办人的办理期限，用于亮灯标识计算
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.GetNextStepAutoOverdue">
+            <summary>
+            获取用于下一步骤主办人，在到办理期限是否自动完成步骤，并审批状态设置为通过
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.CreateDataResult(System.Object)">
+            <summary>
+            按当前的上下文创建一个数据操作结果
+            </summary>
+            <param name="flowSource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.SuccessResult(System.Object,System.String,System.String[])">
+            <summary>
+            按当前的上下文创建一个操作成功的数据操作结果
+            </summary>
+            <param name="source"></param>
+            <param name="message"></param>
+            <param name="messageParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.ErrorResult(System.Object,System.String,System.String[])">
+            <summary>
+            按当前的上下文创建一个操作失败的数据操作结果
+            </summary>
+            <param name="source"></param>
+            <param name="errorMessage"></param>
+            <param name="errorMessageParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.ErrorResult(System.Object,System.Exception,System.String,System.String[])">
+            <summary>
+            按当前的上下文创建一个操作失败的数据操作结果
+            </summary>
+            <param name="source"></param>
+            <param name="ex"></param>
+            <param name="errorMessage"></param>
+            <param name="errorMessageParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.GetFlowResponse">
+            <summary>
+            初始化界面上的显示内容和状态
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.EnsureFlowResponse">
+            <summary>
+            确认初始化界面上需要显示的内容已经初始化
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignContext.FixUserTaskHandleStatus">
+            <summary>
+            修复待办事项与审批记录的办理状态、亮灯显示图标不一致等问题
+            </summary>
+        </member>
+        <member name="T:KdCore.Flow.Signs.KdEntitySigns">
+            <summary>
+            审批对象数据基类
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdEntitySigns.TimeLamp">
+            <summary>
+            获取或设置流程的办理是否逾期
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdEntitySigns.FlowPhase">
+            <summary>
+            获取或设置当前数据的流程审核审批的整体在办状态
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdEntitySigns.SignPhase">
+            <summary>
+            获取或设置对当前被审批对象对于当前用户的审批状态；不在数据库存储，每次显示界面时进行计算推断
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdEntitySigns.FlowStatus">
+            <summary>
+            获取当前对象的审批状态描述
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdEntitySigns.FlowStatusDesc">
+            <summary>
+            获取当前对象的审批状态描述说明
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdEntitySigns.FlowWork">
+            <summary>
+            当前对象的审批状态记录
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdEntitySigns.FlowHistory">
+            <summary>
+            当前对象的所有审批步骤记录，含已删除已撤销等等
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdEntitySigns.FlowContext">
+            <summary>
+            审批对象当前的流程审批上下文
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdEntitySigns.WorkMode">
+            <summary>
+            审批对象当前的流程审批上下文的操作模式
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdEntitySigns.GetAnnexContext(System.String)">
+            <summary>
+            获取附件上传的设置上下文
+            </summary>
+            <param name="annexType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Flow.Signs.KdFlowManager">
+            <summary>
+            签批流程设置定义及缓存管理
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.KdFlowManager.AsyncCode">
+            <summary>
+            签批流程设置同步识别编码
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.KdFlowManager.FlowStepSortNumInterval">
+            <summary>
+            流程步骤定义每步累加计数
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.KdFlowManager.EndStepSortNum">
+            <summary>
+            流程结束的定义步骤顺序号
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.KdFlowManager.FlowAuditSortNumInterval">
+            <summary>
+            审批步骤每步累加计数
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.KdFlowManager.STEP_ID_TEMP">
+            <summary>
+            常量，临时步骤Id
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.KdFlowManager.STEP_ID_PREVIOUS_CASE">
+            <summary>
+            常量，返回上一步审批实例Id 
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.KdFlowManager.MULTI_CASE_BEGIN">
+            <summary>
+            常量，多主办人开始审批步骤NextCaseId标识
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.KdFlowManager.MULTI_CASE_END">
+            <summary>
+            常量，多主办人结束审批步骤PrevCaseId标识
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowManager.ConfigSavePath">
+            <summary>
+            签批流程全局配置保存文件路径
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowManager.Global">
+            <summary>
+            签批流程全局配置
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.ResetCaches">
+            <summary>
+            重置缓存
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.ReloadGlobal">
+            <summary>
+            重新加载全局设置
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.SaveJson">
+            <summary>
+            保存当前的流程全局配置
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.SaveGlobal(KdCore.Flow.Signs.BbFlowSignGlobal)">
+            <summary>
+            保存修改的流程全局配置
+            </summary>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowManager.Action_FilterSaveConfigValues">
+            <summary>
+            第一个参数是源数据对象（用户提交的配置），第二个参数是目标数据对象（将会保存的配置）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowManager.Func_BuildTaskUrlPath">
+            <summary>
+            获取或设置生成待办事项URL地址的处理方法
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowManager.TimerTaskOverdue">
+            <summary>
+            定期检查审批状态检查计时器
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.BeginPeriodicTask(System.Nullable{System.TimeSpan})">
+            <summary>
+            开始执行签批流程的定期检查任务
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowManager.AutoFixFlowStatus">
+            <summary>
+            获取或设置在打开审批办理页面时，是否自动修复待办事项与审批记录的办理状态、亮灯显示图标不一致等问题
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.AutoCheckOverdueFlows">
+            <summary>
+            对有办理期限的审批进行是否过期检查
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.QueryOverdue(System.Linq.IQueryable{KdCore.Flow.Signs.KdFlowSignItem},System.DateTime)">
+            <summary>
+            查询超期待办的步骤
+            </summary>
+            <param name="queryable"></param>
+            <param name="expiresTime"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowManager.Func_GetFlowItemStatusShortDesc">
+            <summary>
+            获取或设置审批步骤的办理状态简洁描述的方法 
+            </summary>
+            <remarks>
+            KdFlowSignItem：输入参数，要查询状态简洁描述的审批步骤
+            string：返回结果，审批步骤的办理状态简洁描述的文本
+            </remarks>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowManager.Func_GetFlowItemStatusLongDesc">
+            <summary>
+            获取或设置审批步骤的办理状态详细描述的方法 
+            </summary>
+            <remarks>
+            KdFlowSignItem：输入参数，要查询状态详细描述的审批步骤
+            string：返回结果，审批步骤的办理状态详细描述的文本
+            </remarks>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowManager.Func_GetFlowProcessStatusDesc">
+            <summary>
+            获取或设置流程办理进度状态描述的方法
+            </summary>
+            <remarks>
+            BbSignPhase：输入参数，要查询状态描述的办理进度状态
+            bool：输入参数，要查询状态描述的类型，是否需要的比较简洁的描述，用于列表页显示流程状态标识
+            string：返回结果，办理状态的描述文本
+            </remarks>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowManager.Action_OnUpdateSignItemOverdueStatus">
+            <summary>
+            获取或设置更新签批记录过期状态时附件的数据处理方法
+            </summary>
+            <remarks>
+            KdDbFlowSignsService：输入参数，当前正在执行的签批数据处理程序
+            KdFlowSignItem：输入参数，要更新过期状态的签批记录
+            </remarks>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowManager.Func_CalcOverdueStatus">
+            <summary>
+            获取或设置待办事项过期状态的专用计算方法
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.GetDescription(KdCore.Flow.Signs.BbFlowPhase)">
+            <summary>
+            获取签批流程状态的描述文字
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.GetDescription(KdCore.Flow.Signs.BbSignPhase,System.Boolean)">
+            <summary>
+            获取签批流程状态的描述文字
+            </summary>
+            <param name="phase">审批状态</param>
+            <param name="isShort">是否是返回较短的描述</param>
+            <returns>审批状态的描述文字</returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.GetStatusLongDesc(KdCore.Flow.Signs.KdFlowSignItem)">
+            <summary>
+            获取当前步骤审批状态的默认详细描述
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.GetStatusShortDesc(KdCore.Flow.Signs.KdFlowSignItem)">
+            <summary>
+            获取当前步骤审批状态的默认简洁描述
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.GetFlowStatus(KdCore.Flow.Signs.IKdEntityFlowSign)">
+            <summary>
+            获取审批对象的审批状态
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.GetFlowStatusDesc(KdCore.Flow.Signs.IKdEntityFlowSign)">
+            <summary>
+            获取审批对象的审批状态描述说明
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.BuildStartStep(KdCore.Flow.Signs.BbFlowSignGuide,KdCore.Flow.Signs.BbFlowSignStep,System.String)">
+            <summary>
+            构造审批流程启动前的准备步骤 
+            </summary>
+            <param name="flow">审批流程</param> 
+            <param name="nextStep">下一步流程步骤</param> 
+            <param name="stepId">指定的构造步骤ID</param> 
+            <returns>启动前的准备步骤,发起步骤</returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.BuildStartEnd(KdCore.Flow.Signs.BbFlowSignGuide,KdCore.Flow.Signs.BbFlowSignStep,System.String,System.String)">
+            <summary>
+            创建审批流程的开始结束步骤
+            </summary>
+            <param name="flow">审批流程</param>
+            <param name="middleStep">中间步骤</param>
+            <param name="startId">开始步骤主键</param>
+            <param name="endId">结束步骤主键</param>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.BuildTempStep(KdCore.Flow.Signs.BbFlowSignStep)">
+            <summary>
+            构造流程临时插入步骤
+            静态方法，不查询数据库
+            </summary>
+            <param name="prevStep">插入前的步骤</param>
+            <returns>临时插入步骤</returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.ArrangeStepsSortNum(KdCore.Flow.Signs.BbFlowSignGuide)">
+            <summary>
+            整理审批流程的步骤排序号
+            </summary>
+            <param name="flow">待整理的审批流程</param>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.GetFirstForHandle(System.Collections.Generic.IEnumerable{KdCore.Flow.Signs.KdFlowSignItem},System.String)">
+            <summary>
+            获取优先处理的审批步骤
+            </summary>
+            <param name="signItems"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.GetLastHandleItem(System.Collections.Generic.IEnumerable{KdCore.Flow.Signs.KdFlowSignItem})">
+            <summary>
+            获取当前审批序列的最后一步主办审批；
+            如果最后一步是多主办人，则查询多个主办人中最后一个未审批人的审批（按最后修改时间逆序选取最新一条记录）
+            </summary>
+            <param name="signItems"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.GetLastHandleItems(System.Collections.Generic.IEnumerable{KdCore.Flow.Signs.KdFlowSignItem})">
+            <summary> 
+            获取当前审批序列的最后一步审批 
+            </summary>
+            <param name="signItems"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.ToOrderList(System.Collections.Generic.IEnumerable{KdCore.Flow.Signs.KdFlowSignItem})">
+            <summary>
+            对审批步骤查询集进行排序并输出为泛型集合
+            </summary>
+            <param name="auditList">审批步骤查询集</param> 
+            <returns>KdFlowSignItem集合</returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.ToOrderList(System.Linq.IQueryable{KdCore.Flow.Signs.KdFlowSignItem},System.Nullable{System.Boolean},System.Boolean,System.Boolean)">
+            <summary>
+            对审批步骤查询集进行排序并输出为泛型集合
+            </summary>
+            <param name="queryable">审批步骤查询集</param> 
+            <param name="isRead">是否传阅</param>
+            <param name="filterAnnuled">是否排除已撤销的审批步骤</param>
+            <param name="filterInvalid">是否排除无效的审批记录</param>
+            <returns>KdFlowSignItem集合</returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.ToOrderList(System.Collections.Generic.IEnumerable{KdCore.Flow.Signs.KdFlowSignItem},System.Nullable{System.Boolean},System.Boolean,System.Boolean)">
+            <summary>
+            对审批步骤查询集进行排序并输出为泛型集合
+            </summary>
+            <param name="queryable">审批步骤查询集</param> 
+            <param name="isRead">是否传阅</param>
+            <param name="filterAnnuled">是否排除已撤销的审批步骤</param>
+            <param name="filterInvalid">是否排除无效的审批记录</param>
+            <returns>KdFlowSignItem集合</returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowManager.DeleteSourceWithWorks``1(KdCore.Data.IBbDataService,System.Boolean,KdCore.Data.Users.KdUser,KdCore.Data.BbDataScope,System.String,System.String,System.String)">
+            <summary>
+            删除审批记录
+            </summary>
+            <typeparam name="TEntity">审批对象的类型</typeparam>
+            <param name="sourceService">修改审批对象使用的数据库访问程序</param>
+            <param name="user"></param>
+            <param name="sourceId">审批对象主键ID</param>
+            <param name="unitSign">待办事项关联的功能单元标识</param>
+            <param name="sourceType">流程审批的对象类型</param>
+            <param name="currUserScope">当前用户被授予的数据操作范围</param>
+            <param name="deleteEnforce">是否强制删除</param> 
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Flow.Signs.KdFlowSignWork">
+            <summary>
+            流程审批记录（一个审批流程一条记录）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignWork.SourceService">
+            <summary>
+            获取或设置流程审批的审批对象的数据操作类型，批量自动处理时用来选择 DbSourceService 的具体类型
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignWork.FlowContext">
+            <summary>
+            获取或设置流程审批的审批上下文类型，批量自动处理时用来选择 WfFlowContext 的具体类型
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignWork.FlowPhase">
+            <summary>
+            获取或设置当前审批的流程审批整体进度状态
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignWork.HandleContent">
+            <summary>
+            获取或设置事项办理时的办理内容或办理结果，或其他描述说明等
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignWork.SignPhase">
+            <summary>
+            获取或设置当前审批对于当前用户的流程审批状态
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowSignWork.CalcOverdueStatus">
+            <summary>
+            计算进度情况是否超期标识状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Flow.Signs.KdSignResponse">
+            <summary>
+            流程审批的处理结果数据封装
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.DebugMode">
+            <summary>
+            获取或设置是否直接加载待办事项和短信数据
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.FlowPhase">
+            <summary>
+            当前审批对象的流程审批状态
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.WorkMode">
+            <summary>
+            当前审批对象对于当前审批人的审批状态
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.FlowContext">
+            <summary>
+            获取或设置当前审批的上下文环境
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.HasFlow">
+            <summary>
+            是否存在历史审批数据
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.SubmitConfirm">
+            <summary>
+            获取或设置提交前弹出对话框确认是否提交
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.IsStartStep">
+            <summary>
+            是否发起步骤，不区分尚未发起或是驳回发起人
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.CheckFiles">
+            <summary>
+            获取或设置发起审批时检查是否已上传附件
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.LastSignItem">
+            <summary>
+            最后一次的主办审批步骤
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.NeedHandlers">
+            <summary>
+            是否需要显示主办人选择和办理期限输入
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.NeedReaders">
+            <summary>
+            是否需要显示传阅人选择
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.CurrStepName">
+            <summary>
+            获取或设置页面需要显示的当前步骤名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.CurrStepCode">
+            <summary>
+            获取或设置页面需要显示的当前步骤编码标识
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.CurrLimitedTime">
+            <summary>
+            获取或设置当前审批步骤的办理期限（文字描述）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.LimitName">
+            <summary>
+            获取或设置办理期限的名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.HandleName">
+            <summary>
+            获取或设置主办人显示的名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.EncyclicName">
+            <summary>
+            获取或设置传阅人显示的名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.BtnRestart">
+            <summary>
+            获取或设置返回发起人按钮显示的名称，值为 null 时标识不显示该按钮
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.BtnReject">
+            <summary>
+            获取或设置返回上一步按钮显示的名称，值为 null 时标识不显示该按钮
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.BtnArgee">
+            <summary>
+            获取或设置同意按钮显示的名称，值为 null 时标识不显示该按钮
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.BtnAbort">
+            <summary>
+            获取或设置中止按钮显示的名称，值为 null 时标识不显示该按钮
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.BtnArgeeValue">
+            <summary>
+            获取或设置同意按钮标识的值，正常提交为 10，补签或传阅为 5，详见 <see cref="T:KdCore.Flow.Signs.BbSignMode"/> 
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.FlowItems">
+            <summary>
+            获取或设置可选流程菜单项
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.StepItems">
+            <summary>
+            获取或设置可选下一步菜单项
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.SignItems">
+            <summary>
+            当前审批对象的全部历史审批和传阅记录(在页面上将要显示的，有效的)
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignResponse.IdeaItems">
+            <summary>
+            获取或设置可选快速输入审批意见菜单项
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdSignResponse.ToHanldeJson">
+            <summary>
+            JSON 部分数据，用于前台JS操作
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Flow.Signs.BbWorkMode">
+            <summary>
+            当前用户的审批操作模式
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbWorkMode.NoAuth">
+            <summary>
+            没有授权，也不是主办人传阅人，不允许查看或编辑审批
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbWorkMode.Reload">
+            <summary>
+            当前审批有变化，需要中止继续进行
+            重新加载数据提供给用户核准后，再重新进行审批
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbWorkMode.None">
+            <summary>
+            尚未设置，可能对于当前业务不存在流程审批设置，无需审批
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbWorkMode.View">
+            <summary>
+            不存在任何审批方式，仅仅查看当前状态
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbWorkMode.Encyclic">
+            <summary>
+            传阅
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbWorkMode.FixComment">
+            <summary>
+            补签意见
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbWorkMode.Approve">
+            <summary>
+            审批审核，可驳回或中止，但不能提交下一步
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbWorkMode.ApproveAndChangeStep">
+            <summary>
+            审批审核，并可提交下一步或跳转到其他步骤等
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbWorkMode.ApproveAndChangeFlow">
+            <summary>
+            审批审核，并可修改流程以及提交下一步或跳转到其他步骤等
+            </summary>
+        </member>
+        <member name="T:KdCore.Flow.Signs.BbFlowSignGlobal">
+            <summary>
+            流程审批全局设置
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.MsgNoAuthView">
+            <summary>
+            获取或设置没有查看权限时显示的说明文字
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.MsgNoAuthEdit">
+            <summary>
+            获取或设置没有编辑权限时显示的说明文字
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.MsgNoAuthSign">
+            <summary>
+            获取或设置没有办理权限时显示的说明文字
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.DebugMode">
+            <summary>
+            获取或设置是否切换为调试模式
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.DeleteDataInFlow">
+            <summary>
+            已审批数据是否允许删除
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.QuickIdeaCount">
+            <summary>
+            快捷输入记忆历史条数
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.TimerSpanMinutes">
+            <summary>
+            定时查询检查流程事务的间隔分钟数
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.StepNameTemp">
+            <summary>
+            临时步骤名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.BtnNameStart">
+            <summary>
+            发起起审批的按钮名称 
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.StepNameRestart">
+            <summary>
+            返回发起人步骤名称 
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.BtnNameRestart">
+            <summary>
+            返回发起人按钮名称 
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.StepNameReject">
+            <summary>
+            返回上一步步骤名称 
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.BtnNameReject">
+            <summary>
+            返回上一步骤按钮名称 
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.StepNameAbort">
+            <summary>
+            中止审批步骤名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.BtnNameAbort">
+            <summary>
+            中止审批按钮名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.BtnNameArgee">
+            <summary>
+            正常提交下一步按钮名称 
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.BtnNameApprove">
+            <summary>
+            仅提交审批意见不涉及下一步主办人的按钮名称 
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.BtnNameFixComment">
+            <summary>
+            提交补签意见的按钮名称 
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.BtnNameEncyclic">
+            <summary>
+            提交传阅意见的按钮名称 
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.EncyclicTitle">
+            <summary>
+            传阅人标题名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.LimitTitle">
+            <summary>
+            办理期限
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.MustReadIdea">
+            <summary>
+            必须填写传阅意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.ShowReadIdea">
+            <summary>
+            页面是否显示填写的传阅意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.ReturnListPage">
+            <summary>
+            提交审批后转到列表页
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.SmsTaskHandlers">
+            <summary>
+            启用主办短信通知
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.SmsTaskReaders">
+            <summary>
+            启用传阅短信通知
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.SmsTaskCancelled">
+            <summary>
+            启用待办事项被撤销时短信通知
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.SmsTaskChanged">
+            <summary>
+            启用待办事项状态更改时短信通知
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.EnabledTempPrint">
+            <summary>
+            打印临时步骤
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.DisplayCancelled">
+            <summary>
+            显示已撤销的审批记录
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.DisplayAutoOver">
+            <summary>
+            显示中止或自动办结的审批记录
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignGlobal.DisplayHandleDesc">
+            <summary>
+            表格布局显示时是否在底部显示办理人的姓名时间等描述
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.BbFlowSignGlobal.InitValues">
+            <summary>
+            初始化默认设置
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.BbFlowSignGlobal.FiltersSaveValues(KdCore.Flow.Signs.BbFlowSignGlobal,KdCore.Flow.Signs.BbFlowSignGlobal)">
+            <summary>
+            仅保存部分参数值，有些参数不允许用户修改
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+        </member>
+        <member name="T:KdCore.Flow.Signs.KdSignRequest">
+            <summary>
+            流程审批请求的参数封装
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.Id">
+            <summary>
+            获取或设置流程审批的对象主键，可能包含多个主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.DataScope">
+            <summary>
+            获取或设置用户对当前操作的授权数据范围
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.SrSubmitMode">
+            <summary>
+            获取或设置用户审批提交方式
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.SrItemId">
+            <summary>
+            获取或设置用户当前审批步骤的主键，如果提交的步骤主键与解析的步骤不一致，则表明流程审批的状态有变化，需要整体刷新页面
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.SrNextFlowId">
+            <summary>
+            获取或设置进行审批的流程主键（用户选择）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.SrNextStepId">
+            <summary>
+            获取或设置用户选择的下一步审批步骤的主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.SrLimitTime">
+            <summary>
+            获取或设置办理期限
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.SrAutoOverdue">
+            <summary>
+            获取或设置是否到办理期限自动完成步骤，并审批状态设置为通过
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.SrWaitEnd">
+            <summary>
+            获取或设置是否更改审批流程暂停等特殊状态
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.SrSignComment">
+            <summary>
+            获取或设置当前审批的审批意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.SrSignQuickIdea">
+            <summary>
+            获取或设置当前审批的选择的快速输入审批意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.SrHandlerIds">
+            <summary>
+            获取或设置已经选择的主办人主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.SrHandlerNames">
+            <summary>
+            获取或设置已经选择的主办人姓名
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.SrHandlerDeptIds">
+            <summary>
+            获取或设置已经选择的主办部门主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.SrHandlerDeptNames">
+            <summary>
+            获取或设置已经选择的主办部门名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.SrReaderIds">
+            <summary>
+            获取或设置已经选择的传阅人主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.SrReaderNames">
+            <summary>
+            获取或设置已经选择的传阅人姓名
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.SrReaderDeptIds">
+            <summary>
+            获取或设置已经选择的传阅部门主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.SrReaderDeptNames">
+            <summary>
+            获取或设置已经选择的传阅部门名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdSignRequest.SrUrlFrom">
+            <summary>
+            获取或设置用户审批完成时需要返回的页面URL
+            </summary>
+        </member>
+        <member name="T:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit">
+            <summary>
+            流程步骤编辑视图实体
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.SortNum">
+            <summary>
+            获取或设置步骤排序号
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.Notes">
+            <summary>
+            获取或设置当前审批的描述说明
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.FlowId">
+            <summary>
+            获取或设置所属流程的主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.StepName">
+            <summary>
+            获取或设置审批步骤名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.StepCode">
+            <summary>
+            获取或设置审批步骤名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.StepType">
+            <summary>
+            获取或设置审批步骤类型
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.LimitDays">
+            <summary>
+            获取或设置审批步骤默认的办理期限天数
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.AllowJump">
+            <summary>
+            是否允许跳转到其他步骤（跳过下一步）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.AllowSkip">
+            <summary>
+            是否允许跳过该步骤
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.AllowTempStep">
+            <summary>
+            是否允许插入临时步骤 
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.AllowReaders">
+            <summary>
+            允许传阅
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.AllowReaderWrite">
+            <summary>
+            允许填写传阅意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.AllowAnyonePass">
+            <summary>
+            任意人审批完成当前步骤
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.AllowSmsNotify">
+            <summary>
+            是否发送短信通知
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.AllowSkipWrite">
+            <summary>
+            允许不填审批意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.AllowEdit">
+            <summary>
+            审批时是否允许修改审批对象数据
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.AllowPatch">
+            <summary>
+            步骤完成后是否允许补签审批意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.AllowPrintHandle">
+            <summary>
+            是否允许打印审批意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.AllowPrintRead">
+            <summary>
+            是否允许打印传阅意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.PrintOnlyLast">
+            <summary>
+            仅打印该步骤的最后一次审批意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.NoticeStarter">
+            <summary>
+            通知发起人
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.NoticeHandler">
+            <summary>
+            通知上步主办人
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.DefaultHandleIds">
+            <summary>
+            默认主办人，最多40人
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.DefaultHandleNames">
+            <summary>
+            默认主办人，最多40人
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.DefaultReaderIds">
+            <summary>
+            默认传阅人
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.DefaultReaderNames">
+            <summary>
+            默认传阅人
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.HandleUserIds">
+            <summary>
+            获取或设置主办人限制的用户主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.HandleUserNames">
+            <summary>
+            获取或设置主办人限制的用户主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.HandleRoleNames">
+            <summary>
+            获取或设置主办人限制的角色名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.HandleDutyIds">
+            <summary>
+            获取或设置主办人限制的职位主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.HandleDutyNames">
+            <summary>
+            获取或设置主办人限制的职位主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.HandleDeptIds">
+            <summary>
+            获取或设置主办人限制的部门主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.HandleDeptNames">
+            <summary>
+            获取或设置主办人限制的部门主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.HandleCorpCodes">
+            <summary>
+            获取或设置主办人限制的单位标识编码
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.HandleCorpNames">
+            <summary>
+            获取或设置主办人限制的单位标识编码
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.ReaderUserIds">
+            <summary>
+            获取或设置传阅人限制的用户主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.ReaderUserNames">
+            <summary>
+            获取或设置传阅人限制的用户主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.ReaderRoleNames">
+            <summary>
+            获取或设置传阅人限制的角色名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.ReaderDutyIds">
+            <summary>
+            获取或设置传阅人限制的职位主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.ReaderDutyNames">
+            <summary>
+            获取或设置传阅人限制的职位主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.ReaderDeptIds">
+            <summary>
+            获取或设置传阅人限制的部门主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.ReaderDeptNames">
+            <summary>
+            获取或设置传阅人限制的部门主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.ReaderCorpCodes">
+            <summary>
+            获取或设置传阅人限制的单位标识编码
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit.ReaderCorpNames">
+            <summary>
+            获取或设置传阅人限制的单位标识编码
+            </summary>
+        </member>
+        <member name="T:KdCore.Flow.Signs.EditModels.BbFlowSignGuideEdit">
+            <summary>
+            流程编辑视图实体
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignGuideEdit.FlowName">
+            <summary>
+            获取或设置流程名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignGuideEdit.FlowCode">
+            <summary>
+            获取或设置流程识别标识
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignGuideEdit.SortNum">
+            <summary>
+            获取或设置显示顺序
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignGuideEdit.TagDisabled">
+            <summary>
+            获取或设置是否禁用该流程
+            为更方便用户理解，页面显示的标题文字为启用，请适当调整页面显示状态
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignGuideEdit.UnitCodes">
+            <summary>
+            获取或设置流程使用范围（对应的功能菜单）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignGuideEdit.SmsNotify">
+            <summary>
+            获取或设置是否发送短信提醒
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignGuideEdit.StartCheckFiles">
+            <summary>
+            获取或设置发起审批时检查是否已上传附件
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignGuideEdit.SubmitConfirm">
+            <summary>
+            获取或设置提交前弹出对话框确认是否提交
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignGuideEdit.NotifyAllHandlers">
+            <summary>
+            获取或设置流程结束后通知所有参与审批的主办人
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignGuideEdit.OverredCancel">
+            <summary>
+            获取或设置是否允许流程结束后撤销
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.EditModels.BbFlowSignGuideEdit.Notes">
+            <summary>
+            备注说明
+            </summary>
+        </member>
+        <member name="T:KdCore.Flow.Signs.BbSignPhase">
+            <summary>
+            被审批对象对于当前用户的审批状态 
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignPhase.None">
+            <summary>
+            尚未赋值，默认设置
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignPhase.NoStart">
+            <summary>
+            不存在审批，未发起审批
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignPhase.Started">
+            <summary>
+            正在审批，并且返回到了发起人
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignPhase.Restarted">
+            <summary>
+            正在审批，并且返回到了发起人
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignPhase.Auditing">
+            <summary>
+            正在审批，且当前登录人属于主办人
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignPhase.Waitting">
+            <summary>
+            流程正在等待其他操作
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignPhase.Overdue">
+            <summary>
+            超期后系统自动完成通过
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignPhase.Aborted">
+            <summary>
+            中止审批，整个流程已经审批完成
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignPhase.Errored">
+            <summary>
+            审批出现错误，整个流程停止，不再继续进行审批
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignPhase.AutoOver">
+            <summary>
+            系统自动完成
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignPhase.Passed">
+            <summary>
+            审批通过，整个流程已经审批完成
+            </summary>
+        </member>
+        <member name="T:KdCore.Flow.Signs.BbStepType">
+            <summary>
+            步骤类型
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbStepType.Start">
+            <summary>
+            发起流程步骤
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbStepType.Normal">
+            <summary>
+            普通步骤
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbStepType.End">
+            <summary>
+            结束步骤
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbStepType.Restart">
+            <summary>
+             返回发起人
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbStepType.MultiCase">
+            <summary>
+            多实例步骤
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbStepType.FixComment">
+            <summary>
+            补签意见
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbStepType.BranchSingleBegin">
+            <summary>
+            单选分支开始步骤
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbStepType.BranchSingleEnd">
+            <summary>
+            单选分支结束步骤
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbStepType.BranchMultiBegin">
+            <summary>
+            并行分支开始步骤
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbStepType.BranchMultiEnd">
+            <summary>
+            并行分支结束步骤
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbStepType.Free">
+            <summary>
+             自由步骤
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbStepType.Inform">
+            <summary>
+             知会/督办会签步骤
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbStepType.Temporary">
+            <summary>
+            临时步骤
+            临时步骤审批完成后返回上一步骤
+            </summary>
+        </member>
+        <member name="T:KdCore.Flow.Signs.BbSignMode">
+            <summary>
+            审批提交的处理类型 
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignMode.Cancel">
+            <summary>
+            撤销审批
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignMode.None">
+            <summary>
+            未设置，默认值，视为查询当前审批状况
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignMode.Save">
+            <summary>
+            保存审批对象的数据，不进行审批
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignMode.Comment">
+            <summary>
+            补签意见，传阅意见等
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignMode.Agree">
+            <summary>
+            正常提交,审批通过
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignMode.Reject">
+            <summary>
+            返回审批(上一步)
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignMode.Restart">
+            <summary>
+            返回审批（发起人）
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignMode.Abort">
+            <summary>
+            中止审批
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignMode.Overdue">
+            <summary>
+            超期自动办结审批
+            </summary>
+        </member>
+        <member name="F:KdCore.Flow.Signs.BbSignMode.SysAuto">
+            <summary>
+            系统自动完成
+            </summary>
+        </member>
+        <member name="T:KdCore.Flow.Signs.KdFlowSignRecord">
+            <summary>
+            流程审批记录基类 
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.FlowType">
+            <summary>
+            获取或设置流程审批的类型，与待办事项的类型关联，大多设置为当前审批所在菜单的名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.UnitSign">
+            <summary>
+            获取或设置流程审批类型，用于同一个主键在不同功能单元的审批识别
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.SourceId">
+            <summary>
+            获取或设置流程审批的对象主键，可能包含多个主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.SourceName">
+            <summary>
+            获取或设置流程审批的对象的标题名称，可能包含多个名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.SourceType">
+            <summary>
+            获取或设置流程审批的对象类型，实体类的全称(Type.FullName)
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.IsBatch">
+            <summary>
+            获取或设置是否批处理审批，一次审批多条数据（通常应该是同一审批对象类型的数据）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.FlowId">
+            <summary>
+            获取或设置当前审批的流程主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.FlowName">
+            <summary>
+            获取或设置当前审批的流程名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.StepId">
+            <summary>
+            获取或设置当前审批的流程步骤定义的主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.StepName">
+            <summary>
+            获取或设置当前审批的流程步骤定义的名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.StepCode">
+            <summary>
+            获取或设置当前审批的流程步骤定义的名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.RelateSignId">
+            <summary>
+            获取或设置关联的审批步骤主键（审批状态、传阅消息）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.StepType">
+            <summary>
+            获取或设置当前审批的流程步骤的类型
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.HandleMode">
+            <summary>
+            获取或设置当前审批的步骤办理提交方式
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.AutoOverdue">
+            <summary>
+            获取或设置到办理期限是否自动完成步骤，并审批状态设置为通过
+            （用于标识当前步骤是否会执行自动通过）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.AutoOverdueNext">
+            <summary>
+            获取或设置是否启用了到办理期限自动通过步骤
+            （用于标识下一步开始执行自动通过）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.ReceiverId">
+            <summary>
+            获取或设置当前审批步骤的接收人（待审批人）的主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.ReceiverName">
+            <summary>
+            获取或设置当前审批步骤的接收人（待审批人）的姓名
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.ReceiverMobile">
+            <summary>
+            获取或设置当前审批步骤的接收人（待审批人）的手机号码
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.ReceiverDeptId">
+            <summary>
+            获取或设置当前审批步骤的接收人（待审批人）的部门主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.ReceiverDeptName">
+            <summary>
+            获取或设置当前审批步骤的接收人（待审批人）的部门名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.ReceiverDutyId">
+            <summary>
+            获取或设置当前审批步骤的接收人（待审批人）的职务主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.ReceiverDutyName">
+            <summary>
+            获取或设置当前审批步骤的接收人（待审批人）的职务名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.HandleContent">
+            <summary>
+            审批意见或传阅意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.HandlerId">
+            <summary>
+            获取或设置当前审批步骤的办理人（实际审批人）的主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.HandlerName">
+            <summary>
+            获取或设置当前审批步骤的办理人（实际审批人）的姓名
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.HandlerMobile">
+            <summary>
+            获取或设置当前审批步骤的办理人（实际审批人）的手机号码
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.HandlerDeptId">
+            <summary>
+            获取或设置当前审批步骤的办理人（实际审批人）的部门主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.HandlerDeptName">
+            <summary>
+            获取或设置当前审批步骤的办理人（实际审批人）的部门名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.HandlerDutyId">
+            <summary>
+            获取或设置当前审批步骤的办理人（实际审批人）的职务主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.HandlerDutyName">
+            <summary>
+            获取或设置当前审批步骤的办理人（实际审批人）的职务名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.AffixBool1">
+            <summary>
+            获取或设置附加布尔标识 1
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.AffixTime1">
+            <summary>
+            获取或设置附加时间标识 1
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.AffixNum1">
+            <summary>
+            获取或设置附加数字标识 1
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.AffixStatus1">
+            <summary>
+            获取或设置附加是否逾期状态标识 1
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.AffixNotes1">
+            <summary>
+            获取或设置附加字符串标识 1
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.AffixBool2">
+            <summary>
+            获取或设置附加布尔标识 2
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.AffixTime2">
+            <summary>
+            获取或设置附加时间标识 2
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.AffixNum2">
+            <summary>
+            获取或设置附加数字标识 2
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.AffixStatus2">
+            <summary>
+            获取或设置附加是否逾期状态标识 2
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.AffixNotes2">
+            <summary>
+            获取或设置附加字符串标识 2
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.Handler">
+            <summary>
+            获取当前步骤主办或传阅的接收人
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignRecord.Receiver">
+            <summary>
+            获取当前步骤主办或传阅的接收人
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowSignRecord.CalcOverdueStatus">
+            <summary>
+            计算审批办理情况是否超期，并更新设置标识状态 TimeLamp
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Flow.Signs.BbFlowSignStep">
+            <summary>
+            审批步骤定义
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.FlowId">
+            <summary>
+            获取或设置所属流程的主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.FlowName">
+            <summary>
+            获取或设置所属流程的名称（不在数据库保存，仅仅是临时存储）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.Flow">
+            <summary>
+            获取或设置所属流程
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.StepName">
+            <summary>
+            获取或设置审批步骤名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.StepCode">
+            <summary>
+            获取或设置审批步骤编码
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.StepType">
+            <summary>
+            获取或设置审批步骤类型
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.LimitDays">
+            <summary>
+            获取或设置审批步骤默认的办理期限天数
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.PrevStepId">
+            <summary>
+            获取或设置审批步骤的上一步骤的主键（可能为空）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.NextStepId">
+            <summary>
+            获取或设置审批步骤的下一步骤的主键（可能为空）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.PrevBranchId">
+            <summary>
+            获取或设置审批步骤的上一拆分步骤的主键（可能为空）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.NextMergeId">
+            <summary>
+            获取或设置审批步骤的下一合并步骤的主键（可能为空）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.AllowJump">
+            <summary>
+            是否允许跳转到其他步骤（跳过下一步）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.AllowSkip">
+            <summary>
+            是否允许跳过该步骤
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.AllowTempStep">
+            <summary>
+            是否允许插入临时步骤 
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.AllowReaders">
+            <summary>
+            允许传阅
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.AllowReaderWrite">
+            <summary>
+            填写传阅意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.AllowAnyonePass">
+            <summary>
+            任意人审批完成当前步骤
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.AllowSmsNotify">
+            <summary>
+            是否发送短信通知
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.AllowSkipWrite">
+            <summary>
+            允许不填审批意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.AllowEdit">
+            <summary>
+            审批时是否允许修改审批对象数据
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.AllowPatch">
+            <summary>
+            步骤自动完成后是否补签审批意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.AllowPrintHandle">
+            <summary>
+            是否允许打印审批意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.AllowPrintRead">
+            <summary>
+            是否允许打印传阅意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.PrintOnlyLast">
+            <summary>
+            仅打印该步骤的最后一次审批意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.NoticeStarter">
+            <summary>
+            办结后通知发起人
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.NoticeHandler">
+            <summary>
+            办结后通知上步主办人
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.DefaultHandleIds">
+            <summary>
+            默认主办人，最多40人
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.DefaultHandleNames">
+            <summary>
+            默认主办人，最多40人
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.DefaultReaderIds">
+            <summary>
+            默认传阅人
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.DefaultReaderNames">
+            <summary>
+            默认传阅人
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.HandleUserIds">
+            <summary>
+            获取或设置主办人限制的用户主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.HandleUserNames">
+            <summary>
+            获取或设置主办人限制的用户主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.HandleRoleNames">
+            <summary>
+            获取或设置主办人限制的角色名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.HandleDutyIds">
+            <summary>
+            获取或设置主办人限制的职位主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.HandleDutyNames">
+            <summary>
+            获取或设置主办人限制的职位主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.HandleDeptIds">
+            <summary>
+            获取或设置主办人限制的部门主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.HandleDeptNames">
+            <summary>
+            获取或设置主办人限制的部门主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.HandleCorpCodes">
+            <summary>
+            获取或设置主办人限制的单位标识编码
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.HandleCorpNames">
+            <summary>
+            获取或设置主办人限制的单位标识编码
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.ReaderUserIds">
+            <summary>
+            获取或设置传阅人限制的用户主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.ReaderUserNames">
+            <summary>
+            获取或设置传阅人限制的用户主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.ReaderRoleNames">
+            <summary>
+            获取或设置传阅人限制的角色名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.ReaderDutyIds">
+            <summary>
+            获取或设置传阅人限制的职位主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.ReaderDutyNames">
+            <summary>
+            获取或设置传阅人限制的职位主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.ReaderDeptIds">
+            <summary>
+            获取或设置传阅人限制的部门主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.ReaderDeptNames">
+            <summary>
+            获取或设置传阅人限制的部门主键
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.ReaderCorpCodes">
+            <summary>
+            获取或设置传阅人限制的单位标识编码
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.ReaderCorpNames">
+            <summary>
+            获取或设置传阅人限制的单位标识编码
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.PrevStep">
+            <summary>
+            获取前一流程步骤
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.BbFlowSignStep.NextStep">
+            <summary>
+            获取后一流程步骤
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.BbFlowSignStep.ToListItem(System.Boolean)">
+            <summary>
+            转换为ListItem，用于下拉列表
+            </summary>
+            <param name="moreDataMode">是否使用包含较多数据的模式进行转换</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.BbFlowSignStep.GetDataTitle">
+            <summary>
+            获取当前数据的标题名称，用于生成待办事项等关联数据时使用，或数据删除时提示显示等
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Flow.Signs.KdFlowSignItem">
+            <summary>
+            流程审批步骤记录（一个审批步骤至少一条记录，每个主办人/传阅人的每一次审批各一条记录）
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.SortNum">
+            <summary>
+             获取或设置审批步骤顺序编号；
+             同一个审批序列，每一步的SortNum是相同的，即多主办人的步骤，所有主办人的审批SortNum是同一个
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.TaskId">
+            <summary>
+            关联待办事项的主键ID
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.PrevId">
+            <summary>
+            上一审批步骤主键ID
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.NextId">
+            <summary>
+            下一审批步骤主键ID
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.RejectId">
+            <summary>
+            返回上一流程步骤的审批步骤主键ID
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.BranchId">
+            <summary>
+            分支步骤的主键ID
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.MergeId">
+            <summary>
+            合并步骤的主键ID
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.RepeatId">
+            <summary>
+            循环步骤的主键ID
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.IsReader">
+            <summary>
+            该记录是否是传阅
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.MarkCode">
+            <summary>
+            意见防篡改特征码
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.AllowWrite">
+            <summary>
+            允许填写意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.AllowPrint">
+            <summary>
+            允许打印意见
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.ForbidCancel">
+            <summary>
+            禁止撤销
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.IsValid">
+            <summary>
+            获取数据有效标识
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.ReceiverTitle">
+            <summary>
+            实际办理人姓名含部门
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.HandlerTitle">
+            <summary>
+            实际办理人姓名含部门
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.AuditDeptName">
+            <summary>
+            待审批人或实际办理人的所在部门
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.AuditUserName">
+            <summary>
+            待审批人或实际办理人姓名
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.AuditUserTitle">
+            <summary>
+            待审批人或实际办理人姓名含部门
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.CanCancel">
+            <summary>
+            获取或设置是否可以撤销，不在数据库存储，需要根据当前登录人及审批情况判断
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.IsOver">
+            <summary>
+            该记录是否视为已完成审批办理
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.IsRunning">
+            <summary>
+            该记录是否视为在审批办理当中
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.NeedHandle">
+            <summary>
+            该记录是否需要办理
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.HasReaders">
+            <summary>
+            该记录是否具有传阅
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.FlowContext">
+            <summary>
+            获取或设置当前步骤关联的流程上下文
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.UserTask">
+            <summary>
+            获取或设置当前步骤关联的待办任务
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.UserTasks">
+            <summary>
+            获取或设置当前步骤关联的待办任务集合，通常应该仅有一项 <see cref="P:KdCore.Flow.Signs.KdFlowSignItem.UserTask"/>
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.SmsItems">
+            <summary>
+            获取或设置待办事项相关联的短信数据
+            未保存在数据库，一般不是自己直接进行赋值的不要以此属性来判断业务流程控制
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.PrevItem">
+            <summary>
+            获取或设置当前步骤的来源步骤
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdFlowSignItem.ReaderItems">
+            <summary>
+            获取或设置当前步骤的传阅步骤
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowSignItem.GetStatusShortDesc">
+            <summary>
+            获取当前步骤审批状态的详细描述
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowSignItem.GetStatusLongDesc">
+            <summary>
+            获取当前步骤审批状态的详细描述
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowSignItem.SetSmsId(KdCore.Data.Sms.KdSmsBase)">
+            <summary>
+            设置与短信相关联的ID
+            </summary>
+            <param name="sms"></param>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowSignItem.CopyNewItem">
+            <summary>
+            复制一条新的审批记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdFlowSignItem.CalcOverdueStatus">
+            <summary>
+            计算审批办理情况是否超期，并更新设置标识状态 TimeLamp
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Flow.Signs.KdDbFlowSignsContext">
+            <summary>
+            流程审批数据库模型
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdDbFlowSignsContext.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdDbFlowSignsContext.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="nameOrConnectString">数据库连接字符串或连接配置名称</param>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdDbFlowSignsContext.DisableModelIndexAttributes">
+            <summary>
+            获取或设置流程审批数据库实体模型中是否禁用索引特性标识的自动转换创建；默认值为 false
+            </summary>
+        </member>
+        <member name="P:KdCore.Flow.Signs.KdDbFlowSignsContext.DbSelfManageIndexes">
+            <summary>
+            获取或设置当前实体模型中是否禁用索引特性标识的自动转换创建；默认值为 false
+            </summary>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdDbFlowSignsContext.CreateModel(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            初始化数据模型定义
+            </summary>
+            <param name="builder">模型构造程序</param>
+        </member>
+        <member name="M:KdCore.Flow.Signs.KdDbFlowSignsContext.InitFuzzyQuerys">
+            <summary>
+            模糊查询方法初始化
+            </summary>
+        </member>
+        <member name="T:KdCore.Data.DbServices.KdDbFlowSignsService">
+            <summary>
+            审批流程数据处理服务程序
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.Register(System.String,System.Boolean)">
+            <summary>
+            注册流程审批的数据库及业务设置
+            </summary>
+            <param name="dbNameOrConnectionString">数据库连接名称或连接字符串</param> 
+            <param name="beginPeriodicTask">是否启动定时检查事项办理状态的周期性任务</param>
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbFlowSignsService.SmsProvider">
+            <summary>
+            短信数据操作提供程序
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService._smsProviderInner_OnSmsSend(System.Object,KdCore.Data.Sms.KdSmsSend)">
+            <summary>
+            短信发送时撤销接收短信用户的原有当前事项的短信
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.Create``2(``0,KdCore.Data.Tasks.IKdTaskOption,KdCore.Flow.Signs.KdSignRequest,KdCore.Data.IBbDataService)">
+            <summary>
+            创建流程办理上下文
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TFlowContext"></typeparam>
+            <param name="source"></param>
+            <param name="taskOption"></param>
+            <param name="request"></param>
+            <param name="sourceService"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetFlowById(System.String)">
+            <summary>
+            根据指定的工作流主键查询工作流；
+            自由流程等特殊流程不在数据库中保存，直接查询数据库无法获取
+            </summary>
+            <param name="workflowId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetStepById(System.String)">
+            <summary>
+            获取指定ID的流程步骤定义
+            </summary>
+            <param name="stepId">流程步骤的ID</param>
+            <returns>流程步骤定义</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.SaveResult(KdCore.Flow.Signs.EditModels.BbFlowSignGuideEdit)">
+            <summary>
+            保存审批流程定义
+            </summary>
+            <param name="editModel">保存的审批流程</param> 
+            <returns>数据处理结果</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.SaveResult(KdCore.Flow.Signs.EditModels.BbFlowSignStepEdit)">
+            <summary>
+            保存审批流程步骤定义
+            </summary>
+            <param name="editModel">编辑后提交的流程步骤</param>
+            <returns>数据处理结果</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.DeleteSteps(System.String[])">
+            <summary>
+            删除流程步骤，并返回操作结果
+            </summary>
+            <param name="ids"></param>
+            <returns><see cref="T:KdCore.Data.KdDataResult"/></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.EnsureSmsNotify(KdCore.Flow.Signs.BbFlowSignStep,System.Boolean)">
+            <summary>
+            确认步骤的短信通知开启状态
+            </summary>
+            <param name="step">审批步骤</param>
+            <param name="notify">是否开启短信通知</param>
+            <returns>确认后的开启状态</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.OpenSmsNotify(System.String)">
+            <summary>
+            步骤开启短信通知
+            </summary>
+            <param name="stepId">步骤主键</param>
+            <returns>开启是否成功</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.CloseSmsNotify(System.String)">
+            <summary>
+            步骤开启短信通知
+            </summary>
+            <param name="stepId">步骤主键</param>
+            <returns>开启是否成功</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetFlowsByUnitSign(System.String)">
+            <summary> 
+            查询指定模块可使用的审批流程集合
+            </summary>
+            <param name="unitSign">模块标识</param>
+            <returns>可使用审批流程集合</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.CheckOverdueSignItemsSendSmsWarnings">
+            <summary>
+            检查设置每一未办理的审批步骤的过期情况，做出状态标识，并查看是否发送短信通知
+            TODO: 待检查再次确认准确性
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.CheckOverdueFlowWork(KdCore.Flow.Signs.KdFlowSignWork)">
+            <summary>
+            检查整个审批流程的审批状态，并对过期未办理的自动设置为审批通过，可继续进行下一步处理
+            </summary>
+            <param name="flowWork"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.RestoreFlowContext``1(KdCore.Flow.Signs.KdFlowSignWork,KdCore.Flow.Signs.KdSignRequest,KdCore.Data.IBbDataService)">
+            <summary>
+            还原流程审批的上下文
+            </summary>
+            <typeparam name="TFlowContext"></typeparam>
+            <param name="sourceFlowStatus"></param>
+            <param name="request"></param>
+            <param name="sourceDbService"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.RestoreFlowContext(KdCore.Flow.Signs.KdFlowSignWork,KdCore.Flow.Signs.KdSignRequest,KdCore.Data.IBbDataService)">
+            <summary>
+            还原流程审批的上下文
+            </summary>
+            <param name="sourceFlowStatus"></param>
+            <param name="request"></param>
+            <param name="sourceDbService"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetStepUserLimits(System.String,System.Boolean)">
+            <summary>
+            查询流程步骤的主办人、传阅人可选范围
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.SignHandle``1(KdCore.Flow.Signs.KdSignRequest,KdCore.Data.Users.IKdUser,KdCore.Data.IBbDataService)">
+            <summary>
+            办理已存在的流程审批步骤
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <param name="request"></param>
+            <param name="user"></param>
+            <param name="sourceDbService"></param>
+            <returns>办理流程审批的结果</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.SignHandle``2(KdCore.Flow.Signs.KdSignRequest,``1,KdCore.Data.Users.IKdUser,KdCore.Data.IBbDataService)">
+            <summary>
+            办理已存在的流程审批步骤
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TEditModel"></typeparam>
+            <param name="request"></param>
+            <param name="editModel"></param>
+            <param name="user"></param>
+            <param name="sourceDbService"></param>
+            <returns>办理流程审批的结果</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.AuditCancel``1(System.String,KdCore.Data.Users.IKdUser,KdCore.Data.IBbDataService)">
+            <summary>
+            撤销已办理的流程审批步骤
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <param name="signItemId"></param>
+            <param name="user"></param>
+            <param name="sourceDbService"></param>
+            <returns>撤销流程审批的结果</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetSmsNoticeLast(KdCore.Flow.Signs.KdFlowSignItem)">
+            <summary>
+            获取与指定待办审批记录关联的最后一条短信
+            </summary>
+            <param name="signItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.SendSmsUrge(System.String,System.Int32)">
+            <summary>
+            发送催办短信
+            </summary>
+            <param name="signItemId">要催办的审批办理记录主键</param>
+            <param name="minSpaceMinutes">与前一条短信的最短间隔分钟数</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetNextSteps(System.String,KdCore.Flow.Signs.BbFlowSignStep)">
+            <summary>
+            查询当前步骤下一步可选的审批步骤
+            查询数据库
+            </summary>
+            <param name="workflowId">工作流主键Id</param>
+            <param name="currStep">当前步骤</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetDefaultHandlerUsers(KdCore.Flow.Signs.BbFlowSignStep)">
+            <summary>
+            获取流程审批步骤的默认主办人
+            </summary>
+            <param name="step"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetDefaultReaderUsers(KdCore.Flow.Signs.BbFlowSignStep)">
+            <summary>
+            获取流程审批步骤的默认传阅人
+            </summary>
+            <param name="step"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetFlowWorks(System.String,System.String,System.String[])">
+            <summary>
+            查询目前的流程整体状态
+            </summary>
+            <param name="unitSign">查询的关联菜单标识</param>
+            <param name="sourceType">审批对象类别标识</param>
+            <param name="sourceIds">审批对象的主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetFlowStep(KdCore.Flow.Signs.KdFlowSignItem)">
+            <summary>
+            查询当前实例对应的工作流步骤
+            可能会查询数据库（根据ID查询步骤或者查询工作流的起始步骤）
+            </summary>
+            <param name="signItem">当前步骤，启动流程时设置为空即可</param>
+            <returns>当前步骤</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetStepByCode(System.String,System.String)">
+            <summary>
+            查询步骤定义
+            </summary>
+            <param name="stepCode">步骤编码</param>
+            <param name="workflowId">工作流主键Id</param>
+            <returns>步骤定义</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetQuickIdea(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            查询快速审批意见
+            </summary>
+            <param name="userId">用户主键</param>
+            <param name="unitSign">查询的关联菜单标识</param>
+            <param name="sourceType">审批对象类别标识</param>
+            <param name="stepId">查询审批步骤主键</param>
+            <param name="count">获取快捷审批意见条数</param>
+            <returns>快速审批意见列表(字符串集合)</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetSourceSignItemsQuery(System.String,System.String,System.String,System.Nullable{System.Boolean},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            查询指定文档的全部审批步骤（包含审批和传阅）
+            </summary>
+            <param name="sourceId">源文档的主键Id</param>
+            <param name="unitSign">待办事项关联的功能单元标识</param>
+            <param name="sourceType">流程审批的对象类型</param>
+            <param name="isReader">是否查询传阅，null值时包含审批和传阅</param>
+            <param name="noCannelled">是否过滤撤销的审批步骤</param>
+            <param name="noInvalid">是否过滤已禁用的审批步骤</param>
+            <param name="noDeleted">是否过滤已删除的审批步骤</param>
+            <returns>IQueryable实例</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetSourceSignItems(System.String,System.String,System.String,System.Nullable{System.Boolean},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            获取指定文档的全部审批步骤（可包含审批和传阅），按审批步骤顺序排列
+            </summary>
+            <param name="sourceId">源文档的主键Id</param>
+            <param name="unitSign">待办事项关联的功能单元标识</param>
+            <param name="sourceType">流程审批的对象类型</param>
+            <param name="isReader">是否传阅记录</param>
+            <param name="noCannelled">是否过滤撤销的步骤</param>
+            <param name="noInvalid">是否过滤无效的步骤（暂时不启用的、已删除的等等）</param>
+            <param name="noDeleted">是否过滤已删除的审批步骤</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetSourceSignItemsQuery(KdCore.Flow.Signs.IKdEntityFlowSign,System.String,System.Nullable{System.Boolean},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            查询指定文档的全部审批步骤（包含审批和传阅）
+            </summary>
+            <param name="source">源文档</param>
+            <param name="unitSign">待办事项关联的功能单元标识</param>
+            <param name="isReader">是否查询传阅，null值时包含审批和传阅</param>
+            <param name="noCannelled">是否过滤撤销的审批步骤</param>
+            <param name="noInvalid">是否过滤已禁用的审批步骤</param>
+            <param name="noDeleted">是否过滤已删除的审批步骤</param>
+            <returns>IQueryable实例</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetSourceSignItems(KdCore.Flow.Signs.IKdEntityFlowSign,System.String,System.Nullable{System.Boolean},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            查询指定文档的全部审批步骤（包含审批和传阅）
+            </summary>
+            <param name="source">源文档</param>
+            <param name="unitSign">待办事项关联的功能单元标识</param>
+            <param name="isReader">是否查询传阅，null值时包含审批和传阅</param>
+            <param name="noCannelled">是否过滤撤销的审批步骤</param>
+            <param name="noInvalid">是否过滤已禁用的审批步骤</param>
+            <param name="noDeleted">是否过滤已删除的审批步骤</param>
+            <returns>IQueryable实例</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetSourcePrintSignItems(System.String,System.String,System.Nullable{System.Boolean},System.String)">
+            <summary>
+            查询指定文档的全部打印(AllowPrint 为 true 的)审批步骤
+            </summary>
+            <param name="sourceId">源文档主键</param>
+            <param name="unitSign">待办事项关联的功能单元标识</param>
+            <param name="withReader">是否包含传阅，null值时包含审批和传阅</param> 
+            <param name="sourceType">流程审批的对象类型</param>
+            <returns>IQueryable实例</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetSourceStatus(System.String,System.String,System.String)">
+            <summary>
+            查询文档的审批状态
+            </summary>
+            <param name="sourceId">查询事项的主键</param>
+            <param name="unitSign">查询的关联菜单标识</param>
+            <param name="sourceType">审批对象类别标识</param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.GetSourceStatus(System.String,KdCore.Data.Tasks.IKdTaskOption)">
+            <summary>
+            查询文档的审批状态
+            </summary>
+            <param name="sourceId">查询事项的主键</param>
+            <param name="option">与查询事项关联的设置选项</param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.FetchFlowRecords``1(System.String,System.Boolean,System.Boolean,``0[])">
+            <summary>
+            查询审批对象的流程状态
+            </summary>
+            <typeparam name="TEntityFlowSign"></typeparam>
+            <param name="unitSign">待办事项关联的功能单元标识</param>
+            <param name="loadSignWork"></param>
+            <param name="loadSignItem"></param>
+            <param name="sourceList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbFlowSignsService.ClearFlowRecords(KdCore.Flow.Signs.IKdEntityFlowSign,System.String)">
+            <summary>
+            清除流程审批数据，（仅标识为已删除）
+            清除数据包括：KdFlowSignWork、KdFlowSignItem、KdUserTask、KdSmsSend
+            </summary>
+            <param name="source"></param> 
+            <param name="unitSign">待办事项关联的功能单元标识</param>
+        </member>
+    </members>
+</doc>

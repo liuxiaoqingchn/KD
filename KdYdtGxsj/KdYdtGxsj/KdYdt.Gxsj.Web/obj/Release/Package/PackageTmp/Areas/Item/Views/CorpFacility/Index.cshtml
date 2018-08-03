@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+}
+
+
+@model  KdDataResponse<PrjFacility>
+
+@using (Html.BeginPageTitle())
+{
+    @Html.BbBtnLinkAdd()
+    @Html.BbBtnGridDelete(this.Model)
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch(this.Model, true))
+    {
+        @Html.BbSearchFor(x => x.FacilityName)
+        @Html.BbSearchFor(x => x.CorpName)
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(true))
+        {
+            @Html.BbTHeadFor(x => x.FacilityName)
+            @Html.BbTHeadFor(x => x.FacilitySpec)
+            @Html.BbTHeadFor(x => x.FacilitySum)
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (PrjFacility item in Model)
+            {
+                using (Html.BeginDataTableRow(item, true))
+                {
+                    <td>@Html.ActionLink(item.FacilityName, "Edit", new { id = item.Id })</td>
+                    <td>@item.FacilitySpec</td>
+                    <td>@item.FacilitySum</td>
+                }
+            }
+        }
+    }
+}

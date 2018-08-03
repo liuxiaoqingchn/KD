@@ -1,0 +1,79 @@
+﻿2018-05-08 16:00:29.43940 [T00001][Critical] KdAppContext - 加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-05-08 16:00:36.84938 [T00001][Critical] KdWebContext - RegisterWebMvc Namespaces: 
+              KdYdt.Gxsj.WebManage.Controllers
+2018-05-08 16:00:36.85938 [T00001][ Major  ] KdUnitManager - 初始化系统功能模块设置……
+2018-05-08 16:00:36.94941 [T00001][ Major  ] KdUnitManager - 从本地运行程序中识别出功能模块：10 个
+2018-05-08 16:00:36.96938 [T00001][ Major  ] KdUnitManager - 从远程获取到文件中识别功能模块定义：39 个
+2018-05-08 16:00:36.97938 [T00001][ Major  ] KdUnitManager - 初始化功能模块：10 个，功能操作：1077 个
+2018-05-08 16:00:36.97938 [T00001][ Major  ] KdUnitManager - 初始化系统模块设置结束
+2018-05-08 16:00:36.97938 [T00001][ Major  ] KdMenu - 初始化系统菜单……
+2018-05-08 16:00:37.29938 [T00001][ Major  ] KdMenu - 共计初始化系统菜单：3 个
+2018-05-08 16:00:37.29938 [T00001][ Major  ] KdMenu - 菜单 系统主菜单[__MAIN__] 共计加载菜单项 21 个
+2018-05-08 16:00:37.29938 [T00001][ Major  ] KdMenu - 菜单 后台管理菜单[__ADMIN__] 共计加载菜单项 8 个
+2018-05-08 16:00:37.44938 [T00001][ Major  ] KdMenu - 菜单 椤圭洰绠＄悊[PrjManage] 共计加载菜单项 33 个
+2018-05-08 16:00:37.44938 [T00001][ Major  ] KdMenu - 初始化系统菜单设置结束
+2018-05-08 16:00:37.45938 [T00001][Critical] BbMvcManager - 当前系统运行环境：
+              IIS Version: 10.0
+              Integrated Pipeline: True
+              TargetFramework: 4.6
+              BaseDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\
+              BinDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\
+              AppDomainAppVirtualPath: /
+              VirtualPathRoot: /
+              AppData VirtualPath: ~/App_Data;
+              AppData PhysicsPath: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data;
+              系统全局配置文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile;
+              数据字典配置文件路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdDict;
+              系统主菜单配置文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdMenu\KdAppMenus.json;
+              系统菜单配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdMenu;
+              系统运行日志文件: ;
+              数据库初始化JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataInit;
+              数据库备份JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataBackup;
+              用户个人文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Data_User;
+              报表模板默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Templates;
+              报表输出默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Reports;
+              附件上传默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\User_Uploads;
+              文件覆盖时自动备份的文件夹名称: History;
+2018-05-08 16:00:37.85938 [T00010][Critical] KdUtil - 调试模式运行，忽略版本更新检测
+2018-05-08 16:00:44.05715 [T00010][ Severe ] HomeController - 【Session:4ziswcbf4tgigu3bqddbt5pl】【HttpGET:562GCTH80OFE】未登录用户[DataScope:HandleFull]
+              已耗时：5.8777704秒 http://localhost:63384/Home/Login
+              【请求处理】执行时间 5.8778 秒【较慢】
+2018-05-08 17:35:09.99537 [T00061][ Severe ] UsersController - 【Session:4ziswcbf4tgigu3bqddbt5pl】【HttpGET:562HYU09AAKJ】管理员（内置）[DataScope:ViewFull, HandleFull]
+              已耗时：5.1100059秒 http://localhost:63384/Users
+              【请求处理】执行时间 5.1100 秒【较慢】
+2018-05-08 17:35:30.15883 [T00096][ Alert  ] KdUnitManager - 未能找到类型 Sms 对应的功能单元(KdUnitGroup)设定。
+2018-05-08 17:35:30.15883 [T00096][ Alert  ] KdUnitManager - 未能找到类型 Signs 对应的功能单元(KdUnitGroup)设定。
+2018-05-08 17:35:30.15883 [T00096][ Alert  ] KdUnitManager - 未能找到类型 Bizs 对应的功能单元(KdUnitGroup)设定。
+2018-05-08 17:35:30.72886 [T00096][ Error  ] RolesController - 【Session:4ziswcbf4tgigu3bqddbt5pl】【HttpGET:562HDME7A7EH】管理员（内置）[DataScope:ViewFull, HandleFull]
+              已耗时：1.6200344秒 http://localhost:63384/Roles/Config/2017B270C18700003A80F5FD13A9409393417265840FF4EE?___act=Index
+              【Exception】System.ArgumentOutOfRangeException: GroupCode 不能包含字符：('^')。 
+              参数名: GroupCode
+                 在 KdCore.KdUtil.CheckHyphens(String name, String value, String hyphens)
+                 在 KdCore.KdUtil..(String )
+                 在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+                 在 KdCore.KdUtil.CheckCodeHyphens(String name, String[] values)
+                 在 KdCore.Data.Units.KdUnitGroup.set_GroupCode(String value)
+                 在 KdCore.Data.Menus.KdMenuItem.InitUnitGroup()
+                 在 KdCore.Data.Menus.KdMenuItem.get_UnitGroup()
+                 在 KdCore.Data.Menus.KdMenuItem.InitUnitActions()
+                 在 KdCore.Data.Menus.KdMenuItem.get_UnitActions()
+                 在 lambda_method(Closure , KdMenuItem )
+                 在 System.Linq.Enumerable.<>c__DisplayClass6_0`1.<CombinePredicates>b__0(TSource x)
+                 在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+                 在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+                 在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+                 在 KdCore.Data.Entity.KdEntityTree`1.GetAllNodes(Nullable`1 tagDisabled, Expression`1 predicate)
+                 在 KdCore.Data.Menus.KdMenu.GetItemsNeedAuthVerify()
+                 在 ASP._Page_Views_Roles_Config_cshtml.Execute() 位置 c:\Users\pc\AppData\Local\Temp\Temporary ASP.NET Files\vs\ab051c23\24bac6d8\App_Web_config.cshtml.79594dc0.p66nth4j.0.cs:行号 0
+                 在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+                 在 System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+                 在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+                 在 System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+                 在 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+                 在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+                 在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+                 在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+                 在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+                 在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+                 在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+                 在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)

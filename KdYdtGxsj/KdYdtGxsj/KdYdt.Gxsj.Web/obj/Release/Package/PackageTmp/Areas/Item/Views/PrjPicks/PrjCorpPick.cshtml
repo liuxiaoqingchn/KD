@@ -1,0 +1,31 @@
+﻿@model KdDataResponse<PrjCorp>
+
+@{Layout = null;}
+@using (Html.BeginDlgSelect())
+{
+    @Html.BbDlgSearchHeader(true, "企业名称")
+<div class="modal-body">
+    <div class="row">
+        @Html.BbSearchFor(x => x.CorpName, "企业名称")
+    </div>
+    @using (Html.BeginDataTable())
+    {
+        @Html.BbTHeadRow(true, "组织机构代码", "企业名称", "联系人", "企业地址")
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (PrjCorp item in Model)
+            {
+                using (Html.BeginDataSelectRow(item))
+                {
+                    @Html.TdText(item.CorpCode)
+                    @Html.TdText(item.CorpName)
+                    @Html.TdText(item.LinkMan)
+                    @Html.TdText(item.RegAddress)
+                }
+            }
+        }
+    }
+</div>
+    @Html.BbDlgFooter(true)
+}

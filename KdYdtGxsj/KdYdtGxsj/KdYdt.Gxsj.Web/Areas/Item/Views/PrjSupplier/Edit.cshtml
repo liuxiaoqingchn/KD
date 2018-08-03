@@ -1,0 +1,48 @@
+﻿@model   Supplier
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnSubmit()
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">供应商</span>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.SupName, 4, 0, null, null, null, new { required = true })
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.SupPerson, 4)
+                @Html.BbTextBoxFor(x => x.SupTel, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.SupProjectCount, 4)
+                @Html.BbTextBoxFor(x => x.SupProjectSum, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.SupCompactSum, 4)
+                @Html.BbTextBoxFor(x => x.SupPraiseType, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.SupAgreCase, 10)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Remark, 10)
+            </div>
+
+            @Html.AnnexUnit()
+            @Html.RowModifier()
+        </div>
+    </div>
+}
+
+@Html.AnnexUpload()

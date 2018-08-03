@@ -1,0 +1,64 @@
+﻿@model OaNotice
+
+@if (Model.AllowedEdit)
+{
+    @section styles{
+        @Url.CSS_Plugin_UEditor()
+    }
+    @section scripts{
+        @Url.JS_Plugin_UEditor()
+        <script>
+            $(document).ready(function () {
+                initUEditor('MainBody');
+            });
+        </script>
+    }
+}
+
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+    @Html.BbBtnSubmit()
+    @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">公告设置</span>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.NoticeTitle, 10)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Subject, 2)
+                @Html.BbTextBoxFor(x => x.HeadWord, 6)
+            </div>
+            <div class="row">
+                @Html.BbDeptPickFor(x => x.NoticeDeptIds, x => x.NoticeDeptNames, 40, "通知部门")
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Notes, 10)
+            </div>
+            @Html.RowModifier()
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <span class="panel-title">公告内容</span>
+        </div>
+        <div class="panel-body">
+            @Html.BfTextBoxFor(x => x.MainBody, 12)
+            @Html.AnnexUnit()
+        </div>
+    </div>
+}
+
+@Html.PartialUserReadersBar()
+@Html.AnnexUpload()

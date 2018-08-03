@@ -1,0 +1,273 @@
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdYdt.Gxsj.WebManage.dll.config
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdYdt.Gxsj.WebManage.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdYdt.Gxsj.WebManage.pdb
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Antlr3.Runtime.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\AutoMapper.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\EntityFramework.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\EntityFramework.SqlServer.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Base.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Data.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Data.EntityFramework.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.DbParts.Commons.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.DbParts.UserExts.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.UITheme.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Web.Controllers.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Web.Mvc.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Web.Resource.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdWeb.Common.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdWeb.Common.Resource.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdWeb.Common.UserExts.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.OData.Core.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.OData.Edm.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.Spatial.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.Web.Infrastructure.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Newtonsoft.Json.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Helpers.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.SelfHost.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.Tracing.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.WebHost.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Mvc.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.OData.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Razor.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.WebPages.Deployment.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.WebPages.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.WebPages.Razor.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\WebGrease.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Net.Http.Formatting.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\AutoMapper.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\EntityFramework.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\EntityFramework.SqlServer.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Base.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Data.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Data.EntityFramework.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.DbParts.Commons.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.DbParts.UserExts.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.UITheme.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Web.Controllers.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Web.Mvc.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Web.Resource.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdWeb.Common.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdWeb.Common.Resource.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdWeb.Common.UserExts.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.OData.Core.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.OData.Edm.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.Spatial.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Newtonsoft.Json.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Helpers.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.SelfHost.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.Tracing.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.WebHost.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Mvc.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.OData.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Razor.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.WebPages.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.WebPages.Deployment.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.WebPages.Razor.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Net.Http.Formatting.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\EntityFramework.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\Microsoft.Spatial.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hant\Microsoft.Spatial.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Helpers.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Http.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Http.SelfHost.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Http.Tracing.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Mvc.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.OData.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Razor.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.WebPages.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\obj\Debug\KdYdt.Gxsj.WebManage.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\obj\Debug\KdYdt.Gxsj.WebManage.pdb
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\obj\Debug\KdYdt.Gxsj.WebManage.csprojResolveAssemblyReference.cache
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdYdt.Gxsj.WebManage.dll.config
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdYdt.Gxsj.WebManage.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdYdt.Gxsj.WebManage.pdb
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Antlr3.Runtime.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\AutoMapper.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\EntityFramework.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\EntityFramework.SqlServer.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Base.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Data.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Data.EntityFramework.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.DbParts.Commons.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.DbParts.UserExts.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.UITheme.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Web.Mvc.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Web.Resource.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdWeb.Common.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdWeb.Common.Resource.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdWeb.Common.UserExts.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.OData.Core.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.OData.Edm.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.Spatial.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.Web.Infrastructure.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Newtonsoft.Json.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Helpers.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.SelfHost.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.Tracing.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.WebHost.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Mvc.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.OData.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Razor.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.WebPages.Deployment.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.WebPages.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.WebPages.Razor.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\WebGrease.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Net.Http.Formatting.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\AutoMapper.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\EntityFramework.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\EntityFramework.SqlServer.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Base.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Data.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Data.EntityFramework.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.DbParts.Commons.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.DbParts.UserExts.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.UITheme.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Web.Mvc.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Web.Resource.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdWeb.Common.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdWeb.Common.Resource.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdWeb.Common.UserExts.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.OData.Core.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.OData.Edm.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.Spatial.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Newtonsoft.Json.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Helpers.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.SelfHost.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.Tracing.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.WebHost.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Mvc.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.OData.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Razor.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.WebPages.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.WebPages.Deployment.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.WebPages.Razor.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Net.Http.Formatting.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\EntityFramework.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\Microsoft.Spatial.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hant\Microsoft.Spatial.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Helpers.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Http.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Http.SelfHost.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Http.Tracing.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Mvc.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.OData.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Razor.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.WebPages.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\obj\Debug\KdYdt.Gxsj.WebManage.csproj.CoreCompileInputs.cache
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\obj\Debug\KdYdt.Gxsj.WebManage.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\obj\Debug\KdYdt.Gxsj.WebManage.pdb
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\obj\Debug\KdYdt.Gxsj.WebManage.csproj.CopyComplete
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\obj\Debug\KdYdt.Gxsj.WebManage.csprojAssemblyReference.cache
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdYdt.Gxsj.WebManage.dll.config
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdYdt.Gxsj.WebManage.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdYdt.Gxsj.WebManage.pdb
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Antlr3.Runtime.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\AutoMapper.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\EntityFramework.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\EntityFramework.SqlServer.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Base.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Data.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Data.EntityFramework.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.DbParts.Commons.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.DbParts.UserExts.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.UITheme.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Web.Mvc.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Web.Resource.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdWeb.Common.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdWeb.Common.Resource.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdWeb.Common.UserExts.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.OData.Core.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.OData.Edm.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.Spatial.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.Web.Infrastructure.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Newtonsoft.Json.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Helpers.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.SelfHost.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.Tracing.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.WebHost.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Mvc.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.OData.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Razor.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.WebPages.Deployment.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.WebPages.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.WebPages.Razor.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\WebGrease.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Net.Http.Formatting.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\AutoMapper.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\EntityFramework.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\EntityFramework.SqlServer.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Base.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Data.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Data.EntityFramework.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.DbParts.Commons.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.DbParts.UserExts.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.UITheme.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Web.Mvc.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdCore.Web.Resource.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdWeb.Common.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdWeb.Common.Resource.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\KdWeb.Common.UserExts.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.OData.Core.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.OData.Edm.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Microsoft.Spatial.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\Newtonsoft.Json.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Helpers.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.SelfHost.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.Tracing.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Http.WebHost.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Mvc.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.OData.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.Razor.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.WebPages.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.WebPages.Deployment.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Web.WebPages.Razor.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\System.Net.Http.Formatting.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\EntityFramework.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\Microsoft.Spatial.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hant\Microsoft.Spatial.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Helpers.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Http.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Http.SelfHost.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Http.Tracing.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Mvc.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.OData.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.Razor.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.WebPages.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\obj\Debug\KdYdt.Gxsj.WebManage.csprojAssemblyReference.cache
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\obj\Debug\KdYdt.Gxsj.WebManage.csproj.CoreCompileInputs.cache
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\obj\Debug\KdYdt.Gxsj.WebManage.csproj.CopyComplete
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\obj\Debug\KdYdt.Gxsj.WebManage.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\obj\Debug\KdYdt.Gxsj.WebManage.pdb

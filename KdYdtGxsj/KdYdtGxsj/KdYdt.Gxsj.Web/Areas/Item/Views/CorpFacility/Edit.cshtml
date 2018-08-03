@@ -1,0 +1,48 @@
+﻿
+@model   PrjFacility
+
+
+
+
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnSubmit()
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">获奖信息</span>
+        </div>
+        <div class="panel-body">
+
+            <div class="row">
+                @Html.SjPickCorpFor(x => x.CorpId, x => x.CorpName, 1)
+                @*@Html.BbDlgPickerFor(x => x.CorpId, "SelectCorp", x => x.CorpName, 1, "#content", 10, "企业名称", new { controller = "SelectCorp" }, null, null, new { required = true })*@
+               @* @Html.BbDlgPickerFor(x => x.PrjCode, "PrjItemPick", x => x.PrjName, 1, "#content", 4, "项目名称", new { controller = "PrjPicks" }, null, null, new { required = true })*@
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.FacilityName, 4)
+                @Html.BbTextBoxFor(x => x.FacilitySpec, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.FacilitySum, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Remark, 10)
+            </div>
+            @Html.AnnexUnit()
+            @Html.RowModifier()
+        </div>
+    </div>
+
+}
+
+@Html.AnnexUpload()

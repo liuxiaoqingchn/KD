@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{359BA850-3823-4BA6-BC05-F994BBE188B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KdYdt.Gxsj.Oa.Domains</RootNamespace>
+    <AssemblyName>KdYdt.Gxsj.Oa.Domains</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="KdCore.Base">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.Data">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.Data.EntityFramework">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.DbParts.Commons">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.DbParts.Commons.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.DbParts.UserExts">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.DbParts.UserExts.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.Office">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.Office.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="KdPrjDomainsManager.cs" />
+    <Compile Include="KdPrjEnumHelper.cs" />
+    <Compile Include="Models\OaWorkPlan.cs" />
+    <Compile Include="Models\OaNotice.cs" />
+    <Compile Include="Models\OaQuickIdea.cs" />
+    <Compile Include="Models\OaSumupReview.cs" />
+    <Compile Include="Models\OaUserSumup.cs" />
+    <Compile Include="Reports\OaSumupReport.cs" />
+    <Compile Include="Reports\OaWorkPlanReport.cs" />
+    <Compile Include="Services\PrjDbOaService.cs" />
+    <Compile Include="Services\PrjDbOaContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EditModels\OaWorkPlanEdit.cs" />
+    <Compile Include="ViewModels\OaWorkPlanWeek.cs" />
+    <Compile Include="EditModels\OaNoticeEdit.cs" />
+    <Compile Include="EditModels\OaSumupEdit.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

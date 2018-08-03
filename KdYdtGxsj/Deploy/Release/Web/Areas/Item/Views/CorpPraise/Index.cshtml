@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null;
+}
+
+
+@model  KdDataResponse<PrjPraise>
+
+@using (Html.BeginPageTitle())
+{
+    @Html.BbBtnLinkAdd()
+    @Html.BbBtnGridDelete(this.Model)
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch(this.Model, true))
+    {
+        @Html.BbSearchFor(x => x.PraiseName)
+        @Html.BbSearchFor(x => x.PraiseDate)
+        @Html.BbSearchFor(x => x.CorpName)
+        @Html.BbSearchFor(x => x.PraiseProject)
+        @Html.BbSearchFor(x => x.PraiseType)
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(true))
+        {
+            @Html.BbTHeadFor(x => x.PraiseName)
+            @Html.BbTHeadFor(x => x.PraiseDate)
+            @Html.BbTHeadFor(x => x.PraiseProject)
+            @Html.BbTHeadFor(x => x.PraiseType)
+            @Html.BbTHeadFor(x => x.PraiseOffice)
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (PrjPraise item in Model)
+            {
+                using (Html.BeginDataTableRow(item, true))
+                {
+                    <td>@Html.ActionLink(item.PraiseName, "Edit", new { id = item.Id })</td>
+                    <td>@item.PraiseDate</td>
+                    <td>@item.PraiseProject</td>
+                    <td>@item.PraiseType</td>
+                    <td>@item.PraiseOffice</td>
+                }
+            }
+        }
+    }
+}

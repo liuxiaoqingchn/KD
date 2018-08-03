@@ -1,0 +1,6 @@
+﻿2018-03-06 09:38:08.47810 [T00026][ Severe ] HomeController - 【Session:v1zfsu0lirqqm0yuya1oyho0】【HttpGET:54B9M5XQIVG7】[DataScope:HandleFull]
+              已耗时：6.1110103秒 http://localhost:63384/Home/Login?from=%2fHome%2fLogout
+              【请求处理】执行时间 6.1110 秒【较慢】
+2018-03-06 09:38:27.55645 [T00021][  Warn  ] HomeController - 【Session:v1zfsu0lirqqm0yuya1oyho0】【HttpGET:54B94RLMPORS】[DataScope:HandleFull]
+              已耗时：3.9023813秒 http://localhost:63384/Home/Login
+              【请求处理】执行时间 3.9024 秒【稍慢】

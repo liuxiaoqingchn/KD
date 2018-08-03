@@ -1,0 +1,26 @@
+﻿@model  KdDataResponse<OaNotice>
+
+@using (Html.BeginPageTitle())
+{
+    @Html.BbBtnLinkAdd()
+    @Html.BbBtnGridDelete(this.Model)
+    @Html.BbBtnLinkReturn()
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch())
+    {
+        @Html.BbSearchFor(x => x.NoticeTitle, "公告标题")
+        @Html.BbSearchFor(x => x.HeadWord)
+        @Html.BbSearchFor(x => x.Subject, "公告类型")
+        @Html.BbSearchFor(x => x.CreateTime, "发布时间")
+        @Html.BbSearchFor(x => x.CreatorUserName, "发布人员")
+        @Html.BbSearchFor(x => x.CreatorDeptName, "发布部门")
+        @Html.BbSearchFor(x => x.NoticeDeptNames, "通知部门")
+        @Html.BbSearchFor(x => x.MainBody, "公告正文")
+        @Html.BbSearchFor(x => x.Notes)
+    }
+
+    @Html.ListLayout()
+}

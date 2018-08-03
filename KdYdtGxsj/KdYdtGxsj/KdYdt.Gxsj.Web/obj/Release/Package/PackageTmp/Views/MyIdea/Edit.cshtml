@@ -1,0 +1,21 @@
+﻿@model OaQuickIdea
+@{ ViewBag.Title = "编辑快捷审批意见"; }
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        @using (Html.BbAjaxForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            @Html.BbDlgHeader()
+            <div class="modal-body">
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.Notes, 10, 0, new { rows = 15 })
+                    @Html.BbTextBoxFor(x => x.SortNum)
+                    @Html.BbCheckBoxFor(x => x.TagDisabled)
+                </div>
+            </div>
+            @Html.BbDlgFooterSubmit()
+        }
+    </div>
+</div>

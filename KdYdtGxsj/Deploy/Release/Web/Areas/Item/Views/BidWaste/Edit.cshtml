@@ -1,0 +1,50 @@
+﻿
+@model  BidWaste
+
+
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnSubmit()
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">投标报名</span>
+        </div>
+        <div class="panel-body" id="content">
+            <div class="row">
+                @Html.BbTextFor(x => x.PrjName)
+                @Html.BbTextFor(x => x.PrjCode)
+            </div>
+            <div class="row">
+                @Html.BbTextFor(x => x.SignDate, 4)
+                @Html.BbTextFor(x => x.WasteData, 4)      
+            </div>
+            <div class="row">    
+                @Html.BbTextFor(x => x.SignAddress, 10)
+            </div>
+            <div class="row">
+                @Html.BbTextFor(x => x.WithPersonName, 4)
+                @Html.BbTextFor(x => x.DeliUnit, 4)
+            </div>       
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.WasteReason, 10)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Explain, 10)
+            </div>
+            @Html.AnnexUnit()     
+        </div>
+    </div>
+
+}
+
+@Html.AnnexUpload()

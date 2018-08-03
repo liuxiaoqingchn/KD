@@ -1,0 +1,28 @@
+﻿[
+  {
+    "SortNum": 10,
+    "TreeName": "OA系统菜单",
+    "TreeCode": "Default",
+    "IsDefault": true,
+    "JsonFileName": "KdMenu_Default.json",
+    "CreateTime": "2018-05-21T15:12:32.9942399+08:00",
+    "ModifyTime": "1800-01-01T00:00:00"
+  },
+  {
+    "SortNum": 30,
+    "TreeName": "项目管理菜单",
+    "TreeCode": "PrjManage",
+    "CreateTime": "2017-05-04T01:32:12.7236911+08:00",
+    "ModifyTime": "1800-01-01T00:00:00"
+  },
+  {
+    "SortNum": 20,
+    "TreeName": "后台管理菜单",
+    "TreeCode": "Admin",
+    "OnlyAdmin": true,
+    "IsDefault": true,
+    "JsonFileName": "KdMenu_Admin.json",
+    "CreateTime": "2018-05-21T15:12:33.143238+08:00",
+    "ModifyTime": "1800-01-01T00:00:00"
+  }
+]

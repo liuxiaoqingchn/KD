@@ -1,0 +1,48 @@
+﻿@model  KdDataResponse<PrjBond>
+
+@using (Html.BeginPageTitle())
+{
+    @*@Html.BbBtnLinkAdd()*@
+}
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch(this.Model, true))
+    {
+        @Html.BbSearchFor(x => x.PrjName)
+        @Html.BbSearchFor(x => x.PrjCode)
+        @Html.BbSearchFor(x => x.MakeName)
+        @Html.BbSearchFor(x => x.BondReturnDate)
+        @Html.BbSearchFor(x => x.IsReturn)
+        @Html.BbSearchFor(x => x.ReturnDate)
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(false))
+        {
+            @Html.BbTHeadFor(x => x.IsReturn)
+            @Html.BbTHeadFor(x => x.PrjCode)
+            @Html.BbTHeadFor(x => x.PrjName)
+            @Html.BbTHeadFor(x => x.BondMoney)
+            @Html.BbTHeadFor(x => x.MakeName)
+            @Html.BbTHeadFor(x => x.BondReturnDate)
+            @Html.BbTHeadFor(x => x.ReturnDate)
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (PrjBond item in Model)
+            {
+                using (Html.BeginDataTableRow(item))
+                {
+                    @Html.TdIconInvert(item.IsReturn)
+                    <td>@item.PrjCode</td>
+                    <td>@Html.ActionLink(item.PrjName, "Edit", new { id = item.Id })</td>
+                    <td>@item.BondMoney</td>
+                    <td>@item.MakeName</td>
+                    <td>@item.BondReturnDate</td>
+                    <td>@item.ReturnDate</td>     
+                }
+            }
+        }
+    }
+}

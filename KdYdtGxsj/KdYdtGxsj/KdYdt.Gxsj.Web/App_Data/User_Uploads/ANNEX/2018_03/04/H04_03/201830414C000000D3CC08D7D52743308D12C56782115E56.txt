@@ -1,0 +1,27 @@
+select CorpName,CorpCode,CorpAddress,RegDate,RegFund,LinkMan,LinkPhone,Source=(select top 1 CategoryRank from CorpCreditSS
+ss where ss.CorpName=a.CorpName and ss.CorpType=a.CorpType order by CalcuDate desc
+) from CorpInfo a where CreateTime>='2017-1-20' and CorpType='建筑业企业' and City='深圳市' and Id in (
+select CorpId from CorpQual where QualName='钢结构工程专业承包' and City='深圳市' and QualNum=2) and id in
+  (
+select CorpId from CorpQual where QualName='环保工程专业承包' and City='深圳市' and QualNum=2)
+order by Source desc 
+
+
+select CorpName,CorpCode,CorpAddress,RegDate,RegFund,LinkMan,LinkPhone,Source=(select count(*) from BidInfo where BidUnit=a.CorpName and BidDate>='2016-4-18'
+),Source1=(select count(*) from BidInfo where BidUnit=a.CorpName and BidDate>='2015-4-18'
+) from CorpInfo a where CreateTime>='2017-3-18' and CorpType='建筑业企业' and City='深圳市' and Id in (
+select CorpId from CorpQual where QualName='市政公用工程施工总承包' and City='深圳市' and QualNum=1) order by Source desc
+
+
+
+select Code,ProjectName,BeginDate,BidUnit,BidMoney,PrjMgr from BidInfo where BidUnit in(
+
+select CorpName from CorpInfo a where CreateTime>='2017-4-3' and CorpType='建筑业企业' and City='深圳市' and Id in (
+select CorpId from CorpQual where QualName in('建筑工程施工总承包','旧_房屋建筑工程施工总承包') and City='深圳市' and QualNum<=2) ) AND City like '%深圳市工程%'
+and BeginDate>='2016-07-01' and BeginDate<='2017-01-01'
+
+
+
+
+select CorpName,CorpCode,CorpAddress,RegDate,RegFund,LinkMan,LinkPhone from CorpInfo a where CreateTime>='2017-5-6' and CorpType='建筑业企业' and City='深圳市' and Id in (
+select CorpId from CorpQual where QualName='城市园林绿化' and City='深圳市' and QualNum=2)  

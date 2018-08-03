@@ -1,0 +1,84 @@
+﻿@model  PrjItem
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnSubmit()
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-info">
+        <div class="panel-heading" data-collapse="false">
+            <span class="panel-title">项目信息</span>
+        </div>
+        <div class="panel-body" id="content">
+            <div class="row">                    
+                @Html.BbTextBoxFor(x => x.PrjName, 10)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.PrjCode, "项目编号")
+                @Html.BbTextBoxFor(x => x.EngScale, null, "万元", 4)
+
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.BuildUnit, 10)
+            </div>
+            <div class="row">
+                @Html.BbRadioListFor(x => x.TenderMthod, 4)
+                @Html.BbRadioListFor(x => x.IsPrese, 4)
+            </div>
+            <div class="row">
+
+                @Html.BbTextBoxFor(x => x.MsgType, 6)
+                @Html.BbCheckBoxFor(x => x.IsKdYdt, 2)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.PrjAddr, 10)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.BuyUnit, 4)
+                @Html.BbTextBoxFor(x => x.TenderUnit)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.NoticTime, 4)
+                @Html.BbTextBoxFor(x => x.EndDate, 4)
+                @*@Html.BbTextBoxFor(x => x.BondMoney, null, "万元", 4)*@
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.BidOpenDate, 4)
+                @Html.BbTextBoxFor(x => x.EndBidDate)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.AnsEndTime, 4)
+                @Html.BbTextBoxFor(x => x.VisitDate, 4)
+            </div>
+            <div class="row">
+                @Html.BbUserPickFor(x => x.PrjRegId, x => x.PrjRegName)
+                @Html.BbTextBoxFor(x => x.PrjRegDate)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.InfoUrl, 10)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.QualRequis, 10)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.MgrRequis, 10)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.OtherRequis, 10)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Explain, 10)
+            </div>
+            @Html.AnnexUnit()
+            @Html.RowModifier()
+        </div>
+    </div>
+}
+@Html.AnnexUpload()

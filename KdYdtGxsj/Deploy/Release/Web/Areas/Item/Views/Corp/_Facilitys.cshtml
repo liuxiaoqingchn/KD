@@ -1,0 +1,28 @@
+﻿@model  List<PrjFacility>
+<div class="panel panel-info">
+    <div class="panel-heading" @Html.DataCollapse(true)>
+        <span class="panel-title">机械设备</span>
+    </div>
+    @using (Html.BeginDataTable())
+    {
+        int i = 1;
+        @Html.BbTHeadRow("", "设备名称", "设备规格", "设备数量")
+        if (!Model.IsNull())
+        {
+            using (Html.BeginDataTableBody())
+            {
+                foreach (PrjFacility item in Model)
+                {
+                    using (Html.BeginDataTableRow(item, false))
+                    {
+                        @Html.TdNumCenter(i)
+                        @Html.TdNumSn(Html.BbLnkDlgAction("FacilityView", item.FacilityName, new { id = item.Id }, IconAwesome.NoneKD, "点击查看详情"))
+                        @Html.TdNumSn(item.FacilitySpec)
+                        @Html.TdNumSn(item.FacilitySum)
+                    }
+                    i++;
+                }
+            }
+        }
+    }
+</div>

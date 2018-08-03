@@ -1,0 +1,41 @@
+﻿@model  KdDataResponse<PrjSealBid>
+@{
+    Layout = null;
+}
+@using (Html.BeginPageTitle())
+{
+    @Html.BbBtnLinkAdd()
+    @Html.BbBtnGridDelete(this.Model)
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch(this.Model, true))
+    {
+        @Html.BbSearchFor(x => x.PrjName)
+        @Html.BbSearchFor(x => x.CheckPersonName)
+        @Html.BbSearchFor(x => x.CheckDate) 
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(true))
+        { 
+            @Html.BbTHeadFor(x => x.PrjName)
+            @Html.BbTHeadFor(x => x.CheckPersonName)
+            @Html.BbTHeadFor(x => x.CheckDate) 
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (PrjSealBid item in Model)
+            {
+                using (Html.BeginDataTableRow(item, true))
+                { 
+                    <td>@Html.ActionLink(item.PrjName, "Edit", new { id = item.Id })</td>
+                    <td>@item.CheckPersonName</td>
+                    <td>@item.CheckDate.ToDateString()</td> 
+                }
+            }
+        }
+    }
+}

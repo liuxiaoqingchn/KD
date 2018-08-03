@@ -1,0 +1,91 @@
+﻿@model  List<PersonSumReport>
+
+@using (Html.BeginPageTitle("建造师汇总"))
+{
+}
+<div style="margin:8px;height:50px;" align="center" width="100%">
+    @using (Html.BeginForm("Index", "PersonSumReport"))
+    {
+        @Html.AntiForgeryToken()
+        <div class="col-md-4">
+            <div class="input-group kd-field-search text-left">
+                <span class="input-group-addon">合同签订日期</span>
+                <input class="form-control text-box date" data-bind="kpq_RelDate" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" data-type="date" id="kpq_RelDate" name="kpq_RelDate" role="form" type="text">
+                <span class="input-group-addon">至</span>
+                <input class="form-control text-box date" data-bind="kpq_RelDate_2" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" data-type="date" id="kpq_RelDate_2" name="kpq_RelDate_2" role="form" type="text">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" role="button">
+                <i class="glyphicon glyphicon-search" aria-hidden="true"></i>查询
+            </button>
+        </div>
+    }
+</div>
+<table class="table table-bordered table-condensed table-striped table-hover table-kd bb-data-table" data-kd-max-adapt-rows="2500" data-kd-role="list" data-kd-type="bbDataGrid" role="grid">
+    <thead>
+        <tr></tr>
+    </thead>
+    <thead>
+        <tr>
+            <th>建造师</th>
+            <th>待投标数量</th>
+            <th>已投标数量</th>
+            <th>中标项目</th>
+            <th>未中标项目</th>
+            <th>中标率</th>
+            <th>待签合同</th>
+            <th>已签合同</th>
+            <th>已签合同金额(万元)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (PersonSumReport item in Model)
+        {
+            using (Html.BeginDataTableRow(item, false))
+            {
+                <tr data-kd-role="listitem" data-kd-title="" role="row" style="background-color:white;">
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">@item.Manage</td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">@item.NotSginPrj</td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">@item.IsSginPrj</td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">@item.IsBidPrj </td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">@item.NotBidPrj</td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">@Html.ConversionToPer(item.IsBidPrj, item.IsSginPrj)</td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">@item.NotPactNum</td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">@item.IsPactNum</td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">
+                        @if (item.IsPactMoney != 0)
+                        {
+                            @item.IsPactMoney.ToString("#.00")
+                        }
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+@*@using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(false))
+        {
+            @Html.BbTHeadRow(false, "建造师", "待投标数量", "已投标数量", "中标项目", "未中标项目", "中标率", "待签合同", "已签合同","已签合同金额")
+        }
+        using (Html.BeginDataTableBody())
+        {
+            foreach (PersonSumReport item in Model)
+            {
+                using (Html.BeginDataTableRow(item, false))
+                {
+                    @Html.TdWord(item.Manage)
+                    @Html.TdWord(item.NotSginPrj)
+                    @Html.TdWord(item.IsSginPrj)
+                    @Html.TdWord(item.IsBidPrj)
+                    @Html.TdWord(item.NotBidPrj)
+                    @Html.ConversionToPer(item.IsBidPrj, item.IsSginPrj)
+                    @Html.TdWord(item.NotPactNum)
+                    @Html.TdWord(item.IsPactNum)
+                    @Html.TdWord(item.IsPactMoney)
+                }
+            }
+        }
+    }*@

@@ -1,0 +1,439 @@
+﻿2018-08-02 21:12:57.98770 [T00001] [Error]   KdDbContextFactory - DbContext Initialize Error and Retry: [KdCore.Data.Dicts.KdDbDictsContext]. 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+2018-08-02 21:12:58.09631 [T00001] [Error]   KdDbContextFactory - DbContext Initialize Error: [KdCore.Data.Dicts.KdDbDictsContext]. 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+              【Exception】System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 系统找不到指定的文件。
+                 在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+                 在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+                 在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+                 在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+                 在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+                 在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+                 在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+                 在 System.Data.SqlClient.SqlConnection.Open()
+                 在 System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<Open>b__36(DbConnection t, DbConnectionInterceptionContext c)
+                 在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+                 在 System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+                 在 System.Data.Entity.SqlServer.SqlProviderServices.<>c__DisplayClass33.<UsingConnection>b__32()
+                 在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+                 在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+                 在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+                 在 System.Data.Entity.SqlServer.SqlProviderServices.UsingConnection(DbConnection sqlConnection, Action`1 act)
+                 在 System.Data.Entity.SqlServer.SqlProviderServices.UsingMasterConnection(DbConnection sqlConnection, Action`1 act)
+                 在 System.Data.Entity.SqlServer.SqlProviderServices.CreateDatabaseFromScript(Nullable`1 commandTimeout, DbConnection sqlConnection, String createDatabaseScript)
+                 在 System.Data.Entity.SqlServer.SqlProviderServices.DbCreateDatabase(DbConnection connection, Nullable`1 commandTimeout, StoreItemCollection storeItemCollection)
+                 在 System.Data.Entity.Core.Common.DbProviderServices.CreateDatabase(DbConnection connection, Nullable`1 commandTimeout, StoreItemCollection storeItemCollection)
+                 在 System.Data.Entity.Core.Objects.ObjectContext.CreateDatabase()
+                 在 System.Data.Entity.Migrations.Utilities.DatabaseCreator.Create(DbConnection connection)
+                 在 System.Data.Entity.Migrations.DbMigrator.EnsureDatabaseExists(Action mustSucceedToKeepDatabase)
+                 在 System.Data.Entity.Migrations.DbMigrator.Update(String targetMigration)
+                 在 System.Data.Entity.MigrateDatabaseToLatestVersion`2.InitializeDatabase(TContext context)
+                 在 KdCore.Data.EntityFramework.KdDbAutoMigrate`1.TDbMigrateToLastVersion.InitializeDatabase(TDbContext context)
+                 在 System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+                 在 System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+                 在 System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+                 在 System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+                 在 System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+                 在 System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+                 在 System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+                 在 System.Data.Entity.Internal.InternalContext.Initialize()
+                 在 System.Data.Entity.Database.Initialize(Boolean force)
+                 在 KdCore.Data.EntityFramework.KdDbContextFactory.DbInitialize[TDbContext]()
+              ClientConnectionId:00000000-0000-0000-0000-000000000000
+              Error Number:2,State:0,Class:20
+2018-08-02 21:15:33.32818 [T00001] [Error]   KdDbContextFactory - DbContext Initialize Error and Retry: [KdCore.Data.Dicts.KdDbDictsContext]. 无法打开登录所请求的数据库 "KdYdtGxsj"。登录失败。
+              用户 'sa' 登录失败。
+2018-08-02 21:15:33.36523 [T00001][CodeMark] KdDbContextFactory - [DB26746391]  未能于 2018/8/2 21:15:33 +08:00 打开连接，错误为: 无法打开登录所请求的数据库 "KdYdtGxsj"。登录失败。 用户 'sa' 登录失败。
+2018-08-02 21:15:33.36722 [T00001][CodeMark] KdDbContextFactory - [DB26746391]  未能于 2018/8/2 21:15:33 +08:00 打开连接，错误为: 无法打开登录所请求的数据库 "KdYdtGxsj"。登录失败。 用户 'sa' 登录失败。
+2018-08-02 21:15:33.37221 [T00001][CodeMark] KdDbContextFactory - [DB9084369]  未能于 2018/8/2 21:15:33 +08:00 打开连接，错误为: 无法打开登录所请求的数据库 "KdYdtGxsj"。登录失败。 用户 'sa' 登录失败。
+2018-08-02 21:15:33.37321 [T00001][CodeMark] KdDbContextFactory - [DB9084369]  未能于 2018/8/2 21:15:33 +08:00 打开连接，错误为: 无法打开登录所请求的数据库 "KdYdtGxsj"。登录失败。 用户 'sa' 登录失败。
+2018-08-02 21:15:33.40023 [T00001][CodeMark] KdDbContextFactory - [DB5034184]  未能于 2018/8/2 21:15:33 +08:00 打开连接，错误为: 无法打开登录所请求的数据库 "KdYdtGxsj"。登录失败。 用户 'sa' 登录失败。
+2018-08-02 21:15:33.40223 [T00001] [Error]   KdDbContextFactory - DbContext Initialize Error: [KdCore.Data.Dicts.KdDbDictsContext]. 无法打开登录所请求的数据库 "KdYdtGxsj"。登录失败。
+              用户 'sa' 登录失败。
+              【Exception】System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "KdYdtGxsj"。登录失败。
+              用户 'sa' 登录失败。
+                 在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+                 在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+                 在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+                 在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+                 在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+                 在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+                 在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+                 在 System.Data.SqlClient.SqlConnection.Open()
+                 在 System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<Open>b__36(DbConnection t, DbConnectionInterceptionContext c)
+                 在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+                 在 System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+                 在 System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection)
+                 在 System.Data.Entity.Migrations.DbMigrator.<>c__DisplayClass32.<ExecuteStatements>b__30()
+                 在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+                 在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+                 在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+                 在 System.Data.Entity.Migrations.DbMigrator.ExecuteStatements(IEnumerable`1 migrationStatements, DbTransaction existingTransaction)
+                 在 System.Data.Entity.Migrations.DbMigrator.ExecuteStatements(IEnumerable`1 migrationStatements)
+                 在 System.Data.Entity.Migrations.DbMigrator.ExecuteOperations(String migrationId, VersionedModel targetModel, IEnumerable`1 operations, IEnumerable`1 systemOperations, Boolean downgrading, Boolean auto)
+                 在 System.Data.Entity.Migrations.DbMigrator.AutoMigrate(String migrationId, VersionedModel sourceModel, VersionedModel targetModel, Boolean downgrading)
+                 在 System.Data.Entity.Migrations.DbMigrator.Upgrade(IEnumerable`1 pendingMigrations, String targetMigrationId, String lastMigrationId)
+                 在 System.Data.Entity.Migrations.DbMigrator.UpdateInternal(String targetMigration)
+                 在 System.Data.Entity.Migrations.DbMigrator.<>c__DisplayClasse.<Update>b__d()
+                 在 System.Data.Entity.Migrations.DbMigrator.EnsureDatabaseExists(Action mustSucceedToKeepDatabase)
+                 在 System.Data.Entity.Migrations.DbMigrator.Update(String targetMigration)
+                 在 System.Data.Entity.MigrateDatabaseToLatestVersion`2.InitializeDatabase(TContext context)
+                 在 KdCore.Data.EntityFramework.KdDbAutoMigrate`1.TDbMigrateToLastVersion.InitializeDatabase(TDbContext context)
+                 在 System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+                 在 System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+                 在 System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+                 在 System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+                 在 System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+                 在 System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+                 在 System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+                 在 System.Data.Entity.Internal.InternalContext.Initialize()
+                 在 System.Data.Entity.Database.Initialize(Boolean force)
+                 在 KdCore.Data.EntityFramework.KdDbContextFactory.DbInitialize[TDbContext]()
+              ClientConnectionId:072d3e88-75be-4784-a5ea-d9c7124afbd7
+              Error Number:4060,State:1,Class:11
+2018-08-02 21:25:04.31774 [T00001][Critical] KdAppContext - 已加载全局配置文件：G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdGlobal.profile
+2018-08-02 21:25:09.71226 [T00001][Critical] KdWebContext - RegisterWebMvc Namespaces: 
+                      KdCore.Web.Errors.Controllers
+                      KdYdt.Gxsj.Oa.Mvc.Controllers
+2018-08-02 21:25:09.71725 [T00001] [Major]   KdUnitManager - 初始化系统功能模块设置……
+2018-08-02 21:25:09.97936 [T00001] [Major]   KdUnitManager - 初始化系统模块设置结束
+              从本地运行程序中识别出功能模块：56 个
+              初始化功能模块：56 个，功能操作：1290 个
+2018-08-02 21:25:09.98436 [T00001] [Major]   KdMenu - 初始化系统菜单……
+2018-08-02 21:25:10.39548 [T00001] [Major]   KdMenu - 共计初始化系统菜单：3 个
+2018-08-02 21:25:10.39548 [T00001] [Major]   KdMenu - 菜单 OA系统菜单[Default] 共计加载菜单项 21 个
+2018-08-02 21:25:10.69867 [T00001] [Major]   KdMenu - 菜单 项目管理菜单[PrjManage] 共计加载菜单项 46 个
+2018-08-02 21:25:10.75872 [T00001] [Major]   KdMenu - 菜单 后台管理菜单[Admin] 共计加载菜单项 8 个
+2018-08-02 21:25:10.75872 [T00001] [Major]   KdMenu - 初始化系统菜单设置结束。
+2018-08-02 21:25:10.84778 [T00001][Critical] BbMvcManager - 当前系统运行环境：
+                      IIS Version: 10.0
+                      Integrated Pipeline: True
+                      TargetFramework: 4.6
+                      BaseDirectory: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\
+                      BinDirectory: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\bin\
+                      AppDomainAppVirtualPath: /
+                      RootPathVirtual: ~
+                      RootPathPhysics: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\
+                      AppData VirtualPath: ~/App_Data;
+                      AppData PhysicsPath: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data;
+                      系统全局配置文件: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdGlobal.profile;
+                      数据字典配置文件夹: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdDict;
+                      系统菜单配置文件夹: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdMenu;
+                      系统默认菜单文件: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdMenu\KdMenu_Default.json;
+                      系统运行日志文件: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdLogs\Kd_Web.2018_08_02.log;
+                      数据库初始化JSON文件默认保存路径: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\DataInit;
+                      数据库备份JSON文件默认保存路径: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\DataBackup;
+                      用户个人文件默认保存路径: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\Data_User;
+                      报表模板默认路径: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\Templates;
+                      报表输出默认路径: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\Reports;
+                      附件上传默认保存路径: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\User_Uploads;
+                      文件覆盖时自动备份的文件夹名称: History;
+2018-08-02 21:25:11.58407 [T00006][CodeMark] HomeController - 【Http-GET:58GLG2VHMXOS】已耗时：0.3257405秒【Session:1zgenxnxkinyne1pahkylgyc】[1D42A643D358ED2]
+              [Url] http://localhost:6382/
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+2018-08-02 21:25:11.65335 [T00006][Critical] KdUtil - 调试模式运行，忽略版本更新检测
+2018-08-02 21:25:12.49203 [T00006][CodeMark] HomeController - 【Http-GET:58GLG2VHMXOS】已耗时：0.3257405秒【Session:1zgenxnxkinyne1pahkylgyc】[1D42A643D358ED2]
+              [Url] http://localhost:6382/
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 1.2317 秒
+2018-08-02 21:25:13.60366 [T00006][Critical] HttpContextWrapper - 【请求处理错误】58GLG2VHMXOS
+              URL：http://localhost:6382/
+              
+              无法向会话状态服务器发出会话状态请求。请确保 ASP.NET State Service (ASP.NET 状态服务)已启动，并且客户端端口与服务器端口相同。如果服务器位于远程计算机上，请检查 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection 的值，确保服务器接受远程请求。如果服务器位于本地计算机上，并且上面提到的注册表值不存在或者设置为 0，则状态服务器连接字符串必须使用“localhost”或“127.0.0.1”作为服务器名称。
+2018-08-02 21:25:13.60565 [T00006][Critical] HttpContextWrapper - 【请求处理错误】58GLG2VHMXOS
+              URL：http://localhost:6382/
+              【Exception】System.Web.HttpException (0x80072749): 无法向会话状态服务器发出会话状态请求。请确保 ASP.NET State Service (ASP.NET 状态服务)已启动，并且客户端端口与服务器端口相同。如果服务器位于远程计算机上，请检查 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameters\AllowRemoteConnection 的值，确保服务器接受远程请求。如果服务器位于本地计算机上，并且上面提到的注册表值不存在或者设置为 0，则状态服务器连接字符串必须使用“localhost”或“127.0.0.1”作为服务器名称。
+                 在 System.Web.SessionState.OutOfProcSessionStateStore.MakeRequest(StateProtocolVerb verb, String id, StateProtocolExclusive exclusiveAccess, Int32 extraFlags, Int32 timeout, Int32 lockCookie, Byte[] buf, Int32 cb, Int32 networkTimeout, SessionNDMakeRequestResults& results)
+                 在 System.Web.SessionState.OutOfProcSessionStateStore.SetAndReleaseItemExclusive(HttpContext context, String id, SessionStateStoreData item, Object lockId, Boolean newItem)
+                 在 System.Web.SessionState.SessionStateModule.OnReleaseState(Object source, EventArgs eventArgs)
+                 在 System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                 在 System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+                 在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-08-02 21:25:13.63466 [T00006][CodeMark] global_asax - 写入日志数据库时发生错误。
+              【Exception】System.NullReferenceException: 未将对象引用设置到对象的实例。
+                 在 KdCore.Web.Mvc.KdWebCustomErrors.CreateUserAction(HttpContextBase context)
+                 在 KdCore.Web.Mvc.KdWebCustomErrors.DbLogErrors(HttpContextBase context, BbLogLevel logLevel, String errorTag, String objType, String objId)
+                 在 KdCore.Web.Mvc.KdWebCustomErrors.OnErrorGlobal(HttpApplication application, Object sender, EventArgs e)
+2018-08-02 23:16:42.65187 [T00001][Critical] KdAppContext - 已加载全局配置文件：G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdGlobal.profile
+2018-08-02 23:16:47.93509 [T00001][Critical] KdWebContext - RegisterWebMvc Namespaces: 
+                      KdCore.Web.Errors.Controllers
+                      KdYdt.Gxsj.Oa.Mvc.Controllers
+2018-08-02 23:16:47.94007 [T00001] [Major]   KdUnitManager - 初始化系统功能模块设置……
+2018-08-02 23:16:48.20328 [T00001] [Major]   KdUnitManager - 初始化系统模块设置结束
+              从本地运行程序中识别出功能模块：56 个
+              初始化功能模块：56 个，功能操作：1290 个
+2018-08-02 23:16:48.20629 [T00001] [Major]   KdMenu - 初始化系统菜单……
+2018-08-02 23:16:48.58711 [T00001] [Major]   KdMenu - 共计初始化系统菜单：3 个
+2018-08-02 23:16:48.58711 [T00001] [Major]   KdMenu - 菜单 OA系统菜单[Default] 共计加载菜单项 21 个
+2018-08-02 23:16:48.88264 [T00001] [Major]   KdMenu - 菜单 项目管理菜单[PrjManage] 共计加载菜单项 46 个
+2018-08-02 23:16:48.92479 [T00001] [Major]   KdMenu - 菜单 后台管理菜单[Admin] 共计加载菜单项 8 个
+2018-08-02 23:16:48.92479 [T00001] [Major]   KdMenu - 初始化系统菜单设置结束。
+2018-08-02 23:16:48.99182 [T00001][Critical] BbMvcManager - 当前系统运行环境：
+                      IIS Version: 10.0
+                      Integrated Pipeline: True
+                      TargetFramework: 4.6
+                      BaseDirectory: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\
+                      BinDirectory: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\bin\
+                      AppDomainAppVirtualPath: /
+                      RootPathVirtual: ~
+                      RootPathPhysics: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\
+                      AppData VirtualPath: ~/App_Data;
+                      AppData PhysicsPath: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data;
+                      系统全局配置文件: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdGlobal.profile;
+                      数据字典配置文件夹: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdDict;
+                      系统菜单配置文件夹: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdMenu;
+                      系统默认菜单文件: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdMenu\KdMenu_Default.json;
+                      系统运行日志文件: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdLogs\Kd_Web.2018_08_02.log;
+                      数据库初始化JSON文件默认保存路径: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\DataInit;
+                      数据库备份JSON文件默认保存路径: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\DataBackup;
+                      用户个人文件默认保存路径: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\Data_User;
+                      报表模板默认路径: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\Templates;
+                      报表输出默认路径: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\Reports;
+                      附件上传默认保存路径: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\User_Uploads;
+                      文件覆盖时自动备份的文件夹名称: History;
+2018-08-02 23:16:49.67311 [T00006][CodeMark] HomeController - 【Http-GET:58GNB70QRIUW】已耗时：0.2816840秒【Session:upgjaqijhmwhjnh2r5ry1qmf】[1D42A73D59B8F1D]
+              [Url] http://localhost:6382/
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+2018-08-02 23:16:49.71872 [T00006][Critical] KdUtil - 调试模式运行，忽略版本更新检测
+2018-08-02 23:16:50.41018 [T00006][CodeMark] HomeController - 【Http-GET:58GNB70QRIUW】已耗时：0.2816840秒【Session:upgjaqijhmwhjnh2r5ry1qmf】[1D42A73D59B8F1D]
+              [Url] http://localhost:6382/
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 1.0167 秒
+2018-08-02 23:16:51.25713 [T00010][CodeMark] HomeController - 【Http-GET:58GN9ATJD89I】已耗时：0.0951769秒【Session:upgjaqijhmwhjnh2r5ry1qmf】[1D42A73D6A990ED]
+              [Url] http://localhost:6382/Home/Login
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+2018-08-02 23:17:01.71860 [T00010][CodeMark] HomeController - 【Http-GET:58GN9ATJD89I】已耗时：0.0951769秒【Session:upgjaqijhmwhjnh2r5ry1qmf】[1D42A73D6A990ED]
+              [Url] http://localhost:6382/Home/Login
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 10.5556 秒【缓慢】
+2018-08-02 23:17:14.36886 [T00006][CodeMark] HomeController - 【Http-POST:58GNQYFTCHWQ】已耗时：0.0040005秒【Session:upgjaqijhmwhjnh2r5ry1qmf】[1D42A73E47DE5A7]
+              [Url] http://localhost:6382/Home/Login
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Home/Login
+2018-08-02 23:17:15.12473 [T00006][CodeMark] HomeController - 【Http-POST:58GNQYFTCHWQ】已耗时：0.0040005秒【Session:upgjaqijhmwhjnh2r5ry1qmf】[1D42A73E47DE5A7]
+              [Url] http://localhost:6382/Home/Login
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求处理完成】执行时间 0.7599 秒
+2018-08-02 23:17:15.15276 [T00010][CodeMark] ItemHomeController - 【Http-GET:58GNMAUAJSFF】已耗时：0.0070069秒【Session:upgjaqijhmwhjnh2r5ry1qmf】[1D42A73E4F5341E]
+              [Url] http://localhost:6382/Item/ItemHome
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Home/Login
+2018-08-02 23:17:27.59233 [T00010][CodeMark] ItemHomeController - 【Http-GET:58GNMAUAJSFF】已耗时：0.0070069秒【Session:upgjaqijhmwhjnh2r5ry1qmf】[1D42A73E4F5341E]
+              [Url] http://localhost:6382/Item/ItemHome
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求处理完成】执行时间 12.4456 秒【异常缓慢】
+2018-08-02 23:19:48.06247 [T00015][CodeMark] PrjItemController - 【Http-GET:58GNKHF9WQ4C】已耗时：0.0050035秒【Session:upgjaqijhmwhjnh2r5ry1qmf】[1D42A7440198712]
+              [Url] http://localhost:6382/Item/PrjItem
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/ItemHome
+2018-08-02 23:19:52.14722 [T00015][CodeMark] PrjItemController - 【Http-GET:58GNKHF9WQ4C】已耗时：0.0050035秒【Session:upgjaqijhmwhjnh2r5ry1qmf】[1D42A7440198712]
+              [Url] http://localhost:6382/Item/PrjItem
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 4.0887 秒【稍慢】
+2018-08-02 23:38:11.11634 [T00001] [Error]   KdDbContextFactory - DbContext Initialize Error and Retry: [KdCore.Data.Dicts.KdDbDictsContext]. 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+2018-08-02 23:38:11.17138 [T00001] [Error]   KdDbContextFactory - DbContext Initialize Error: [KdCore.Data.Dicts.KdDbDictsContext]. 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+              【Exception】System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 系统找不到指定的文件。
+                 在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+                 在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+                 在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+                 在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+                 在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+                 在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+                 在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+                 在 System.Data.SqlClient.SqlConnection.Open()
+                 在 System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<Open>b__36(DbConnection t, DbConnectionInterceptionContext c)
+                 在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+                 在 System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+                 在 System.Data.Entity.SqlServer.SqlProviderServices.<>c__DisplayClass33.<UsingConnection>b__32()
+                 在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+                 在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+                 在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+                 在 System.Data.Entity.SqlServer.SqlProviderServices.UsingConnection(DbConnection sqlConnection, Action`1 act)
+                 在 System.Data.Entity.SqlServer.SqlProviderServices.UsingMasterConnection(DbConnection sqlConnection, Action`1 act)
+                 在 System.Data.Entity.SqlServer.SqlProviderServices.CreateDatabaseFromScript(Nullable`1 commandTimeout, DbConnection sqlConnection, String createDatabaseScript)
+                 在 System.Data.Entity.SqlServer.SqlProviderServices.DbCreateDatabase(DbConnection connection, Nullable`1 commandTimeout, StoreItemCollection storeItemCollection)
+                 在 System.Data.Entity.Core.Common.DbProviderServices.CreateDatabase(DbConnection connection, Nullable`1 commandTimeout, StoreItemCollection storeItemCollection)
+                 在 System.Data.Entity.Core.Objects.ObjectContext.CreateDatabase()
+                 在 System.Data.Entity.Migrations.Utilities.DatabaseCreator.Create(DbConnection connection)
+                 在 System.Data.Entity.Migrations.DbMigrator.EnsureDatabaseExists(Action mustSucceedToKeepDatabase)
+                 在 System.Data.Entity.Migrations.DbMigrator.Update(String targetMigration)
+                 在 System.Data.Entity.MigrateDatabaseToLatestVersion`2.InitializeDatabase(TContext context)
+                 在 KdCore.Data.EntityFramework.KdDbAutoMigrate`1.TDbMigrateToLastVersion.InitializeDatabase(TDbContext context)
+                 在 System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+                 在 System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+                 在 System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+                 在 System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+                 在 System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+                 在 System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+                 在 System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+                 在 System.Data.Entity.Internal.InternalContext.Initialize()
+                 在 System.Data.Entity.Database.Initialize(Boolean force)
+                 在 KdCore.Data.EntityFramework.KdDbContextFactory.DbInitialize[TDbContext]()
+              ClientConnectionId:00000000-0000-0000-0000-000000000000
+              Error Number:2,State:0,Class:20
+2018-08-02 23:40:02.90006 [T00001][Critical] KdAppContext - 已加载全局配置文件：G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdGlobal.profile
+2018-08-02 23:40:08.41296 [T00001][Critical] KdWebContext - RegisterWebMvc Namespaces: 
+                      KdCore.Web.Errors.Controllers
+                      KdYdt.Gxsj.Oa.Mvc.Controllers
+2018-08-02 23:40:08.41797 [T00001] [Major]   KdUnitManager - 初始化系统功能模块设置……
+2018-08-02 23:40:08.69116 [T00001] [Major]   KdUnitManager - 初始化系统模块设置结束
+              从本地运行程序中识别出功能模块：56 个
+              初始化功能模块：56 个，功能操作：1290 个
+2018-08-02 23:40:08.69416 [T00001] [Major]   KdMenu - 初始化系统菜单……
+2018-08-02 23:40:09.10846 [T00001] [Major]   KdMenu - 共计初始化系统菜单：3 个
+2018-08-02 23:40:09.10846 [T00001] [Major]   KdMenu - 菜单 OA系统菜单[Default] 共计加载菜单项 21 个
+2018-08-02 23:40:09.37865 [T00001] [Major]   KdMenu - 菜单 项目管理菜单[PrjManage] 共计加载菜单项 46 个
+2018-08-02 23:40:09.49973 [T00001] [Major]   KdMenu - 菜单 后台管理菜单[Admin] 共计加载菜单项 8 个
+2018-08-02 23:40:09.49973 [T00001] [Major]   KdMenu - 初始化系统菜单设置结束。
+2018-08-02 23:40:09.54577 [T00001][Critical] BbMvcManager - 当前系统运行环境：
+                      IIS Version: 10.0
+                      Integrated Pipeline: True
+                      TargetFramework: 4.6
+                      BaseDirectory: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\
+                      BinDirectory: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\bin\
+                      AppDomainAppVirtualPath: /
+                      RootPathVirtual: ~
+                      RootPathPhysics: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\
+                      AppData VirtualPath: ~/App_Data;
+                      AppData PhysicsPath: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data;
+                      系统全局配置文件: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdGlobal.profile;
+                      数据字典配置文件夹: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdDict;
+                      系统菜单配置文件夹: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdMenu;
+                      系统默认菜单文件: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdMenu\KdMenu_Default.json;
+                      系统运行日志文件: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdLogs\Kd_Web.2018_08_02.log;
+                      数据库初始化JSON文件默认保存路径: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\DataInit;
+                      数据库备份JSON文件默认保存路径: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\DataBackup;
+                      用户个人文件默认保存路径: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\Data_User;
+                      报表模板默认路径: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\Templates;
+                      报表输出默认路径: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\Reports;
+                      附件上传默认保存路径: G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\User_Uploads;
+                      文件覆盖时自动备份的文件夹名称: History;
+2018-08-02 23:40:10.38936 [T00008][CodeMark] HomeController - 【Http-GET:58GNHANPNGG4】已耗时：0.4453151秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A77186714C1]
+              [Url] http://localhost:6382/
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+2018-08-02 23:40:10.46041 [T00008][Critical] KdUtil - 调试模式运行，忽略版本更新检测
+2018-08-02 23:40:11.30902 [T00008][CodeMark] HomeController - 【Http-GET:58GNHANPNGG4】已耗时：0.4453151秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A77186714C1]
+              [Url] http://localhost:6382/
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 1.3620 秒
+2018-08-02 23:40:11.33303 [T00006][CodeMark] HomeController - 【Http-GET:58GN4H11U434】已耗时：0.0040014秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A771939F46A]
+              [Url] http://localhost:6382/Home/Login
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+2018-08-02 23:40:26.68433 [T00006][CodeMark] HomeController - 【Http-GET:58GN4H11U434】已耗时：0.0040014秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A771939F46A]
+              [Url] http://localhost:6382/Home/Login
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 15.3553 秒【异常缓慢】
+2018-08-02 23:40:38.10943 [T00008][CodeMark] HomeController - 【Http-POST:58GNHDG3JFNR】已耗时：0.0040029秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A77292FB544]
+              [Url] http://localhost:6382/Home/Login
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Home/Login
+2018-08-02 23:40:39.16117 [T00008][CodeMark] HomeController - 【Http-POST:58GNHDG3JFNR】已耗时：0.0040029秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A77292FB544]
+              [Url] http://localhost:6382/Home/Login
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求处理完成】执行时间 1.0547 秒
+2018-08-02 23:40:39.19720 [T00008][CodeMark] ItemHomeController - 【Http-GET:58GN2J00TKIN】已耗时：0.0130092秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A7729D4508A]
+              [Url] http://localhost:6382/Item/ItemHome
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Home/Login
+2018-08-02 23:40:41.58889 [T00008][CodeMark] ItemHomeController - 【Http-GET:58GN2J00TKIN】已耗时：0.0130092秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A7729D4508A]
+              [Url] http://localhost:6382/Item/ItemHome
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求处理完成】执行时间 2.4037 秒
+2018-08-02 23:40:45.10939 [T00008][CodeMark] PrjTrackController - 【Http-GET:58GNVLBE8SP9】已耗时：0.0040019秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A772D5BD13C]
+              [Url] http://localhost:6382/Item/PrjTrack
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/ItemHome
+2018-08-02 23:40:49.93981 [T00008][CodeMark] PrjTrackController - 【Http-GET:58GNVLBE8SP9】已耗时：0.0040019秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A772D5BD13C]
+              [Url] http://localhost:6382/Item/PrjTrack
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 4.8344 秒【稍慢】
+2018-08-02 23:40:52.36553 [T00008][CodeMark] PrjItemController - 【Http-GET:58GN4LPHPA6D】已耗时：0.0050036秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A7731AEDD30]
+              [Url] http://localhost:6382/Item/PrjItem
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PrjTrack
+2018-08-02 23:40:53.13107 [T00008][CodeMark] PrjItemController - 【Http-GET:58GN4LPHPA6D】已耗时：0.0050036秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A7731AEDD30]
+              [Url] http://localhost:6382/Item/PrjItem
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.7705 秒
+2018-08-02 23:40:59.71073 [T00008][CodeMark] PayPactController - 【Http-GET:58GNRPFVKHFV】已耗时：0.0030012秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A77360FF570]
+              [Url] http://localhost:6382/Item/PayPact
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PrjItem
+2018-08-02 23:41:00.39422 [T00008][CodeMark] PayPactController - 【Http-GET:58GNRPFVKHFV】已耗时：0.0030012秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A77360FF570]
+              [Url] http://localhost:6382/Item/PayPact
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.6865 秒
+2018-08-02 23:41:02.23352 [T00006][CodeMark] InternalAgrController - 【Http-GET:58GNOH3JEG3V】已耗时：0.0040019秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A773790C0BE]
+              [Url] http://localhost:6382/Item/InternalAgr
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PayPact
+2018-08-02 23:41:04.11585 [T00006][CodeMark] InternalAgrController - 【Http-GET:58GNOH3JEG3V】已耗时：0.0040019秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A773790C0BE]
+              [Url] http://localhost:6382/Item/InternalAgr
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 1.8863 秒
+2018-08-02 23:41:06.67767 [T00006][CodeMark] PayBondController - 【Http-GET:58GNH93F6THL】已耗时：0.0040024秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A773A36E04E]
+              [Url] http://localhost:6382/Item/PayBond
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/InternalAgr
+2018-08-02 23:41:08.61805 [T00006][CodeMark] PayBondController - 【Http-GET:58GNH93F6THL】已耗时：0.0040024秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A773A36E04E]
+              [Url] http://localhost:6382/Item/PayBond
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 1.9444 秒
+2018-08-02 23:41:10.12011 [T00008][CodeMark] PayBidingController - 【Http-GET:58GNQKZTG40J】已耗时：0.0040029秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A773C4426A1]
+              [Url] http://localhost:6382/Item/PayBiding
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PayBond
+2018-08-02 23:41:12.06749 [T00008][CodeMark] PayBidingController - 【Http-GET:58GNQKZTG40J】已耗时：0.0040029秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A773C4426A1]
+              [Url] http://localhost:6382/Item/PayBiding
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 1.9514 秒
+2018-08-02 23:41:15.03759 [T00008][CodeMark] PayIncomeController - 【Http-GET:58GNZJ2GBG7J】已耗时：0.0030003秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A773F32A6F2]
+              [Url] http://localhost:6382/Item/PayIncome
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PayBiding
+2018-08-02 23:41:16.93093 [T00008][CodeMark] PayIncomeController - 【Http-GET:58GNZJ2GBG7J】已耗时：0.0030003秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A773F32A6F2]
+              [Url] http://localhost:6382/Item/PayIncome
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 1.8963 秒
+2018-08-02 23:41:21.44848 [T00014][CodeMark] ItemHomeController - 【Http-GET:58GN28M6LXLB】已耗时：0.0055041秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A7743047E5B]
+              [Url] http://localhost:6382/Item
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PayIncome
+2018-08-02 23:41:21.62260 [T00014][CodeMark] ItemHomeController - 【Http-GET:58GN28M6LXLB】已耗时：0.0055041秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A7743047E5B]
+              [Url] http://localhost:6382/Item
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求处理完成】执行时间 0.1796 秒
+2018-08-02 23:41:26.33792 [T00017][CodeMark] TasksController - 【Http-GET:58GN3O8B7IXE】已耗时：0.0050091秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A7745EEA397]
+              [Url] http://localhost:6382/Tasks
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item
+2018-08-02 23:41:29.55447 [T00017][CodeMark] TasksController - 【Http-GET:58GN3O8B7IXE】已耗时：0.0050091秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A7745EEA397]
+              [Url] http://localhost:6382/Tasks
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求处理完成】执行时间 3.2216 秒【稍慢】
+2018-08-02 23:41:41.94019 [T00006][CodeMark] MyFollowController - 【Http-GET:58GNURJM7ACA】已耗时：0.0040024秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A774F3B828A]
+              [Url] http://localhost:6382/MyFollow
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Tasks
+2018-08-02 23:41:44.06970 [T00006][CodeMark] MyFollowController - 【Http-GET:58GNURJM7ACA】已耗时：0.0040024秒【Session:2xrlcypueukekfcnbsvlhrv4】[1D42A774F3B828A]
+              [Url] http://localhost:6382/MyFollow
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求处理完成】执行时间 2.1335 秒

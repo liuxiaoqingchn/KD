@@ -1,0 +1,86 @@
+﻿
+@model  PrjBond
+
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnSubmit()
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">保证金退还情况</span>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                @Html.BbTextFor(x => x.PrjName, 4)
+                @Html.BbTextFor(x => x.PrjCode, 4)
+            </div>
+            <div class="row">
+            </div>
+            <div class="row">
+                @Html.BbTextFor(x => x.TaskPersonName, 4)
+                @Html.BbTextFor(x => x.TaskTime, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextFor(x => x.MakeName, 4)
+                @Html.BbTextFor(x => x.PlanTime, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.BondMoney, null, "万元", 2, 0, new { ReadOnly = true })
+                @Html.BbTextFor(x => x.BondReturnDate, 2)
+                @Html.BbRadioListFor(x => x.IsBond,2, 0,false, new { ReadOnly = true })
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.TenderPrice, null, "万元", 2)
+                @Html.BbTextBoxFor(x => x.BidEndDate,2)
+                @Html.BbTextBoxFor(x => x.EndDate,2)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.ReturnBankName, 4)
+                @Html.BbTextBoxFor(x => x.ReturnBankUser, 4)
+                @Html.BbTextBoxFor(x => x.ReturnBankAccount, 4)
+                @Html.BbTextBoxFor(x => x.PlayTime, 4)
+                @*@Html.BbTextBoxFor(x => x.OutBankName, 4)
+                    @Html.BbTextBoxFor(x => x.OutBankUser, 4)*@
+            </div>
+            <div class="row">
+                @*@Html.BbTextBoxFor(x => x.OutBankAccount, 10)*@
+            </div>
+            <div class="row">
+                @*@Html.BbTextBoxFor(x => x.CollectBankName, 4)
+                    @Html.BbTextBoxFor(x => x.CollectBankUser, 4)*@
+            </div>
+            <div class="row">
+                @*@Html.BbTextBoxFor(x => x.CollectBankAccount, 10)*@
+            </div>
+            <div class="row">
+                @Html.BbUserPickFor(x => x.PlayPersonId, x => x.PlayPersonName, 1, null, 4)
+                @Html.BbRadioListFor(x => x.IsReturn)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.FillDate,2)
+                @Html.BbTextBoxFor(x => x.TableDate, 2)
+                @Html.BbTextBoxFor(x => x.ActualTime, 2)
+            </div>
+            <div class="row">
+                @Html.BbRadioListFor(x => x.TaskStatus)
+       
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Explain)
+            </div>
+            @Html.AnnexUnit()
+            @Html.RowModifier()
+        </div>
+    </div>
+}
+
+@Html.AnnexUpload()

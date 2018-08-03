@@ -1,0 +1,49 @@
+﻿@model  KdDataResponse<PrjBiding>
+
+@using (Html.BeginPageTitle())
+{                        
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch(this.Model, true))
+    {
+        @Html.BbSearchFor(x => x.PrjCode)
+        @Html.BbSearchFor(x => x.PrjName)
+        @Html.BbSearchFor(x => x.TaskPersonName)
+        @Html.BbSearchFor(x => x.TaskTime)
+        @Html.BbSearchFor(x => x.PlanTime)      
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(true))
+        {
+            @Html.BbTHead("亮灯")
+            @Html.BbTHeadFor(x => x.PrjCode)
+            @Html.BbTHeadFor(x => x.PrjName)
+            @Html.BbTHeadFor(x => x.TaskPersonName)
+            @Html.BbTHeadFor(x => x.TaskTime)
+            @Html.BbTHeadFor(x => x.MakeName)
+            @Html.BbTHeadFor(x => x.TaskStatus)
+            @Html.BbTHeadFor(x => x.PlanTime)
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (PrjBiding item in Model)
+            {
+                using (Html.BeginDataTableRow(item, true))
+                {
+                    <td>@Html.PlanLamp(item.PlanTime)</td>
+                    <td>@item.PrjCode</td>
+                    <td>@Html.ActionLink(item.PrjName, "Edit", new { id = item.Id })</td>
+                    <td>@item.TaskPersonName</td>
+                    <td>@item.TaskTime.ToTimeString()</td>
+                    <td>@item.MakeName</td>
+                    <td>@item.TaskStatus.ToString()</td>
+                    <td>@item.PlanTime.ToTimeString()</td>
+                }
+            }
+        }
+    }
+}

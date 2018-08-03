@@ -1,0 +1,1253 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KdCore.Wechat</name>
+    </assembly>
+    <members>
+        <member name="T:KdCore.Wechat.WxOpenUserHttpToken">
+            <summary>
+            微信用户授权登录访问网页的票据
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUserHttpToken.AccessToken">
+            <summary>
+            公众号唯一票据凭证
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUserHttpToken.RefreshToken">
+            <summary>
+            用户刷新access_token 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUserHttpToken.OpenId">
+            <summary>
+            授权用户OpendID
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUserHttpToken.Scope">
+            <summary>
+            用户授权的作用域，使用逗号（,）分隔 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUserHttpToken.ExpiresIn">
+            <summary>
+            票据凭证有效时间，单位：秒
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUserHttpToken.ObtainTime">
+            <summary>
+            票据凭证获取时间
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUserHttpToken.ExpiresTime">
+            <summary>
+            票据凭证过期时间
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUserHttpToken.IsExpired">
+            <summary>
+            当前凭证已经过期
+            </summary>
+        </member>
+        <member name="T:KdCore.Wechat.KdWxManager">
+            <summary>
+            微信公众号平台管理程序
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.Logger">
+            <summary>
+            获取日志输出对象
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.WxServerUrlBase">
+            <summary>
+            微信接口 URL: Base
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.WxServerUrlBase_OpenScope">
+            <summary>
+            微信接口 URL: 获取微信用户信息
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.WxServerUrlBase_WebToken">
+            <summary>
+            微信接口 URL: 获取微信用户访问站点的识别 Token
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.WxServerUrlBase_WebTokenRefresh">
+            <summary>
+            微信接口 URL: 获取微信用户访问站点的识别 Token Refresh
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.UrlBodyFmt_OpenScope">
+            <summary>
+            微信接口 URL 主体格式化模板: 生成的 URL 用于获取微信用户信息
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.UrlBodyFmt_WebToken">
+            <summary>
+            微信接口 URL 主体格式化模板: 生成的 URL 用于获取微信用户访问站点的识别 Token
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.UrlBodyFmt_WebTokenRefresh">
+            <summary>
+            微信接口 URL 主体格式化模板: 生成的 URL 用于获取微信用户访问站点的识别 Token Refresh
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.EnableLogsWxServer">
+            <summary>
+            获取或设置是否在日志中输出与微信服务器间的通信日志信息，用于观察调试
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.UseVirtualServer">
+            <summary>
+            获取或设置是否使用虚拟的微信服务器，在调试时使用虚拟服务器可避免影响正式环境运行
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.VirtualServerUrlBase">
+            <summary>
+            获取或设置虚拟的微信服务器的基 URL，该 URL 需提供响应测试微信通信的功能
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.AccessTokenExpirySeconds">
+            <summary>
+            获取或设置 access_token 令牌有效期时间（秒数）
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.JsonPathWxConfig">
+            <summary>
+            微信配置文件JSON序列化保存路径
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.JsonPathWxToken">
+            <summary>
+            票据凭证缓存序列化保存路径
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.Config">
+            <summary>
+            当前正在使用的管理配置
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.WxZeroTime">
+            <summary>
+            获取或设置微信接口识别为零的时间（通常为常量，不需要修改）
+            </summary>
+        </member>
+        <member name="F:KdCore.Wechat.KdWxManager._wechatToken">
+            <summary>
+            票据凭证缓存
+            </summary>
+        </member>
+        <member name="F:KdCore.Wechat.KdWxManager._wechatServers">
+            <summary>
+            微信服务器的IP地址缓存
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.AccessToken">
+            <summary>
+            当前正在使用的票据凭证
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.ServersIP">
+            <summary>
+            当前正在使用的微信服务器的IP地址
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.Init(System.String,System.String)">
+            <summary>
+            初始化微信配置保存路径
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.InitConfig(System.String)">
+            <summary>
+            重新从配置文件初始化微信配置参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.SetVirtualServer(System.String,System.Boolean)">
+            <summary>
+            设置虚拟的微信服务器的基 URL，该 URL 需提供响应测试微信通信的功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.ToWxTime(System.Int32)">
+            <summary>
+            微信接口时间转换
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.ToWxTime(System.DateTime)">
+            <summary>
+            微信接口时间转换
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.ServerUrlVerify(System.String,System.String,System.String)">
+            <summary>
+            验证服务器地址的有效性；
+            加密/校验流程如下：
+            1. 将token、timestamp、nonce三个参数进行字典序排序
+            2. 将三个参数字符串拼接成一个字符串进行sha1加密
+            3. 开发者获得加密后的字符串可与signature对比，标识该请求来源于微信
+            </summary>
+            <param name="signature">微信加密签名，signature结合了开发者填写的token参数和请求中的timestamp参数、nonce参数。</param>
+            <param name="timestamp">时间戳</param>
+            <param name="nonce">随机数</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.ServerUrlVerify(System.Uri)">
+            <summary>
+            验证服务器地址的有效性；
+            </summary>
+            <param name="requestUri">验证请求的URI</param>
+            <returns>验证答复结果</returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.CreateRestClient">
+            <summary>
+            创建一个用于微信通信的 <see cref="T:RestSharp.RestClient"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.WxHttpGetAbsoluteUrl(System.String,KdCore.Wechat.WechatCode@,System.Boolean)">
+            <summary>
+            对参数 url（绝对路径）GET 请求，并返回请求结果（仅当StatusCode==200时）
+            </summary>
+            <param name="fullUrl">请求的URL地址</param>
+            <param name="wxCode">请求执行返回码</param>
+            <param name="addToken">是否附加请求验证令牌</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.WxHttpGetAbsoluteUrl``1(System.String,KdCore.Wechat.WechatCode@,System.Boolean)">
+            <summary>
+            对参数 url（绝对路径）提交 GET 请求，并返回请求结果（仅当StatusCode==200时）
+            </summary>
+            <typeparam name="T">请求的数据类型</typeparam>
+            <param name="url">请求的URL地址</param>
+            <param name="wxCode">输出微信服务器可能返回的全局返回码</param>
+            <param name="addToken">是否给 url 自动添加 token 参数</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.WxHttpGet(System.String,KdCore.Wechat.WechatCode@,System.Boolean)">
+            <summary>
+            对 <see cref="P:KdCore.Wechat.KdWxManager.WxServerUrlBase"/> 的相对路径的提交 GET 请求，并返回请求结果（仅当StatusCode==200时）
+            </summary>
+            <param name="url">请求的URL地址(对于 <see cref="P:KdCore.Wechat.KdWxManager.WxServerUrlBase"/> 的相对路径)</param>
+            <param name="wxCode">请求执行返回码</param>
+            <param name="addToken">是否附加请求验证令牌</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.WxHttpGet``1(System.String,KdCore.Wechat.WechatCode@,System.Boolean)">
+            <summary>
+            对 <see cref="P:KdCore.Wechat.KdWxManager.WxServerUrlBase"/> 的相对路径的提交 GET 请求，并返回请求结果（仅当StatusCode==200时）
+            </summary>
+            <typeparam name="T">请求的数据类型</typeparam>
+            <param name="url">请求的URL地址(对于 <see cref="P:KdCore.Wechat.KdWxManager.WxServerUrlBase"/> 的相对路径)</param>
+            <param name="wxCode">输出微信服务器可能返回的全局返回码</param>
+            <param name="addToken">是否给 url 自动添加 token 参数</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.WxHttpPost(RestSharp.IRestRequest)">
+            <summary>
+            对 <see cref="P:KdCore.Wechat.KdWxManager.WxServerUrlBase"/> 的相对路径的提交 Post请求，并返回请求结果（仅当StatusCode==200时）
+            </summary>
+            <param name="request">POST请求</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.WxHttpPost``1(RestSharp.IRestRequest)">
+            <summary>
+            对 <see cref="P:KdCore.Wechat.KdWxManager.WxServerUrlBase"/> 的相对路径的提交 POST 请求，并返回请求结果（仅当StatusCode==200时）
+            </summary>
+            <typeparam name="T">请求的数据类型</typeparam>
+            <param name="request">POST请求</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.GetServerUserToken(System.Boolean)">
+            <summary>
+            获取公众号与微信服务器之间通信的票据凭证及过期时间
+            </summary>
+            <param name="useCacheToken">是否使用缓存的 Access_Token</param>
+            <returns>票据凭证（Access_Token）</returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.GetWechatServerIPs">
+            <summary>
+            获取微信服务器的IP地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.IsWechatServer(System.String)">
+            <summary>
+            验证是否是微信服务器的IP
+            </summary>
+            <param name="requestIp">请求的来源IP</param>
+            <returns>是否是微信服务器的IP</returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.MenuCreate(KdCore.Wechat.WcMenuButton[])">
+            <summary>
+            创建微信菜单
+            </summary>
+            <param name="buttons"></param>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.MenuConditional">
+            <summary>
+            查询当前的自定义微信菜单
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.MenuConfig">
+            <summary>
+            查询当前的微信菜单设置
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.GetWxUser(System.String,KdCore.Wechat.WechatCode@,System.String)">
+            <summary>
+            获取微信账号信息
+            </summary>
+            <param name="openId"></param>
+            <param name="code"></param>
+            <param name="language"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.GetWxUser(System.String,System.String)">
+            <summary>
+            获取微信账号信息
+            </summary>
+            <param name="openId"></param> 
+            <param name="language"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.OnReceiveUnknown">
+            <summary>
+            获取或设置接收到未知类型消息时的处理方法
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.OnReceiveText">
+            <summary>
+            获取或设置接收到文本消息时的处理方法
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.OnReceiveImage">
+            <summary>
+            获取或设置接收到图片消息时的处理方法
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.OnReceiveVoice">
+            <summary>
+            获取或设置接收到语音消息时的处理方法
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.OnReceiveVideo">
+            <summary>
+            获取或设置接收到视频消息时的处理方法
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.OnReceiveShortVideo">
+            <summary>
+            获取或设置接收到小视频消息时的处理方法
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.OnReceiveLocation">
+            <summary>
+            获取或设置接收到定位消息时的处理方法
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.OnReceiveLink">
+            <summary>
+            获取或设置接收到超链接消息时的处理方法
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.OnReceiveEvent">
+            <summary>
+            获取或设置接收到时间消息时的处理方法
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.HandleMessage(System.String)">
+            <summary>
+            处理接收到的微信消息，返回对消息处理结果的响应结果（XML格式字符串）
+            </summary>
+            <param name="xmlReceiveMessage">接收到的微信消息（XML格式字符串）</param>
+            <returns>包含消息响应结果的 XML 格式字符串</returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.ReplyMessageAsync(System.Net.Http.HttpContent)">
+            <summary>
+            处理消息
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.OnEventSubscribe">
+            <summary>
+            获取或设置关注事件的处理方法
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.OnEventUnsubscribe">
+            <summary>
+            获取或设置取消关注事件的处理方法
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.OnEventScan">
+            <summary>
+            获取或设置扫描事件的处理方法
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.OnEventLocation">
+            <summary>
+            获取或设置定位事件的处理方法
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.OnEventClick">
+            <summary>
+            获取或设置点击事件的处理方法
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxManager.OnEventView">
+            <summary>
+            获取或设置查看事件的处理方法
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.GetUrlWxOpenUserInfo(System.Boolean,System.String,System.String)">
+            <summary>
+            构建一个可以获取微信用户信息的 URL 地址
+            </summary>
+            <param name="useUserInfo"></param>
+            <param name="urlRedirect"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.GetOpenUserHttpToken(System.String)">
+            <summary>
+            从已生成的接口地址获取微信用户的授权 access_token
+            </summary>
+            <param name="urlGetOpenUserInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.GetOpenUserHttpToken(System.Web.HttpContextBase)">
+            <summary>
+            获取当前正在使用 Web Token
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.GetOpenUserHttpTokenRefresh(KdCore.Wechat.WxOpenUserHttpToken)">
+            <summary>
+            获取刷新后的 Web Token
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Wechat.KdWxManager.GetOpenUserHttpTokenCurrSession(System.Web.HttpContextBase)">
+            <summary>
+            获取或初始化当前 Session 可用的 WxWebToken
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Wechat.WcButtonType">
+            <summary>
+            微信菜单按钮类型
+            </summary>
+        </member>
+        <member name="F:KdCore.Wechat.WcButtonType.None">
+            <summary>
+            未设置类型或设置类型不正确
+            </summary>
+        </member>
+        <member name="F:KdCore.Wechat.WcButtonType.Click">
+            <summary>
+            点击推事件
+            用户点击click类型按钮后，微信服务器会通过消息接口推送消息类型为event 的结构给开发者（参考消息接口指南），并且带上按钮中开发者填写的key值，开发者可以通过自定义的key值与用户进行交互；
+            </summary>
+        </member>
+        <member name="F:KdCore.Wechat.WcButtonType.View">
+            <summary>
+            跳转URL
+            用户点击view类型按钮后，微信客户端将会打开开发者在按钮中填写的网页URL，可与网页授权获取用户基本信息接口结合，获得用户基本信息。
+            </summary>
+        </member>
+        <member name="F:KdCore.Wechat.WcButtonType.Scancode_push">
+            <summary>
+            扫码推事件
+            用户点击按钮后，微信客户端将调起扫一扫工具，完成扫码操作后显示扫描结果（如果是URL，将进入URL），且会将扫码的结果传给开发者，开发者可以下发消息。
+            </summary>
+        </member>
+        <member name="F:KdCore.Wechat.WcButtonType.Scancode_waitmsg">
+            <summary>
+            扫码推事件且弹出“消息接收中”提示框
+            用户点击按钮后，微信客户端将调起扫一扫工具，完成扫码操作后，将扫码的结果传给开发者，同时收起扫一扫工具，然后弹出“消息接收中”提示框，随后可能会收到开发者下发的消息。
+            </summary>
+        </member>
+        <member name="F:KdCore.Wechat.WcButtonType.Pic_sysphoto">
+            <summary>
+            弹出系统拍照发图
+            用户点击按钮后，微信客户端将调起系统相机，完成拍照操作后，会将拍摄的相片发送给开发者，并推送事件给开发者，同时收起系统相机，随后可能会收到开发者下发的消息。
+            </summary>
+        </member>
+        <member name="F:KdCore.Wechat.WcButtonType.Pic_photo_or_album">
+            <summary>
+            弹出拍照或者相册发图
+            用户点击按钮后，微信客户端将弹出选择器供用户选择“拍照”或者“从手机相册选择”。用户选择后即走其他两种流程。
+            </summary>
+        </member>
+        <member name="F:KdCore.Wechat.WcButtonType.Pic_weixin">
+            <summary>
+            弹出微信相册发图器
+            用户点击按钮后，微信客户端将调起微信相册，完成选择操作后，将选择的相片发送给开发者的服务器，并推送事件给开发者，同时收起相册，随后可能会收到开发者下发的消息。
+            </summary>
+        </member>
+        <member name="F:KdCore.Wechat.WcButtonType.Location_select">
+            <summary>
+            弹出地理位置选择器
+            用户点击按钮后，微信客户端将调起地理位置选择工具，完成选择操作后，将选择的地理位置发送给开发者的服务器，同时收起位置选择工具，随后可能会收到开发者下发的消息。
+            </summary>
+        </member>
+        <member name="F:KdCore.Wechat.WcButtonType.Media_id">
+            <summary>
+            下发消息（除文本消息）
+            用户点击media_id类型按钮后，微信服务器会将开发者填写的永久素材id对应的素材下发给用户，永久素材类型可以是图片、音频、视频、图文消息。请注意,永久素材id必须是在“素材管理/新增永久素材”接口上传后获得的合法id。
+            </summary>
+        </member>
+        <member name="F:KdCore.Wechat.WcButtonType.View_limited">
+            <summary>
+            跳转图文消息URL
+            用户点击view_limited类型按钮后，微信客户端将打开开发者在按钮中填写的永久素材id对应的图文消息URL，永久素材类型只支持图文消息。请注意, 永久素材id必须是在“素材管理/新增永久素材”接口上传后获得的合法id。
+            </summary>
+        </member>
+        <member name="T:KdCore.Wechat.WcMenu">
+            <summary>
+            微信菜单定义
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WcMenu.MenuId">
+            <summary>
+            菜单标识 KEY
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WcMenu.Button">
+            <summary>
+            一级菜单数组，个数应为1~3个 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WcMenu.MatchRule">
+            <summary>
+            菜单匹配规则，即什么样的用户可以使用该菜单
+            </summary>
+        </member>
+        <member name="T:KdCore.Wechat.WcMenuButton">
+            <summary>
+            微信菜单中的菜单项/菜单按钮
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WcMenuButton.Type">
+            <summary>
+            菜单的响应动作类型 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WcMenuButton.Name">
+            <summary>
+            按钮名称/显示文字
+            菜单标题，不超过16个字节，子菜单不超过40个字节 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WcMenuButton.Key">
+            <summary>
+            菜单KEY值，用于消息接口推送，不超过128字节 
+            click等点击类型必须 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WcMenuButton.Url">
+            <summary>
+            网页链接，用户点击菜单可打开链接，不超过1024字节 
+            view类型必须 	
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WcMenuButton.Media_Id">
+            <summary>
+            调用新增永久素材接口返回的合法media_id 
+            media_id类型和view_limited类型必须 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WcMenuButton.SubButton">
+            <summary>
+            二级菜单数组，个数应为1~5个
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.WcMenuButton.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.WcMenuButton.#ctor(System.String,KdCore.Wechat.WcButtonType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name"></param>
+            <param name="buttonType"></param>
+        </member>
+        <member name="M:KdCore.Wechat.WcMenuButton.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name"></param>
+            <param name="url"></param>
+        </member>
+        <member name="T:KdCore.Wechat.WechatServers">
+            <summary>
+            微信服务器的IP地址
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WechatServers.IpList">
+            <summary>
+            IP地址数组
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WechatServers.ExpiresIn">
+            <summary>
+            有效时间，单位：秒
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WechatServers.ExpiresTime">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WechatServers.IsExpired">
+            <summary>
+            当前IP地址数组已经过期
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WechatServers.NotExpired">
+            <summary>
+            当前IP地址数组尚未过期，仍然有效
+            </summary>
+        </member>
+        <member name="T:KdCore.Wechat.WxServerUserToken">
+            <summary>
+            公众号与微信服务通信的唯一票据
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxServerUserToken.AccessToken">
+            <summary>
+            公众号唯一票据凭证
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxServerUserToken.ExpiresIn">
+            <summary>
+            票据凭证有效时间，单位：秒
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxServerUserToken.ObtainTime">
+            <summary>
+            票据凭证获取时间
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxServerUserToken.ExpiresTime">
+            <summary>
+            票据凭证过期时间
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxServerUserToken.IsExpired">
+            <summary>
+            当前凭证已经过期
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxServerUserToken.NotExpired">
+            <summary>
+            当前凭证尚未过期，仍然有效
+            </summary>
+        </member>
+        <member name="T:KdCore.Wechat.WechatCode">
+            <summary>
+            微信全局返回码
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WechatCode.ErrCode">
+            <summary>
+            错误代码
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WechatCode.ErrMsg">
+            <summary>
+            错误代码说明
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WechatCode.MakeRetry">
+            <summary>
+            发现错误后已做处理，请重试
+            </summary>
+        </member>
+        <member name="T:KdCore.Wechat.RsException">
+            <summary>
+            RestSharp 异常信息封装
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.RsException.Client">
+            <summary>
+            发生异常的 IRestClient 实例
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.RsException.Request">
+            <summary>
+            与异常相关的 IRestRequest 实例
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.RsException.Response">
+            <summary>
+            与异常相关的 IRestResponse 实例
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.RsException.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.RsException.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:KdCore.Wechat.RsException.#ctor(System.String,System.Exception)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:KdCore.Wechat.RsException.#ctor(RestSharp.IRestResponse,RestSharp.RestClient)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="response"></param>
+            <param name="client"></param>
+        </member>
+        <member name="T:KdCore.Wechat.KdWxConfig">
+            <summary>
+            微信公众号基本配置
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxConfig.AppID">
+            <summary>
+            详见微信平台接口说明
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxConfig.AesKey">
+            <summary>
+            详见微信平台接口说明
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxConfig.AppSecret">
+            <summary>
+            详见微信平台接口说明
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.KdWxConfig.SiteToken">
+            <summary>
+            详见微信平台接口说明
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.WxJsonSerializer.#ctor">
+            <summary> 
+            Default serializer 
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.WxJsonSerializer.#ctor(Newtonsoft.Json.JsonSerializer)">
+            <summary> 
+            Default serializer with overload for allowing custom Json.NET settings 
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.WxJsonSerializer.Serialize(System.Object)">
+            <summary> 
+            Serialize the object as JSON 
+            </summary>
+            <param name="obj">Object to serialize</param> 
+            <returns>JSON as String</returns> 
+        </member>
+        <member name="P:KdCore.Wechat.WxJsonSerializer.DateFormat">
+            <summary> 
+            Unused for JSON Serialization 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxJsonSerializer.RootElement">
+            <summary> 
+            Unused for JSON Serialization 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxJsonSerializer.Namespace">
+            <summary> 
+            Unused for JSON Serialization 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxJsonSerializer.ContentType">
+            <summary> 
+            Content type for serialized content 
+            </summary>
+        </member>
+        <member name="T:KdCore.Wechat.WxMatchRule">
+            <summary>
+            微信菜单匹配规则
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMatchRule.Group_id">
+            <summary>
+            分组标识
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMatchRule.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMatchRule.Country">
+            <summary>
+            所在国家
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMatchRule.Province">
+            <summary>
+            所在省份
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMatchRule.City">
+            <summary>
+            所在城市
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMatchRule.Client_platform_type">
+            <summary>
+            客户端系统类型
+            </summary>
+        </member>
+        <member name="T:KdCore.Wechat.WxMenuConditional">
+            <summary>
+            匹配规则的微信菜单
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMenuConditional.Menu">
+            <summary>
+            微信菜单
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMenuConditional.ConditionalMenu">
+            <summary>
+            带有匹配规则的微信菜单
+            </summary>
+        </member>
+        <member name="T:KdCore.Wechat.WxMessage">
+            <summary>
+            微信消息定义（综合）
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.IsReply">
+            <summary>
+            是否是回复的消息
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.ToUserName">
+            <summary>
+            开发者微信号
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.FromUserName">
+            <summary>
+            发送方账户（一个OpenID）
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.CreateTime">
+            <summary>
+            消息创建时间 （整型）
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.MsgType">
+            <summary>
+            文本消息为 text
+            图片消息为 image
+            语音消息为 voice 
+            视频消息为 video 
+            小视频消息为 shortvideo 
+            地理位置消息为 location 
+            链接消息 link 
+            
+            事件消息 event 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.Recognition">
+            <summary>
+            识别标识
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.MsgId">
+            <summary>
+            消息id，64位整型
+            仅接收到的消息存在
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.Content">
+            <summary>
+            文本消息内容
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.PicUrl">
+            <summary>
+            图片链接
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.MediaId">
+            <summary>
+            图片消息媒体id，可以调用多媒体文件下载接口拉取数据。
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.ThumbMediaId">
+            <summary>
+            视频消息缩略图的媒体id，可以调用多媒体文件下载接口拉取数据。 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.Format">
+            <summary>
+            语音格式，如amr，speex等
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.MusicURL">
+            <summary>
+            音乐链接
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.HQMusicUrl">
+            <summary>
+            高质量音乐链接，WIFI环境优先使用该链接播放音乐 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.Location_X">
+            <summary>
+            地理位置纬度
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.Location_Y">
+            <summary>
+            地理位置经度
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.Scale">
+            <summary>
+            地图缩放大小
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.Label">
+            <summary>
+            地理位置信息
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.Url">
+            <summary>
+            消息链接
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.Title">
+            <summary>
+            消息标题
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.Description">
+            <summary>
+            消息描述
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.Event">
+            <summary>
+            事件类型
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.EventKey">
+            <summary>
+            事件KEY值
+            一个32位无符号整数
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.Ticket">
+            <summary>
+            事件类型
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.Latitude">
+            <summary>
+            地理位置纬度
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.Longitude">
+            <summary>
+            地理位置经度
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.Precision">
+            <summary>
+            地理位置精度
+            </summary>
+        </member>
+        <member name="T:KdCore.Wechat.WxMessage.ArticleItem">
+            <summary>
+            多媒体消息数据项
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.ArticleItem.Title">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.ArticleItem.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.ArticleItem.PicUrl">
+            <summary>
+            显示图片 URL 链接
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.ArticleItem.Url">
+            <summary>
+            URL链接地址
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.ArticleItem.ToXml">
+            <summary>
+            输出 xml 字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.ArticleItem.ToString">
+            <summary>
+            重写 ToStriong 方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.ArticleCount">
+            <summary>
+            媒体数据项数量
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.ArticleItems">
+            <summary>
+            媒体数据项集合
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.CreateReply(System.String)">
+            <summary>
+            初始化一个应答回复消息
+            </summary>
+            <param name="msgType"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.XmlMessage">
+            <summary>
+            XML消息内容
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.XmlBuilder">
+            <summary>
+            XML消息内容组合处理对象
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.CreateXmlTextNode(System.String,System.String)">
+            <summary>
+            创建一个XML文本数据节点
+            </summary>
+            <param name="nodeName"></param>
+            <param name="nodeValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.CreateXmlNode(System.String,System.String)">
+            <summary>
+            创建一个XML非文本数据节点
+            </summary>
+            <param name="nodeName"></param>
+            <param name="nodeValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.CreateXmlNode``1(System.String,``0)">
+            <summary>
+            创建一个XML非文本数据节点
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="nodeName"></param>
+            <param name="nodeValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.AppendXmlTextNode(System.String,System.String)">
+            <summary>
+            往消息中当前位置添加一个文本属性节点
+            </summary>
+            <param name="nodeName"></param>
+            <param name="nodeValue"></param>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.AppendXmlNode(System.String,System.String)">
+            <summary>
+            往消息中当前位置添加一个非文本属性节点
+            </summary>
+            <param name="nodeName"></param>
+            <param name="nodeValue"></param>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.AppendXmlNode``1(System.String,``0)">
+            <summary>
+            往消息中当前位置添加一个非文本属性节点
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="nodeName"></param>
+            <param name="nodeValue"></param>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.Resolve(System.String)">
+            <summary>
+            解析XML消息数据字符串
+            </summary>
+            <param name="xmlMessage">XML消息数据字符串</param>
+            <returns>消息数据对象</returns>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.GetXmlMessage">
+            <summary>
+            生成XML消息字符串
+            </summary>
+            <returns>XML消息字符串</returns>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.AddImageXmlItems">
+            <summary>
+            添加图片属性节点
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.AddVoiceXmlItems">
+            <summary>
+            添加语音属性节点
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.AddVideoXmlItems">
+            <summary>
+            添加视频属性节点
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.AddMusicXmlItems">
+            <summary>
+            添加音乐属性节点
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.AddNewsXmlItems">
+            <summary>
+            添加新闻属性节点
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.AddEventXmlItems">
+            <summary>
+            添加事件消息特有的消息属性内容
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.ToString">
+            <summary>
+            返回当前消息的XML格式字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.TestServiceOpenID">
+            <summary>
+            测试用微信公众号OpenID
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.TestUserOpenID">
+            <summary>
+            测试用微信普通账号OpenID
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.TestMsgSubscribe">
+            <summary>
+            测试用的关注消息
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxMessage.TestMsgUnsubscribe">
+            <summary>
+            测试用的取消关注消息
+            </summary>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.CreateTestMessage(System.Boolean,System.String,System.String)">
+            <summary>
+            创建一条测试消息数据
+            </summary>
+            <param name="isReceive"></param>
+            <param name="msgType"></param>
+            <param name="eventName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Wechat.WxMessage.InitTestData(System.String,System.String)">
+            <summary>
+            初始化测试数据
+            </summary>
+            <param name="userId"></param>
+            <param name="serviceId"></param>
+        </member>
+        <member name="T:KdCore.Wechat.WxOpenUser">
+            <summary>
+            微信开放账号信息
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUser.Subscribe">
+            <summary>
+            用户是否订阅该公众号标识，值为0时，代表此用户没有关注该公众号，拉取不到其余信息。 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUser.GroupId">
+            <summary>
+            用户所在的分组ID 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUser.OpenId">
+            <summary>
+            用户的标识，对当前公众号唯一 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUser.UnionId">
+            <summary>
+            只有在用户将公众号绑定到微信开放平台账户后，才会出现该字段。详见：获取用户个人信息（UnionID机制）
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUser.NickName">
+            <summary>
+            用户的昵称
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUser.Sex">
+            <summary>
+            用户的性别，值为1时是男性，值为2时是女性，值为0时是未知 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUser.Language">
+            <summary>
+            用户的语言，简体中文为zh_CN 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUser.City">
+            <summary>
+            用户所在城市
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUser.Province">
+            <summary>
+            用户所在省份 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUser.Country">
+            <summary>
+            用户所在国家 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUser.HeadimgUrl">
+            <summary>
+            用户头像，最后一个数值代表正方形头像大小（有0、46、64、96、132数值可选，0代表640*640正方形头像），用户没有头像时该项为空。若用户更换头像，原有头像URL将失效。 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUser.Subscribe_Time">
+            <summary>
+            用户关注时间，为时间戳。如果用户曾多次关注，则取最后关注时间 
+            </summary>
+        </member>
+        <member name="P:KdCore.Wechat.WxOpenUser.Remark">
+            <summary>
+            公众号运营者对粉丝的备注，公众号运营者可在微信公众平台用户管理界面对粉丝添加备注 
+            </summary>
+        </member>
+    </members>
+</doc>

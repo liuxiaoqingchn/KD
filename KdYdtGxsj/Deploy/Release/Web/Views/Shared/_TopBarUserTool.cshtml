@@ -1,0 +1,13 @@
+﻿@if (Html.IsPc())
+{
+    <li>
+        <a href="@Url.Action("Index","Tasks",new { area=string.Empty})" target="_OA">
+            <i class="fa fa-rocket"></i> OA系统
+        </a>
+    </li>
+    <li>
+        <a href="@Url.Action("Index","ItemHome",new { area="Item"})" target="_Item">
+            <i class="fa fa-database"></i> 项目管理
+        </a>
+    </li>
+}

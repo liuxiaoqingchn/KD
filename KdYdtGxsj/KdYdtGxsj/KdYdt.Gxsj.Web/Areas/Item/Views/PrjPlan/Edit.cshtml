@@ -1,0 +1,101 @@
+﻿@model  PrjPlan
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnSubmit()
+        @Html.BbBtnLinkReturn()
+    }
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-info">
+        <div class="panel-heading" @Html.DataCollapse(false)>
+            <span class="panel-title">基本信息</span>
+        </div>
+        <div class="panel-body">
+            <div id="content">
+                <div class="row">
+                    @Html.BfHiddenFor(x => x.PrjStatus)
+                </div>
+                <div class="row">
+                    @*@Html.BbDlgPickerFor(x => x.PrjName, "PrjItemPick", x => x.PrjName, 1, "#content", 4, "项目名称", new { controller = "PrjPicks" }, null, null, new { required = true })*@
+                    @Html.SjPickPrjFor(x => x.ProjectId, x => x.PrjName, 1)
+                    @Html.BbTextBoxFor(x => x.PrjCode, 4)
+                </div>
+                <div class="row">
+                    @if (this.Model.IsNewData())
+                    {
+                        @Html.BbRadioListFor(x => x.IsOpen)
+                    }
+                    else
+                    {
+                        @Html.BbRadioListFor(x => x.IsOpen, 4, 0, false, new { ReadOnly = true })
+                    }
+                    @Html.BbRadioListFor(x => x.IsCons)
+                </div>
+
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.TenderUnit, 10)
+                </div>
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.BuildUnit, 4)
+                    @Html.BbDictRadioListFor(x => x.TenderMthod, 4)
+                </div>
+                <div class="row">
+                    @Html.BbDictRadioListFor(x => x.ManageMode, "ManageMode")
+                    @Html.BbDictRadioListFor(x => x.PrjNature, 4)
+                    @Html.BbTextBoxFor(x => x.EngScale, null, "万元", 4)
+                    @Html.BbTextBoxFor(x => x.BondMoney, null, "万元", 4)
+                </div>
+            </div>
+            <div class="row">
+                @Html.SjPickPrjManFor(x => x.PrjPersonId, x => x.PrjPersonName, 1)
+            </div>
+            <div class="row">
+                @Html.SjPickCorpFor(x => x.DeliId, x => x.DeliUnit, 1)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.PrjManagement, null, "%", 4)
+                @Html.BbTextBoxFor(x => x.MaterialsCost, null, "万元", 4)
+            </div>
+            <div class="row">
+                @Html.BbUserPickFor(x => x.PrjPeopleId, x => x.PrjPeopleName, 1)
+                @Html.BbTextBoxFor(x => x.ProjectDate, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Remarks, 10)
+            </div>
+            @Html.RowModifier()
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">（意向）项目负责人</span>
+        </div><div class="panel-body">
+            <div class="row">
+                @Html.BbUserPickFor(x => x.PrjLeaderId, x => x.PrjLeaderName, 1)
+                @Html.BbTextBoxFor(x => x.PrjIdCard, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.PrjMobile, 4)
+                @Html.BbTextBoxFor(x => x.PrjEmail, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.PrincipalName, 4)
+                @Html.BbTextBoxFor(x => x.PrincipalIdCard, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.PrincipalMobile, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Explain, 10)
+            </div>
+        </div>
+        @Html.AnnexUnit()
+    </div>
+
+}
+

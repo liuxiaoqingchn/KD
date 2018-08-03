@@ -1,0 +1,169 @@
+﻿2018-06-14 09:40:14.70211 [T00001][Critical] KdAppContext - 已加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-06-14 09:40:19.07484 [T00001][Critical] KdWebContext - RegisterWebMvc Namespaces: 
+                      KdCore.Web.Errors.Controllers
+                      KdYdt.Gxsj.WebManage.Controllers
+2018-06-14 09:40:19.07783 [T00001] [Major]   KdUnitManager - 初始化系统功能模块设置……
+2018-06-14 09:40:19.29724 [T00001] [Major]   KdUnitManager - 初始化系统模块设置结束
+              从本地运行程序中识别出功能模块：13 个
+              从远程获取到文件中识别功能模块定义：51 个
+              初始化功能模块：13 个，功能操作：1491 个
+2018-06-14 09:40:19.30123 [T00001] [Major]   KdMenu - 初始化系统菜单……
+2018-06-14 09:40:19.69919 [T00001] [Major]   KdMenu - 共计初始化系统菜单：3 个
+2018-06-14 09:40:19.79606 [T00001] [Major]   KdMenu - 菜单 OA系统菜单[Default] 共计加载菜单项 21 个
+2018-06-14 09:40:19.97860 [T00001] [Major]   KdMenu - 菜单 项目管理菜单[PrjManage] 共计加载菜单项 45 个
+2018-06-14 09:40:19.97860 [T00001] [Major]   KdMenu - 菜单 后台管理菜单[Admin] 共计加载菜单项 8 个
+2018-06-14 09:40:19.97860 [T00001] [Major]   KdMenu - 初始化系统菜单设置结束。
+2018-06-14 09:40:20.05238 [T00001][Critical] BbMvcManager - 当前系统运行环境：
+                      IIS Version: 10.0
+                      Integrated Pipeline: True
+                      TargetFramework: 4.6
+                      BaseDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\
+                      BinDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\
+                      AppDomainAppVirtualPath: /
+                      VirtualPathRoot: /
+                      AppData VirtualPath: /App_Data;
+                      AppData PhysicsPath: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data;
+                      系统全局配置文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile;
+                      数据字典配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdDict;
+                      系统菜单配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data;
+                      系统默认菜单文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdMenu\KdMenu_Admin.json;
+                      系统运行日志文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdLogs\Kd_admin.2018_06_14.log;
+                      数据库初始化JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataInit;
+                      数据库备份JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataBackup;
+                      用户个人文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Data_User;
+                      报表模板默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Templates;
+                      报表输出默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Reports;
+                      附件上传默认保存路径: /App_Data/User_Uploads;
+                      文件覆盖时自动备份的文件夹名称: History;
+2018-06-14 09:40:22.83335 [T00012][CodeMark] HomeController - 【Http-GET:5739V62JEGY1】已耗时：1.2764370秒【Session:ka32eram0en052njnzhxtyml】[1D40380A857520E]
+              [Url] http://localhost:2234/
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+2018-06-14 09:40:22.94405 [T00012][Critical] KdUtil - 调试模式运行，忽略版本更新检测
+2018-06-14 09:40:24.10950 [T00012][CodeMark] HomeController - 【Http-GET:5739V62JEGY1】已耗时：1.2764370秒【Session:ka32eram0en052njnzhxtyml】[1D40380A857520E]
+              [Url] http://localhost:2234/
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 2.5516 秒【稍慢】
+2018-06-14 09:40:33.46471 [T00007][CodeMark] HomeController - 【Http-GET:5739AAOPTUZD】已耗时：0.0807575秒【Session:ka32eram0en052njnzhxtyml】[1D40380AF63D4CC]
+              [Url] http://localhost:2234/Home/Login
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+2018-06-14 09:40:44.27748 [T00007][CodeMark] HomeController - 【Http-GET:5739AAOPTUZD】已耗时：0.0807575秒【Session:ka32eram0en052njnzhxtyml】[1D40380AF63D4CC]
+              [Url] http://localhost:2234/Home/Login
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 10.8935 秒【缓慢】
+2018-06-14 09:41:47.08873 [T00009][CodeMark] HomeController - 【Http-POST:57390GLN0D3L】已耗时：0.0039893秒【Session:ka32eram0en052njnzhxtyml】[1D40380DB51ADFB]
+              [Url] http://localhost:2234/Home/Login
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Home/Login
+2018-06-14 09:41:47.66220 [T00009][CodeMark] HomeController - 【Http-POST:57390GLN0D3L】已耗时：0.0039893秒【Session:ka32eram0en052njnzhxtyml】[1D40380DB51ADFB]
+              [Url] http://localhost:2234/Home/Login
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求处理完成】执行时间 0.5775 秒
+2018-06-14 09:41:47.70608 [T00007][CodeMark] UsersController - 【Http-GET:5739DW9SHF3D】已耗时：0.0029921秒【Session:ka32eram0en052njnzhxtyml】[1D40380DBB00823]
+              [Url] http://localhost:2234/Users
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Home/Login
+2018-06-14 09:41:53.89481 [T00007][CodeMark] UsersController - 【Http-GET:5739DW9SHF3D】已耗时：0.0029921秒【Session:ka32eram0en052njnzhxtyml】[1D40380DBB00823]
+              [Url] http://localhost:2234/Users
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 6.1917 秒【较慢】
+2018-06-14 09:43:00.08226 [T00028][CodeMark] MenusController - 【Http-GET:5739D46IIC38】已耗时：0.0029912秒【Session:ka32eram0en052njnzhxtyml】[1D4038106D3C2BF]
+              [Url] http://localhost:2234/Menus
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Users
+2018-06-14 09:43:00.68765 [T00028][CodeMark] MenusController - 【Http-GET:5739D46IIC38】已耗时：0.0029912秒【Session:ka32eram0en052njnzhxtyml】[1D4038106D3C2BF]
+              [Url] http://localhost:2234/Menus
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.6084 秒
+2018-06-14 09:43:03.10957 [T00023][CodeMark] MenusController - 【Http-GET:5739NXID0WIR】已耗时：0.0019957秒【Session:ka32eram0en052njnzhxtyml】[1D4038108A1D7E1]
+              [Url] http://localhost:2234/Menus/Edit?code=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus
+2018-06-14 09:43:03.99221 [T00023][CodeMark] MenusController - 【Http-GET:5739NXID0WIR】已耗时：0.0019957秒【Session:ka32eram0en052njnzhxtyml】[1D4038108A1D7E1]
+              [Url] http://localhost:2234/Menus/Edit?code=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.8846 秒
+2018-06-14 09:43:12.89644 [T00033][CodeMark] MenusController - 【Http-POST:5739C5DRQORQ】已耗时：0.0039902秒【Session:ka32eram0en052njnzhxtyml】[1D403810E76E577]
+              [Url] http://localhost:2234/Menus/FrontAsync?___act=Edit
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus/Edit?code=PrjManage
+2018-06-14 09:43:21.75189 [T00033] [Error]   MenusController - 【Http-POST:5739C5DRQORQ】已耗时：0.0039902秒【Session:ka32eram0en052njnzhxtyml】[1D403810E76E577]
+              [Url] http://localhost:2234/Menus/FrontAsync?___act=Edit
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              抱歉，系统在处理您的操作时发生了错误。
+              【Exception】System.NullReferenceException: 未将对象引用设置到对象的实例。
+                 在 KdCore.Web.Mvc.BbCoreController.RemoteSend(String asyncCode, String configFileOrFolderName, String msgSuccess, String msgError)
+                 在 KdCore.Web.Controllers.KdMenusBaseController.FrontAsync()
+                 在 lambda_method(Closure , ControllerBase , Object[] )
+                 在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+                 在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+                 在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+                 在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+                 在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+                 在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+                 在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+                 在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+                 在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+                 在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+                 在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+                 在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+                 在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+                 在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+                 在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-06-14 09:43:21.75488 [T00033][CodeMark] MenusController - 【Http-POST:5739C5DRQORQ】已耗时：0.0039902秒【Session:ka32eram0en052njnzhxtyml】[1D403810E76E577]
+              [Url] http://localhost:2234/Menus/FrontAsync?___act=Edit
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 8.8624 秒【缓慢】
+2018-06-14 09:51:30.34938 [T00001][Critical] KdAppContext - 已加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-06-14 09:51:31.85934 [T00001][Critical] KdWebContext - RegisterWebMvc Namespaces: 
+                      KdCore.Web.Errors.Controllers
+                      KdYdt.Gxsj.WebManage.Controllers
+2018-06-14 09:51:31.86333 [T00001] [Major]   KdUnitManager - 初始化系统功能模块设置……
+2018-06-14 09:51:31.96206 [T00001] [Major]   KdUnitManager - 初始化系统模块设置结束
+              从本地运行程序中识别出功能模块：13 个
+              从远程获取到文件中识别功能模块定义：51 个
+              初始化功能模块：13 个，功能操作：1491 个
+2018-06-14 09:51:31.96506 [T00001] [Major]   KdMenu - 初始化系统菜单……
+2018-06-14 09:51:32.19843 [T00001] [Major]   KdMenu - 共计初始化系统菜单：3 个
+2018-06-14 09:51:32.30515 [T00001] [Major]   KdMenu - 菜单 OA系统菜单[Default] 共计加载菜单项 21 个
+2018-06-14 09:51:32.72802 [T00001] [Major]   KdMenu - 菜单 项目管理菜单[PrjManage] 共计加载菜单项 45 个
+2018-06-14 09:51:32.72802 [T00001] [Major]   KdMenu - 菜单 后台管理菜单[Admin] 共计加载菜单项 8 个
+2018-06-14 09:51:32.72802 [T00001] [Major]   KdMenu - 初始化系统菜单设置结束。
+2018-06-14 09:51:32.75295 [T00001][Critical] BbMvcManager - 当前系统运行环境：
+                      IIS Version: 10.0
+                      Integrated Pipeline: True
+                      TargetFramework: 4.6
+                      BaseDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\
+                      BinDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\
+                      AppDomainAppVirtualPath: /
+                      VirtualPathRoot: /
+                      AppData VirtualPath: /App_Data;
+                      AppData PhysicsPath: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data;
+                      系统全局配置文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile;
+                      数据字典配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdDict;
+                      系统菜单配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data;
+                      系统默认菜单文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdMenu\KdMenu_Admin.json;
+                      系统运行日志文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdLogs\Kd_admin.2018_06_14.log;
+                      数据库初始化JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataInit;
+                      数据库备份JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataBackup;
+                      用户个人文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Data_User;
+                      报表模板默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Templates;
+                      报表输出默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Reports;
+                      附件上传默认保存路径: /App_Data/User_Uploads;
+                      文件覆盖时自动备份的文件夹名称: History;
+2018-06-14 09:51:33.00727 [T00014][CodeMark] MenusController - 【Http-POST:5739W72UNED2】已耗时：0.1246655秒【Session:ka32eram0en052njnzhxtyml】[1D40382387BA4D2]
+              [Url] http://localhost:2234/Menus/FrontAsync?___act=Edit
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus/Edit?code=PrjManage
+2018-06-14 09:51:33.04218 [T00014][Critical] KdUtil - 调试模式运行，忽略版本更新检测
+2018-06-14 09:51:34.54516 [T00014][CodeMark] MenusController - 【Http-POST:5739W72UNED2】已耗时：0.1246655秒【Session:ka32eram0en052njnzhxtyml】[1D40382387BA4D2]
+              [Url] http://localhost:2234/Menus/FrontAsync?___act=Edit
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 1.6606 秒

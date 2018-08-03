@@ -1,0 +1,40 @@
+﻿@model OaNotice
+
+@using (@Html.BeginPageTitle())
+{
+    @Html.BbBtnLinkReturn()
+}
+
+@Html.NavBreadcrumb()
+
+<h1 class="text-center">@Model.NoticeTitle</h1>
+
+@if (!string.IsNullOrWhiteSpace(Model.HeadWord))
+{
+    <div class="row">
+        @Html.BbTextFor(x => x.HeadWord, 10)
+    </div>
+}
+
+@Html.RowModifier("发布公告")
+<div class="row">
+    @Html.BbTextFor(x => x.NoticeDeptNames, 10)
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="page-document">
+            @Html.Raw(Model.MainBody)
+        </div>
+    </div>
+</div>
+
+@Html.AnnexFiles()
+
+@if (!string.IsNullOrWhiteSpace(Model.HeadWord))
+{
+    <div class="well">
+        @Model.Notes
+    </div>
+}
+
+@Html.PartialUserReadersBar()

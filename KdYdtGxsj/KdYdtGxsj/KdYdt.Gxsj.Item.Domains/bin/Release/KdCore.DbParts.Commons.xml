@@ -1,0 +1,1712 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KdCore.DbParts.Commons</name>
+    </assembly>
+    <members>
+        <member name="T:KdCore.Data.Annexs.KdDbAnnexsContext">
+            <summary>
+            附件/上传文件记录数据库模型
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Annexs.KdDbAnnexsContext.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Annexs.KdDbAnnexsContext.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="nameOrConnectString">数据库连接字符串或连接配置名称</param>
+        </member>
+        <member name="M:KdCore.Data.Annexs.KdDbAnnexsContext.CreateModel(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            初始化数据模型定义
+            </summary>
+            <param name="builder">模型构造程序</param>
+        </member>
+        <member name="T:KdCore.Data.Annexs.KdUserFile">
+            <summary>
+            用户上传文件
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Annexs.KdUserFile.#cctor">
+            <summary>
+            初始化模糊查询
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Annexs.KdUserFile.FuzzyKdUser(System.String)">
+            <summary>
+            模糊查询比较方法
+            </summary>
+            <param name="word"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Data.DbServices.KdDbAnnexsService">
+            <summary>
+             资料中心文件管理
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.Register(System.String)">
+            <summary>
+            注册上传文件管理数据库及业务设置
+            </summary>
+            <param name="dbNameOrConnectionString">数据库连接名称或连接字符串</param>  
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbAnnexsService.AnnexProvider">
+            <summary>
+            附件数据操作提供程序
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbAnnexsService.FileCodeDisks">
+            <summary>
+            文件类型编码：网盘
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.FileGet(System.String)">
+            <summary>
+            获取附件数据记录
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.FileThumbnails(System.String)">
+            <summary>
+            获取附件的预览文件；如图片类文件自动生成并返回缩略图
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.FileThumbnails(KdCore.Data.Annexs.KdFileBase)">
+            <summary>
+            获取附件的缩略图或预览文件；如图片类文件自动生成并返回缩略图
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.FileDownload(System.String)">
+            <summary>
+            获取下载文件，并更新下载计数
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.FileDelete(System.String)">
+            <summary>
+            删除文件/文件夹及其下所有记录
+            </summary>
+            <remarks>是否删除文件根据全局设定<see cref="P:KdCore.Data.Annexs.KdAnnexContext.DeletePhysicalFiles"/>进行判断</remarks>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.FileDelete(KdCore.Data.Annexs.KdFileBase)">
+            <summary>
+            删除文件/文件夹及其下所有记录
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.FileUpdate(KdCore.Data.Annexs.KdFileBase)">
+            <summary>
+            更新附件数据记录
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.FileUpload(KdCore.Data.Annexs.KdFileBase)">
+            <summary>
+            添加附件数据记录
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.CopyAnnexsTo(KdCore.Data.Annexs.IKdEntityAnnex,KdCore.Data.IKdEntityBase)">
+            <summary>
+            复制附件记录到另一实体数据名下（不复制附件的物理文件）
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.EnptyAnnexFiles">
+            <summary>
+            返回一个空的附件查询
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.QueryAnnexFiles(KdCore.Data.Annexs.KdAnnexRequest,System.Boolean)">
+            <summary>
+            根据参数对附件进行查询
+            </summary>
+            <param name="request">查询参数</param>
+            <param name="noTracking">不创建数据的状态跟踪</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.CountAnnexFiles(KdCore.Data.Annexs.KdAnnexRequest)">
+            <summary>
+            根据参数查询附件的统计数量
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.GetAnnexFiles(KdCore.Data.Annexs.KdAnnexRequest,System.Boolean)">
+            <summary>
+            根据参数查询附件列表
+            </summary>
+            <param name="request"></param>
+            <param name="noTracking"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.LoadAnnexFiles(KdCore.Data.Annexs.IKdEntityAnnex,System.Boolean)">
+            <summary>
+            根据数据源查询并设置附件列表
+            </summary>
+            <param name="source"></param>
+            <param name="noTracking"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.GetAnnexContext(KdCore.Data.Annexs.IKdEntityAnnex,System.String,System.Boolean)">
+            <summary>
+            根据数据源获取附件模型
+            </summary>
+            <param name="source">查询参数</param>  
+            <param name="annexType"></param>
+            <param name="noTracking">不创建数据的状态跟踪</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.MoveFileSort(System.String,System.String,System.Boolean)">
+            <summary>
+            移动附件排序
+            </summary>
+            <param name="sourceId"></param>
+            <param name="fileId"></param>
+            <param name="isUp"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.AddWatermark(KdCore.Data.Annexs.KdFileBase,System.Drawing.Point,System.String)">
+            <summary>
+            添加水印
+            </summary>
+            <param name="file"></param>
+            <param name="startPosition"></param>
+            <param name="watermarkPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.AddWatermark(System.Collections.Generic.IEnumerable{KdCore.Data.Annexs.KdFileBase},System.Drawing.Point,System.String)">
+            <summary>
+            添加水印
+            </summary>
+            <param name="files"></param>
+            <param name="startPosition"></param>
+            <param name="watermarkPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.GetDiskFolder``1(System.String,``0,System.String,System.String)">
+            <summary>
+            获取数字档案文件中指定主键ID的文件夹目录视图
+            </summary>
+            <typeparam name="TDiskUser"></typeparam>
+            <param name="diskType">网络磁盘类型</param>
+            <param name="user"></param>
+            <param name="id"></param>
+            <param name="rootName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAnnexsService.SaveDiskFile(System.String,KdCore.Data.Annexs.KdUserFile)">
+            <summary>
+            保存文件描述说明，可能是新增或修改
+            </summary>
+            <param name="diskType">网络磁盘类型</param>
+            <param name="editModel"></param> 
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Data.DbServices.KdDbAuthsService">
+            <summary>
+            用户数据服务程序
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.Register(System.String,System.Boolean)">
+            <summary>
+            注册用户管理及权限管理的数据服务
+            </summary>
+            <param name="dbNameOrConnectionString">数据库连接配置名称或连接字符串</param>
+            <param name="executeDataInit">是否执行数据初始化处理</param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.DataInit">
+            <summary>
+            初始化数据
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.OnDataInitDepts">
+            <summary>
+            初始化部门数据
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.OnDataInitDutys">
+            <summary>
+            初始化职务数据
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.OnDataInitRoles">
+            <summary>
+            初始化角色数据
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.OnDataInitUsers">
+            <summary>
+            初始化用户数据
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetJsonSavePath``1(System.String,System.String,System.String)">
+            <summary>
+            获取备份或加载指定所属单位标识的 JSON 数据文件的默认路径。
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="corpCode">数据所属单位标识</param>
+            <param name="dbContextFolder">按 DbContext 分组的文件夹名称</param>
+            <param name="jsonDataFolder">数据备份加载的总体文件夹名称</param>
+            <returns>JSON文件路径</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.OnGetDataTagCodeExpression``1(System.String)">
+            <summary>
+            获取指定类型数据在按所属单位筛选时的查询表达式
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="tagCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbAuthsService.UserProvider">
+            <summary>
+            用户及授权数据操作提供程序
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.UserUpdate(KdCore.Data.Users.IKdUser)">
+            <summary>
+            保存对用户数据的修改，但暂不提交到数据库
+            </summary>
+            <param name="user"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.ExistsUserName(System.String,System.String)">
+            <summary>
+            判断用户名称是否已经存在
+            </summary>
+            <param name="userName"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.UnlockPwdWrong(System.String)">
+            <summary>
+            解锁用户登录密码错误锁定状态
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.UpdateUserSpell">
+            <summary>
+            更新用户姓名的拼音及缩写
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.RebuildUserSort(System.Collections.Generic.List{KdCore.Data.Users.KdUser})">
+            <summary>
+            重建用户综合显示排序
+            </summary>
+            <param name="users"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.UserArrange(System.Linq.Expressions.Expression{System.Func{KdCore.Data.Users.KdUser,System.Boolean}})">
+            <summary>
+            整理更新用户数据，包括补齐拼音全称，拼音缩写，重新初始化排序等等
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.SaveResult(KdCore.Data.EditModels.KdUserEdit)">
+            <summary>
+            保存用户
+            </summary>
+            <param name="editModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.ChangePassword(KdCore.Data.EditModels.KdChgPwd)">
+            <summary>
+            修改用户密码
+            </summary>
+            <param name="editModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.QueryUsers(System.Nullable{System.Boolean},System.Linq.Expressions.Expression{System.Func{KdCore.Data.Users.KdUser,System.Boolean}})">
+            <summary>
+            用户查询
+            </summary>
+            <param name="tagDisabled"></param>
+            <param name="predicate"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.QueryUsers(System.Linq.Expressions.Expression{System.Func{KdCore.Data.Users.KdUser,System.Boolean}})">
+            <summary>
+            用户查询
+            </summary>
+            <param name="predicate"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.QueryValidUsers(System.Linq.Expressions.Expression{System.Func{KdCore.Data.Users.KdUser,System.Boolean}})">
+            <summary>
+            用户查询
+            </summary>
+            <param name="predicate"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetUsers(System.Linq.Expressions.Expression{System.Func{KdCore.Data.Users.KdUser,System.Boolean}})">
+            <summary>
+            用户查询
+            </summary>
+            <param name="predicate"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetValidUsers(System.Linq.Expressions.Expression{System.Func{KdCore.Data.Users.KdUser,System.Boolean}})">
+            <summary>
+            有效用户查询
+            </summary>
+            <param name="predicate"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetUsers(System.Nullable{System.Boolean},System.Linq.Expressions.Expression{System.Func{KdCore.Data.Users.KdUser,System.Boolean}})">
+            <summary>
+            用户查询
+            </summary>
+            <param name="tagDisabled"></param>
+            <param name="predicate"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetValidKdUsers(System.Linq.Expressions.Expression{System.Func{KdCore.Data.Users.KdUser,System.Boolean}})">
+            <summary>
+            用户查询
+            </summary>
+            <param name="predicate"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.SetRoleUsers(System.String,System.String[])">
+            <summary>
+            配置角色下的用户，并返回当前所有的用户集合，便于查看设置结果
+            </summary>
+            <param name="roleId"></param>
+            <param name="userIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetUserByName(System.String,System.Boolean)">
+            <summary>
+            根据用户登录名查询用户，如果用户已经被停用（<see cref="P:KdCore.Data.Entity.KdEntityCreateBase.TagDisabled"/>）将不会返回数据
+            </summary>
+            <param name="userName">用户登录名</param>
+            <param name="removeProxy">去除代理类封装</param>
+            <returns> KdUser 实例</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetUser(System.String,System.Boolean)">
+            <summary>
+            根据用户主键查询用户
+            </summary>
+            <param name="userId">用户主键</param>
+            <param name="removeProxy">去除代理类封装</param>
+            <returns> KdUser 实例</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.SaveChanges">
+            <summary>
+            重写基类方法，保存成功时更新用户缓存，以便更新用户的角色权限、显示菜单等
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.SaveResult(KdCore.Data.EditModels.KdRoleEdit,System.String)">
+            <summary>
+            保存角色
+            </summary>
+            <param name="editModel"></param> 
+            <param name="ownerCorpCode"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.SetRoleAuths(System.String,System.String[])">
+            <summary>
+            设置角色所拥有的授权权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.SaveDept(System.String,KdCore.Data.EditModels.KdTreeNodeEdit)">
+            <summary>
+            保存编辑的部门
+            </summary>
+            <param name="corpCode"></param>
+            <param name="editModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.DeleteDepts(System.String[])">
+            <summary>
+            删除部门定义
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.SaveDuty(System.String,KdCore.Data.EditModels.KdTreeNodeEdit)">
+            <summary>
+            保存编辑的职务
+            </summary>
+            <param name="corpCode"></param>
+            <param name="editModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.DeleteDutys(System.String[])">
+            <summary>
+            删除职务
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetRoleUsers(System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+            <summary>
+            查询指定角色的有效用户
+            </summary>
+            <param name="roleName"></param>
+            <param name="tagDisabled"></param>
+            <param name="tagDeleted"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetUsers(System.String[])">
+            <summary>
+            根据多个账户ID，获取这些账户
+            </summary>
+            <param name="userIds">多个账户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetAllRoles">
+            <summary>
+            获取所有角色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetRoles(System.String[])">
+            <summary>
+            查询角色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetRoleUsers(System.String)">
+            <summary>
+            查询指定角色的有效用户
+            </summary>
+            <param name="roleName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetUserById(System.String)">
+            <summary>
+            查询指定主键的用户
+            </summary>
+            <param name="userId">用户主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetUserByName(System.String)">
+            <summary>
+            根据用户登录名查询用户
+            </summary>
+            <param name="userName">用户登录名</param>
+            <returns>KdUserBase实例</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetUsersById(System.String[])">
+            <summary>
+            根据多个账户ID，获取这些账户
+            </summary>
+            <param name="userIds">多个账户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.SaveResult(KdCore.Data.EditModels.KdUserGroupEdit,System.String)">
+            <summary>
+            保存用户分组数据
+            </summary>
+            <param name="editModel"></param>
+            <param name="ownerCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetUserRange(KdCore.Data.Users.KdUserLimit)">
+            <summary>
+            查询授权用户的可选范围
+            </summary>
+            <param name="userLimit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetUserRange(KdCore.Data.Users.KdUserDataType)">
+            <summary>
+            查询授权用户的可选范围
+            </summary>
+            <param name="dataType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetUsers(System.Nullable{System.Boolean},System.String[],System.String[],System.String[],System.String[],System.String[])">
+            <summary>
+            用户查询
+            </summary>
+            <param name="disabled"></param>
+            <param name="userIds"></param>
+            <param name="roleNames"></param>
+            <param name="deptIds"></param>
+            <param name="dutyIds"></param>
+            <param name="corpCodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetUsers(System.Nullable{System.Boolean},System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            用户查询
+            </summary>
+            <param name="disabled">是否无效用户</param>
+            <param name="userIds"></param>
+            <param name="roleNames"></param>
+            <param name="deptIds"></param>
+            <param name="dutyIds"></param>
+            <param name="corpCodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetUsersByStrict(System.Nullable{System.Boolean},System.String[],System.String[],System.String[],System.String[],System.String[])">
+            <summary>
+            查询符合所有条件的用户
+            </summary>
+            <param name="tagDisabled">是否禁用</param>
+            <param name="userIds">用户主键</param>
+            <param name="roleNames">用户角色名称</param>
+            <param name="deptIds">用户部门主键</param>
+            <param name="dutyIds">用户职务主键</param>
+            <param name="corpCodes">用户单位标识编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbAuthsService.GetUsersByLoose(System.Nullable{System.Boolean},System.String[],System.String[],System.String[],System.String[],System.String[])">
+            <summary>
+            查询除是否禁用外符合任一组条件的用户
+            </summary>
+            <param name="disabled">是否禁用</param>
+            <param name="userIds">用户主键</param>
+            <param name="roleNames">用户角色名称</param>
+            <param name="deptIds">用户部门主键</param>
+            <param name="dutyIds">用户职务主键</param>
+            <param name="corpCodes">用户单位标识编码</param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Data.DbServices.KdDbDictsService">
+            <summary>
+            数据字典业务逻辑管理类
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbDictsService.Register(System.String)">
+            <summary>
+            注册上传文件管理数据库及业务设置
+            </summary>
+            <param name="dbNameOrConnectionString">数据库连接名称或连接字符串</param>  
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbDictsService.InitDictItems(KdCore.Data.Entity.KdEntityTree{KdCore.Data.Dicts.KdDictItem})">
+            <summary>
+            获取指定识别编码的字典的所有数据项
+            </summary>
+            <param name="tree"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbDictsService.OnGetDataTagCodeExpression``1(System.String)">
+            <summary>
+            获取数据字典在进行字典标识筛选时的查询表达式
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="tagCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbDictsService.JsonLoad``1(System.Boolean,System.String,System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            从JSON文件初始化数据字典的数据项
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbDictsService.GetItemsByCode(System.String)">
+            <summary>
+            从数据库中获取指定键的初始化数据字典缓存项
+            </summary>
+            <param name="dictCode">数据字典编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbDictsService.AddDictItems(System.String,System.Collections.Generic.IEnumerable{KdCore.Data.Dicts.KdDictItem})">
+            <summary>
+            添加数据字典项（仅用于数据初始化）
+            </summary>
+            <param name="dictCode"></param>
+            <param name="dictItems">数据字典项集合</param>  
+            <returns>成功保存的条数</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbDictsService.ClearAllData">
+            <summary>
+            清除现有字典项数据（仅用于数据初始化）
+            </summary>
+            <returns>清除的数据条数</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbDictsService.SaveItem(System.String,KdCore.Data.EditModels.KdDictItemEdit)">
+            <summary>
+            保存字典项修改
+            </summary>
+            <param name="dictCode"></param> 
+            <param name="editModel"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbDictsService.DeleteItems(System.String[])">
+            <summary>
+            批量删除参数明细，如果参数明细有子级明细，则不能删除
+            </summary>
+            <param name="itemIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbDictsService.ImportRegionalism(System.String,KdCore.Data.Users.IKdUser,System.String)">
+            <summary>
+            导入行政区划数据
+            </summary>
+            <param name="filePath"></param>
+            <param name="userImport"></param>
+            <param name="dictCode"></param>
+            <remarks>通常数据来自政府公开网站，每行包含一条行政区划数据，包含行政区划代码和行政区划名称，根据行政区划代码来自动判定省市县的归属</remarks>
+        </member>
+        <member name="T:KdCore.Data.DbServices.KdDbLogsService">
+            <summary>
+             用户操作日志记录业务处理
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbLogsService.ReservePeriodForClearLogs">
+            <summary>
+            全局设置--清理系统日志时保留多长时间内的日志记录
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbLogsService.SaveBatchItemCount">
+            <summary>
+            全局设置--往数据库保存时一次保存的日志条数，数据量过大可能会造成堵塞
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.Register(System.String,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan})">
+            <summary>
+            注册用户操作日志记录功能
+            </summary>
+            <param name="dbNameOrConnectionString">数据库连接配置名称或连接字符串</param>
+            <param name="reservePeriodForClearLogs">清理系统日志时保留日志的时间范围</param>
+            <param name="clearPeriod">自动清理系统日志的时间周期</param>
+            <param name="startTime">第一次启动自动清理日志的时间点，几点几分</param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.DbRegister(System.String)">
+            <summary>
+            仅注册用户操作日志记录数据库
+            </summary>
+            <param name="dbNameOrConnectionString">数据库连接配置名称或连接字符串</param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.Register(System.String,System.Int32,System.Int32,System.Nullable{System.TimeSpan})">
+            <summary>
+            注册用户操作日志记录功能
+            </summary>
+            <param name="dbNameOrConnectionString">数据库连接配置名称或连接字符串</param>
+            <param name="reserveDaysForClearLogs">清理系统日志时保留日志的天数</param>
+            <param name="clearPeriodDays">自动清理系统日志的天数</param>
+            <param name="startTime">第一次启动自动清理日志的时间点，几点几分</param>
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbLogsService.TimerClearLogs">
+            <summary>
+            日志清理检查计时器
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.BeginPeriodicTask(System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan})">
+            <summary>
+            开始执行定时清理过期的系统日志
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbLogsService.QueueActionLogs">
+            <summary>
+            用户日志待保存数据缓存队列
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.SaveLogs(System.Object,System.Collections.Generic.IEnumerable{KdCore.Data.Users.KdUserAction})">
+            <summary>
+            提交用户操作日志到待保存队列，等候保存到数据库
+            </summary>
+            <param name="batchToken">批次标识</param>
+            <param name="actionLogs">要保存的日志记录</param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.TrySaveQueueLogsToDatabase(System.Object)">
+            <summary>
+            保存用户操作日志到数据库，并在发生错误时不抛出异常
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.SaveQueueLogsToDatabase(System.Object)">
+            <summary>
+            保存用户操作日志到数据库
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.SaveLogsToDatabase(System.Object,System.Collections.Generic.IEnumerable{KdCore.Data.Users.KdUserAction})">
+            <summary>
+            保存用户操作日志，请在保存前自行设置日志实体的创建用户属性
+            </summary>
+            <param name="batchToken">批次标识</param>
+            <param name="actionLogs">要保存的日志记录</param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.ClearPeriodLogs">
+            <summary>
+            定时清理过期的系统日志
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.ClearPeriodLogs(System.Nullable{System.TimeSpan})">
+            <summary>
+            清理过期系统日志
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.OnDataContextCreated(KdCore.Data.Logs.KdDbLogsContext)">
+            <summary>
+            创建数据库上下文后的后续处理
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.ClearLogs(System.Nullable{System.TimeSpan})">
+            <summary>
+            清理过期系统日志
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.AddLogs(KdCore.Data.Users.KdUserAction)">
+            <summary>
+            保存用户操作日志，请在保存前自行设置日志实体的创建用户属性
+            </summary>
+            <param name="userActionLog"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.AddLogs(System.Collections.Generic.IEnumerable{KdCore.Data.Users.KdUserAction})">
+            <summary>
+            保存用户操作日志，请在保存前自行设置日志实体的创建用户属性
+            </summary>
+            <param name="userActionLogs"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.Get(System.String)">
+            <summary>
+            查询系统日志
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.Query(System.Linq.Expressions.Expression{System.Func{KdCore.Data.Users.KdUserAction,System.Boolean}})">
+            <summary>
+            查询系统日志
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.QueryBatchLogs(System.String)">
+            <summary>
+            查询一个操作批次的有关系统日志集合
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.DeleteLogs(System.String)">
+            <summary>
+            删除系统日志
+            </summary>
+            <param name="logId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.DeleteLogs(KdCore.Data.Users.KdUserAction)">
+            <summary>
+            删除系统日志
+            </summary>
+            <param name="log"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.DeleteLogs(System.Collections.Generic.IEnumerable{KdCore.Data.Users.KdUserAction})">
+            <summary>
+            删除系统日志
+            </summary>
+            <param name="logs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbLogsService.DeleteBatchLogs(System.String)">
+            <summary>
+            批量删除一个操作批次的有关的系统日志
+            </summary>
+            <param name="logBatchTaskId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Data.DbServices.KdDbSmsService">
+            <summary>
+             短信收发业务处理
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.Register(System.String,System.Func{KdCore.Data.Sms.IKdSmsTransceiver},System.Boolean)">
+            <summary>
+            注册短信收发业务数据库及业务设置
+            </summary>
+            <param name="dbNameOrConnectionString">数据库连接名称或连接字符串</param> 
+            <param name="funcGetSmsTransceiver">短信真实收发的提供程序的方法</param> 
+            <param name="beginPeriodicTask">是否开始执行定期检查短信收发的任务</param> 
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.Register(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            注册短信收发业务数据库及业务设置
+            </summary>
+            <param name="dbNameOrConnectionString">数据库连接名称或连接字符串</param> 
+            <param name="useSzgovSmsTransceiver">是否直接只用内置的短信收发接口（宝安龙华等区政务短信接口）</param> 
+            <param name="beginPeriodicTask">是否开始执行定期检查短信收发的任务</param> 
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbSmsService.Func_GetSmsTransceiver">
+            <summary>
+            短信真实收发的提供程序，如WebService接口，短信猫接口等
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.GetSmsTransceiver">
+            <summary>
+            获取短信真实收发接口的实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbSmsService.SmsProvider">
+            <summary>
+            短信数据操作提供程序
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbSmsService.TimerSmsSend">
+            <summary>
+            待办事项状态检查计时器
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.BeginPeriodicTask">
+            <summary>
+            开始执行定期检查短信收发的任务
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.CheckSmsTransmit">
+            <summary>
+            检查短信发送和接收
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.CheckSmsTransmitResult">
+            <summary>
+            检查短信发送和接收
+            </summary>
+        </member>
+        <member name="E:KdCore.Data.DbServices.KdDbSmsService.OnGlobalSmsSend">
+            <summary>
+            全局短信发送事件
+            </summary>
+        </member>
+        <member name="E:KdCore.Data.DbServices.KdDbSmsService.OnGlobalSmsReceive">
+            <summary>
+            全局短信收取事件
+            </summary>
+        </member>
+        <member name="E:KdCore.Data.DbServices.KdDbSmsService.OnSmsSend">
+            <summary>
+            当前的短信发送事件
+            </summary>
+        </member>
+        <member name="E:KdCore.Data.DbServices.KdDbSmsService.OnSmsReceive">
+            <summary>
+            当前的短信收取事件
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbSmsService.Func_CleanSmsContent">
+            <summary>
+            短信内容清理的处理方法，比如添加过滤敏感字符的处理等
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.CleanSmsContent(System.String)">
+            <summary>
+            短信内容整理，如清理重复词汇、过滤敏感字符等
+            </summary>
+            <param name="smsContent">短信内容</param>
+            <returns>清理后的短信内容</returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.GetTransceiver">
+            <summary>
+            获取短信实际收发接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.SmsTransmit">
+            <summary>
+            检查短信发送和接收
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.SmsSave(System.Collections.Generic.IEnumerable{KdCore.Data.Sms.KdSmsReceive})">
+            <summary>
+            保存接收到的短信
+            方法内未作提交处理，请自行提交
+            </summary>
+            <param name="receives"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.SmsSave(KdCore.Data.Sms.KdSmsReceive)">
+            <summary>
+            保存接收到的短信
+            方法内未作提交处理，请自行提交
+            </summary>
+            <param name="sms"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.SmsSave(KdCore.Data.Sms.KdSmsSend)">
+            <summary>
+            保存要发送的短信
+            方法内未作提交处理，请自行提交
+            </summary>
+            <param name="sms"></param>
+        </member>
+        <member name="P:KdCore.Data.DbServices.KdDbSmsService.SmsQueryTagDisabled">
+            <summary>
+            获取或设置使用 <see cref="M:KdCore.Data.DbServices.KdDbSmsService.SmsQuery``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})"/> 查询数据时是否包含 TagDisabled = true 的数据
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.SmsQuery``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            短信查询
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.SmsLast``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            最后一条待发送或已经发送（根据具体指定的查询类型决定）的短信查询
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.SmsCancel(System.Linq.Expressions.Expression{System.Func{KdCore.Data.Sms.KdSmsSend,System.Boolean}})">
+            <summary>
+            撤销短信发送，但已提交发送的无法撤销
+            </summary>
+            <param name="predicate">撤销待发短信记录的筛选条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.SmsResend(System.String[])">
+            <summary>
+            重新发送选定的短信
+            </summary>
+            <param name="ids"></param>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.GetSmsToWillSend(System.Int32,System.Int32)">
+            <summary>
+            查询物理上尚未发送或者发送不成功的短信
+            </summary>
+            <param name="maxCount"></param>
+            <param name="skipSendHours">超过计划发送时间多少小时后放弃发送</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.SmsDelete``1(System.String[])">
+            <summary>
+            短信删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.DbServices.KdDbSmsService.TestTransceiver">
+            <summary>
+            测试短信实际收发处理接口是否连接正常
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Data.Apps.KdAppBaseEntity">
+            <summary>
+            与应用程序配置管理相关的数据基类
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdAppBaseEntity.AppTagCode">
+            <summary>
+            获取或设置数据所属应用程序。
+            </summary>
+        </member>
+        <member name="T:KdCore.Data.Apps.KdDbAppsContext">
+            <summary>
+            系统基础配置管理数据库 DbContext 模型
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Apps.KdDbAppsContext.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Apps.KdDbAppsContext.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdDbAppsContext.TablePrefix">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Apps.KdDbAppsContext.CreateModel(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            创建数据模型
+            添加映射的数据库表，以及详细的映射配置
+            </summary>
+            <param name="builder">数据模型生成类实例</param>
+        </member>
+        <member name="T:KdCore.Data.Apps.KdDbAppsService">
+            <summary>
+            系统基础配置管理 DbService类
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Apps.KdDbAppsService.#cctor">
+            <summary>
+            注册上传文件管理数据库及业务设置
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Apps.KdDbAppsService.GetSuspendAssemblyVersions(System.Boolean)">
+            <summary>
+            获取系统中待处理程序集版本更新说明的程序集记录
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdDbAppsService.AppDataTagCode">
+            <summary>
+            获取或设置当前使用的程序数据识别标识
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Apps.KdDbAppsService.DbAppQuery``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}[])">
+            <summary>
+            当前应用程序相关的数据查询，过滤非当前系统的数据（<see cref="P:KdCore.Data.Apps.KdAppBaseEntity.AppTagCode"/>）
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="predicates"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.Apps.KdDbAppsService.CheckCurrDomainAssemblyVersionsUpdate">
+            <summary>
+            检测更新当前应用程序域中加载的程序集版本，更新到数据库，并检查是否是否需要处理更新说明
+            </summary>
+            <returns>是否存在需要处理更新说明的程序集</returns>
+        </member>
+        <member name="M:KdCore.Data.Apps.KdDbAppsService.GetLastAssemblyVersions">
+            <summary>
+            查询数据库中程序集记录的最新版本信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.Apps.KdDbAppsService.GetUnhandleAssemblyVersions">
+            <summary>
+            查询数据库中程序集记录的未进行更新说明处理的程序集版本信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.Apps.KdDbAppsService.ExistsAssemblyVersionsUpdate(System.Reflection.AssemblyName[])">
+            <summary>
+            检查程序集版本信息，是否需要更新
+            </summary>
+            <param name="allAssemblyNames">待检查的程序集描述标识</param>
+        </member>
+        <member name="M:KdCore.Data.Apps.KdDbAppsService.UpdateAssemblyVersions(System.Boolean,System.Reflection.AssemblyName[])">
+            <summary>
+            更新程序集版本信息到数据库
+            </summary>
+            <param name="abolishOthers">是否将其他程序集设置为废除</param>
+            <param name="allAssemblyNames">将要记录到数据库的程序集描述标识</param>
+        </member>
+        <member name="M:KdCore.Data.Apps.KdDbAppsService.AssemblyUpdateExplain(KdCore.Data.Apps.KdVersionExplain)">
+            <summary>
+            保存程序集版本更新情况说明到数据库
+            </summary>
+            <param name="explain"></param>
+        </member>
+        <member name="M:KdCore.Data.Apps.KdDbAppsService.AutoUpdateVersionExplain">
+            <summary>
+            读取配置文件，自动处理升级说明
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Data.Apps.KdVersionExplain">
+            <summary>
+            系统程序集版本更新说明
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdVersionExplain.UpdateTime">
+            <summary>
+            获取或设置更新说明添加时间
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdVersionExplain.UpdateTag">
+            <summary>
+            更新说明批次标识
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdVersionExplain.NotifyUser">
+            <summary>
+            是否提醒通知用户
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdVersionExplain.UseExplainFile">
+            <summary>
+            是否通过 JSON 更新说明文件识别自动添加更新说明
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdVersionExplain.FileTag">
+            <summary>
+            JSON 更新说明文件的唯一识别标识
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdVersionExplain.VersionTitle">
+            <summary>
+            获取或设置更新说明标题
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdVersionExplain.ExplainerName">
+            <summary>
+            获取或设置更新说明填写人员姓名
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdVersionExplain.ProgramerNames">
+            <summary>
+            获取或设置本次更新内容开发人员姓名
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdVersionExplain.DevpExplain">
+            <summary>
+            更新说明：面向开发人员日志
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdVersionExplain.UrlManual">
+            <summary>
+            更新情况使用手册页面/文件 Url
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdVersionExplain.UserExplain">
+            <summary>
+            更新说明：面向使用用户
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdVersionExplain.FileExpire">
+            <summary>
+            JSON 更新说明文件的有效期(不在数据库保存)
+            </summary>
+        </member>
+        <member name="T:KdCore.Data.Apps.KdAssemblyVersion">
+            <summary>
+            系统程序集版本历史
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdAssemblyVersion.IsHandled">
+            <summary>
+            获取或设置程序集更新是否处理填写更新说明
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdAssemblyVersion.AssemblyName">
+            <summary>
+            获取或设置程序集的简单名称。这通常（但不一定）是程序集的清单文件的文件名，不包括其扩展名。
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdAssemblyVersion.AssemblyCulture">
+            <summary>
+            获取或设置与此程序集关联的区域性名称。
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdAssemblyVersion.UpdateVersion">
+            <summary>
+            获取或设置程序集更新后的主版本号、次版本号、内部版本号和修订号。
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdAssemblyVersion.UpdateTime">
+            <summary>
+            获取或设置程序集版本发现更新时间
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdAssemblyVersion.OriginalVersion">
+            <summary>
+            获取或设置程序集更新前的主版本号、次版本号、内部版本号和修订号。
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdAssemblyVersion.HandleTime">
+            <summary>
+            获取或设置程序集更新说明处理时间
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdAssemblyVersion.HandleName">
+            <summary>
+            获取或设置程序集更新说明处理人姓名
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdAssemblyVersion.HandleTag">
+            <summary>
+            获取或设置程序集更新说明处理批次标识
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdAssemblyVersion.FileName">
+            <summary>
+            获取或设置与此程序集文件名称。
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdAssemblyVersion.FileTime">
+            <summary>
+            获取或设置程序集文件最后修改时间
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdAssemblyVersion.IsAbolished">
+            <summary>
+            获取或设置程序集是否已撤销弃用
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdAssemblyVersion.AbolishTime">
+            <summary>
+            获取或设置程序集撤销弃用发现时间
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdAssemblyVersion.FullName">
+            <summary>
+            获取或设置程序集的全名（也称为显示名称）。
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Apps.KdAssemblyVersion.FullPath">
+            <summary>
+            获取或设置程序集的全名（也称为显示名称）。
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Apps.KdAssemblyVersion.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Apps.KdAssemblyVersion.#ctor(System.Reflection.AssemblyName)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="assemblyName"></param>
+        </member>
+        <member name="M:KdCore.Data.Apps.KdAssemblyVersion.#ctor(System.Reflection.Assembly)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="assembly"></param>
+        </member>
+        <member name="T:KdCore.Data.Auths.KdDbAuthsContext">
+            <summary>
+            用户数据库数据模型
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Auths.KdDbAuthsContext.OnCreateModel_KdUser">
+            <summary>
+            获取或设置在创建数据模型时对<see cref="T:KdCore.Data.Users.KdUser"/>类型的额外配置处理
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Auths.KdDbAuthsContext.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Auths.KdDbAuthsContext.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="nameOrConnectString">数据库连接字符串或连接配置名称</param>
+        </member>
+        <member name="M:KdCore.Data.Auths.KdDbAuthsContext.CreateModel(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            初始化数据模型定义
+            </summary>
+            <param name="builder">模型构造程序</param>
+        </member>
+        <member name="M:KdCore.Data.Auths.KdDbAuthsContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)">
+            <summary>
+            实体数据验证，并检查自动补全空白的 MarkCode、SecurityStamp
+            </summary>
+            <param name="entityEntry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.Auths.KdDbAuthsContext.SaveChanges">
+            <summary>
+            提交此上下文中所做的所有更改保存到基础数据库。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.Auths.KdDbAuthsContext.InitDbTableColumns">
+            <summary>
+            初始化数据库表列顺序及索引设置
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Auths.KdDbAuthsContext.InitFuzzyQuerys">
+            <summary>
+            模糊查询方法初始化
+            </summary>
+        </member>
+        <member name="T:KdCore.Data.Dicts.KdDbDictsContext">
+            <summary>
+            数据字典数据库模型
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Dicts.KdDbDictsContext.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Dicts.KdDbDictsContext.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="nameOrConnectString"></param>
+        </member>
+        <member name="M:KdCore.Data.Dicts.KdDbDictsContext.CreateModel(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            初始化数据模型定义
+            </summary>
+            <param name="builder">模型构造程序</param>
+        </member>
+        <member name="M:KdCore.Data.Dicts.KdDbDictsContext.SaveChanges">
+            <summary>
+            提交此上下文中所做的所有更改保存到基础数据库。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Data.KdVersionManager">
+            <summary>
+            系统版本更新管理
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.KdVersionManager.Init">
+            <summary>
+            初始化版本更新检查管理
+            </summary>
+        </member>
+        <member name="T:KdCore.Data.Logs.KdDbLogsContext">
+            <summary>
+            用户日志数据库数据模型
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Logs.KdDbLogsContext.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Logs.KdDbLogsContext.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="nameOrConnectString">数据库连接字符串或连接配置名称</param>
+        </member>
+        <member name="M:KdCore.Data.Logs.KdDbLogsContext.CreateModel(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            初始化数据模型定义
+            </summary>
+            <param name="builder">模型构造程序</param>
+        </member>
+        <member name="P:KdCore.Data.Logs.KdDbLogsContext.DataLogsDetails">
+            <summary>
+            获取或设置是否是否启用自动用户操作日志（保存到数据库的日志）（EntityFramework 每次CURD操作的详细日志）
+            </summary>
+        </member>
+        <member name="T:KdCore.Data.Serials.KdDataSerial">
+            <summary>
+            数据流水号最大值状态记录
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Serials.KdDataSerial.DataType">
+            <summary>
+            使用流水号的数据类型标识
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Serials.KdDataSerial.SnPrefix">
+            <summary>
+            流水号前缀，不同的流水号前缀+后缀会重新为从 1 开始
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Serials.KdDataSerial.SnNum">
+            <summary>
+            系统中当前最大流水号
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Serials.KdDataSerial.SnSuffix">
+            <summary>
+            流水号后缀，不同的流水号前缀+后缀会重新为从 1 开始
+            </summary>
+        </member>
+        <member name="T:KdCore.Data.Serials.KdDbSerialsContext">
+            <summary>
+            数据流水号最大值状态记录数据库模型
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Serials.KdDbSerialsContext.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Serials.KdDbSerialsContext.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="nameOrConnectString">数据库连接字符串或连接配置名称</param>
+        </member>
+        <member name="M:KdCore.Data.Serials.KdDbSerialsContext.CreateModel(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            初始化数据模型定义
+            </summary>
+            <param name="builder">模型构造程序</param>
+        </member>
+        <member name="M:KdCore.Data.Serials.KdDbSerialsContext.BuildNextSerials(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            根据流水号记录情况，获取下一组可用的流水号
+            </summary>
+            <param name="dataType"></param>
+            <param name="prefix"></param>
+            <param name="suffix"></param>
+            <param name="requestSnCount"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Data.KdSerialsManager">
+            <summary>
+             数据流水号状态记录管理
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.KdSerialsManager.DbRegister(System.String)">
+            <summary>
+            数据流水号状态记录管理数据库及业务设置
+            </summary>
+            <param name="dbNameOrConnectionString">数据库连接名称或连接字符串</param>  
+        </member>
+        <member name="M:KdCore.Data.KdSerialsManager.BuildNextSerials(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            根据流水号记录情况，获取下一组可用的流水号。
+            流水号在获取后无论是否使用，系统均视为获取的流水号已被占用，下次获取将顺延后续号码。
+            系统中将流水号类型标识、前缀、后缀完全相同的情况下，才视为同一流水号序列，才会持续编号。
+            三者中存在任一个不同时，系统将视为新的一组流水号重新从1开始
+            </summary>
+            <param name="dataType">流水号类型标识</param>
+            <param name="prefix">流水号前缀</param>
+            <param name="suffix">流水号后缀</param>
+            <param name="requestCount">本次获取的流水号个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.KdSerialsManager.GetSerial(System.String,System.String,System.String)">
+            <summary>
+            根据流水号记录情况，获取下一组可用的流水号。
+            流水号在获取后无论是否使用，系统均视为获取的流水号已被占用，下次获取将顺延后续号码。
+            系统中将流水号类型标识、前缀、后缀完全相同的情况下，才视为同一流水号序列，才会持续编号。
+            三者中存在任一个不同时，系统将视为新的一组流水号重新从1开始
+            </summary>
+            <param name="dataType">流水号类型标识</param>
+            <param name="prefix">流水号前缀</param>
+            <param name="suffix">流水号后缀</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.KdSerialsManager.GetSerials(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            根据流水号记录情况，获取下一组可用的流水号。
+            流水号在获取后无论是否使用，系统均视为获取的流水号已被占用，下次获取将顺延后续号码。
+            系统中将流水号类型标识、前缀、后缀完全相同的情况下，才视为同一流水号序列，才会持续编号。
+            三者中存在任一个不同时，系统将视为新的一组流水号重新从1开始
+            </summary>
+            <param name="requestCount">本次获取的流水号个数</param>
+            <param name="dataType">流水号类型标识</param>
+            <param name="prefix">流水号前缀</param>
+            <param name="suffix">流水号后缀</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.KdSerialsManager.GetSerial``1(System.String,System.String)">
+            <summary>
+            根据流水号记录情况，获取下一组可用的流水号。
+            流水号在获取后无论是否使用，系统均视为获取的流水号已被占用，下次获取将顺延后续号码。
+            </summary>
+            <typeparam name="TEntity">使用流水号的数据类型</typeparam>
+            <param name="prefix">流水号前缀</param>
+            <param name="suffix">流水号后缀</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.KdSerialsManager.GetSerials``1(System.Int32,System.String,System.String)">
+            <summary>
+            根据流水号记录情况，获取下一组可用的流水号。
+            流水号在获取后无论是否使用，系统均视为获取的流水号已被占用，下次获取将顺延后续号码。
+            </summary>
+            <typeparam name="TEntity">使用流水号的数据类型</typeparam>
+            <param name="requestCount">本次获取的流水号个数</param>
+            <param name="prefix">流水号前缀</param>
+            <param name="suffix">流水号后缀</param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Data.Sms.KdDbSmsContext">
+            <summary>
+            短信记录数据库模型
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Sms.KdDbSmsContext.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Sms.KdDbSmsContext.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="nameOrConnectString">数据库连接字符串或连接配置名称</param>
+        </member>
+        <member name="M:KdCore.Data.Sms.KdDbSmsContext.CreateModel(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            初始化数据模型定义
+            </summary>
+            <param name="builder">模型构造程序</param>
+        </member>
+        <member name="M:KdCore.Data.Sms.KdDbSmsContext.InitFuzzyQuerys">
+            <summary>
+            模糊查询方法初始化
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Sms.KdDbSmsContext.FuzzySmsSend(System.String)">
+            <summary>
+            初始化模糊查询
+            </summary>
+            <param name="word"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.Sms.KdDbSmsContext.FuzzySmsHistory(System.String)">
+            <summary>
+            初始化模糊查询
+            </summary>
+            <param name="word"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.Sms.KdDbSmsContext.FuzzySmsReceive(System.String)">
+            <summary>
+            初始化模糊查询
+            </summary>
+            <param name="word"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdCore.Data.Sms.Szgov.RegElement.IsEmpty">
+            <summary>
+            是否为空值
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Sms.Szgov.RegElement.IsValid">
+            <summary>
+            是否有效
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Sms.Szgov.RegElement.Reserve">
+            <summary>
+            备用保留项
+            </summary>
+        </member>
+        <member name="T:KdCore.Data.Sms.Szgov.KdSzgovTransceiver">
+            <summary>
+            宝安龙华等政府单位使用的短信收发WebService接口
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.CreateInstance">
+            <summary>
+            创建一个实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.UrlSmsWebService">
+            <summary>
+            短信接口的 URL 地址
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.SmsWebService">
+            <summary>
+            发送调用WebService服务类
+            </summary>
+        </member>
+        <member name="F:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.TIME_FMT">
+            <summary>
+             时间格式：yyyyMMddHHmmss
+            </summary>
+        </member>
+        <member name="F:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.SOURCE_ADDR">
+            <summary>
+            源地址：1065730102420004，请一定在接口函数中指定该发送号码，即短信发送函数中的sourceAddr。 
+            按文档说明此号码为固定值
+            </summary>
+        </member>
+        <member name="F:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.PUBLIC_CONTENT">
+            <summary>
+            公共短信内容,可为空,不为空则所有message节点内的content内容节点,
+            在短信下发时都默认加上publicContent节点内容
+            </summary>
+        </member>
+        <member name="F:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.SmsMaxLength">
+            <summary>
+            短信最大长度 ：能支持1000个汉字 
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.NeedEncrypt">
+            <summary>
+            用户名密码是否需要加密
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.AzdgKey">
+            <summary>
+            用户名密码进行加密时采用的 AZDG Key
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.UserNameGlobal">
+            <summary>
+            用户名(已加密),采用AZDG加密方式进行加密
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.PasswordGlobal">
+            <summary>
+            密码(已加密),采用AZDG加密方式进行加密
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.AzdgEncrypt(System.String)">
+            <summary>
+            AZDG加密字符串
+            </summary>
+            <param name="original"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.ServiceUrl">
+            <summary>
+            短信接口的 URL 地址
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.UserName">
+            <summary>
+            短信接口验证用户名
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.Password">
+            <summary>
+            短信接口验证密码
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.ConnectTest">
+            <summary>
+            连接webservices接口
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.GetPublicContent">
+            <summary>
+            公共短信内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.SendSms(KdCore.Data.Sms.KdSmsSend)">
+            <summary>
+            下发短信：指的是MAS机发送短信到用户手机
+            </summary>
+            <param name="sms">待发送的短信</param>
+        </member>
+        <member name="M:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.CheckSmsStatus(KdCore.Data.Sms.KdSmsSend)">
+            <summary>
+            获取特定短信的发送状态
+            </summary>
+            <param name="sms">待检查发送状态的短信</param>
+        </member>
+        <member name="M:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.SendSmsList(System.Collections.Generic.IEnumerable{KdCore.Data.Sms.KdSmsSend})">
+            <summary>
+            立即执行发送短信的真实处理，如果不能提供可直接返回结果集合为null
+            </summary>
+            <param name="smsSendWaitList">待发送的短信集合</param>
+            <returns>已经更改了发送结果状态的短信数据集合</returns>
+        </member>
+        <member name="M:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.GetSmsSendStatus(System.Collections.Generic.IEnumerable{KdCore.Data.Sms.KdSmsSend})">
+            <summary>
+            查询短信的真实发送状态，如果不能提供可直接返回结果集合为null
+            </summary>
+            <param name="smsSendSubmitList">待检查发送状态的短信集合</param>
+            <returns>已经更改了发送结果状态的短信数据集合</returns>
+        </member>
+        <member name="M:KdCore.Data.Sms.Szgov.KdSzgovTransceiver.GetSmsReceive">
+            <summary>
+            获取接收到的短信集合，如果不能提供可直接返回结果集合为null
+            </summary>
+            <returns>接收到的短信集合</returns>
+        </member>
+        <member name="T:KdCore.Data.ViewModels.KdDiskFolder">
+            <summary>
+            资料中心页面视图模型
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.ViewModels.KdDiskFolder.GetAnnexRequest(System.String)">
+            <summary>
+            获取文件查询参数
+            </summary>
+            <param name="annexType"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdCore.Data.ViewModels.KdDiskFolder.Parent">
+            <summary>
+            所在目录
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.ViewModels.KdDiskFolder.GetAnnexContext(System.String)">
+            <summary>
+            获取附件上传的设置上下文
+            </summary>
+            <param name="annexType"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

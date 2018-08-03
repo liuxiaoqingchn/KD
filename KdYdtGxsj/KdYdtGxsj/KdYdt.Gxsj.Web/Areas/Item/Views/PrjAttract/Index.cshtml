@@ -1,0 +1,47 @@
+﻿@model  KdDataResponse<PrjAttract>
+
+@using (Html.BeginPageTitle())
+{
+    @Html.BbBtnLinkAdd()
+    @Html.BbBtnGridDelete(this.Model)
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch())
+    {
+        @Html.BbSearchFor(x => x.AttractName)
+        @Html.BbSearchFor(x => x.AttractUnit)
+        @Html.BbSearchFor(x => x.AttractPerson) 
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(true))
+        {
+            @Html.BbTHeadFor(x => x.AttractName)
+            @Html.BbTHeadFor(x => x.AttractUrl)
+            @Html.BbTHeadFor(x => x.AttractUnit)
+            @Html.BbTHeadFor(x => x.AttractPwd)
+            @Html.BbTHeadFor(x => x.AttractPerson)
+            @Html.BbTHeadFor(x => x.AttractTel)
+            @Html.BbTHeadFor(x => x.CreatorDate)
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (PrjAttract item in Model)
+            {
+                using (Html.BeginDataTableRow(item, true))
+                {
+                    <td>@Html.ActionLink(item.AttractName, "Edit", new { id = item.Id})</td>
+                    <td>@item.AttractUrl</td>
+                    <td>@item.AttractUnit</td> 
+                    <td>@item.AttractPwd</td>
+                    <td>@item.AttractPerson</td>
+                    <td>@item.AttractTel</td>
+                    <td>@item.CreatorDate</td>
+                }
+            }
+        }
+    }
+}

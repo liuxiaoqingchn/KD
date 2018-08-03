@@ -1,0 +1,350 @@
+﻿2018-06-04 09:20:05.92537 [T00001][Critical] KdAppContext - 已加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-06-04 09:20:11.19825 [T00001][Critical] KdWebContext - RegisterWebMvc Namespaces: 
+                      KdCore.Web.Errors.Controllers
+                      KdYdt.Gxsj.WebManage.Controllers
+2018-06-04 09:20:11.20024 [T00001] [Major]   KdUnitManager - 初始化系统功能模块设置……
+2018-06-04 09:20:11.57424 [T00001] [Major]   KdUnitManager - 初始化系统模块设置结束
+              从本地运行程序中识别出功能模块：13 个
+              从远程获取到文件中识别功能模块定义：39 个
+              初始化功能模块：13 个，功能操作：1217 个
+2018-06-04 09:20:11.62810 [T00001] [Major]   KdMenu - 初始化系统菜单……
+2018-06-04 09:20:11.88541 [T00001] [Major]   KdMenu - 共计初始化系统菜单：3 个
+2018-06-04 09:20:12.01905 [T00001] [Major]   KdMenu - 菜单 OA系统菜单[Default] 共计加载菜单项 21 个
+2018-06-04 09:20:12.14771 [T00001] [Major]   KdMenu - 菜单 项目管理菜单[PrjManage] 共计加载菜单项 42 个
+2018-06-04 09:20:12.14771 [T00001] [Major]   KdMenu - 菜单 后台管理菜单[Admin] 共计加载菜单项 8 个
+2018-06-04 09:20:12.14771 [T00001] [Major]   KdMenu - 初始化系统菜单设置结束。
+2018-06-04 09:20:12.17965 [T00001][Critical] BbMvcManager - 当前系统运行环境：
+                      IIS Version: 10.0
+                      Integrated Pipeline: True
+                      TargetFramework: 4.6
+                      BaseDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\
+                      BinDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\
+                      AppDomainAppVirtualPath: /
+                      VirtualPathRoot: /
+                      AppData VirtualPath: ~/App_Data;
+                      AppData PhysicsPath: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data;
+                      系统全局配置文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile;
+                      数据字典配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdDict;
+                      系统菜单配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data;
+                      系统默认菜单文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdMenu\KdMenu_Admin.json;
+                      系统运行日志文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdLogs\Kd_admin.2018_06_04.log;
+                      数据库初始化JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataInit;
+                      数据库备份JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataBackup;
+                      用户个人文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Data_User;
+                      报表模板默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Templates;
+                      报表输出默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Reports;
+                      附件上传默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\User_Uploads;
+                      文件覆盖时自动备份的文件夹名称: History;
+2018-06-04 09:20:12.71918 [T00056][CodeMark] HomeController - 【Http-GET:56T9ECC7SKKT】已耗时：0.2184166秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA22F8E7E50]
+              [Url] http://localhost:2234/Home/Logout
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus/Edit?code=PrjManage
+2018-06-04 09:20:12.76708 [T00056][Critical] KdUtil - 调试模式运行，忽略版本更新检测
+2018-06-04 09:20:13.35849 [T00056][CodeMark] HomeController - 【Http-GET:56T9ECC7SKKT】已耗时：0.2184166秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA22F8E7E50]
+              [Url] http://localhost:2234/Home/Logout
+              [User: 未登录用户][DataScope: Forbidden]
+              【请求处理完成】执行时间 0.8567 秒
+2018-06-04 09:20:13.36745 [T00120][CodeMark] HomeController - 【Http-GET:56T9LIIA7SOP】已耗时：0.0029924秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA23012214F]
+              [Url] http://localhost:2234/Home/Login?from=%2fHome%2fLogout
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus/Edit?code=PrjManage
+2018-06-04 09:20:19.12606 [T00120][CodeMark] HomeController - 【Http-GET:56T9LIIA7SOP】已耗时：0.0029924秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA23012214F]
+              [Url] http://localhost:2234/Home/Login?from=%2fHome%2fLogout
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 5.7616 秒【较慢】
+2018-06-04 09:20:26.34376 [T00022][CodeMark] HomeController - 【Http-POST:56T94A8G01PL】已耗时：0.0029926秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA237CE2893]
+              [Url] http://localhost:2234/Home/Login?from=%2FHome%2FLogout
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Home/Login?from=%2fHome%2fLogout
+2018-06-04 09:20:26.76049 [T00022][CodeMark] HomeController - 【Http-POST:56T94A8G01PL】已耗时：0.0029926秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA237CE2893]
+              [Url] http://localhost:2234/Home/Login?from=%2FHome%2FLogout
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求处理完成】执行时间 0.4197 秒
+2018-06-04 09:20:26.78443 [T00094][CodeMark] HomeController - 【Http-GET:56T9GEW6K6XH】已耗时：0.0020005秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA238118CFD]
+              [Url] http://localhost:2234/Home/Logout
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Home/Login?from=%2fHome%2fLogout
+2018-06-04 09:20:26.81737 [T00094][CodeMark] HomeController - 【Http-GET:56T9GEW6K6XH】已耗时：0.0020005秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA238118CFD]
+              [Url] http://localhost:2234/Home/Logout
+              [User: 未登录用户][DataScope: Forbidden]
+              【请求处理完成】执行时间 0.0349 秒
+2018-06-04 09:20:26.82133 [T00056][CodeMark] HomeController - 【Http-GET:56T9OFFUC484】已耗时：0.0019956秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA238172E78]
+              [Url] http://localhost:2234/
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Home/Login?from=%2fHome%2fLogout
+2018-06-04 09:20:26.87419 [T00056][CodeMark] HomeController - 【Http-GET:56T9OFFUC484】已耗时：0.0019956秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA238172E78]
+              [Url] http://localhost:2234/
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 0.0549 秒
+2018-06-04 09:20:26.87818 [T00120][CodeMark] HomeController - 【Http-GET:56T9AB0NJG04】已耗时：0.0009970秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA23820020C]
+              [Url] http://localhost:2234/Home/Login
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Home/Login?from=%2fHome%2fLogout
+2018-06-04 09:20:31.56066 [T00120][CodeMark] HomeController - 【Http-GET:56T9AB0NJG04】已耗时：0.0009970秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA23820020C]
+              [Url] http://localhost:2234/Home/Login
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 4.6835 秒【稍慢】
+2018-06-04 09:20:35.24980 [T00120][CodeMark] HomeController - 【Http-POST:56T9N4P3PWIB】已耗时：0.0029926秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA23D1D1CA9]
+              [Url] http://localhost:2234/Home/Login
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Home/Login
+2018-06-04 09:20:35.41748 [T00120][CodeMark] HomeController - 【Http-POST:56T9N4P3PWIB】已耗时：0.0029926秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA23D1D1CA9]
+              [Url] http://localhost:2234/Home/Login
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求处理完成】执行时间 0.1707 秒
+2018-06-04 09:20:35.43734 [T00019][CodeMark] UsersController - 【Http-GET:56T94HD5QJDU】已耗时：0.0032970秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA23D39AE86]
+              [Url] http://localhost:2234/Users
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Home/Login
+2018-06-04 09:20:35.96033 [T00019][CodeMark] UsersController - 【Http-GET:56T94HD5QJDU】已耗时：0.0032970秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA23D39AE86]
+              [Url] http://localhost:2234/Users
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.5263 秒
+2018-06-04 09:20:39.20266 [T00056][CodeMark] MenusController - 【Http-GET:56T9RX5AEGJG】已耗时：0.0029903秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA23F784537]
+              [Url] http://localhost:2234/Menus
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Users
+2018-06-04 09:20:39.25255 [T00056][CodeMark] MenusController - 【Http-GET:56T9RX5AEGJG】已耗时：0.0029903秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA23F784537]
+              [Url] http://localhost:2234/Menus
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.0529 秒
+2018-06-04 09:20:42.44001 [T00054][CodeMark] MenusController - 【Http-GET:56T92W9OOWHN】已耗时：0.0029645秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA241664119]
+              [Url] http://localhost:2234/Menus/Edit?code=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus
+2018-06-04 09:20:42.57365 [T00054][CodeMark] MenusController - 【Http-GET:56T92W9OOWHN】已耗时：0.0029645秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA241664119]
+              [Url] http://localhost:2234/Menus/Edit?code=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.1366 秒
+2018-06-04 09:22:51.13353 [T00050][CodeMark] MenusController - 【Http-POST:56T9VH3ZA5YW】已耗时：0.0209426秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA28E189577]
+              [Url] http://localhost:2234/Menus/Edit?treeCode=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus/Edit?code=PrjManage
+2018-06-04 09:22:51.35507 [T00050][CodeMark] MenusController - 【Http-POST:56T9VH3ZA5YW】已耗时：0.0209426秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA28E189577]
+              [Url] http://localhost:2234/Menus/Edit?treeCode=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.2425 秒
+2018-06-04 09:22:51.42798 [T00125][CodeMark] MenusController - 【Http-GET:56T95PD1MIKA】已耗时：0.0019954秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA28E4867C7]
+              [Url] http://localhost:2234/Menus/Edit?code=PrjManage&__sY=88
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus/Edit?code=PrjManage
+2018-06-04 09:22:51.64997 [T00125][CodeMark] MenusController - 【Http-GET:56T95PD1MIKA】已耗时：0.0019954秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA28E4867C7]
+              [Url] http://localhost:2234/Menus/Edit?code=PrjManage&__sY=88
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.2240 秒
+2018-06-04 09:23:26.48252 [T00112][CodeMark] MenusController - 【Http-POST:56T9Y67KF6WT】已耗时：0.0039897秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA2A32CFFE9]
+              [Url] http://localhost:2234/Menus/Edit?treeCode=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus/Edit?code=PrjManage&__sY=88
+2018-06-04 09:23:26.63408 [T00112][CodeMark] MenusController - 【Http-POST:56T9Y67KF6WT】已耗时：0.0039897秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA2A32CFFE9]
+              [Url] http://localhost:2234/Menus/Edit?treeCode=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.1555 秒
+2018-06-04 09:23:26.68090 [T00050][CodeMark] MenusController - 【Http-GET:56T98UJFPPLV】已耗时：0.0000000秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA2A34BE0CF]
+              [Url] http://localhost:2234/Menus/Edit?code=PrjManage&__sY=229
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus/Edit?code=PrjManage&__sY=88
+2018-06-04 09:23:26.90828 [T00050][CodeMark] MenusController - 【Http-GET:56T98UJFPPLV】已耗时：0.0000000秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA2A34BE0CF]
+              [Url] http://localhost:2234/Menus/Edit?code=PrjManage&__sY=229
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.2274 秒
+2018-06-04 09:24:58.26544 [T00075][CodeMark] MenusController - 【Http-GET:56T9H0B13XNH】已耗时：0.0049863秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA2D9E1CEFC]
+              [Url] http://localhost:2234/Menus/Reinit?___act=Edit
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus/Edit?code=PrjManage&__sY=229
+2018-06-04 09:25:00.53736 [T00075] [Error]   MenusController - 【Http-GET:56T9H0B13XNH】已耗时：0.0049863秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA2D9E1CEFC]
+              [Url] http://localhost:2234/Menus/Reinit?___act=Edit
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【Exception】System.AggregateException: 发生一个或多个错误。 ---> System.Net.Http.HttpRequestException: 发送请求时出错。 ---> System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。 127.0.0.1:6382
+                 在 System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+                 在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+                 在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+                 --- 内部异常堆栈跟踪的结尾 ---
+                 在 System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+                 在 System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+                 --- 内部异常堆栈跟踪的结尾 ---
+                 在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+                 在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+                 在 KdCore.Web.KdUtilHttp..()
+              --- 引发异常的上一位置中堆栈跟踪的末尾 ---
+                 在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+                 在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+                 在 KdCore.Web.KdUtilHttp..()
+                 --- 内部异常堆栈跟踪的结尾 ---
+                 在 System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+                 在 System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+                 在 System.Threading.Tasks.Task`1.get_Result()
+                 在 KdCore.KdUtilWeb.RemoteRequest(String code, String requestFileName, String urlTarget, String authCode)
+                 在 KdCore.Web.Mvc.BbCoreController.RemoteRequest(String asyncCode, String saveFileName, String urlTarget, String authCode)
+              ---> (内部异常 #0) System.Net.Http.HttpRequestException: 发送请求时出错。 ---> System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。 127.0.0.1:6382
+                 在 System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+                 在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+                 在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+                 --- 内部异常堆栈跟踪的结尾 ---
+                 在 System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+                 在 System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+                 --- 内部异常堆栈跟踪的结尾 ---
+                 在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+                 在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+                 在 KdCore.Web.KdUtilHttp..()
+              --- 引发异常的上一位置中堆栈跟踪的末尾 ---
+                 在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+                 在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+                 在 KdCore.Web.KdUtilHttp..()<---
+              
+2018-06-04 09:25:01.05897 [T00075][CodeMark] MenusController - 【Http-GET:56T9H0B13XNH】已耗时：0.0049863秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA2D9E1CEFC]
+              [Url] http://localhost:2234/Menus/Reinit?___act=Edit
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 2.7985 秒【稍慢】
+2018-06-04 09:25:01.06395 [T00112][CodeMark] MenusController - 【Http-GET:56T961F0RV6R】已耗时：0.0019911秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA2DB8D4927]
+              [Url] http://localhost:2234/Menus
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus/Edit?code=PrjManage&__sY=229
+2018-06-04 09:25:01.11583 [T00112][CodeMark] MenusController - 【Http-GET:56T961F0RV6R】已耗时：0.0019911秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA2DB8D4927]
+              [Url] http://localhost:2234/Menus
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.0539 秒
+2018-06-04 09:25:03.63398 [T00112][CodeMark] MenusController - 【Http-GET:56T9MEDWSQDX】已耗时：0.0029892秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA2DD1549D7]
+              [Url] http://localhost:2234/Menus/Edit?code=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus
+2018-06-04 09:25:03.66390 [T00112][CodeMark] MenusController - 【Http-GET:56T9MEDWSQDX】已耗时：0.0029892秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA2DD1549D7]
+              [Url] http://localhost:2234/Menus/Edit?code=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.0329 秒
+2018-06-04 09:29:06.24244 [T00112][CodeMark] MenusController - 【Http-POST:56T9S3QCZ8TR】已耗时：0.0049846秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA36DB018C0]
+              [Url] http://localhost:2234/Menus/FrontAsync?___act=Edit
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus/Edit?code=PrjManage
+2018-06-04 09:29:07.06125 [T00112][CodeMark] MenusController - 【Http-POST:56T9S3QCZ8TR】已耗时：0.0049846秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA36DB018C0]
+              [Url] http://localhost:2234/Menus/FrontAsync?___act=Edit
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.8238 秒
+2018-06-04 09:52:09.78650 [T00099][CodeMark] MenusController - 【Http-POST:56T9ZA40IV3R】已耗时：0.0059850秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA6A6580377]
+              [Url] http://localhost:2234/Menus/Edit?treeCode=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus/Edit?code=PrjManage
+2018-06-04 09:52:10.07973 [T00099][CodeMark] MenusController - 【Http-POST:56T9ZA40IV3R】已耗时：0.0059850秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA6A6580377]
+              [Url] http://localhost:2234/Menus/Edit?treeCode=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.2992 秒
+2018-06-04 09:52:10.13078 [T00023][CodeMark] MenusController - 【Http-GET:56T9Z57QB40O】已耗时：0.0019948秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA6A68D27F8]
+              [Url] http://localhost:2234/Menus/Edit?code=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus/Edit?code=PrjManage
+2018-06-04 09:52:10.32077 [T00023][CodeMark] MenusController - 【Http-GET:56T9Z57QB40O】已耗时：0.0019948秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA6A68D27F8]
+              [Url] http://localhost:2234/Menus/Edit?code=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.1910 秒
+2018-06-04 09:52:14.49715 [T00099][CodeMark] MenusController - 【Http-GET:56T98GPNWK8A】已耗时：0.0029847秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA6A92742AE]
+              [Url] http://localhost:2234/Menus/Reinit?___act=Edit
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus/Edit?code=PrjManage
+2018-06-04 09:52:15.32098 [T00099][CodeMark] MenusController - 【Http-GET:56T98GPNWK8A】已耗时：0.0029847秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA6A92742AE]
+              [Url] http://localhost:2234/Menus/Reinit?___act=Edit
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.8268 秒
+2018-06-04 09:52:15.32594 [T00184][CodeMark] MenusController - 【Http-GET:56T9I2S4GP5Y】已耗时：0.0019948秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA6A9A5DFB8]
+              [Url] http://localhost:2234/Menus
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus/Edit?code=PrjManage
+2018-06-04 09:52:15.37481 [T00184][CodeMark] MenusController - 【Http-GET:56T9I2S4GP5Y】已耗时：0.0019948秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA6A9A5DFB8]
+              [Url] http://localhost:2234/Menus
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.0509 秒
+2018-06-04 09:52:21.06641 [T00097][CodeMark] MenusController - 【Http-GET:56T9E9FY2PWQ】已耗时：0.0019948秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA6AD11CCC4]
+              [Url] http://localhost:2234/Menus/Edit?code=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus
+2018-06-04 09:52:21.12262 [T00097][CodeMark] MenusController - 【Http-GET:56T9E9FY2PWQ】已耗时：0.0019948秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA6AD11CCC4]
+              [Url] http://localhost:2234/Menus/Edit?code=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.0582 秒
+2018-06-04 09:52:28.29047 [T00097][CodeMark] MenusController - 【Http-POST:56T9M477SFZ3】已耗时：0.0019948秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA6B1601ABA]
+              [Url] http://localhost:2234/Menus/Edit?treeCode=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus/Edit?code=PrjManage
+2018-06-04 09:52:28.45870 [T00097][CodeMark] MenusController - 【Http-POST:56T9M477SFZ3】已耗时：0.0019948秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA6B1601ABA]
+              [Url] http://localhost:2234/Menus/Edit?treeCode=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.1702 秒
+2018-06-04 09:52:28.51617 [T00109][CodeMark] MenusController - 【Http-GET:56T97SLN2SXC】已耗时：0.0009797秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA6B182B2E1]
+              [Url] http://localhost:2234/Menus/Edit?code=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus/Edit?code=PrjManage
+2018-06-04 09:52:28.74510 [T00109][CodeMark] MenusController - 【Http-GET:56T97SLN2SXC】已耗时：0.0009797秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA6B182B2E1]
+              [Url] http://localhost:2234/Menus/Edit?code=PrjManage
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.2299 秒
+2018-06-04 09:58:29.63148 [T00001][Critical] KdAppContext - 已加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-06-04 09:58:30.42037 [T00001][Critical] KdWebContext - RegisterWebMvc Namespaces: 
+                      KdCore.Web.Errors.Controllers
+                      KdYdt.Gxsj.WebManage.Controllers
+2018-06-04 09:58:30.42336 [T00001] [Major]   KdUnitManager - 初始化系统功能模块设置……
+2018-06-04 09:58:30.51013 [T00001] [Major]   KdUnitManager - 初始化系统模块设置结束
+              从本地运行程序中识别出功能模块：13 个
+              从远程获取到文件中识别功能模块定义：51 个
+              初始化功能模块：13 个，功能操作：1475 个
+2018-06-04 09:58:30.51213 [T00001] [Major]   KdMenu - 初始化系统菜单……
+2018-06-04 09:58:30.69165 [T00001] [Major]   KdMenu - 共计初始化系统菜单：3 个
+2018-06-04 09:58:30.75348 [T00001] [Major]   KdMenu - 菜单 OA系统菜单[Default] 共计加载菜单项 21 个
+2018-06-04 09:58:30.88713 [T00001] [Major]   KdMenu - 菜单 项目管理菜单[PrjManage] 共计加载菜单项 43 个
+2018-06-04 09:58:30.88713 [T00001] [Major]   KdMenu - 菜单 后台管理菜单[Admin] 共计加载菜单项 8 个
+2018-06-04 09:58:30.88713 [T00001] [Major]   KdMenu - 初始化系统菜单设置结束。
+2018-06-04 09:58:30.89710 [T00001][Critical] BbMvcManager - 当前系统运行环境：
+                      IIS Version: 10.0
+                      Integrated Pipeline: True
+                      TargetFramework: 4.6
+                      BaseDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\
+                      BinDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\
+                      AppDomainAppVirtualPath: /
+                      VirtualPathRoot: /
+                      AppData VirtualPath: ~/App_Data;
+                      AppData PhysicsPath: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data;
+                      系统全局配置文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile;
+                      数据字典配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdDict;
+                      系统菜单配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data;
+                      系统默认菜单文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdMenu\KdMenu_Admin.json;
+                      系统运行日志文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdLogs\Kd_admin.2018_06_04.log;
+                      数据库初始化JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataInit;
+                      数据库备份JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataBackup;
+                      用户个人文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Data_User;
+                      报表模板默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Templates;
+                      报表输出默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Reports;
+                      附件上传默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\User_Uploads;
+                      文件覆盖时自动备份的文件夹名称: History;
+2018-06-04 09:58:30.98486 [T00173][CodeMark] MenusController - 【Http-POST:56T9SJW4XTM2】已耗时：0.0488687秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA78987E08A]
+              [Url] http://localhost:2234/Menus/FrontAsync?___act=Edit
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:2234/Menus/Edit?code=PrjManage
+2018-06-04 09:58:31.01578 [T00173][Critical] KdUtil - 调试模式运行，忽略版本更新检测
+2018-06-04 09:58:31.89344 [T00173][CodeMark] MenusController - 【Http-POST:56T9SJW4XTM2】已耗时：0.0488687秒【Session:deykbhyeislh0lsm151x1fkz】[1D3FBA78987E08A]
+              [Url] http://localhost:2234/Menus/FrontAsync?___act=Edit
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.9564 秒

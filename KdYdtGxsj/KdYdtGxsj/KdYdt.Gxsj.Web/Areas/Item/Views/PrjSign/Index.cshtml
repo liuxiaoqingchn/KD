@@ -1,0 +1,51 @@
+﻿@model  KdDataResponse<PrjSign>
+
+@using (Html.BeginPageTitle())
+{
+    @Html.BbBtnLinkAdd()
+    @Html.BbBtnGridDelete(this.Model)
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch(this.Model, true))
+    {
+        @Html.BbSearchFor(x => x.PrjStatus)
+        @Html.BbSearchFor(x => x.PrjCode)
+        @Html.BbSearchFor(x => x.PrjName)
+        @Html.BbSearchFor(x => x.SignAddress)
+        @Html.BbSearchFor(x => x.QualAuditMode)
+        @Html.BbSearchFor(x => x.SignStartData)
+        @Html.BbSearchFor(x => x.SignEndData)
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(true))
+        {
+            @Html.BbTHeadFor(x => x.PrjStatus)
+            @Html.BbTHeadFor(x => x.PrjCode)
+            @Html.BbTHeadFor(x => x.PrjName)
+            @Html.BbTHeadFor(x => x.QualAuditMode)
+            @Html.BbTHeadFor(x => x.SignAddress)
+            @Html.BbTHeadFor(x => x.SignStartData)
+            @Html.BbTHeadFor(x => x.SignEndData)
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (PrjSign item in Model)
+            {
+                using (Html.BeginDataTableRow(item, true))
+                {
+                    <td>@item.PrjStatus</td>
+                    <td>@item.PrjCode</td>
+                    <td>@Html.ActionLink(item.PrjName, "Edit", new { id = item.Id })</td>
+                    <td>@item.QualAuditMode</td>
+                    <td>@item.SignAddress</td>
+                    <td>@item.SignStartData.ToDateString()</td>
+                    <td>@item.SignEndData.ToDateString()</td>
+                }
+            }
+        }
+    }
+}

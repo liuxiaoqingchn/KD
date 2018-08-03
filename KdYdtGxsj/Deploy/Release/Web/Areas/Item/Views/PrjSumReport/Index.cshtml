@@ -1,0 +1,67 @@
+﻿@model PrjSumReport
+@{
+
+}
+@using (Html.BeginPageTitle("项目汇总"))
+{
+}
+<div style="margin:8px;height:50px;" align="center" width="100%">
+    @using (Html.BeginForm("Index", "PrjSumReport"))
+    {
+        @Html.AntiForgeryToken()
+        <div class="col-md-4">
+            <div class="input-group kd-field-search text-left">
+                <span class="input-group-addon">立项日期</span>
+                <input class="form-control text-box date" data-bind="kpq_RelDate" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" data-type="date" id="kpq_RelDate" name="kpq_RelDate" role="form" type="text">
+                <span class="input-group-addon">至</span>
+                <input class="form-control text-box date" data-bind="kpq_RelDate_2" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" data-type="date" id="kpq_RelDate_2" name="kpq_RelDate_2" role="form" type="text">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" role="button">
+                <i class="glyphicon glyphicon-search" aria-hidden="true"></i>查询
+            </button>
+        </div>
+    }
+</div>
+<table class="table table-bordered table-condensed table-striped table-hover table-kd bb-data-table" style="float:left" width="100%" border="1">
+    <tr>
+        <td style="text-align:center;height:40px;width:10%;" class="kd-cell-word text-nowrap kd-cell-em04">月份</td>
+        <td style="text-align:center;height:40px;width:10%"> 招标方式 </td>
+        <td style="text-align:center;height:40px;width:12%">立项数量</td>
+        <td style="text-align:center;height:40px;width:12%">投标数量</td>
+        <td style="text-align:center;height:40px;width:12%">中标数量</td>
+        <td style="text-align:center;height:40px;width:12%">中标金额</td>
+    </tr>
+    @for (int i = 0; i < ViewBag.monthlength; i++)
+    {
+        <tr>
+            <td style="text-align:center;height:40px;width:10%" rowspan="3">@ViewBag.months[i]</td>
+            <td style="text-align:center;height:40px;width:5%">交易中心</td>
+            <td style="text-align:center;height:40px;width:6%">@ViewBag.ItemNumsjyzx[i]</td>
+            <td style="text-align:center;height:40px;width:5%">@ViewBag.Bidjyzx[i]</td>
+            <td style="text-align:center;height:40px;width:6%">@ViewBag.WinBidNumsjyzx[i]</td>
+            <td style="text-align:center;height:40px;width:12%">
+                    @ViewBag.BidAmountjyzx[i]
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:center;height:40px;width:5%">政府采购</td>
+            <td style="text-align:center;height:40px;width:6%">@ViewBag.ItemNumszfcg[i]</td>
+            <td style="text-align:center;height:40px;width:5%">@ViewBag.Bidzfcg[i]</td>
+            <td style="text-align:center;height:40px;width:6%">@ViewBag.WinBidNumszfcg[i]</td>
+            <td style="text-align:center;height:40px;width:12%">
+                    @ViewBag.BidAmountzfcg[i]
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:center;height:40px;width:5%">社会招投标</td>
+            <td style="text-align:center;height:40px;width:6%">@ViewBag.ItemNumsztb[i]</td>
+            <td style="text-align:center;height:40px;width:5%">@ViewBag.Bidztb[i]</td>
+            <td style="text-align:center;height:40px;width:6%">@ViewBag.WinBidNumsztb[i]</td>
+            <td style="text-align:center;height:40px;width:12%">
+                    @ViewBag.BidAmountztb[i]
+            </td>
+        </tr>
+    }
+</table>

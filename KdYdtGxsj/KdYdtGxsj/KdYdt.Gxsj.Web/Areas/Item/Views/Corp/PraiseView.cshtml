@@ -1,0 +1,44 @@
+﻿
+
+
+@model   PrjPraise
+
+
+
+
+@{Layout = null; }
+
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        @using (Html.BbAjaxForm())
+        {
+            @Html.BbDlgHeader("获奖信息")
+            @Html.HiddenFor(x => x.Id)
+            <div class="modal-body">
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.CorpName, 4, new { ReadOnly = true })
+                    @Html.BbTextBoxFor(x => x.CorpCode, 4, new { ReadOnly = true })
+                </div>
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.PraiseName, 4, new { ReadOnly = true })
+                    @Html.BbTextBoxFor(x => x.PraiseDate, 4, new { ReadOnly = true })
+                </div>
+                <div class="row">
+                    @Html.BbRadioListFor(x => x.PraiseOffice, 4)
+                    @Html.BbRadioListFor(x => x.PraiseType, 4)
+                </div>
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.PraiseProject, 4, new { ReadOnly = true })
+
+                </div>
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.Remark, 10, new { ReadOnly = true })
+                </div>
+                @Html.AnnexUnit()
+                @Html.RowModifier()
+            </div>
+            @Html.BbDlgFooter()
+        }
+    </div>
+</div>

@@ -1,0 +1,52 @@
+﻿@model  KdDataResponse<BidResult>
+
+@using (Html.BeginPageTitle())
+{
+    @*@Html.BbBtnLinkAdd()*@
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch(this.Model, true))
+    {
+        @Html.BbSearchFor(x => x.PrjCode)
+        @Html.BbSearchFor(x => x.PrjName)
+        @Html.BbSearchFor(x => x.IsBid)
+        @Html.BbSearchFor(x => x.NoticeCode)
+        @Html.BbSearchFor(x => x.BidUnit)
+        @Html.BbSearchFor(x => x.BidDate)
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(false))
+        {
+            @Html.BbTHeadFor(x => x.PrjStatus)
+            @Html.BbTHeadFor(x => x.IsBid)
+            @Html.BbTHeadFor(x => x.PrjCode)
+            @Html.BbTHeadFor(x => x.PrjName)
+            @Html.BbTHeadFor(x => x.BondMoney)
+            @Html.BbTHeadFor(x => x.SignAddress)
+            @Html.BbTHeadFor(x => x.SignDate)
+            @Html.BbTHeadFor(x => x.ResultDate)
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (BidResult item in Model)
+            {
+                using (Html.BeginDataTableRow(item, false))
+                {
+                    <td>@item.PrjStatus</td>
+                    @*@Html.TdIcon(item.IsOpen, true, true)*@
+                    <td>@item.IsBid</td>
+                    <td>@item.PrjCode</td>
+                    <td>@Html.ActionLink(item.PrjName, "Edit", new { id = item.Id })</td>
+                    <td>@item.BondMoney</td>
+                    <td>@item.SignAddress</td>
+                    <td>@item.SignDate</td>
+                    <td>@item.ResultDate</td>
+                }
+            }
+        }
+    }
+}

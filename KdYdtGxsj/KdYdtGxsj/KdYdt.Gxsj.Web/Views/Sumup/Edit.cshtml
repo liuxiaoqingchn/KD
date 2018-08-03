@@ -1,0 +1,102 @@
+﻿@model OaUserSumup
+@if (!Model.IsReported)
+{
+    @section scripts{
+        <script>
+            function weekSubmit(btn) {
+                var text = "提交后将不能再进行任何修改，包括添加和删除！<br />确认要提交吗？";
+                bb.dlgConfirm(text, "系统提示", function () {
+                    loading();
+                    $("#IsReported").val(true);
+                    $("form").submit();
+                });
+                return false;
+            }
+        </script>
+    }
+}
+
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        if (!Model.IsReported)
+        {
+            @Html.BbBtnSave()
+            @Html.JsButton(BbShowPattern.Warning, "提交", "weekSubmit", "提交后无法修改和删除，请确认无误后再提交。如果暂不提交，可点击“暂存”按钮进行保存已填写内容", IconAwesome.Check_Square_O)
+        }
+        else
+        {
+            @Html.BbBtnDlgAction("Review", "审批", BbShowPattern.Danger, new { id = Model.Id })
+        }
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(x => x.SumupPeriod)
+    @Html.HiddenFor(x => x.IsReported)
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">@Model.SumupType</span>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                @Html.BbTextFor(x => x.CreatorDeptName, "所属部门")
+                @Html.BbTextFor(x => x.CreatorDutyName, "所属职务")
+            </div>
+            <div class="row">
+                @Html.BbTextFor(x => x.CreatorUserName, "填报人")
+                @Html.BbTextFor(x => x.CreateTime, "填写时间")
+            </div>
+            <div class="row">
+                @if (Model.SumupPeriod == BbCycleDate.Day)
+                {
+                    @Html.BbTextBoxFor(x => x.StartDate, "填报日期")
+                }
+                else
+                {
+                    @Html.BbTextBoxFor(x => x.StartDate)
+                    @Html.BbTextBoxFor(x => x.EndDate)
+                }
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.SumupOverall)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.ExistProblems)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.PlanNext)
+            </div>
+        </div>
+    </div>
+}
+
+@if (Model.IsNewData()) { return; }
+
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <span class="panel-title">审批情况</span>
+    </div>
+    <div class="panel-body">
+        @if (Model.Reviews.IsEmpty())
+        {
+            <p>暂无审批</p>
+        }
+        else
+        {
+            <ul class="list-unstyled">
+                @foreach (OaSumupReview item in Model.Reviews)
+                {
+                    <li>
+                        <span>@item.CreateDesc</span>
+                        @Html.ToHtmlString(item.ReviewResult)
+                    </li>
+                }
+            </ul>
+        }
+    </div>
+</div>

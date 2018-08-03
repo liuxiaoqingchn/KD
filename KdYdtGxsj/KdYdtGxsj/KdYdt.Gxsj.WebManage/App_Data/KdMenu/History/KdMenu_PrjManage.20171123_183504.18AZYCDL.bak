@@ -1,0 +1,16 @@
+[
+  {
+    "Id": "2017B230F07B0000A1EE4E026AEA4BF5928577DF911F6047",
+    "SortNum": 10,
+    "NodeName": "企业库",
+    "NodeCode": "qyk",
+    "NameAndSortNum": "010. 企业库",
+    "CodePath": "qyk",
+    "UrlPath": "~/Item/Corp",
+    "IconPath": "fa fa-database",
+    "IsForeground": true,
+    "NamePath": "企业库",
+    "CreateTime": "2017-11-23T17:06:03.7365413+08:00",
+    "ModifyTime": "2017-11-23T17:06:03.7605371+08:00"
+  }
+]

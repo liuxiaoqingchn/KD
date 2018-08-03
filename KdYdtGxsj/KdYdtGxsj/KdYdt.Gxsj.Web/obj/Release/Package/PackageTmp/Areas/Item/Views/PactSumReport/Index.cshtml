@@ -1,0 +1,97 @@
+﻿@model PactSumReport
+@{
+
+}
+@using (Html.BeginPageTitle("合同汇总"))
+{
+}
+<div style="margin:8px;height:50px;" align="center" width="100%">
+    @using (Html.BeginForm("Index", "PactSumReport"))
+    {
+        @Html.AntiForgeryToken()
+        <div class="col-md-4">
+            <div class="input-group kd-field-search text-left">
+                <span class="input-group-addon">合同签订日期</span>
+                <input class="form-control text-box date" data-bind="kpq_RelDate" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" data-type="date" id="kpq_RelDate" name="kpq_RelDate" role="form" type="text">
+                <span class="input-group-addon">至</span>
+                <input class="form-control text-box date" data-bind="kpq_RelDate_2" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" data-type="date" id="kpq_RelDate_2" name="kpq_RelDate_2" role="form" type="text">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" role="button">
+                <i class="glyphicon glyphicon-search" aria-hidden="true"></i>查询
+            </button>
+        </div>
+    }
+</div>
+<table class="table table-bordered table-condensed table-striped table-hover table-kd bb-data-table" style="float:left" width="100%" border="1">
+    <tr>
+        <td style="text-align:center;height:40px;width:10%;" rowspan="3" class="kd-cell-word text-nowrap kd-cell-em04">月份</td>
+        <td style="text-align:center;height:40px;width:10%" colspan="4"> 经营方式 </td>
+        <td style="text-align:center;height:40px;width:12%" rowspan="3">合同总数量</td>
+        <td style="text-align:center;height:40px;width:12%" rowspan="3">合同总金额(万元)</td>
+    </tr>
+    <tr>
+        <td style="text-align:center;height:40px;width:12%" colspan="2">  自营 </td>
+        <td style="text-align:center;height:40px;width:12%" colspan="2">  联营 </td>
+    </tr>
+    <tr>
+        <td style="text-align:center;height:40px;width:6%">  数量 </td>
+        <td style="text-align:center;height:40px;width:6%">  金额(万元) </td>
+        <td style="text-align:center;height:40px;width:6%">  数量 </td>
+        <td style="text-align:center;height:40px;width:6%">  金额(万元) </td>
+    </tr>
+    @for (int i = 0; i < ViewBag.monthlength; i++)
+    {
+        <tr>
+            <td style="text-align:center;height:40px;width:10%">@ViewBag.months[i]</td>
+            <td style="text-align:center;height:40px;width:5%">@ViewBag.zypactnum[i]</td>
+            <td style="text-align:center;height:40px;width:6%">@ViewBag.zypactm[i]</td>
+            <td style="text-align:center;height:40px;width:5%">@ViewBag.lypactnum[i]</td>
+            <td style="text-align:center;height:40px;width:6%">
+                    @ViewBag.lypactm[i]
+            </td>
+            <td style="text-align:center;height:40px;width:12%">@ViewBag.pactnum[i]</td>
+            <td style="text-align:center;height:40px;width:12%">
+                    @ViewBag.pactm[i]
+            </td>
+        </tr>
+    }
+    <tr>
+        <td style="text-align:center;height:40px;width:10%">@ViewBag.Total</td>
+        <td style="text-align:center;height:40px;width:5%">@ViewBag.zypactnumtotal</td>
+        <td style="text-align:center;height:40px;width:6%">@ViewBag.zypactmtotal</td>
+        <td style="text-align:center;height:40px;width:5%">@ViewBag.lypactnumtotal</td>
+        <td style="text-align:center;height:40px;width:6%">@ViewBag.lypactmtotal</td>
+        <td style="text-align:center;height:40px;width:12%">@ViewBag.pactnumtotal</td>
+        <td style="text-align:center;height:40px;width:12%">
+                @ViewBag.pactmtotal
+        </td>
+    </tr>
+</table>
+@*@using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(false))
+        {
+            @Html.BbTHeadRow(false, "跟标人", "经营方式", "", "")
+        }
+        using (Html.BeginDataTableBody())
+        {
+            foreach(PactSumReport item in Model)
+            {
+                using (Html.BeginDataTableRow(item, false))
+                {
+                    @Html.TdWord(item.WinBidUnit)
+                    @Html.TdWord(item.OperationMode)
+                    @Html.TdWord(item.PactNum)
+                    @Html.TdWord(item.PactAmount)
+                }
+            }
+            <tr>
+                <td>总计</td>
+                <td></td>
+                <td>@ViewBag.PactSums</td>
+                <td>@ViewBag.AmountSums</td>
+            </tr>
+        }
+    }*@

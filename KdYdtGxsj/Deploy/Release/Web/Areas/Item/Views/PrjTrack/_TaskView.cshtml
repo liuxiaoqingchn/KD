@@ -1,0 +1,54 @@
+﻿@model  PrjTask
+@{ Model.AllowedEdit = false;}
+<div class="panel panel-info">
+    <div class="panel-heading"><span class="panel-title">任务安排</span></div>
+    <div class="panel-body">
+        <div class="row">
+            @Html.BbTextFor(x => x.PrjName)
+            @Html.BbTextFor(x => x.PrjCode)
+        </div>
+        <div class="row">
+            @Html.BbTextBoxFor(x => x.BondMoney, null, "万元", 4, 0, new { ReadOnly = true })
+            @*@Html.BbCheckBoxFor(x => x.IsBond, 0, new { ReadOnly = true })*@
+            @Html.BbRadioListFor(x => x.IsBond, 4, 0, false, new { ReadOnly = true })
+        </div>
+        <div class="row">
+            @Html.BbUserPickFor(x => x.LetterId, x => x.LetterName, 1@*, null, 0, 0, null, null, null, new { Required = true }*@)
+            @Html.BbTextBoxFor(x => x.LetterTime, 4@*, new { Required = true }*@)
+        </div>
+        <div class="row">
+            @Html.BbUserPickFor(x => x.BusinessId, x => x.BusinessName, 1@*, null, 0, 0, null, null, null, new { Required = true }*@)
+            @Html.BbTextBoxFor(x => x.BusinessTime, 4@*, new { Required = true }*@)
+        </div>
+        <div class="row">
+            @Html.BbUserPickFor(x => x.SkillId, x => x.SkillName, 1@*, null, 0, 0, null, null, null, new { Required = true }*@)
+            @Html.BbTextBoxFor(x => x.SkillTime, 4@*, new { Required = true }*@)
+        </div>
+        <div class="row">
+            @Html.BbUserPickFor(x => x.SealId, x => x.SealName, 1@*, null, 0, 0, null, null, null, new { Required = true }*@)
+            @Html.BbTextBoxFor(x => x.SealTime, 4@*, new { Required = true }*@)
+        </div>
+        <div class="row">
+            @Html.BbUserPickFor(x => x.CreditId, x => x.CreditName@*, 1, null, 0, 0, null, null, null, new { Required = true }*@)
+            @Html.BbTextBoxFor(x => x.CreditTime, 4@*, new { Required = true }*@)
+        </div>
+        <div class="row">
+            @Html.BbUserPickFor(x => x.DesignId, x => x.DesignName, 1@*, null, 0, 0, null, null, null, new { Required = true }*@)
+            @Html.BbTextBoxFor(x => x.DesignTime, 4@*, new { Required = true }*@)
+        </div>
+        <div class="row">
+            @Html.HiddenFor(x => x.IsLssued)
+            @Html.HiddenFor(x => x.TaskPersonId)
+            @Html.HiddenFor(x => x.TaskPersonName)
+            @Html.HiddenFor(x => x.TaskTime)
+            @Html.BbTextFor(x => x.TaskPersonName)
+            @Html.BbTextFor(x => x.TaskTime)
+        </div>
+        <div class="row">
+            @Html.BbTextBoxFor(x => x.Remarks)
+        </div>
+        <div>
+            @Html.AnnexUnit()
+        </div>
+    </div>
+</div>

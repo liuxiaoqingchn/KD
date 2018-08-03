@@ -1,0 +1,67 @@
+﻿@model  List<PaySumReport>
+@using (Html.BeginPageTitle("收入汇总"))
+{
+}
+@Html.TabHeader()
+<div style="margin:8px;height:50px;" align="center" width="100%">
+    @using (Html.BeginForm("Income", "PaySumReport"))
+    {
+        @Html.AntiForgeryToken()
+        <div class="col-md-4">
+            <div class="input-group kd-field-search text-left">
+                <span class="input-group-addon">合同签订日期</span>
+                <input class="form-control text-box date" data-bind="kpq_RelDate" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" data-type="date" id="kpq_RelDate" name="kpq_RelDate" role="form" type="text">
+                <span class="input-group-addon">至</span>
+                <input class="form-control text-box date" data-bind="kpq_RelDate_2" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" data-type="date" id="kpq_RelDate_2" name="kpq_RelDate_2" role="form" type="text">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" role="button">
+                <i class="glyphicon glyphicon-search" aria-hidden="true"></i>查询
+            </button>
+        </div>
+    }
+</div>
+<table class="table table-bordered table-condensed table-striped table-hover table-kd bb-data-table" data-kd-max-adapt-rows="2500" data-kd-role="list" data-kd-type="bbDataGrid" role="grid">
+    <thead>
+        <tr></tr>
+    </thead>
+    <thead>
+        <tr>
+            <th>项目名称</th>
+            <th>标书费</th>
+            <th>保函或保证金</th>
+            <th>项目经理配合费</th>
+            <th>资料费</th>
+            <th>电子、展板样品费</th>
+            <th>招标代理服务费</th>
+            <th>差率食宿费</th>
+            <th>管理费</th>
+            <th>项目预计利润</th>
+            <th>其他</th>
+            <th>总计</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(PaySumReport item in Model)
+        {
+            using (Html.BeginDataTableRow(item, false))
+            {
+                <tr data-kd-role="listitem" data-kd-title="" role="row" style="background-color:white;">
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">@item.Prj</td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">@item.BSInc</td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">/</td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">@item.ManageInc</td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">@item.MaterialInc </td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">/</td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">/</td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">/</td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">@item.AdminInc</td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">@item.PrjExpInc</td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">@item.OtherInc</td>
+                    <td class="kd-cell-word text-nowrap kd-cell-em04">@item.BidSumInc</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

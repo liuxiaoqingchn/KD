@@ -1,0 +1,223 @@
+﻿2018-05-09 16:30:44.49207 [T00031][  Warn  ] HomeController - 【Session:4ziswcbf4tgigu3bqddbt5pl】【HttpGET:563GZ9SVWB9Y】未登录用户[DataScope:HandleFull]
+              已耗时：3.9414621秒 http://localhost:63384/Home/Login?from=%2fMenus
+              【请求处理】执行时间 3.9415 秒【稍慢】
+2018-05-09 16:30:51.13787 [T00033][ Error  ] MenusController - 【Session:4ziswcbf4tgigu3bqddbt5pl】【HttpGET:563GXAT7FVWX】管理员（内置）[DataScope:ViewFull, HandleFull]
+              已耗时：2.8126098秒 http://localhost:63384/Menus
+              【Exception】System.Data.Entity.Core.EntityCommandExecutionException: 执行命令定义时出错。有关详细信息，请参阅内部异常。 ---> System.Data.SqlClient.SqlException: 对象名 'dbo.KdUserNotify' 无效。
+                 在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+                 在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+                 在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+                 在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+                 在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+                 在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+                 在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+                 在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+                 在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+                 在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+                 在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+                 在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                 在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+                 在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+                 在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+                 在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+                 在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                 在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+                 在 System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+                 --- 内部异常堆栈跟踪的结尾 ---
+                 在 System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+                 在 System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+                 在 System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+                 在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+                 在 System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+                 在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+                 在 System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+                 在 System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+                 在 System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+                 在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+                 在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+                 在 KdCore.Data.DbServices.KdDbUsersService.LoadUserNotifies(IKdUser user, String prevNotifyId, Nullable`1 timeLimit, Int32 maxCount)
+                 在 KdCore.KdAppContext.LoadUserNotifies(IKdUser user, String prevNotifyId, Nullable`1 timeLimit, Int32 maxCount)
+                 在 KdCore.KdAppContext.LoadUserNotify(IKdUser user, String prevNotifyId, Nullable`1 timeLimit)
+                 在 KdCore.Web.Mvc.KdUserTaskHelper.LoadUserNotify(HtmlHelper helper)
+                 在 ASP._Page_Views_Shared__Layout_cshtml.Execute() 位置 c:\Users\pc\AppData\Local\Temp\Temporary ASP.NET Files\vs\ab051c23\24bac6d8\App_Web__layout.cshtml.639c3968.fhvgp7no.0.cs:行号 0
+                 在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+                 在 System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+                 在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+                 在 System.Web.WebPages.WebPageBase.<>c__DisplayClass3.<RenderPageCore>b__2(TextWriter writer)
+                 在 System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)
+                 在 System.Web.WebPages.WebPageBase.Write(HelperResult result)
+                 在 System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)
+                 在 System.Web.WebPages.WebPageBase.PopContext()
+                 在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+                 在 System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+                 在 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+                 在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+                 在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+                 在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+                 在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+                 在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+                 在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+                 在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-05-09 16:30:51.31936 [T00033][  Warn  ] MenusController - 【Session:4ziswcbf4tgigu3bqddbt5pl】【HttpGET:563GXAT7FVWX】管理员（内置）[DataScope:ViewFull, HandleFull]
+              已耗时：2.9940935秒 http://localhost:63384/Menus
+              【请求处理】执行时间 2.9941 秒【稍慢】
+2018-05-09 16:30:55.63687 [T00039][ Error  ] MenusController - 【Session:4ziswcbf4tgigu3bqddbt5pl】【HttpGET:563GXNWDA1WC】管理员（内置）[DataScope:ViewFull, HandleFull]
+              已耗时：0.1183393秒 http://localhost:63384/Menus
+              【Exception】System.Data.Entity.Core.EntityCommandExecutionException: 执行命令定义时出错。有关详细信息，请参阅内部异常。 ---> System.Data.SqlClient.SqlException: 对象名 'dbo.KdUserNotify' 无效。
+                 在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+                 在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+                 在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+                 在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+                 在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+                 在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+                 在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+                 在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+                 在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+                 在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+                 在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+                 在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                 在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+                 在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+                 在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+                 在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+                 在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                 在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+                 在 System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+                 --- 内部异常堆栈跟踪的结尾 ---
+                 在 System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+                 在 System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+                 在 System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+                 在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+                 在 System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+                 在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+                 在 System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+                 在 System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+                 在 System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+                 在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+                 在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+                 在 KdCore.Data.DbServices.KdDbUsersService.LoadUserNotifies(IKdUser user, String prevNotifyId, Nullable`1 timeLimit, Int32 maxCount)
+                 在 KdCore.KdAppContext.LoadUserNotifies(IKdUser user, String prevNotifyId, Nullable`1 timeLimit, Int32 maxCount)
+                 在 KdCore.KdAppContext.LoadUserNotify(IKdUser user, String prevNotifyId, Nullable`1 timeLimit)
+                 在 KdCore.Web.Mvc.KdUserTaskHelper.LoadUserNotify(HtmlHelper helper)
+                 在 ASP._Page_Views_Shared__Layout_cshtml.Execute() 位置 c:\Users\pc\AppData\Local\Temp\Temporary ASP.NET Files\vs\ab051c23\24bac6d8\App_Web__layout.cshtml.639c3968.fhvgp7no.0.cs:行号 0
+                 在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+                 在 System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+                 在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+                 在 System.Web.WebPages.WebPageBase.<>c__DisplayClass3.<RenderPageCore>b__2(TextWriter writer)
+                 在 System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)
+                 在 System.Web.WebPages.WebPageBase.Write(HelperResult result)
+                 在 System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)
+                 在 System.Web.WebPages.WebPageBase.PopContext()
+                 在 System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+                 在 System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+                 在 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+                 在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+                 在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+                 在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+                 在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+                 在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+                 在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+                 在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+2018-05-09 16:33:23.78309 [T00041][Critical] KdAppContext - 加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-05-09 16:33:30.73856 [T00041][Critical] KdWebContext - RegisterWebMvc Namespaces: 
+              KdYdt.Gxsj.WebManage.Controllers
+2018-05-09 16:33:30.74257 [T00041][ Major  ] KdUnitManager - 初始化系统功能模块设置……
+2018-05-09 16:33:30.84184 [T00041][ Major  ] KdUnitManager - 从本地运行程序中识别出功能模块：10 个
+2018-05-09 16:33:30.86794 [T00041][ Major  ] KdUnitManager - 从远程获取到文件中识别功能模块定义：39 个
+2018-05-09 16:33:30.87192 [T00041][ Major  ] KdUnitManager - 初始化功能模块：10 个，功能操作：1077 个
+2018-05-09 16:33:30.87192 [T00041][ Major  ] KdUnitManager - 初始化系统模块设置结束
+2018-05-09 16:33:30.87295 [T00041][ Major  ] KdMenu - 初始化系统菜单……
+2018-05-09 16:33:31.09053 [T00041][ Major  ] KdMenu - 共计初始化系统菜单：3 个
+2018-05-09 16:33:31.09053 [T00041][ Major  ] KdMenu - 菜单 系统主菜单[__MAIN__] 共计加载菜单项 21 个
+2018-05-09 16:33:31.09053 [T00041][ Major  ] KdMenu - 菜单 后台管理菜单[__ADMIN__] 共计加载菜单项 8 个
+2018-05-09 16:33:31.22085 [T00041][ Major  ] KdMenu - 菜单 椤圭洰绠＄悊[PrjManage] 共计加载菜单项 33 个
+2018-05-09 16:33:31.22085 [T00041][ Major  ] KdMenu - 初始化系统菜单设置结束
+2018-05-09 16:33:31.22586 [T00041][Critical] BbMvcManager - 当前系统运行环境：
+              IIS Version: 10.0
+              Integrated Pipeline: True
+              TargetFramework: 4.6
+              BaseDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\
+              BinDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\
+              AppDomainAppVirtualPath: /
+              VirtualPathRoot: /
+              AppData VirtualPath: ~/App_Data;
+              AppData PhysicsPath: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data;
+              系统全局配置文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile;
+              数据字典配置文件路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdDict;
+              系统主菜单配置文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdMenu\KdAppMenus.json;
+              系统菜单配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdMenu;
+              系统运行日志文件: ;
+              数据库初始化JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataInit;
+              数据库备份JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataBackup;
+              用户个人文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Data_User;
+              报表模板默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Templates;
+              报表输出默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Reports;
+              附件上传默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\User_Uploads;
+              文件覆盖时自动备份的文件夹名称: History;
+2018-05-09 16:33:31.62596 [T00049][Critical] KdUtil - 调试模式运行，忽略版本更新检测
+2018-05-09 16:33:36.65932 [T00049][ Severe ] MenusController - 【Session:4ziswcbf4tgigu3bqddbt5pl】【HttpGET:563GDXQHC63O】管理员（内置）[DataScope:ViewFull, HandleFull]
+              已耗时：5.1988042秒 http://localhost:63384/Menus
+              【请求处理】执行时间 5.1988 秒【较慢】
+2018-05-09 16:34:24.10349 [T00107][Critical] KdAppContext - 加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-05-09 16:34:24.12554 [T00107][ Major  ] KdUnitManager - 初始化系统功能模块设置……
+2018-05-09 16:34:24.13156 [T00107][ Major  ] KdUnitManager - 从本地运行程序中识别出功能模块：10 个
+2018-05-09 16:34:24.13758 [T00107][ Major  ] KdUnitManager - 从远程获取到文件中识别功能模块定义：39 个
+2018-05-09 16:34:24.13958 [T00107][ Major  ] KdUnitManager - 初始化功能模块：10 个，功能操作：1154 个
+2018-05-09 16:34:24.13958 [T00107][ Major  ] KdUnitManager - 初始化系统模块设置结束
+2018-05-09 16:34:24.14058 [T00107][ Major  ] KdMenu - 初始化系统菜单……
+2018-05-09 16:34:24.25489 [T00107][ Major  ] KdMenu - 共计初始化系统菜单：3 个
+2018-05-09 16:34:24.25489 [T00107][ Major  ] KdMenu - 菜单 系统主菜单[__MAIN__] 共计加载菜单项 21 个
+2018-05-09 16:34:24.25489 [T00107][ Major  ] KdMenu - 菜单 后台管理菜单[__ADMIN__] 共计加载菜单项 8 个
+2018-05-09 16:34:24.38223 [T00107][ Major  ] KdMenu - 菜单 椤圭洰绠＄悊[PrjManage] 共计加载菜单项 33 个
+2018-05-09 16:34:24.38223 [T00107][ Major  ] KdMenu - 初始化系统菜单设置结束
+2018-05-09 16:34:24.45843 [T00107][ Fatal  ] MenusController - 【Session:4ziswcbf4tgigu3bqddbt5pl】【HttpGET:563G24KTT30N】管理员（内置）[DataScope:ViewFull, HandleFull]
+              已耗时：20.7710317秒 http://localhost:63384/Menus/Reinit?___act=Index
+              【请求处理】执行时间 20.7710 秒【异常缓慢】
+2018-05-09 18:39:01.22923 [T00033][Critical] KdAppContext - 加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-05-09 18:39:01.26733 [T00033][ Major  ] KdUnitManager - 初始化系统功能模块设置……
+2018-05-09 18:39:01.27736 [T00033][ Major  ] KdUnitManager - 从本地运行程序中识别出功能模块：10 个
+2018-05-09 18:39:01.28338 [T00033][ Major  ] KdUnitManager - 从远程获取到文件中识别功能模块定义：39 个
+2018-05-09 18:39:01.28638 [T00033][ Major  ] KdUnitManager - 初始化功能模块：10 个，功能操作：1154 个
+2018-05-09 18:39:01.28638 [T00033][ Major  ] KdUnitManager - 初始化系统模块设置结束
+2018-05-09 18:40:05.51592 [T00024][Critical] KdAppContext - 加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-05-09 18:40:05.51693 [T00024][ Major  ] KdUnitManager - 初始化系统功能模块设置……
+2018-05-09 18:40:05.52595 [T00024][ Major  ] KdUnitManager - 从本地运行程序中识别出功能模块：10 个
+2018-05-09 18:40:05.53297 [T00024][ Major  ] KdUnitManager - 从远程获取到文件中识别功能模块定义：39 个
+2018-05-09 18:40:05.53497 [T00024][ Major  ] KdUnitManager - 初始化功能模块：10 个，功能操作：1154 个
+2018-05-09 18:40:05.53497 [T00024][ Major  ] KdUnitManager - 初始化系统模块设置结束
+2018-05-09 18:40:12.18566 [T00124][Critical] KdAppContext - 加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-05-09 18:40:12.18666 [T00124][ Major  ] KdUnitManager - 初始化系统功能模块设置……
+2018-05-09 18:40:12.19669 [T00124][ Major  ] KdUnitManager - 从本地运行程序中识别出功能模块：10 个
+2018-05-09 18:40:12.20271 [T00124][ Major  ] KdUnitManager - 从远程获取到文件中识别功能模块定义：39 个
+2018-05-09 18:40:12.20471 [T00124][ Major  ] KdUnitManager - 初始化功能模块：10 个，功能操作：1154 个
+2018-05-09 18:40:12.20471 [T00124][ Major  ] KdUnitManager - 初始化系统模块设置结束
+2018-05-09 18:40:59.56331 [T00107][Critical] KdAppContext - 加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-05-09 18:40:59.56531 [T00107][ Major  ] KdUnitManager - 初始化系统功能模块设置……
+2018-05-09 18:40:59.57734 [T00107][ Major  ] KdUnitManager - 从本地运行程序中识别出功能模块：10 个
+2018-05-09 18:40:59.58336 [T00107][ Major  ] KdUnitManager - 从远程获取到文件中识别功能模块定义：39 个
+2018-05-09 18:40:59.58537 [T00107][ Major  ] KdUnitManager - 初始化功能模块：10 个，功能操作：1154 个
+2018-05-09 18:40:59.58537 [T00107][ Major  ] KdUnitManager - 初始化系统模块设置结束
+2018-05-09 18:42:19.33868 [T00031][Critical] KdAppContext - 加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-05-09 18:42:19.34018 [T00031][ Major  ] KdUnitManager - 初始化系统功能模块设置……
+2018-05-09 18:42:19.34971 [T00031][ Major  ] KdUnitManager - 从本地运行程序中识别出功能模块：10 个
+2018-05-09 18:42:19.35673 [T00031][ Major  ] KdUnitManager - 从远程获取到文件中识别功能模块定义：39 个
+2018-05-09 18:42:19.37628 [T00031][ Major  ] KdUnitManager - 初始化功能模块：10 个，功能操作：1154 个
+2018-05-09 18:42:19.37628 [T00031][ Major  ] KdUnitManager - 初始化系统模块设置结束
+2018-05-09 18:43:13.62844 [T00108][Critical] KdAppContext - 加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-05-09 18:43:13.63044 [T00108][ Major  ] KdUnitManager - 初始化系统功能模块设置……
+2018-05-09 18:43:13.64047 [T00108][ Major  ] KdUnitManager - 从本地运行程序中识别出功能模块：10 个
+2018-05-09 18:43:13.64648 [T00108][ Major  ] KdUnitManager - 从远程获取到文件中识别功能模块定义：39 个
+2018-05-09 18:43:13.64849 [T00108][ Major  ] KdUnitManager - 初始化功能模块：10 个，功能操作：1154 个
+2018-05-09 18:43:13.64849 [T00108][ Major  ] KdUnitManager - 初始化系统模块设置结束
+2018-05-09 18:43:20.20246 [T00024][Critical] KdAppContext - 加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-05-09 18:43:20.20446 [T00024][ Major  ] KdUnitManager - 初始化系统功能模块设置……
+2018-05-09 18:43:20.21349 [T00024][ Major  ] KdUnitManager - 从本地运行程序中识别出功能模块：10 个
+2018-05-09 18:43:20.22051 [T00024][ Major  ] KdUnitManager - 从远程获取到文件中识别功能模块定义：39 个
+2018-05-09 18:43:20.22251 [T00024][ Major  ] KdUnitManager - 初始化功能模块：10 个，功能操作：1154 个
+2018-05-09 18:43:20.22351 [T00024][ Major  ] KdUnitManager - 初始化系统模块设置结束
+2018-05-09 18:43:27.28651 [T00033][Critical] KdAppContext - 加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-05-09 18:43:27.28752 [T00033][ Major  ] KdUnitManager - 初始化系统功能模块设置……
+2018-05-09 18:43:27.30456 [T00033][ Major  ] KdUnitManager - 从本地运行程序中识别出功能模块：10 个
+2018-05-09 18:43:27.31058 [T00033][ Major  ] KdUnitManager - 从远程获取到文件中识别功能模块定义：39 个
+2018-05-09 18:43:27.31258 [T00033][ Major  ] KdUnitManager - 初始化功能模块：10 个，功能操作：1154 个
+2018-05-09 18:43:27.31258 [T00033][ Major  ] KdUnitManager - 初始化系统模块设置结束

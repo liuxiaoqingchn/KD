@@ -1,0 +1,365 @@
+﻿2017-11-24 09:31:45.9774924 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 09:31:45.9804639 Critical KdUtil - IIS Version: 10.0; Integrated Pipeline: True; VirtualPathRoot: /
+2017-11-24 09:31:45.9804639 Critical KdUtil - TargetFramework: 4.6; AppDomainAppVirtualPath: /
+2017-11-24 09:31:45.9804639 Critical KdUtil - BinDirectory: E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\;
+2017-11-24 09:31:46.3164929 Notice KdDbDictsContext - DbContext.OnModelCreating: [DC_KdDbDictsContext_51H92IYXDZ0O]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;pwd=123
+2017-11-24 09:31:48.1824930 Alert KdDbDictsContext - SaveChanges[DC_KdDbDictsContext_51H92IYXDZ0O][]: KdCore.Data.Dicts.KdDbDictsContext
+2017-11-24 09:31:48.1914945 Notice KdDbAuthsContext - DbContext.OnModelCreating: [DC_KdDbAuthsContext_51H9WG0IG1WQ]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;pwd=123
+2017-11-24 09:31:48.2574663 Alert KdDbAuthsContext - SaveChanges[DC_KdDbAuthsContext_51H9WG0IG1WQ][]: KdCore.Data.Auths.KdDbAuthsContext
+2017-11-24 09:31:48.2594959 Notice KdDbLogsContext - DbContext.OnModelCreating: [DC_KdDbLogsContext_51H99BPIUX9Y]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;pwd=123
+2017-11-24 09:31:49.1344668 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H99BPIUX9Y][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:31:49.1384655 Notice KdDbAnnexsContext - DbContext.OnModelCreating: [DC_KdDbAnnexsContext_51H98P58DJGE]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;pwd=123
+2017-11-24 09:31:49.1934660 Alert KdDbAnnexsContext - SaveChanges[DC_KdDbAnnexsContext_51H98P58DJGE][]: KdCore.Data.Annexs.KdDbAnnexsContext
+2017-11-24 09:31:49.2144657 Notice KdDbUsersContext - DbContext.OnModelCreating: [DC_KdDbUsersContext_51H9VDOMLBV4]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;pwd=123
+2017-11-24 09:31:49.3794641 Alert KdDbUsersContext - SaveChanges[DC_KdDbUsersContext_51H9VDOMLBV4][]: KdCore.Data.Users.KdDbUsersContext
+2017-11-24 09:31:49.9554670 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9X3MU1JVS][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:31:50.0104649 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9X3MU1JVS][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:31:57.7804698 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9O2VJJ287][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:31:57.7924668 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9O2VJJ287][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:32:00.8462342 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9DVWCWGPT][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:32:00.8547363 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9DVWCWGPT][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:32:00.8677368 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9PDHUNU78][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:32:00.8767361 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9PDHUNU78][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:32:06.2304168 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9Z4TVYLY3][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:32:06.2404156 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9Z4TVYLY3][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:32:06.2604149 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9DZ7U3IKX][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:32:06.2674165 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9DZ7U3IKX][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:32:06.2744158 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9BBJCWGKX][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:32:06.2844172 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9BBJCWGKX][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:32:13.7000710 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H94ZVNQ6EP][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:32:13.7310626 Notice UsersController -  管理员（内置） CurrDataScope: Full
+2017-11-24 09:32:13.7460634 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H94ZVNQ6EP][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:32:14.4357073 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51H9CWMNSA96][DS_KdDbDictsService_51H9F5DUTGE0]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 09:32:14.6787100 Alert KdDbAuthsContext - DbContext.OnDispose: [DC_KdDbAuthsContext_51H9DHC5NH2S][DS_KdDbAuthsService_51H99BUZE4VX]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 09:32:14.6797158 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9I2EMBLBD][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:32:14.6877101 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9I2EMBLBD][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:32:23.6383132 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9H5MXT0KQ][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:32:23.6463138 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9H5MXT0KQ][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:32:25.5923154 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H90RH1MOL8][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:32:25.6003123 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H90RH1MOL8][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:32:46.3433171 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 09:32:46.3603184 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9KVT4KLC8][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:32:46.3713170 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9KVT4KLC8][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:32:46.5703159 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9XZKU4FCK][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:32:46.5783139 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9XZKU4FCK][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:33:04.6099899 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 09:33:04.6299935 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9GIIRHYD3][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:33:04.6519924 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9GIIRHYD3][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:33:04.8559904 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H932GZGK5Q][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:33:04.8639910 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H932GZGK5Q][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:40:11.5834697 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 09:40:11.6084730 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H95V2BW9JP][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:40:12.4504668 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H95V2BW9JP][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:40:12.4504668 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9GQQN4N3F][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:40:12.4574693 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9GQQN4N3F][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:41:08.7745812 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 09:41:08.7855804 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9YMQEVNSI][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:41:08.8025794 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9YMQEVNSI][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:41:09.0305791 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9SXI1UMNN][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:41:09.0385791 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9SXI1UMNN][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:43:43.9636083 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 09:43:43.9786096 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9YLGJDWBE][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:43:43.9886104 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9YLGJDWBE][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:43:44.2366080 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9L3HOGV1B][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:43:44.2446094 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9L3HOGV1B][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:45:53.9892789 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 09:45:54.0132806 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H93J2HYO35][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:45:54.0262806 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H93J2HYO35][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:45:54.3102769 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9IE4K2ZUR][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:45:54.3172762 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9IE4K2ZUR][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:52:09.9124165 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 09:52:09.9314203 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9EJCVWKB0][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:52:10.7774152 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9EJCVWKB0][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:52:10.7784133 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9RY8NTFK2][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:52:10.7864195 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9RY8NTFK2][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:53:43.1865722 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 09:53:43.2005737 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H911JKUPU9][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:53:43.2085737 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H911JKUPU9][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:53:43.4405696 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H91A8S6N1A][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:53:43.4475718 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H91A8S6N1A][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:59:21.4136847 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 09:59:21.4746833 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9UMHTA00R][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:59:22.3167793 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9UMHTA00R][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 09:59:22.3167793 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51H9RU7PELU7][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 09:59:22.3846870 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51H9RU7PELU7][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:00:46.4198037 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:00:46.4348042 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAMCRO08FL][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:00:46.4468060 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAMCRO08FL][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:00:46.6898011 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HA0CXGHU7N][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:00:46.7008026 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HA0CXGHU7N][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:02:45.6316302 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:02:45.6516289 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAO1VGE73S][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:02:45.6656310 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAO1VGE73S][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:02:45.9776283 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HA27BY4UXI][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:02:45.9906291 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HA27BY4UXI][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:04:10.7770886 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:04:10.7940896 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAR83KUSRB][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:04:10.8020873 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAR83KUSRB][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:04:11.0770838 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HACXSOI1IS][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:04:11.1160834 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HACXSOI1IS][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:23:29.1778025 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:23:29.1818021 Critical KdUtil - IIS Version: 10.0; Integrated Pipeline: True; VirtualPathRoot: /
+2017-11-24 10:23:29.1818021 Critical KdUtil - TargetFramework: 4.6; AppDomainAppVirtualPath: /
+2017-11-24 10:23:29.1818021 Critical KdUtil - BinDirectory: E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\;
+2017-11-24 10:23:29.8878018 Notice KdDbDictsContext - DbContext.OnModelCreating: [DC_KdDbDictsContext_51HA69RD9XOV]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;pwd=123
+2017-11-24 10:23:32.9958009 Alert KdDbDictsContext - SaveChanges[DC_KdDbDictsContext_51HA69RD9XOV][]: KdCore.Data.Dicts.KdDbDictsContext
+2017-11-24 10:23:33.0128005 Notice KdDbAuthsContext - DbContext.OnModelCreating: [DC_KdDbAuthsContext_51HAGK8X1BFS]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;pwd=123
+2017-11-24 10:23:33.0688031 Alert KdDbAuthsContext - SaveChanges[DC_KdDbAuthsContext_51HAGK8X1BFS][]: KdCore.Data.Auths.KdDbAuthsContext
+2017-11-24 10:23:33.0718341 Notice KdDbLogsContext - DbContext.OnModelCreating: [DC_KdDbLogsContext_51HAVSWERM98]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;pwd=123
+2017-11-24 10:23:33.9428075 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAVSWERM98][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:23:33.9468025 Notice KdDbAnnexsContext - DbContext.OnModelCreating: [DC_KdDbAnnexsContext_51HA4EZJSY3X]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;pwd=123
+2017-11-24 10:23:33.9958055 Alert KdDbAnnexsContext - SaveChanges[DC_KdDbAnnexsContext_51HA4EZJSY3X][]: KdCore.Data.Annexs.KdDbAnnexsContext
+2017-11-24 10:23:34.0148038 Notice KdDbUsersContext - DbContext.OnModelCreating: [DC_KdDbUsersContext_51HA5DK0X1WP]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;pwd=123
+2017-11-24 10:23:34.1508027 Alert KdDbUsersContext - SaveChanges[DC_KdDbUsersContext_51HA5DK0X1WP][]: KdCore.Data.Users.KdDbUsersContext
+2017-11-24 10:23:34.9388090 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:23:35.1748025 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HA1NTPSUDI][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:23:35.3698006 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HA1NTPSUDI][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:23:35.7228026 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HA4EXRC0RT][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:23:35.7308009 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HA4EXRC0RT][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:23:48.1458065 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:23:48.1608089 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HA9QYM8E5K][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:23:48.1688044 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HA9QYM8E5K][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:23:48.4028027 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAH7F90SF2][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:23:48.4108042 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAH7F90SF2][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:24:17.6538052 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:24:17.6668069 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAYY9L9I3D][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:24:17.6758064 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAYY9L9I3D][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:24:17.9528043 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAL4RBPBKO][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:24:17.9598076 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAL4RBPBKO][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:24:58.6506846 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:24:58.6656859 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAYT0R4DPJ][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:24:58.6746868 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAYT0R4DPJ][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:24:58.9276830 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAWO5196Z8][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:24:58.9386833 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAWO5196Z8][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:25:33.3163509 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:25:33.3273515 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HALL2WQ98D][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:25:33.3353521 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HALL2WQ98D][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:25:33.6033530 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HA61ZI2GVX][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:25:33.6113518 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HA61ZI2GVX][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:27:52.0241472 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:27:52.0391471 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAML6NYHR0][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:27:52.0541490 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAML6NYHR0][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:27:52.2921453 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAF47RS5XQ][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:27:52.3001453 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAF47RS5XQ][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:28:03.0191467 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:28:03.0331567 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAE43BTKL0][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:28:03.0451495 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAE43BTKL0][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:28:03.2801485 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HA6D0XM35F][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:28:03.2881454 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HA6D0XM35F][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:30:01.5479853 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:30:01.5632329 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAED6M237I][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:30:01.5737420 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAED6M237I][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:30:01.8487476 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HARL27FFZ5][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:30:01.8567476 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HARL27FFZ5][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:33:48.3697619 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:33:48.3887731 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAFJ6OQ65H][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:33:48.3967640 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAFJ6OQ65H][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:33:48.6627632 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HASG3P4ZBU][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:33:48.6697614 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HASG3P4ZBU][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:34:20.5586764 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:34:20.5716767 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAI7LL0T40][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:34:20.5797011 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAI7LL0T40][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:34:20.8556758 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAE6U9Y8UD][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:34:20.8636758 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAE6U9Y8UD][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:34:25.8196751 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAPUMM037A][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:34:25.8276774 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAPUMM037A][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:37:03.0560656 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:37:03.0710655 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HA2B9B6X7Y][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:37:03.0860705 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HA2B9B6X7Y][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:37:03.3540634 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAMKW7J1FT][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:37:03.3620640 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAMKW7J1FT][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:38:20.4588989 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:38:20.4799009 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAIWF2BJ4V][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:38:20.4889001 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAIWF2BJ4V][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:38:20.7848972 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HA9IJBNTJU][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:38:20.7919005 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HA9IJBNTJU][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:39:12.9508663 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:39:12.9828706 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAVEQKO2I0][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:39:12.9908675 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAVEQKO2I0][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:39:13.2798638 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAZT4LQ909][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:39:13.2878658 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAZT4LQ909][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:44:01.8210162 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:44:01.8360159 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HACOE0EVNM][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:44:02.6800387 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HACOE0EVNM][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:44:02.6810189 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAO1B4I3R9][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:44:02.6870152 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAO1B4I3R9][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:45:00.9143141 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:45:00.9333204 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HA7NNTHEY3][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:45:00.9453083 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HA7NNTHEY3][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:45:01.2073088 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAM58RGOYX][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:45:01.2143178 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAM58RGOYX][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:45:05.9843088 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HA7YMJBBSG][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:45:05.9963123 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HA7YMJBBSG][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:47:32.4080513 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:47:32.4280563 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAWN1X11XC][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:47:32.4370527 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAWN1X11XC][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:47:32.7230512 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HALQZNVHV1][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:47:32.7310513 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HALQZNVHV1][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:47:38.8100512 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:47:38.8200506 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAAIZYGE05][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:47:38.8290527 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAAIZYGE05][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:47:39.0970521 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAM7O7NVHK][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:47:39.1030502 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAM7O7NVHK][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:47:44.4750542 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:47:44.4900524 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAC72PX9EP][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:47:44.4990542 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAC72PX9EP][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:47:44.7850525 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAVHBYEO2Q][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:47:44.7930499 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAVHBYEO2Q][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:47:48.8492195 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:47:48.8742210 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAQSI63GVB][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:47:48.8912197 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAQSI63GVB][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:47:49.1972170 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HALUKZMOMH][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:47:49.2042183 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HALUKZMOMH][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:47:53.1192228 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:47:53.1382201 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAV80YSR5D][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:47:53.1472202 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAV80YSR5D][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:47:53.4682193 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAFNCP0AWI][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:47:53.4762202 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAFNCP0AWI][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:47:57.5422201 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:47:57.5602218 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAKZGR147X][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:47:57.5702231 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAKZGR147X][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:47:57.8412192 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAQZG7A5HO][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:47:57.8482180 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAQZG7A5HO][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:48:05.7772223 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:48:05.7922199 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HA5C9ZUPNU][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:48:05.8002205 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HA5C9ZUPNU][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:48:06.0812233 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAE8095ZD5][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:48:06.0892202 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAE8095ZD5][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:48:10.0046642 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:48:10.0206651 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAEB4CRVM4][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:48:10.0286730 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAEB4CRVM4][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:48:10.3246633 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HADZG8TNVH][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:48:10.3336628 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HADZG8TNVH][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:48:15.7856692 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:48:15.7956654 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAYGW7LUID][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:48:15.8036668 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAYGW7LUID][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:48:16.1126650 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HA77PDJ1CG][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:48:16.1196646 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HA77PDJ1CG][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:48:21.4616671 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:48:21.4766659 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HA5WJKL04W][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:48:21.4856663 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HA5WJKL04W][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:48:21.7816682 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HATWQP59AK][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:48:21.7886644 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HATWQP59AK][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:48:28.9362152 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:48:28.9922143 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAS8J9SY8Y][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:48:29.0002192 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAS8J9SY8Y][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:48:29.2902139 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAFS8AUB52][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:48:29.2972155 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAFS8AUB52][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:48:35.7042159 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:48:35.7242175 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HANITYTOKH][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:48:35.7332159 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HANITYTOKH][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:48:36.0232137 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAKZEII6MU][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:48:36.0302147 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAKZEII6MU][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:48:42.7294618 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:48:42.7944602 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HA5U2LNA97][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:48:42.8024625 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HA5U2LNA97][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:48:43.0954663 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAYJ49KY8L][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:48:43.1024608 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAYJ49KY8L][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:48:48.4304621 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:48:48.4484652 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAR55LDDB3][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:48:48.4564638 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAR55LDDB3][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:48:48.7974634 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAYVOULLZP][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:48:48.8054617 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAYVOULLZP][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:48:58.9234627 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:48:58.9514634 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAV6Z8LAC2][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:48:58.9604624 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAV6Z8LAC2][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:48:59.2984614 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAGHO3EV7E][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:48:59.3074629 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAGHO3EV7E][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:49:02.5904656 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAI4TZ3AEF][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:49:02.6074643 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAI4TZ3AEF][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:50:12.8449400 Notice UsersController -  管理员（内置） CurrDataScope: Full
+2017-11-24 10:50:13.9389404 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HABRHSQGYH][DS_KdDbDictsService_51HA2UYEIOS0]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:13.9849417 Alert KdDbAuthsContext - DbContext.OnDispose: [DC_KdDbAuthsContext_51HAFZGYHZFR][DS_KdDbAuthsService_51HAQ34AS3VI]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:13.9859421 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAOIAY96FL][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:50:13.9929425 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAOIAY96FL][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:50:16.4909410 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HALUPCI337][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:50:16.4989433 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HALUPCI337][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:50:29.2449448 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAW7HNV3TG][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:50:29.2529687 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAW7HNV3TG][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:50:49.2577880 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HA45CFJAVH][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:50:49.2663171 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HA45CFJAVH][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:50:52.7243978 Alert KdDbAuthsContext - SaveChanges[DC_KdDbAuthsContext_51HA9EGD9388][DS_KdDbAuthsService_51HALIQRKGGX]: KdCore.Data.Auths.KdDbAuthsContext
+2017-11-24 10:50:52.7653712 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 10:50:52.7653712 Alert KdDbAuthsContext - DbContext.OnDispose: [DC_KdDbAuthsContext_51HA9EGD9388][DS_KdDbAuthsService_51HALIQRKGGX]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:52.8103732 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAN5W5Y0NO][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:50:52.8183720 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAN5W5Y0NO][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:50:52.9763694 Notice UsersController -  管理员（内置） CurrDataScope: Full
+2017-11-24 10:50:53.0373745 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HA3CZV48E0][DS_KdDbDictsService_51HAHJWHCK31]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:53.1113699 Alert KdDbAuthsContext - DbContext.OnDispose: [DC_KdDbAuthsContext_51HAIJ9DHCXI][DS_KdDbAuthsService_51HACQ0SDAZ4]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:53.1113699 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HABTH519LK][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:50:53.1183698 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HABTH519LK][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:50:58.1495688 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HA193UX8D9][DS_KdDbDictsService_51HAG00RQF0C]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1525703 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HAJY6CUCJM][DS_KdDbDictsService_51HACVVR428B]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1545708 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HA05EXXQX9][DS_KdDbDictsService_51HAQVKLVAHV]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1575702 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HAO2FQ7WPB][DS_KdDbDictsService_51HARC4YHM0V]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1595693 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HA66FT3CPV][DS_KdDbDictsService_51HAONXGSWXM]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1625691 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HAON9TY22U][DS_KdDbDictsService_51HA7HG8OI5L]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1655671 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HA5ZWI1JBY][DS_KdDbDictsService_51HAYJWH75ME]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1675673 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HA1QNDQNYZ][DS_KdDbDictsService_51HA87TNG4W0]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1705699 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HA4DCPUOV9][DS_KdDbDictsService_51HAA8YX3OVV]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1725713 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HAFPQMAZJ9][DS_KdDbDictsService_51HAD71NXTCW]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1755799 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HA0PQMXF3M][DS_KdDbDictsService_51HAI7BLU0CW]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1775701 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HAC5W991NM][DS_KdDbDictsService_51HAHV6LJ76W]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1805687 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HAOOMJ56FW][DS_KdDbDictsService_51HA5BV49R9E]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1835688 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HAH5GFWIQA][DS_KdDbDictsService_51HAGFVVAV3W]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1855678 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HAE2LE95KG][DS_KdDbDictsService_51HAXHX27YHU]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1885710 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HAUGSJVGI6][DS_KdDbDictsService_51HAIJXEA5VJ]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1915708 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HALN5FKK4J][DS_KdDbDictsService_51HA3R925DQF]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1935713 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HAXMHV2R43][DS_KdDbDictsService_51HACC1N4INP]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1965702 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HAG5M3Z3DH][DS_KdDbDictsService_51HA8KOPVP9Q]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.1985709 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HAAC01HEGL][DS_KdDbDictsService_51HAITXXFH6X]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 10:50:58.2235702 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HAVGOKV7DW][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:50:58.2355715 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HAVGOKV7DW][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 10:51:04.5255747 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HABL5HL7PI][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 10:51:04.5346974 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HABL5HL7PI][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 11:03:04.8832564 Alert KdDbDictsContext - SaveChanges[DC_KdDbDictsContext_51HBI8M4EUM5][DS_KdDbDictsService_51HB6VLI6Q08]: KdCore.Data.Dicts.KdDbDictsContext
+2017-11-24 11:03:05.7462230 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 11:03:05.7462230 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HBI8M4EUM5][DS_KdDbDictsService_51HB6VLI6Q08]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 11:03:05.7582234 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HBQ8OD23S8][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 11:03:05.9732217 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HB85PZK533][DS_KdDbDictsService_51HB2VXWZOY0]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 11:03:06.6112338 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HBQ8OD23S8][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 11:03:06.6112338 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HB1FDBR9CN][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 11:03:06.6254321 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HB1FDBR9CN][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 11:03:19.4222249 Alert KdDbDictsContext - SaveChanges[DC_KdDbDictsContext_51HBTSV54C79][DS_KdDbDictsService_51HBBAI2B431]: KdCore.Data.Dicts.KdDbDictsContext
+2017-11-24 11:03:19.4402285 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 11:03:19.4402285 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HBTSV54C79][DS_KdDbDictsService_51HBBAI2B431]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 11:03:19.4532234 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HB55IVN18D][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 11:03:19.6172245 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HBV4RBEUQF][DS_KdDbDictsService_51HB4FLRNN6G]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 11:03:19.7672335 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HB55IVN18D][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 11:03:19.7682222 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HBUFXQ9Q85][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 11:03:19.7762290 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HBUFXQ9Q85][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 11:07:13.8102677 Alert KdDbDictsContext - SaveChanges[DC_KdDbDictsContext_51HB1T7BA923][DS_KdDbDictsService_51HBEIVFGQR0]: KdCore.Data.Dicts.KdDbDictsContext
+2017-11-24 11:07:14.6492956 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 11:07:14.6492956 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HB1T7BA923][DS_KdDbDictsService_51HBEIVFGQR0]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 11:07:14.6602641 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HB926FP2FA][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 11:07:14.6722659 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HB926FP2FA][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 11:07:14.8242649 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HBASNN0MTJ][DS_KdDbDictsService_51HBUU0Z0BPV]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 11:07:14.9142649 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HBR4MUGT60][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 11:07:14.9312638 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HBR4MUGT60][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 11:07:36.8686948 Alert KdDbDictsContext - SaveChanges[DC_KdDbDictsContext_51HBPWWOKY0V][DS_KdDbDictsService_51HBSJFKLGCQ]: KdCore.Data.Dicts.KdDbDictsContext
+2017-11-24 11:07:36.8766912 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 11:07:36.8766912 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HBPWWOKY0V][DS_KdDbDictsService_51HBSJFKLGCQ]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 11:07:36.8886919 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HBWOB8AVOR][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 11:07:36.9116941 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HBWOB8AVOR][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 11:07:37.0636924 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HB3GA7NQWK][DS_KdDbDictsService_51HBNEDE96L5]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 11:07:37.1416911 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HB2GM4AEVM][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 11:07:37.1576911 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HB2GM4AEVM][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 11:08:16.8156775 Notice UsersController -  管理员（内置） CurrDataScope: Full
+2017-11-24 11:08:16.8657073 Alert KdDbAuthsContext - DbContext.OnDispose: [DC_KdDbAuthsContext_51HBA1MBO9L4][DS_KdDbAuthsService_51HBGSM4UFNV]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 11:08:16.8666761 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HBGU1M94OR][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 11:08:16.8776768 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HBGU1M94OR][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 11:08:19.2166758 Alert KdDbAuthsContext - DbContext.OnDispose: [DC_KdDbAuthsContext_51HBLEO7T2UF][DS_KdDbAuthsService_51HBIYSUVPJB]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 11:08:19.2176757 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HBO7CIZLJC][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 11:08:19.2256762 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HBO7CIZLJC][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 11:08:23.0836767 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HBG46RGQI0][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 11:08:23.0966755 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HBG46RGQI0][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 11:08:27.9496805 Alert KdDbAuthsContext - SaveChanges[DC_KdDbAuthsContext_51HBH2F9TLBE][DS_KdDbAuthsService_51HBCWPVTRUA]: KdCore.Data.Auths.KdDbAuthsContext
+2017-11-24 11:08:27.9896751 Critical KdUtil - 加载全局配置文件：E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2017-11-24 11:08:27.9896751 Alert KdDbAuthsContext - DbContext.OnDispose: [DC_KdDbAuthsContext_51HBH2F9TLBE][DS_KdDbAuthsService_51HBCWPVTRUA]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 11:08:28.0366810 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HBNDNMIU2J][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 11:08:28.0456800 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HBNDNMIU2J][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;
+2017-11-24 11:08:28.1586773 Notice UsersController -  管理员（内置） CurrDataScope: Full
+2017-11-24 11:08:28.1716770 Alert KdDbDictsContext - DbContext.OnDispose: [DC_KdDbDictsContext_51HBNZJIAHFW][DS_KdDbDictsService_51HBS8HBYCLO]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 11:08:28.2376764 Alert KdDbAuthsContext - DbContext.OnDispose: [DC_KdDbAuthsContext_51HBCT37JAKT][DS_KdDbAuthsService_51HB04G4J4MA]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsj;uid=sa;
+2017-11-24 11:08:28.2376764 Alert KdDbLogsContext - SaveChanges[DC_KdDbLogsContext_51HBY4AQPJ53][]: KdCore.Data.Logs.KdDbLogsContext
+2017-11-24 11:08:28.2486761 Alert KdDbLogsContext - DbContext.OnDispose: [DC_KdDbLogsContext_51HBY4AQPJ53][]Data Source=TESTSERVER\SQL2008R2;database=KdYdtGxsjLogs;uid=sa;

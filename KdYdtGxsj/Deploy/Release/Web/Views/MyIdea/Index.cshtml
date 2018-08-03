@@ -1,0 +1,28 @@
+﻿@model KdDataResponse<OaQuickIdea>
+
+@using (Html.BeginPageTitle())
+{
+    @Html.BbBtnDlgAdd(null, null, "添加快捷审批意见")
+    @Html.BbBtnGridDelete(this.Model)
+}
+@Html.NavBreadcrumb()
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginDataTable())
+    {
+        @Html.BbTHeadRow(true, "停用", "排序", "快捷意见", "修改时间")
+        using (Html.BeginDataTableBody())
+        {
+            foreach (OaQuickIdea item in Model)
+            {
+                using (Html.BeginDataTableRow(item, true))
+                {
+                    @Html.TdIconInvert(item.TagDisabled)
+                    @Html.TdIndex(item.SortNum)
+                    @Html.TdText(Html.BbLnkDlgEdit(item.Notes, new { id = item.Id }, "点击修改快捷审批意见"))
+                    @Html.TdDateTime(item.ModifyTime)
+                }
+            }
+        }
+    }
+}

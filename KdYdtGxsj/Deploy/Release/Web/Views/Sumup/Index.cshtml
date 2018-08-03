@@ -1,0 +1,46 @@
+﻿@model KdDataResponse<OaUserSumup>
+
+@using (Html.BeginPageTitle())
+{
+    @Html.BbBtnLinkReport("统计", new { id = ViewBag.Period })
+    @Html.BbBtnLinkAdd(null, new { period = ViewBag.Period })
+    @Html.BbBtnGridDelete(this.Model)
+    @Html.BbBtnGridDeleteEnforce(this.Model)
+}
+
+@using (Html.BeginDataGrid())
+{
+    @Html.NavBreadcrumbWithSearch()
+
+    @Html.TabHeader()
+
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(true))
+        {
+            @Html.BbTHeadFor(x => x.IsReported)
+            @Html.BbTHeadFor(x => x.IsDelayed)
+            @Html.BbTHead("填报部门", "CreatorDeptName")
+            @Html.BbTHead("填报人", "CreatorUserName")
+            @Html.BbTHeadFor(x => x.StartDate)
+            @Html.BbTHeadFor(x => x.EndDate)
+            @Html.BbTHead("填写时间", "CreateTime")
+        }
+        using (Html.BeginDataTableBody())
+        {
+            foreach (OaUserSumup item in Model)
+            {
+                using (Html.BeginDataTableRow(item, true))
+                {
+                    @Html.TdIcon(item.IsReported)
+                    @Html.TdIconInvert(item.IsDelayed)
+                    @Html.TdWord(item.CreatorDeptName)
+                    @Html.TdWordHref(item.CreatorUserName, Url.Action("Edit", new { id = item.Id }))
+                    @Html.TdDate(item.StartDate)
+                    @Html.TdDate(item.EndDate)
+                    @Html.TdDateTime(item.CreateTime)
+                }
+            }
+        }
+    }
+}

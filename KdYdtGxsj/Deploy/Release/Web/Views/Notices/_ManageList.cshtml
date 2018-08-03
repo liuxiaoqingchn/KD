@@ -1,0 +1,24 @@
+﻿@model KdDataResponse<OaNotice>
+
+@using (Html.BeginDataList())
+{
+    foreach (OaNotice item in Model)
+    {
+        using (Html.BeginDataListItem(item, true))
+        {
+            <dt>
+                @Html.ActionLink(item.NoticeTitle, "Edit", new { id = item.Id })
+            </dt>
+            <dl>
+                <dt>类型</dt>
+                <dd class="text-success">@item.Subject</dd>
+
+                <dt>通知部门</dt>
+                <dd class="text-success">@item.NoticeDeptNames</dd>
+            </dl>
+            <dd class="item-row item-notes">
+                @string.Format("由 {0} 于 {1} 发布", item.CreateName, item.CreateTime)
+            </dd>
+        }
+    }
+}

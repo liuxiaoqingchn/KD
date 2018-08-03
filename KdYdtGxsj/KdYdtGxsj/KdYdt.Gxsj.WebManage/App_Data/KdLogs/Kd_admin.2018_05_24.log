@@ -1,0 +1,162 @@
+﻿2018-05-24 17:32:56.29299 [T00001][Critical] KdAppContext - 已加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-05-24 17:32:59.38273 [T00001][Critical] KdWebContext - RegisterWebMvc Namespaces: 
+                      KdCore.Web.Errors.Controllers
+                      KdYdt.Gxsj.WebManage.Controllers
+2018-05-24 17:32:59.38572 [T00001] [Major]   KdUnitManager - 初始化系统功能模块设置……
+2018-05-24 17:32:59.49842 [T00001] [Major]   KdUnitManager - 初始化系统模块设置结束
+              从本地运行程序中识别出功能模块：13 个
+              从远程获取到文件中识别功能模块定义：39 个
+              初始化功能模块：13 个，功能操作：1218 个
+2018-05-24 17:32:59.50141 [T00001] [Major]   KdMenu - 初始化系统菜单……
+2018-05-24 17:32:59.65101 [T00001] [Major]   KdMenu - 共计初始化系统菜单：3 个
+2018-05-24 17:32:59.72980 [T00001] [Major]   KdMenu - 菜单 OA系统菜单[Default] 共计加载菜单项 21 个
+2018-05-24 17:32:59.87342 [T00001] [Major]   KdMenu - 菜单 项目管理菜单[PrjManage] 共计加载菜单项 39 个
+2018-05-24 17:32:59.87342 [T00001] [Major]   KdMenu - 菜单 后台管理菜单[Admin] 共计加载菜单项 8 个
+2018-05-24 17:32:59.87342 [T00001] [Major]   KdMenu - 初始化系统菜单设置结束。
+2018-05-24 17:32:59.88140 [T00001][Critical] BbMvcManager - 当前系统运行环境：
+                      IIS Version: 10.0
+                      Integrated Pipeline: True
+                      TargetFramework: 4.6
+                      BaseDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\
+                      BinDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\
+                      AppDomainAppVirtualPath: /
+                      VirtualPathRoot: /
+                      AppData VirtualPath: ~/App_Data;
+                      AppData PhysicsPath: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data;
+                      系统全局配置文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile;
+                      数据字典配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdDict;
+                      系统菜单配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data;
+                      系统默认菜单文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdMenu\KdMenu_Admin.json;
+                      系统运行日志文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdLogs\Kd_admin.2018_05_24.log;
+                      数据库初始化JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataInit;
+                      数据库备份JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataBackup;
+                      用户个人文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Data_User;
+                      报表模板默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Templates;
+                      报表输出默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Reports;
+                      附件上传默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\User_Uploads;
+                      文件覆盖时自动备份的文件夹名称: History;
+2018-05-24 17:33:00.29529 [T00011][CodeMark] HomeController - 【Http-GET:56IHXJ1O5DOK】已耗时：0.1057164秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F34234BA8255]
+              [Url] http://localhost:9488/
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+2018-05-24 17:33:00.32321 [T00011][Critical] KdUtil - 调试模式运行，忽略版本更新检测
+2018-05-24 17:33:00.70420 [T00011][CodeMark] HomeController - 【Http-GET:56IHXJ1O5DOK】已耗时：0.1057164秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F34234BA8255]
+              [Url] http://localhost:9488/
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 0.5136 秒
+2018-05-24 17:33:00.71616 [T00010][CodeMark] HomeController - 【Http-GET:56IHQH5ILY3X】已耗时：0.0029915秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F342350A4080]
+              [Url] http://localhost:9488/Home/Login
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+2018-05-24 17:33:13.11904 [T00010][CodeMark] HomeController - 【Http-GET:56IHQH5ILY3X】已耗时：0.0029915秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F342350A4080]
+              [Url] http://localhost:9488/Home/Login
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 12.4059 秒【异常缓慢】
+2018-05-24 17:34:13.06639 [T00010][CodeMark] HomeController - 【Http-POST:56IHCXLNDFFT】已耗时：0.0039885秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F3426029DE10]
+              [Url] http://localhost:9488/Home/Login
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:9488/Home/Login
+2018-05-24 17:34:13.41435 [T00010][CodeMark] HomeController - 【Http-POST:56IHCXLNDFFT】已耗时：0.0039885秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F3426029DE10]
+              [Url] http://localhost:9488/Home/Login
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求处理完成】执行时间 0.3520 秒
+2018-05-24 17:34:13.43938 [T00018][CodeMark] UsersController - 【Http-GET:56IHQSBN88I0】已耗时：0.0109719秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F3426061B76D]
+              [Url] http://localhost:9488/Users
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:9488/Home/Login
+2018-05-24 17:34:18.83698 [T00018][CodeMark] UsersController - 【Http-GET:56IHQSBN88I0】已耗时：0.0109719秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F3426061B76D]
+              [Url] http://localhost:9488/Users
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 5.4086 秒【较慢】
+2018-05-24 17:35:05.29165 [T00010][CodeMark] MenusController - 【Http-GET:56IH6SZCA3U1】已耗时：0.0059816秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F3427F4A816C]
+              [Url] http://localhost:9488/Menus
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:9488/Users
+2018-05-24 17:35:05.90002 [T00010][CodeMark] MenusController - 【Http-GET:56IH6SZCA3U1】已耗时：0.0059816秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F3427F4A816C]
+              [Url] http://localhost:9488/Menus
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.6144 秒
+2018-05-24 17:35:08.93291 [T00007][CodeMark] MenusController - 【Http-POST:56IH5ZO6Q1T4】已耗时：0.0019939秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F3428176BA2C]
+              [Url] http://localhost:9488/Menus/FrontAsync?___act=Index
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:9488/Menus
+2018-05-24 17:35:09.64631 [T00007][CodeMark] MenusController - 【Http-POST:56IH5ZO6Q1T4】已耗时：0.0019939秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F3428176BA2C]
+              [Url] http://localhost:9488/Menus/FrontAsync?___act=Index
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.7154 秒
+2018-05-24 18:02:41.64244 [T00055][CodeMark] DictsController - 【Http-GET:56IIY9NGICLL】已耗时：0.0139625秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F3465A8C5CA7]
+              [Url] http://localhost:9488/Dicts
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:9488/Menus
+2018-05-24 18:02:42.66371 [T00055][CodeMark] DictsController - 【Http-GET:56IIY9NGICLL】已耗时：0.0139625秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F3465A8C5CA7]
+              [Url] http://localhost:9488/Dicts
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 1.0352 秒
+2018-05-24 18:02:49.95797 [T00081][CodeMark] DictsController - 【Http-GET:56IIMZRALGPJ】已耗时：0.0039896秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F3465F82BB79]
+              [Url] http://localhost:9488/Dicts/Reinit?___act=Index
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:9488/Dicts
+2018-05-24 18:02:49.98393 [T00081][CodeMark] DictsController - 【Http-GET:56IIMZRALGPJ】已耗时：0.0039896秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F3465F82BB79]
+              [Url] http://localhost:9488/Dicts/Reinit?___act=Index
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.0299 秒
+2018-05-24 18:02:49.98889 [T00080][CodeMark] DictsController - 【Http-GET:56II7CJUZLZL】已耗时：0.0019942秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F3465F87C121]
+              [Url] http://localhost:9488/Dicts?isback=True
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:9488/Dicts
+2018-05-24 18:02:50.03875 [T00080][CodeMark] DictsController - 【Http-GET:56II7CJUZLZL】已耗时：0.0019942秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F3465F87C121]
+              [Url] http://localhost:9488/Dicts?isback=True
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.0519 秒
+2018-05-24 18:02:50.04274 [T00083][CodeMark] DictsController - 【Http-GET:56III5OYTKT8】已耗时：0.0009982秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F3465F901FCE]
+              [Url] http://localhost:9488/Dicts
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:9488/Dicts
+2018-05-24 18:02:50.20930 [T00083][CodeMark] DictsController - 【Http-GET:56III5OYTKT8】已耗时：0.0009982秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F3465F901FCE]
+              [Url] http://localhost:9488/Dicts
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.1676 秒
+2018-05-24 18:04:44.21672 [T00064][CodeMark] DictsController - 【Http-GET:56II0ZXPAMZG】已耗时：0.0049863秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F346A39D14E3]
+              [Url] http://localhost:9488/Dicts/Edit?code=IsOpen
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:9488/Dicts
+2018-05-24 18:04:44.89291 [T00064][CodeMark] DictsController - 【Http-GET:56II0ZXPAMZG】已耗时：0.0049863秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F346A39D14E3]
+              [Url] http://localhost:9488/Dicts/Edit?code=IsOpen
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.6812 秒
+2018-05-24 18:04:51.29479 [T00074][CodeMark] DictsController - 【Http-GET:56II6ATWIH0A】已耗时：0.0019943秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F346A7D59136]
+              [Url] http://localhost:9488/Dicts?___act=Edit&isback=True
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:9488/Dicts/Edit?code=IsOpen
+2018-05-24 18:04:51.29878 [T00074][CodeMark] DictsController - 【Http-GET:56II6ATWIH0A】已耗时：0.0019943秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F346A7D59136]
+              [Url] http://localhost:9488/Dicts?___act=Edit&isback=True
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.0060 秒
+2018-05-24 18:04:51.30277 [T00082][CodeMark] DictsController - 【Http-GET:56IIWDRGGHSU】已耗时：0.0009975秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F346A7D6EFD0]
+              [Url] http://localhost:9488/Dicts
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:9488/Dicts/Edit?code=IsOpen
+2018-05-24 18:04:51.35264 [T00082][CodeMark] DictsController - 【Http-GET:56IIWDRGGHSU】已耗时：0.0009975秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F346A7D6EFD0]
+              [Url] http://localhost:9488/Dicts
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.0509 秒
+2018-05-24 18:04:52.94738 [T00064][CodeMark] DictsController - 【Http-POST:56IIS8BXMANF】已耗时：0.0029916秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F346A8D19442]
+              [Url] http://localhost:9488/Dicts/FrontAsync?___act=Index
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:9488/Dicts
+2018-05-24 18:04:53.38333 [T00064][CodeMark] DictsController - 【Http-POST:56IIS8BXMANF】已耗时：0.0029916秒【Session:izrxso4wfefyod5ddnjcrrvr】[1D3F346A8D19442]
+              [Url] http://localhost:9488/Dicts/FrontAsync?___act=Index
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.4389 秒

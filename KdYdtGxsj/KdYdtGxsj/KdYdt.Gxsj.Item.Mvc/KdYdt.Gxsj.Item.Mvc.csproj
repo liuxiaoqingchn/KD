@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D1F8C66-AE85-4B42-A4CF-82F48385366C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KdYdt.Gxsj.Item.Mvc</RootNamespace>
+    <AssemblyName>KdYdt.Gxsj.Item.Mvc</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Function</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>Function</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.Base">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.Data">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.Data.EntityFramework">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.DbParts.Commons">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.DbParts.Commons.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.DbParts.UserExts">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.DbParts.UserExts.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.Office, Version=5.5.6729.3982, Culture=neutral, PublicKeyToken=279a6f076cadf4a8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.Office.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.Web.Mvc">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdCore.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="KdCore.Web.Resource, Version=1.1.0.5, Culture=neutral, PublicKeyToken=279a6f076cadf4a8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\Resources\KdCore.Web.Resource.dll</HintPath>
+    </Reference>
+    <Reference Include="KdWeb.Common">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdWeb.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="KdWeb.Common.Resource">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdWeb.Common.Resource.dll</HintPath>
+    </Reference>
+    <Reference Include="KdWeb.Common.UserExts">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\KdLib\KdWeb.Common.UserExts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.Composition.Registration" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Log" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Reflection.Context" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.DurableInstancing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.SelfHost">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.Http.SelfHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Tracing">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.Http.Tracing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.OData">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.RegularExpressions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.WebPages">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor">
+      <HintPath>..\..\KdWeb.Library\KdWeb.Library\RefLib\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\ItemAreaRegistration.cs" />
+    <Compile Include="Areas\ItemBaseController.cs" />
+    <Compile Include="Areas\Item\Controllers\BidResultController.cs" />
+    <Compile Include="Areas\Item\Controllers\BondOccController.cs" />
+    <Compile Include="Areas\Item\Controllers\InsertPrjItemController.cs" />
+    <Compile Include="Areas\Item\Controllers\PactSumReportController.cs" />
+    <Compile Include="Areas\Item\Controllers\InternalAgrController.cs" />
+    <Compile Include="Areas\Item\Controllers\IncomeSumReportController.cs" />
+    <Compile Include="Areas\Item\Controllers\PaySumReportController.cs" />
+    <Compile Include="Areas\Item\Controllers\PersonSummaryController.cs" />
+    <Compile Include="Areas\Item\Controllers\PrjSumReportController.cs" />
+    <Compile Include="Areas\Item\Controllers\PrjSupplierController.cs" />
+    <Compile Include="Areas\Item\Controllers\CorpFacilityController.cs" />
+    <Compile Include="Areas\Item\Controllers\CorpPraiseController.cs" />
+    <Compile Include="Areas\Item\Controllers\PrjAttractController.cs" />
+    <Compile Include="Areas\Item\Controllers\PayBidingController.cs" />
+    <Compile Include="Areas\Item\Controllers\PayBondController.cs" />
+    <Compile Include="Areas\Item\Controllers\PayPactController.cs" />
+    <Compile Include="Areas\Item\Controllers\CorpAptitudeController.cs" />
+    <Compile Include="Areas\Item\Controllers\PrjChangeController.cs" />
+    <Compile Include="Areas\Item\Controllers\BidPresenController.cs" />
+    <Compile Include="Areas\Item\Controllers\PrjCreditController.cs" />
+    <Compile Include="Areas\Item\Controllers\PrjDesignController.cs" />
+    <Compile Include="Areas\Item\Controllers\PrjSealController.cs" />
+    <Compile Include="Areas\Item\Controllers\PrjSignController.cs" />
+    <Compile Include="Areas\Item\Controllers\BidSituationController.cs" />
+    <Compile Include="Areas\Item\Controllers\PrjBondController.cs" />
+    <Compile Include="Areas\Item\Controllers\PrjBusinessController.cs" />
+    <Compile Include="Areas\Item\Controllers\CorpController.cs" />
+    <Compile Include="Areas\Item\Controllers\BidDefenceController.cs" />
+    <Compile Include="Areas\Item\Controllers\ItemHomeController.cs" />
+    <Compile Include="Areas\Item\Controllers\PrjTrackController.cs" />
+    <Compile Include="Areas\Item\Controllers\PayIncomeController.cs" />
+    <Compile Include="Areas\Item\Controllers\PaySpendController.cs" />
+    <Compile Include="Areas\Item\Controllers\PersonController.cs" />
+    <Compile Include="Areas\Item\Controllers\PrjPlanController.cs" />
+    <Compile Include="Areas\Item\Controllers\PersonPickerController.cs" />
+    <Compile Include="Areas\Item\Controllers\PrjItemController.cs" />
+    <Compile Include="Areas\Item\Controllers\BidQualCheckController.cs" />
+    <Compile Include="Areas\Item\Controllers\SelectCorpController.cs" />
+    <Compile Include="Areas\Item\Controllers\PrjPicksController.cs" />
+    <Compile Include="Areas\Item\Controllers\PrjTaskController.cs" />
+    <Compile Include="Areas\Item\Controllers\PrjSkillController.cs" />
+    <Compile Include="Areas\Item\Controllers\BidWasteController.cs" />
+    <Compile Include="Areas\Item\Controllers\TaskSummaryController.cs" />
+    <Compile Include="PrjHtmlHelper.cs" />
+    <Compile Include="PrjPicksHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KdYdt.Gxsj.Item.Domains\KdYdt.Gxsj.Item.Domains.csproj">
+      <Project>{5701597d-7ea9-4f89-928a-ba3259f382dd}</Project>
+      <Name>KdYdt.Gxsj.Item.Domains</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

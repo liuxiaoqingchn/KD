@@ -1,0 +1,491 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KdWeb.Common.UserExts</name>
+    </assembly>
+    <members>
+        <member name="T:KdCore.Web.Controllers.KdWorkDaysController">
+            <summary>
+            系统工作日配置管理 Controller 基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdWorkDaysController.Index(System.Nullable{System.Int32})">
+            <summary>
+            获取设定系统中使用的工作日的查询配置界面
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdWorkDaysController.Index(System.Web.Mvc.FormCollection)">
+            <summary>
+            提交指定年份的工作日设置结果
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdWorkDaysController.Reset(System.Nullable{System.Int32})">
+            <summary>
+            提交指定年份的工作日重置
+            </summary>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdCalendarBaseController">
+            <summary>
+            日程安排管理 Controller 基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdCalendarBaseController.Index(System.Nullable{System.Int32})">
+            <summary>
+            获取日程安排列表管理界面
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdCalendarBaseController.Edit(System.String,System.String)">
+            <summary>
+            获取编辑本人的日程安排
+            </summary>
+            <param name="id"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdCalendarBaseController.Edit(KdCore.Data.EditModels.KdUserPlanEdit)">
+            <summary>
+            提交保存日程安排结果
+            </summary>
+            <param name="edit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdCalendarBaseController.Complete(KdCore.Data.EditModels.KdUserPlanComplete)">
+            <summary>
+            提交日程安排事项办结情况
+            </summary>
+            <param name="edit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdCalendarBaseController.Delete(System.String)">
+            <summary>
+            删除日程安排
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdFollowBaseController">
+            <summary>
+            我的关注 Controller 基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdFollowBaseController.Index">
+            <summary>
+            列表显示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdFollowBaseController.Edit(System.String)">
+            <summary>
+            获取编辑界面
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdFollowBaseController.Edit(KdCore.Data.EditModels.KdUserFollowEdit)">
+            <summary>
+            提交编辑结果
+            </summary>
+            <param name="edit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdFollowBaseController.Delete(System.String[])">
+            <summary>
+            删除关注记录
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdTasksBaseController">
+            <summary>
+            待办事项管理 Controller 基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdTasksBaseController.OnDataResponse``1(KdCore.Data.KdDataResponse{``0})">
+            <summary>
+            用于列表数据显示的最后处理准备
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="response"></param>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdTasksBaseController.SetTabHeaders(System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            生成分类标签：待办(Mode=1)、待阅(Mode=2)、已办(Mode=3)、已阅(Mode=4)
+            </summary>
+            <param name="currTabMode"></param>
+            <param name="todoHandle"></param>
+            <param name="todoRead"></param>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdTasksBaseController.GetTabTaskResponse(System.Nullable{System.Int32})">
+            <summary>
+            获取待办事项的数据请求查询结果，参数值示意如下：
+                 null：默认，视为待办
+                    1：待办
+                    2：待阅
+                    3：已办
+                    4：已阅    
+            </summary>
+            <param name="currTabMode"></param>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdTasksBaseController.Index(System.Nullable{System.Int32})">
+            <summary>
+            获取数据列表显示，参数值示意如下：
+                 null：默认，视为待办
+                    1：待办
+                    2：待阅
+                    3：已办
+                    4：已阅              
+            </summary>
+            <param name="id">参数值为 1 时，待办，</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdTasksBaseController.Delete(System.String[])">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdTasksBaseController.Batch(System.String[])">
+            <summary>
+            批量设置传阅类型的待办事项为已阅
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdTasksBaseController.CheckOverdue">
+            <summary>
+            待办事项的过期状态红绿灯检查
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Web.Controllers.KdPmBaseController">
+            <summary>
+            留言管理 Controller 基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdPmBaseController.BuildTabHeader(System.Boolean)">
+            <summary>
+            生成分类标签：收件箱、发件箱
+            </summary>
+            <param name="isSend"></param>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdPmBaseController.Index(System.String)">
+            <summary>
+            列表显示：收件箱
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdPmBaseController.Send(System.String)">
+            <summary>
+            列表显示：发件箱
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdPmBaseController.Edit(System.String)">
+            <summary>
+            获取发送留言界面
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdPmBaseController.Edit(KdCore.Data.EditModels.KdUserPmEdit)">
+            <summary>
+            提交留言发送
+            </summary>
+            <param name="editModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdPmBaseController.Forward(System.String)">
+            <summary>
+            转发接收到的留言
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdPmBaseController.Delete(System.String[])">
+            <summary>
+            删除自己发送并且对方尚未查看的留言
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Web.Controllers.KdPmBaseController.Reply(System.String[])">
+            <summary>
+            批量设置传阅类型的待办事项为已阅
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdWeb.Common.KdUserHtmlHelper">
+            <summary>
+            项目中常用的 HTML 处理方法
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdUserHtmlHelper.PartialUserReadersBar(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出用户阅读情况 HTML
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameUserBarReaders"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdUserHtmlHelper.PartialViewUserExts(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出用户扩展数据展示 HTML
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdUserHtmlHelper.PartialUserBarPlan(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出用户扩展数据 日程安排 页头位置弹出框 展示 HTML
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameUserBarPlan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdUserHtmlHelper.PartialUserPanelPlan(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出用户扩展数据 日程安排 Panel 展示 HTML
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameUserPanelPlan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdUserHtmlHelper.PartialUserBarPm(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出用户扩展数据 未读留言 页头位置弹出框 展示 HTML
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameUserBarPm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdUserHtmlHelper.PartialUserPanelPm(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出用户扩展数据 未读留言 Panel 展示 HTML
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameUserPanelPm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdUserHtmlHelper.PartialUserBarTasks(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出用户扩展数据 待办事项 页头位置弹出框 展示 HTML
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameUserBarTasks"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdUserHtmlHelper.PartialUserPanelTasks(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+             输出用户扩展数据 待办事项 Panel 展示 HTML
+            </summary>
+            <param name="helper"></param>
+            <param name="partialViewNameUserPanelTasks"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdUserHtmlHelper.ToLampHtml(KdCore.Data.BbTodoState,System.Nullable{System.DateTime},KdCore.Data.Users.IKdUser,System.Func{System.String,System.String})">
+            <summary>
+            将待办或已办进度转换为页面显示亮灯状态的 HTML
+            </summary>
+            <param name="lampStatus"></param>
+            <param name="timeLimit">办理期限日期</param>
+            <param name="user">当前用户，如果不为null，系统将尝试查找用户自定义设置的亮灯显示主题方案</param>
+            <param name="funcImgPathToWebClientUrl">在对亮灯状态图片路径从系统路基处理为页面显示客户端相对路径进行处理时使用的方法，如果传值为null，将强制使用系统默认图标字体方式进行显示</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdUserHtmlHelper.TdLampHtml(KdCore.Data.BbTodoState,System.Nullable{System.DateTime},KdCore.Data.Users.IKdUser,System.Func{System.String,System.String})">
+            <summary>
+            将待办或已办进度转换为页面显示亮灯状态的 HTML
+            </summary>
+            <param name="lampStatus"></param>
+            <param name="timeLimit">办理期限日期</param>
+            <param name="user">当前用户，如果不为null，系统将尝试查找用户自定义设置的亮灯显示主题方案</param>
+            <param name="funcImgPathToWebClientUrl">在对亮灯状态图片路径从系统路基处理为页面显示客户端相对路径进行处理时使用的方法，如果传值为null，将强制使用系统默认图标字体方式进行显示</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdUserHtmlHelper.ToLamp(System.Web.Mvc.HtmlHelper,KdCore.Data.BbTodoState,System.Nullable{System.DateTime})">
+            <summary>
+            将待办或已办进度转换为页面显示亮灯状态的 HTML
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdUserHtmlHelper.TdLamp(System.Web.Mvc.HtmlHelper,KdCore.Data.BbTodoState,System.Nullable{System.DateTime})">
+            <summary>
+            将待办或已办进度转换为页面显示亮灯状态的 HTML
+            </summary>
+        </member>
+        <member name="T:KdWeb.Common.KdWebUserExts">
+            <summary>
+            项目常用扩展方法
+            </summary>
+        </member>
+        <member name="P:KdWeb.Common.KdWebUserExts.Logger">
+            <summary>
+            日志记录对象
+            </summary>
+        </member>
+        <member name="P:KdWeb.Common.KdWebUserExts.UserTask_CacheCatalogs_MaxCount">
+            <summary>
+            当前登录用户的待办事项缓存最大条数；
+            管理员查看数据太多，系统反应缓慢，限制最大获取条数
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebUserExts.RegisterUserTask(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            注册配置用户待办事项的嵌入资源文件设置
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebUserExts.RegisterUserPm(System.String,System.String)">
+            <summary>
+            注册配置用户站内留言的嵌入资源文件设置
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebUserExts.RegisterUserPlan(System.String,System.String)">
+            <summary>
+            注册配置用户日程安排的嵌入资源文件设置
+            </summary>
+        </member>
+        <member name="P:KdWeb.Common.KdWebUserExts.UserTask_Controller">
+            <summary>
+            待办事项的 Controller 名称
+            </summary>
+        </member>
+        <member name="P:KdWeb.Common.KdWebUserExts.UserPlan_Title">
+            <summary>
+            日程安排 的 标题名称
+            </summary>
+        </member>
+        <member name="P:KdWeb.Common.KdWebUserExts.UserPlan_Controller">
+            <summary>
+            日程安排 的 Controller 名称
+            </summary>
+        </member>
+        <member name="P:KdWeb.Common.KdWebUserExts.UserPm_Title">
+            <summary>
+            站内留言 的 标题名称
+            </summary>
+        </member>
+        <member name="P:KdWeb.Common.KdWebUserExts.UserPm_Controller">
+            <summary>
+            站内留言的 Controller 名称
+            </summary>
+        </member>
+        <member name="M:KdWeb.Common.KdWebUserExts.LoadUserNotify(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            加载当前登录用户的提醒消息
+            </summary>
+            <param name="helper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdWebUserExts.DbGetAllUserTaskCatalogs(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            从数据库中查询获取当前登录用户的待办事项
+            </summary>
+            <param name="helper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdWebUserExts.GetUserTaskCatalogs(System.Web.Mvc.HtmlHelper,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+            <summary>
+            获取当前登录用户的待办事项，从缓存中查询，如果缓存不存在则自动进行初始化查询
+            </summary>
+            <param name="helper"></param>
+            <param name="unitSign">所属模块</param> 
+            <param name="onlyView">是否仅需查阅</param>
+            <param name="ignoreCount">查询待办事项的忽略计数状态的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdWebUserExts.GetUserTaskCount(System.Web.Mvc.HtmlHelper,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+            <summary>
+            获取当前登录用户的待办事项，从缓存中查询，如果缓存不存在则自动进行初始化查询
+            </summary>
+            <param name="helper"></param>
+            <param name="unitSign">所属模块</param> 
+            <param name="onlyView">是否仅需查阅</param>
+            <param name="ignoreCount">查询待办事项的忽略计数状态的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdWebUserExts.GetUserTaskTodoCount(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            获取当前模块菜单的待办事项数量
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="unitSign">当前的模块标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdWebUserExts.GetUserTaskTodoCount(System.Web.Mvc.HtmlHelper,KdCore.Data.Menus.KdMenuItem)">
+            <summary>
+            获取当前模块菜单的待办事项数量
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="menuItem">当前的模块菜单</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdWebUserExts.GetUserTasks(System.Web.Mvc.HtmlHelper,System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+            <summary>
+            获取当前登录用户的待办事项，从缓存中查询，如果缓存不存在则自动进行初始化查询
+            </summary>
+            <param name="helper"></param>
+            <param name="maxCount"></param>
+            <param name="unitSign">所属模块</param> 
+            <param name="onlyView">是否仅需查阅</param>
+            <param name="ignoreCount">查询待办事项的忽略计数状态的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdWebUserExts.GetUserTaskTodoResponse(System.Web.Mvc.HtmlHelper,System.Int32,System.String)">
+            <summary>
+            获取待办事项的前多少条
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="maxCount"></param>
+            <param name="unitSign"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdWebUserExts.GetUserPmResponse(System.Web.Mvc.HtmlHelper,System.Int32)">
+            <summary>
+            获取当前登录用户的留言类型的待办事项
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="maxCount"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdWebUserExts.GetUserPlans(System.Web.Mvc.HtmlHelper)">
+            <summary>
+             获取当前登录用户的日程计划，从缓存中查询，如果缓存不存在则自动进行初始化查询
+            </summary>
+            <param name="helper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdWebUserExts.BtnFollow``1(System.Web.Mvc.HtmlHelper,``0,System.String)">
+            <summary>
+            添加收藏/取消收藏
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="helper"></param>
+            <param name="entity"></param>
+            <param name="actionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdWebUserExts.BtnFollow``1(System.Web.Mvc.HtmlHelper{``0},System.String)">
+            <summary>
+            添加收藏/取消收藏
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="helper"></param>
+            <param name="actionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdWeb.Common.KdWebUserExts.ProcessLeftMenuTagA(KdCore.Data.Menus.KdMenuItem,System.String,KdCore.Web.Mvc.BbTagBuilder,System.Web.Mvc.HtmlHelper,System.Web.Mvc.UrlHelper)">
+            <summary>
+            左侧菜单项 HTML A 标签加工处理
+            </summary>
+            <param name="menuItem">需要处理的菜单项</param>
+            <param name="tagABuilder">HTML标签处理对象</param>
+            <param name="htmlHelper"></param>
+            <param name="urlHelper"></param>
+            <param name="menuUrl"></param>
+        </member>
+    </members>
+</doc>

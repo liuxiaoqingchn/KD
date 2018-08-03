@@ -1,0 +1,30 @@
+﻿@model  List<PrjPerson>
+<div class="panel panel-info">
+    <div class="panel-heading" @Html.DataCollapse(true)>
+        <span class="panel-title">人员信息</span>
+    </div>
+    @using (Html.BeginDataTable())
+    {
+        int i = 1;
+        @Html.BbTHeadRow("", "姓名", "性别", "联系电话", "证书编号", "证书等级")
+        if (!Model.IsNull())
+        {
+            using (Html.BeginDataTableBody())
+            {
+                foreach (PrjPerson item in Model)
+                {
+                    using (Html.BeginDataTableRow(item, false))
+                    {
+                        @Html.TdNumCenter(i)
+                        @Html.TdNumSn(Html.BbLnkDlgAction("PersonView", item.PersonName, new { id = item.Id }, IconAwesome.NoneKD, "点击查看详情"))  
+                        @Html.TdNumSn(item.PersonSex)
+                        @Html.TdNumSn(item.LinkPhone)
+                        @Html.TdNumSn(item.CredentialID)
+                        @Html.TdNumSn(item.Rank)
+                    }
+                    i++;
+                }
+            }
+        }
+    }
+</div>

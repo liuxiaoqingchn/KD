@@ -1,0 +1,51 @@
+﻿@model  KdDataResponse<BidDefence>
+@{
+    Layout = null;
+}
+@using (Html.BeginPageTitle())
+{
+    @Html.BbBtnLinkAdd()
+    @Html.BbBtnGridDelete(this.Model)
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch(this.Model, true))
+    {
+        @Html.BbSearchFor(x => x.PrjCode)
+        @Html.BbSearchFor(x => x.PrjName)
+        @Html.BbSearchFor(x => x.CheckPersonName)
+        @Html.BbSearchFor(x => x.CheckDate)
+        @Html.BbSearchFor(x => x.DefenceDate)
+        @Html.BbSearchFor(x => x.MeetAddr)
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(true))
+        {
+            @Html.BbTHeadFor(x => x.PrjCode)
+            @Html.BbTHeadFor(x => x.PrjName)
+
+            @Html.BbTHeadFor(x => x.DefenceDate)
+            @Html.BbTHeadFor(x => x.MeetAddr)
+            @Html.BbTHeadFor(x => x.CheckPersonName)
+            @Html.BbTHeadFor(x => x.CheckDate)
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (BidDefence item in Model)
+            {
+                using (Html.BeginDataTableRow(item, true))
+                {
+                    <td>@item.PrjCode</td>
+                    <td>@Html.ActionLink(item.PrjName, "Edit", new { id = item.Id })</td>
+                    <td>@item.DefenceDate.ToDateString()</td>
+                    <td>@item.MeetAddr</td>
+                    <td>@item.CheckPersonName</td>
+                    <td>@item.CheckDate.ToDateString()</td>
+                }
+            }
+        }
+    }
+}

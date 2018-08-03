@@ -1,0 +1,100 @@
+﻿@model  List<PaySumReport>
+@using (Html.BeginPageTitle())
+{
+}
+@Html.TabHeader("TabHeaders")
+<div style="margin:8px;height:50px;" align="center" width="100%">
+    @using (Html.BeginForm("Index", "PaySumReport", new { paySumType = ViewBag.EnumPaySumType }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="col-md-4">
+            <div class="input-group kd-field-search text-left">
+                <span class="input-group-addon">经办日期</span>
+                <input class="form-control text-box date" data-bind="kpq_RelDate" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" data-type="date" id="kpq_RelDate" name="kpq_RelDate" role="form" type="text">
+                <span class="input-group-addon">至</span>
+                <input class="form-control text-box date" data-bind="kpq_RelDate_2" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" data-type="date" id="kpq_RelDate_2" name="kpq_RelDate_2" role="form" type="text">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" role="button">
+                <i class="glyphicon glyphicon-search" aria-hidden="true"></i>查询
+            </button>
+        </div>
+    }
+</div>
+<table class="table table-bordered table-condensed table-striped table-hover table-kd bb-data-table" data-kd-max-adapt-rows="2500" data-kd-role="list" data-kd-type="bbDataGrid" role="grid">
+    <thead>
+        <tr></tr>
+    </thead>
+    <thead>
+        <tr>
+            <th>项目名称</th>
+            <th>标书费</th>
+            <th>保函或保证金</th>
+            <th>项目经理配合费</th>
+            <th>资料费</th>
+            <th>电子、展板样品费</th>
+            <th>招标代理服务费</th>
+            <th>差旅食宿费</th>
+            <th>管理费</th>
+            <th>项目预计利润</th>
+            <th>其他</th>
+            <th>总计</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (PaySumReport item in Model)
+        {
+            using (Html.BeginDataTableRow(item, false))
+            {
+                if (ViewBag.EnumPaySumType == 1)
+                {
+                    <tr data-kd-role="listitem" data-kd-title="" role="row" style="background-color:white;">
+                        <td class="kd-cell-word text-nowrap kd-cell-em04" @*rowspan="2"*@>@item.Prj</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">@item.BSfee</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">@item.Bondfee</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">@item.Managefee</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">@item.Materialfee</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">@item.Samplefee</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">@item.Bidfee</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">@item.Travelfee</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">/</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">/</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">@item.Otherfee</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">@item.BidSumfee</td>
+                    </tr>
+                }
+                if (ViewBag.EnumPaySumType == 2)
+                {
+                    <tr data-kd-role="listitem" data-kd-title="" role="row" style="background-color:white;">
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">@item.Prj</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">@item.BSInc</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">/</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">@item.ManageInc</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">@item.MaterialInc </td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">/</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">/</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">/</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">@item.AdminInc</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">@item.PrjExpInc</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">@item.OtherInc</td>
+                        <td class="kd-cell-word text-nowrap kd-cell-em04">@item.BidSumInc</td>
+                    </tr>
+                }
+            }
+        }
+    </tbody>
+</table>
+<div class="bb-grid-message">
+    @if (ViewBag.EnumPaySumType == 1)
+    {
+        <p>注明：默认显示上个月的支出汇总；</p>
+        <p>费用支出-标书费:包括技术标、商务标、纸质标书制作费；</p>
+
+    }
+    @if (ViewBag.EnumPaySumType == 2)
+    {
+        <p>注明：默认显示上个月的支出汇总；</p>
+        <p>费用收入-标书费:包括技术标、商务标；</p>
+    }
+</div>

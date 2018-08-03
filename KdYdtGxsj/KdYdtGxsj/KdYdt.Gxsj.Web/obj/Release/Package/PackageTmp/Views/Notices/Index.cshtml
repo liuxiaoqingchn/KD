@@ -1,0 +1,19 @@
+﻿@model KdDataResponse<KdUserTask>
+@using (Html.BeginPageTitle())
+{
+    @Html.BbBtnLinkAdd()
+    @Html.BbBtnLinkManage()
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch())
+    {
+        @Html.BbSearchFor(x => x.SourceName, "公告标题")
+        @Html.BbSearchFor(x => x.ItemName, "公告类型")
+        @Html.BbSearchFor(x => x.CreateTime, "发布时间")
+        @Html.BbSearchFor(x => x.CreatorUserName, "发布人员")
+        @Html.BbSearchFor(x => x.CreatorDeptName, "发布部门")
+    }
+    @Html.ListLayout()
+}

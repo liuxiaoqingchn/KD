@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KdWeb.Common.Resource</name>
+    </assembly>
+    <members>
+        <member name="T:KdCore.Web.Resource.KdWebKdResource">
+            <summary>
+            Web 项目常用资源文件；泛型方式（不能使用静态类型）注册程序集使用的标识类
+            </summary>
+        </member>
+    </members>
+</doc>

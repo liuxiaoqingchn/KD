@@ -1,0 +1,55 @@
+﻿@model  KdDataResponse<PrjTask>
+ 
+@using (Html.BeginPageTitle())
+{
+    @*@Html.BbBtnLinkAdd()*@
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch(this.Model, true))
+    {
+        @Html.BbSearchFor(x => x.PrjCode)
+        @Html.BbSearchFor(x => x.PrjName)
+        @Html.BbSearchFor(x => x.TaskPersonName)
+        @Html.BbSearchFor(x => x.TaskTime)
+        @Html.BbSearchFor(x => x.LetterName)
+        @Html.BbSearchFor(x => x.BusinessName)
+        @Html.BbSearchFor(x => x.SkillName)
+        @Html.BbSearchFor(x => x.SealName)
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(false))
+        {
+            @*@Html.BbTHead("亮灯")*@
+            @Html.BbTHeadFor(x => x.PrjCode)
+            @Html.BbTHeadFor(x => x.PrjName)
+            @Html.BbTHeadFor(x => x.TaskPersonName)
+            @Html.BbTHeadFor(x => x.LetterName)
+            @Html.BbTHeadFor(x => x.BusinessName)
+            @Html.BbTHeadFor(x => x.SkillName)
+            @Html.BbTHeadFor(x => x.SealName)
+            @Html.BbTHeadFor(x => x.TaskTime)
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (PrjTask item in Model)
+            {
+                using (Html.BeginDataTableRow(item, false))
+                {
+                    @*<td class="col-icon">@Html.PlanLamp(item.LampStatus, item.NoticTime, item.OpenBidTime)</td>*@
+                    <td>@item.PrjCode</td>
+                    <td>@Html.ActionLink(item.PrjName, "Edit", new { id = item.Id })</td>
+                    <td>@item.TaskPersonName</td>
+                    <td>@Html.PlanLamp(item.LetterTime) @item.LetterName </td>
+                    <td>@Html.PlanLamp(item.BusinessTime) @item.BusinessName</td>
+                    <td>@Html.PlanLamp(item.SkillTime) @item.SkillName</td>
+                    <td>@Html.PlanLamp(item.SealTime) @item.SealName</td>
+                    <td>@item.TaskTime.ToTimeString()</td>
+                }
+            }
+        }
+    }
+}

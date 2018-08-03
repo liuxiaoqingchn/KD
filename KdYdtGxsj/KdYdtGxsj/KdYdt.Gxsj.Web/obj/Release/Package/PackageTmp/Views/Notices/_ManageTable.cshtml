@@ -1,0 +1,30 @@
+﻿@model KdDataResponse<OaNotice>
+
+@using (Html.BeginDataTable())
+{
+    using (Html.BeginDataTableHeader(true))
+    {
+        @Html.BbTHeadFor(x => x.Subject)
+        @Html.BbTHeadFor(x => x.NoticeTitle)
+        @Html.BbTHead("发布时间", "CreateTime")
+        @Html.BbTHead("发布部门", "CreatorDeptName")
+        @Html.BbTHead("发布人", "CreatorUserName")
+        @Html.BbTHead("是否阅读")
+    }
+
+    using (Html.BeginDataTableBody())
+    {
+        foreach (OaNotice item in Model)
+        {
+            using (Html.BeginDataTableRow(item, true))
+            {
+                @Html.TdWord(item.Subject, 8)
+                @Html.TdText(Html.ActionLink(item.NoticeTitle, "Edit", new { id = item.Id }))
+                @Html.TdDateTime(item.CreateTime)
+                @Html.TdWord(item.CreatorDeptName)
+                @Html.TdWord(item.CreatorUserName)
+                @Html.TdIcon(item.IsHandled())
+            }
+        }
+    }
+}

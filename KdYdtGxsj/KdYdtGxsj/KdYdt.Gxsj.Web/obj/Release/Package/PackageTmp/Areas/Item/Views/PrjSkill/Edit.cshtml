@@ -1,0 +1,46 @@
+﻿@model  PrjBiding
+
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnSubmit()
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">技术标</span>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                @Html.BbTextFor(x => x.PrjName)
+                @Html.BbTextFor(x => x.PrjCode)
+            </div>
+            <div class="row">
+                @Html.BbTextFor(x => x.TaskPersonName)
+                @Html.BbTextFor(x => x.TaskTime)
+            </div>
+            <div class="row">
+                @Html.BbTextFor(x => x.MakeName)
+                @Html.BbTextFor(x => x.PlanTime)
+            </div>
+            <div class="row">
+                @Html.BbRadioListFor(x => x.TaskStatus)
+                @Html.BbTextBoxFor(x => x.ActualTime)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Remarks)
+            </div>
+            @Html.AnnexUnit()     
+        </div>
+    </div>
+}
+@Html.AnnexUpload()
+
+

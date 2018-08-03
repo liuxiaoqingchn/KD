@@ -1,0 +1,34 @@
+﻿@model KdDataResponse<BidResult>
+
+@{Layout = null;}
+@using (Html.BeginDlgSelect())
+{
+    @Html.BbDlgSearchHeader(true, "中标项目")
+    <div class="modal-body">
+        <div class="row">
+            @Html.BbSearchFor(x => x.PrjCode)
+            @Html.BbSearchFor(x => x.PrjName)
+        </div>
+        @using (Html.BeginDataTable())
+        {
+            @Html.BbTHeadRow(true, "项目编号", "项目名称", "跟标人", "中标单位", "中标金额", "中标日期")
+
+            using (Html.BeginDataTableBody())
+            {
+                foreach (BidResult item in Model)
+                {
+                    using (Html.BeginDataSelectRow(item))
+                    {
+                        @Html.TdText(item.PrjCode)
+                        @Html.TdText(item.PrjName)
+                        @Html.TdText(item.WithPersonName)
+                        @Html.TdText(item.BidUnit)
+                        @Html.TdText(item.BidMoney)
+                        @Html.TdText(item.BidDate.ToDateString())
+                    }
+                }
+            }
+        }
+    </div>
+    @Html.BbDlgFooter(true)
+}

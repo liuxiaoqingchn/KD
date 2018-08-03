@@ -1,0 +1,816 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KdCore.Office</name>
+    </assembly>
+    <members>
+        <member name="T:KdCore.Office.KdUtilWord">
+            <summary>
+            Word 文档导出工具类；
+            主要使用模板文件进行书签(Bookmark)替换方式生成统计报表等
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdUtilWord.CreateWordDocument(System.String)">
+            <summary>
+            创建一个 Word 文档对象实例
+            </summary>
+            <param name="pathTemplate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilWord.SaveTo(NPOI.XWPF.UserModel.XWPFDocument,System.String)">
+            <summary>
+            保存 Word 文档到指定物理路径
+            </summary>
+            <param name="document"></param>
+            <param name="savePath"></param>
+        </member>
+        <member name="M:KdCore.Office.KdUtilWord.InferPictureType(System.String,NPOI.XWPF.UserModel.PictureType)">
+            <summary>
+            根据文件扩展名自动推断图片格式
+            </summary>
+            <param name="imgFileName"></param>
+            <param name="defaultType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilWord.InferPictureType(System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            根据文件扩展名自动推断图片格式
+            </summary>
+            <param name="format"></param> 
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Office.KdWord">
+            <summary>
+            Word 文档导出上下文封装
+            主要使用模板文件进行书签(Bookmark)替换方式生成统计报表等
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWord.#ctor">
+            <summary>
+            初始化上下文实例，将以新建方式创建 Word 文档
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWord.#ctor(System.String)">
+            <summary>
+            初始化上下文实例，将以基于模板的方式创建 Word 文档
+            </summary>
+            <param name="pathTemplate">Word 文档模板保存的物理路径</param>
+        </member>
+        <member name="F:KdCore.Office.KdWord.pathTemplate">
+            <summary>
+            模板文件路径
+            </summary>
+        </member>
+        <member name="F:KdCore.Office.KdWord._isParsed">
+            <summary>
+            是否已解析书签
+            </summary>
+        </member>
+        <member name="P:KdCore.Office.KdWord.Doc">
+            <summary>
+            当前 Word 文档
+            </summary>
+        </member>
+        <member name="P:KdCore.Office.KdWord.DictBookmarks">
+            <summary>
+            当前 Word 文档中解析出的书签缓存
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWord.SaveTo(System.String)">
+            <summary>
+            保存 Word 文档到指定的物理路径
+            </summary>
+            <param name="savePath"></param>
+        </member>
+        <member name="M:KdCore.Office.KdWord.ParseBookmarks">
+            <summary>
+            解析当前文档的全部书签
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWord.TryParseItems(NPOI.OpenXmlFormats.Wordprocessing.CT_P)">
+            <summary>
+            解析节点及子节点中包含的书签
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWord.TryParseItems(NPOI.OpenXmlFormats.Wordprocessing.CT_R)">
+            <summary>
+            解析节点及子节点中包含的书签
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWord.TryParseItems(NPOI.OpenXmlFormats.Wordprocessing.CT_Tbl)">
+            <summary>
+            解析节点及子节点中包含的书签
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWord.TryParseItems(NPOI.OpenXmlFormats.Wordprocessing.CT_Row)">
+            <summary>
+            解析节点及子节点中包含的书签
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWord.TryParseItems(NPOI.OpenXmlFormats.Wordprocessing.CT_Tc)">
+            <summary>
+            解析节点及子节点中包含的书签
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWord.TryParseItems(NPOI.OpenXmlFormats.Wordprocessing.CT_RunTrackChange)">
+            <summary>
+            解析节点及子节点中包含的书签
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWord.TryParseItems(NPOI.OpenXmlFormats.Wordprocessing.CT_CustomXmlBlock)">
+            <summary>
+            解析节点及子节点中包含的书签
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWord.TryParseItems(NPOI.OpenXmlFormats.Shared.CT_OMath)">
+            <summary>
+            解析节点及子节点中包含的书签
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWord.TryParseItems(NPOI.OpenXmlFormats.Shared.CT_OMathPara)">
+            <summary>
+            解析节点及子节点中包含的书签
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWord.TryParseItems(NPOI.OpenXmlFormats.Wordprocessing.CT_SdtBlock)">
+            <summary>
+            解析节点及子节点中包含的书签
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWord.ParseBookmarks(System.Collections.ArrayList)">
+            <summary>
+            解析当前文档的全部书签
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWord.ParseBookmarks(NPOI.OpenXmlFormats.Wordprocessing.CT_P)">
+            <summary>
+            解析当前文档的全部书签
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWord.GetBookmark(System.String)">
+            <summary>
+            根据传入书签名称获取已经解析过的书签
+            </summary>
+            <param name="bookmarkName">书签名称</param> 
+        </member>
+        <member name="M:KdCore.Office.KdWord.Reset(System.String)">
+            <summary>
+            根据传入书签名称清除已设置的内容
+            </summary>
+            <param name="bookmarkName">书签名称</param> 
+        </member>
+        <member name="M:KdCore.Office.KdWord.ResetText(System.String,System.String)">
+            <summary>
+            根据传入书签名称重新设置文字内容
+            </summary>
+            <param name="bookmarkName">书签名称</param>
+            <param name="content">文字内容</param>
+        </member>
+        <member name="M:KdCore.Office.KdWord.ResetTexts(System.String,System.String[])">
+            <summary>
+            根据传入书签名称重新设置文字内容
+            </summary>
+            <param name="bookmarkName">书签名称</param>
+            <param name="contents">文字内容</param>
+        </member>
+        <member name="M:KdCore.Office.KdWord.ResetText(System.String,System.Object)">
+            <summary>
+            根据传入书签名称重新设置文字内容
+            </summary>
+            <param name="bookmarkName">书签名称</param>
+            <param name="content">文字内容</param>
+        </member>
+        <member name="M:KdCore.Office.KdWord.ResetTexts(System.String,System.Object[])">
+            <summary>
+            根据传入书签名称重新设置文字内容
+            </summary>
+            <param name="bookmarkName">书签名称</param>
+            <param name="contents">文字内容</param>
+        </member>
+        <member name="M:KdCore.Office.KdWord.ResetImages(System.String,System.Double,System.Double,System.String[])">
+            <summary>
+            根据传入书签名称重新设置图片内容
+            </summary>
+            <param name="bookmarkName">书签名称</param>
+            <param name="width">图片显示宽度，单位：cm</param>
+            <param name="height">图片显示高度，单位：cm</param>
+            <param name="imgPaths">图片文件物理路径</param>
+        </member>
+        <member name="T:KdCore.Office.KdWordBookmark">
+            <summary>
+            Word 文档中的书签替换工具封装对象
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.#ctor(NPOI.XWPF.UserModel.XWPFDocument,NPOI.OpenXmlFormats.Wordprocessing.CT_P,NPOI.OpenXmlFormats.Wordprocessing.CT_Bookmark)">
+            <summary>
+            初始化实例对象
+            </summary>
+            <param name="document">当前所在的 Word 文档</param>
+            <param name="container">当前书签所在的容器</param>
+            <param name="bookmark">当前书签的开始标记</param>
+        </member>
+        <member name="P:KdCore.Office.KdWordBookmark.Document">
+            <summary>
+            获取当前所在的 Word 文档
+            </summary>
+        </member>
+        <member name="P:KdCore.Office.KdWordBookmark.Container">
+            <summary>
+            获取当前书签所在的容器
+            </summary>
+        </member>
+        <member name="P:KdCore.Office.KdWordBookmark.Start">
+            <summary>
+            获取当前书签的开始标记
+            </summary>
+        </member>
+        <member name="P:KdCore.Office.KdWordBookmark.Id">
+            <summary>
+            获取当前书签的标识ID；同一容器内唯一，整个 Word 文档中可能不唯一
+            </summary>
+        </member>
+        <member name="P:KdCore.Office.KdWordBookmark.Name">
+            <summary>
+            获取当前书签的标识名称；理论上整个 Word 文档中唯一，下划线开头的为隐藏书签
+            </summary>
+        </member>
+        <member name="P:KdCore.Office.KdWordBookmark.RunTemplate">
+            <summary>
+            获取或设置当前书签设置文字格式时的模板
+            </summary>
+        </member>
+        <member name="P:KdCore.Office.KdWordBookmark.DefaultImgWidth">
+            <summary>
+            插入图片未明确指定参数时，默认图片宽度，单位：cm
+            </summary>
+        </member>
+        <member name="P:KdCore.Office.KdWordBookmark.DefaultImgHeight">
+            <summary>
+            插入图片未明确指定参数时，默认图片高度，单位：cm
+            </summary>
+        </member>
+        <member name="P:KdCore.Office.KdWordBookmark.DefaultPictureType">
+            <summary>
+            插入图片未明确指定参数时，默认图片格式
+            </summary>
+        </member>
+        <member name="P:KdCore.Office.KdWordBookmark.IsInvalid">
+            <summary>
+            获取当前实例的各必需属性是否有效
+            </summary>
+        </member>
+        <member name="P:KdCore.Office.KdWordBookmark.Paragraph">
+            <summary>
+            获取一个针对当前书签所在的容器的段落对象实例
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.GetIndexStart">
+            <summary>
+            获取当前书签开始节点在容器中从零开始的位置索引
+            </summary>
+            <returns>当前实例无效或未找到有效节点时返回 -1</returns>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.GetIndexEnd(System.Int32)">
+            <summary>
+            获取当前书签结束节点在容器中从零开始的位置索引
+            </summary>
+            <param name="start"></param>
+            <returns>当前实例无效或未找到有效节点时返回 -1</returns>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.EnsureMarkupRange">
+            <summary>
+            确认当前书签已经添加了结束标记
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.AddNewR">
+            <summary>
+            在书签结束节点前添加一个新的内容节点容器；相对于在书签内追加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.CloneFontStyle(NPOI.OpenXmlFormats.Wordprocessing.CT_R)">
+            <summary>
+            复制书签周边的文字样式到当前样式
+            </summary>
+            <param name="ctR"></param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.AddNewText(System.String)">
+            <summary>
+            在书签结束节点前添加一个新的文字内容节点容器；相对于在书签内追加
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.AppendText(System.String)">
+            <summary>
+            在书签结束节点前添加一个新的文字内容节点容器；相对于在书签内追加
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.AppendText(System.Object)">
+            <summary>
+            在书签结束节点前添加一个新的文字内容节点容器；相对于在书签内追加
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.Reset">
+            <summary>
+            清除当前书签节点内的所有内容
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.ResetText(System.String)">
+            <summary>
+            清除当前书签节点内的所有内容，重新添加文字内容
+            </summary>
+            <param name="content"></param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.ResetText(System.Object)">
+            <summary>
+            清除当前书签节点内的所有内容，重新添加文字内容
+            </summary>
+            <param name="content"></param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.ResetTexts(System.String[])">
+            <summary>
+            清除当前书签节点内的所有内容，重新添加文字内容，每个字符串一个子容器
+            </summary>
+            <param name="contents"></param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.ResetTexts(System.Object[])">
+            <summary>
+            清除当前书签节点内的所有内容，重新添加文字内容，每个字符串一个子容器
+            </summary>
+            <param name="contents"></param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.AppendTexts(System.String[])">
+            <summary>
+            在当前书签节点内的尾部追加文字内容，每个字符串一个子容器
+            </summary>
+            <param name="contents"></param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.AppendTexts(System.Object[])">
+            <summary>
+            在当前书签节点内的尾部追加文字内容，每个字符串一个子容器
+            </summary>
+            <param name="contents"></param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.AppendImage(System.IO.Stream,NPOI.XWPF.UserModel.PictureType,System.String,System.Nullable{System.Double},System.Nullable{System.Double})">
+            <summary>
+            在当前书签节点内的尾部追加指定格式的图片；
+            图片尺寸单位为 厘米
+            </summary>
+            <param name="stream">图片数据流</param>
+            <param name="type">图片格式</param>
+            <param name="imageName">图片名称</param>
+            <param name="width">图片显示宽度，单位：cm</param>
+            <param name="height">图片显示高度，单位：cm</param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.AppendImage(System.IO.Stream,NPOI.XWPF.UserModel.PictureType,System.String,System.Int32,System.Int32)">
+            <summary>
+            在当前书签节点内的尾部追加指定格式的图片；
+            图片尺寸单位为 EMUS（English Metric Unit）； 1cm = 360000 EMUS
+            </summary>
+            <param name="stream">图片数据流</param>
+            <param name="type">图片格式</param>
+            <param name="imageName">图片名称</param>
+            <param name="width">图片显示宽度，单位：EMUS</param>
+            <param name="height">图片显示高度，单位：EMUS</param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.ResetImages(System.String[])">
+            <summary>
+            清除当前书签节点内的所有内容，重新添加图片内容，每个图片一个子容器；
+            图片设置使用默认尺寸
+            </summary>
+            <param name="imgPaths"></param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.ResetImages(System.Double,System.Double,System.String[])">
+            <summary>
+            清除当前书签节点内的所有内容，重新添加图片内容，每个图片一个子容器；
+            图片设置使用默认尺寸
+            </summary>
+            <param name="width">图片显示宽度，单位：cm</param>
+            <param name="height">图片显示高度，单位：cm</param>
+            <param name="imgPaths">图片文件物理路径</param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.AppendImages(System.String[])">
+            <summary>
+            在当前书签节点内的尾部追加图片内容，每个图片一个子容器；
+            图片设置使用默认尺寸
+            </summary>
+            <param name="imgPaths">图片文件物理路径</param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.AppendImages(System.Double,System.Double,System.String[])">
+            <summary>
+            在当前书签节点内的尾部追加图片内容，每个图片一个子容器；
+            图片设置使用默认尺寸
+            </summary>
+            <param name="width">图片显示宽度，单位：cm</param>
+            <param name="height">图片显示高度，单位：cm</param>
+            <param name="imgPaths">图片文件物理路径</param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.AppendImage(System.String,System.String,System.Nullable{System.Double},System.Nullable{System.Double})">
+            <summary>
+            在当前书签节点内的尾部追加图片，根据文件扩展名自动推断图片格式；
+            未指定高宽尺寸时使用默认尺寸
+            </summary>
+            <param name="imgPath">图片文件物理路径</param>
+            <param name="imgName">图片在 Word 文档中的保存名称</param>
+            <param name="width">图片显示宽度，单位：cm</param>
+            <param name="height">图片显示高度，单位：cm</param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.AppendImageBmp(System.String,System.String,System.Nullable{System.Double},System.Nullable{System.Double})">
+            <summary>
+            在当前书签节点内的尾部追加 BMP 格式图片；
+            未指定高宽尺寸时使用默认尺寸
+            </summary>
+            <param name="imgPath">图片文件物理路径</param>
+            <param name="imgName">图片在 Word 文档中的保存名称</param>
+            <param name="width">图片显示宽度，单位：cm</param>
+            <param name="height">图片显示高度，单位：cm</param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.AppendImageJpeg(System.String,System.String,System.Nullable{System.Double},System.Nullable{System.Double})">
+            <summary>
+            在当前书签节点内的尾部追加 JPEG 格式图片；
+            未指定高宽尺寸时使用默认尺寸
+            </summary>
+            <param name="imgPath">图片文件物理路径</param>
+            <param name="imgName">图片在 Word 文档中的保存名称</param>
+            <param name="width">图片显示宽度，单位：cm</param>
+            <param name="height">图片显示高度，单位：cm</param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.AppendImagePng(System.String,System.String,System.Nullable{System.Double},System.Nullable{System.Double})">
+            <summary>
+            在当前书签节点内的尾部追加 PNG 格式图片；
+            未指定高宽尺寸时使用默认尺寸
+            </summary>
+            <param name="imgPath">图片文件物理路径</param>
+            <param name="imgName">图片在 Word 文档中的保存名称</param>
+            <param name="width">图片显示宽度，单位：cm</param>
+            <param name="height">图片显示高度，单位：cm</param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.AppendImage(System.String,NPOI.XWPF.UserModel.PictureType,System.String,System.Nullable{System.Double},System.Nullable{System.Double})">
+            <summary>
+            在当前书签节点内的尾部追加指定格式的图片；
+            未指定高宽尺寸时使用默认尺寸
+            </summary>
+            <param name="imgPath">图片文件物理路径</param>
+            <param name="imgName">图片在 Word 文档中的保存名称</param>
+            <param name="type">图片格式</param>
+            <param name="width">图片显示宽度，单位：cm</param>
+            <param name="height">图片显示高度，单位：cm</param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.AppendImage(System.Drawing.Image,NPOI.XWPF.UserModel.PictureType,System.String,System.Nullable{System.Double},System.Nullable{System.Double})">
+            <summary>
+            在当前书签节点内的尾部追加指定的图片；
+            未指定高宽尺寸时使用默认尺寸
+            </summary>
+            <param name="image">追加的图片</param>
+            <param name="imageName">图片名称</param>
+            <param name="type">图片格式</param>
+            <param name="width">图片显示宽度，单位：cm</param>
+            <param name="height">图片显示高度，单位：cm</param>
+        </member>
+        <member name="M:KdCore.Office.KdWordBookmark.AppendImage(System.Drawing.Image,System.String,System.Nullable{System.Double},System.Nullable{System.Double})">
+            <summary>
+            在当前书签节点内的尾部追加指定的图片；
+            未指定高宽尺寸时使用默认尺寸
+            </summary>
+            <param name="image">追加的图片</param>
+            <param name="imageName">图片名称</param>
+            <param name="width">图片显示宽度，单位：cm</param>
+            <param name="height">图片显示高度，单位：cm</param>
+        </member>
+        <member name="T:KdCore.Office.KdUtilExcel">
+            <summary>
+            Excel操作工具类
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SetColumnWidth(NPOI.SS.UserModel.ISheet,System.Int32,System.Double)">
+            <summary>
+            设置列宽
+            </summary>
+            <param name="sheet">工作表</param>
+            <param name="columnIndex">列索引</param>
+            <param name="width">列宽度，自动乘以256</param>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SetRowHeight(NPOI.SS.UserModel.ISheet,System.Int32,System.Double)">
+            <summary>
+            设置行高
+            </summary>
+            <param name="sheet">工作表</param>
+            <param name="rowIndex">行索引</param>
+            <param name="height">行高</param>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.CloneCellStyle(NPOI.SS.UserModel.ICell)">
+            <summary>
+            克隆当前单元格样式，修改前克隆避免修改当前样式导致所有的使用该样式的单元格修改
+            </summary>
+            <param name="cell">单元格</param> 
+            <returns>设置后的样式</returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SetCellFont(NPOI.SS.UserModel.ICell,System.Int16,System.String)">
+            <summary>
+            设置单元格字体
+            </summary>
+            <param name="cell">单元格</param>
+            <param name="fontSize">字体大小</param>
+            <param name="fontName">字体名称</param>
+            <returns>设置后的样式</returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SetCellStyle(NPOI.SS.UserModel.ICell,NPOI.SS.UserModel.HorizontalAlignment,NPOI.SS.UserModel.VerticalAlignment,System.Boolean,System.Boolean,System.Int16,System.String,NPOI.SS.UserModel.BorderStyle)">
+            <summary>
+            设置单元格样式
+            </summary>
+            <param name="cell">单元格</param>
+            <param name="horizontalAlignment">水平对齐方式</param>
+            <param name="verticalAlignment">竖向对齐方式</param>
+            <param name="wrapText">是否自动换行</param>
+            <param name="hasBorder">是否添加边框</param>
+            <param name="fontSize">字体大小</param>
+            <param name="fontName">字体名称</param>
+            <param name="borderStyle">边框线条样式</param>
+            <returns>设置后的样式</returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SetCellsStyle(NPOI.SS.UserModel.ISheet,System.Int32,System.Int32,System.Int32,System.Int32,NPOI.SS.UserModel.HorizontalAlignment,NPOI.SS.UserModel.VerticalAlignment,System.Boolean,System.Boolean,System.Int16,System.String,NPOI.SS.UserModel.BorderStyle)">
+            <summary>
+            批量设置单元格同一样式
+            </summary>
+            <param name="sheet">工作表</param>
+            <param name="startRow">开始的行索引</param>
+            <param name="startColumn">开始的列索引</param>
+            <param name="endRow">结束的行索引</param>
+            <param name="endColumn">结束的列索引</param>
+            <param name="horizontalAlignment">水平对齐方式</param>
+            <param name="verticalAlignment">竖向对齐方式</param>
+            <param name="wrapText">是否自动换行</param>
+            <param name="hasBorder">是否添加边框</param>
+            <param name="fontSize">字体大小</param>
+            <param name="fontName">字体名称</param>
+            <param name="borderStyle">边框线条样式</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SetCellFormat(NPOI.SS.UserModel.ICell,System.String)">
+            <summary>
+            设置单元格内容格式
+            </summary>
+            <param name="cell">单元格</param>
+            <param name="format">自定义格式设置字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.MergedCells(NPOI.SS.UserModel.ISheet,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,NPOI.SS.UserModel.BorderStyle)">
+            <summary>
+            合并单元格
+            </summary>
+            <param name="sheet">工作表</param>
+            <param name="startRow">合并单元格开始行索引，从0开始</param>
+            <param name="startColumn">合并单元格开始列索引，从0开始</param>
+            <param name="endRow">合并单元格结束行索引，从0开始</param>
+            <param name="endColumn">合并单元格结束列索引，从0开始</param>
+            <param name="autoSetBorder">合并后是否自动设置边框</param>
+            <param name="style">合并单元格的边框样式</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.ClosedBorderRange(NPOI.SS.UserModel.ISheet,NPOI.SS.Util.CellRangeAddress,NPOI.SS.UserModel.BorderStyle)">
+            <summary>
+            设置合并单元格的边框
+            </summary>
+            <param name="sheet">工作表</param>
+            <param name="range">合并单元格的区域</param>
+            <param name="style">合并单元格的边框样式</param>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.CopyCellStyle(NPOI.SS.UserModel.ICell,System.Int32,System.Int32)">
+            <summary>
+            复制单元格样式
+            </summary>
+            <param name="cell">需要复制样式的单元格</param>
+            <param name="fromRowIndex">样式来源单元格的行索引</param>
+            <param name="fromColumnIndex">样式来源单元格的列索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.CopyRowStyle(NPOI.SS.UserModel.IRow,System.Int32)">
+            <summary>
+            复制行样式
+            </summary>
+            <param name="row">需要复制样式的行</param>
+            <param name="fromRowIndex">样式来源行的索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.CreateBook(NPOI.SS.UserModel.ISheet@,System.String,System.String,System.String,System.Int16,System.String,System.Single,System.Single)">
+            <summary>
+            创建Excel文件对象
+            </summary>
+            <param name="defaultSheet">返回添加的工作表对象</param>
+            <param name="sheetName">添加的工作表标签名称</param>
+            <param name="bookSubject"> Excel文档属性，文档主题 </param>
+            <param name="company"> Excel文档属性，公司名称 </param>
+            <param name="fontSize"> 文档默认字体大小 </param>
+            <param name="fontName"> 文档默认字体名称 </param>
+            <param name="defaultRowHeight">默认行高</param>
+            <param name="defaultColumnWidth">默认列宽</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.GetWorkbookFromFile(System.String)">
+            <summary>
+            打开 Excel 模板获取 Excel IWorkbook 对象；
+            必须是 Office 97-2003格式的 Excel 文件，高版本可通过“另存为”转换为 Office 97-2003格式格式
+            </summary>
+            <param name="path">模板文件的物理路径</param>
+            <returns>IWorkbook对象</returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SaveToFile(NPOI.SS.UserModel.IWorkbook,System.String)">
+            <summary>
+            将Excel文件对象保存成文件
+            </summary>
+            <param name="workbook">需要保存的 Excel 对象</param>
+            <param name="fileFullName">文件保存的完整路径</param>
+            <returns>保存是否成功</returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SaveToFile(NPOI.SS.UserModel.IWorkbook,System.String,System.String)">
+            <summary>
+            将Excel文件对象保存成文件
+            </summary>
+            <param name="workbook"> 需要保存的 Excel 对象 </param>
+            <param name="folderName"> Excel 文件保存的目录，如果指定目录不存在，则自动尝试创建 </param>
+            <param name="fileName"> Excel 文件名</param>
+            <returns>保存是否成功</returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SaveToStream(NPOI.SS.UserModel.IWorkbook,System.IO.Stream)">
+            <summary>
+            将Excel文件对象直接输出到目标流对象
+            </summary>
+            <param name="workbook"> 需要输出的 Excel 对象 </param>
+            <param name="targetStream">目标流对象</param>
+            <returns>输出是否成功</returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.MoveRows(NPOI.SS.UserModel.ISheet,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            在工作表中上下移动指定行；
+            <example> sheet.MoveRows( 5, 10, 3 ) 实现的效果为将工作表中的第6至11行向下移动3行，移动后为第9至14行，原有内容将被覆盖</example>
+            </summary>
+            <param name="sheet">工作表</param>
+            <param name="startRowIndex">要移动的开始行索引</param>
+            <param name="endRowIndex">要移动的结束行索引</param>
+            <param name="moveRowsNumber">移动位置的行数，负数则向上移动</param>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.GetCell(NPOI.SS.UserModel.ISheet,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            获取单元格对象
+            </summary>
+            <param name="sheet">工作表</param>
+            <param name="rowIndex">行索引，从0开始</param>
+            <param name="columnIndex">列索引，从0开始</param>
+            <param name="autoSetDefaultStyle">列索引为新增加列时，是否自动将样式设置为第 0 列的默认样式</param>
+            <returns>单元格对象</returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SetCellValue(NPOI.SS.UserModel.ISheet,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            设置的单元格内容
+            </summary>
+            <param name="sheet">工作表</param>
+            <param name="rowIndex">行索引，从0开始</param>
+            <param name="columnIndex">列索引，从0开始</param>
+            <param name="value">要设置的单元格内容</param>
+            <returns>单元格对象</returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SetCellValue(NPOI.SS.UserModel.ISheet,System.Int32,System.Int32,System.DateTime)">
+            <summary>
+            设置的单元格内容
+            </summary>
+            <param name="sheet">工作表</param>
+            <param name="rowIndex">行索引，从0开始</param>
+            <param name="columnIndex">列索引，从0开始</param>
+            <param name="value">要设置的单元格内容</param>
+            <returns>单元格对象</returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SetCellValue(NPOI.SS.UserModel.ISheet,System.Int32,System.Int32,System.String)">
+            <summary>
+            设置的单元格内容
+            </summary>
+            <param name="sheet">工作表</param>
+            <param name="rowIndex">行索引，从0开始</param>
+            <param name="columnIndex">列索引，从0开始</param>
+            <param name="value">要设置的单元格内容</param>
+            <returns>单元格对象</returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SetCellValue(NPOI.SS.UserModel.ISheet,System.Int32,System.Int32,System.Double)">
+            <summary>
+            设置的单元格内容
+            </summary>
+            <param name="sheet">工作表</param>
+            <param name="rowIndex">行索引，从0开始</param>
+            <param name="columnIndex">列索引，从0开始</param>
+            <param name="value">要设置的单元格内容</param>
+            <returns>单元格对象</returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SetCellValue(NPOI.SS.UserModel.ISheet,System.Int32,System.Int32,NPOI.SS.UserModel.IRichTextString)">
+            <summary>
+            设置的单元格内容
+            </summary>
+            <param name="sheet">工作表</param>
+            <param name="rowIndex">行索引，从0开始</param>
+            <param name="columnIndex">列索引，从0开始</param>
+            <param name="value">要设置的单元格内容</param>
+            <returns>单元格对象</returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SetCellValue(NPOI.SS.UserModel.ISheet,System.Int32,System.Int32,System.Data.DataRow,System.Data.DataColumn)">
+            <summary>
+            设置的单元格内容
+            </summary>
+            <param name="sheet">工作表</param>
+            <param name="rowIndex">行索引，从0开始</param>
+            <param name="columnIndex">列索引，从0开始</param>
+            <param name="dataRow"> DataTable 数据源中的行</param>
+            <param name="dataColumn">当前单元格对应 DataTable 中的列</param>
+            <returns>单元格对象</returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SetBorder(NPOI.SS.UserModel.ICell,NPOI.SS.UserModel.BorderStyle)">
+            <summary>
+            设置单元格四周边框
+            </summary>
+            <param name="cell"></param>
+            <param name="allStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SetBorder(NPOI.SS.UserModel.ICell,NPOI.SS.UserModel.BorderStyle,NPOI.SS.UserModel.BorderStyle)">
+            <summary>
+            设置单元格四周边框
+            </summary>
+            <param name="cell"></param>
+            <param name="topAndBottom">单元格的上下边框样式</param>
+            <param name="leftAndRight">单元格的左右边框样式</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SetBorder(NPOI.SS.UserModel.ICell,NPOI.SS.UserModel.BorderStyle,NPOI.SS.UserModel.BorderStyle,NPOI.SS.UserModel.BorderStyle,NPOI.SS.UserModel.BorderStyle)">
+            <summary>
+            设置单元格四周边框
+            </summary>
+            <param name="cell"></param>
+            <param name="top">单元格的上边框样式</param>
+            <param name="right">单元格的右边框样式</param>
+            <param name="bottom">单元格的下边框样式</param>
+            <param name="left">单元格的左边框样式</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SetBorder(NPOI.SS.UserModel.ISheet,NPOI.SS.Util.CellRangeAddress,NPOI.SS.UserModel.BorderStyle)">
+            <summary>
+            设置四周边框
+            </summary>
+            <param name="sheet"></param>
+            <param name="range"></param>
+            <param name="style"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SetLandscape(NPOI.SS.UserModel.ISheet,System.Boolean)">
+            <summary>
+            设置打印纸张方向
+            </summary>
+            <param name="sheet">工作表</param>
+            <param name="isLandscapeOrientation">是否横向打印</param>
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.SetPrintSetup(NPOI.SS.UserModel.ISheet,NPOI.SS.UserModel.PaperSize)">
+            <summary>
+            设置打印纸张尺寸
+            </summary>
+            <param name="sheet">工作表</param>
+            <param name="paperSize">打印纸张尺寸</param> 
+        </member>
+        <member name="M:KdCore.Office.KdUtilExcel.ToExcel(System.Data.DataTable)">
+            <summary>
+            DataTable 直接输出到 Excel
+            </summary>
+            <param name="table">DataTable数据集</param>
+        </member>
+        <member name="T:KdCore.Office.KdUtilPdf">
+            <summary>
+            PDF文件处理工具
+            </summary>
+        </member>
+        <member name="M:KdCore.Office.KdUtilPdf.AddWaterMark(System.String,iTextSharp.text.Image)">
+            <summary>
+            添加水印
+            </summary>
+            <param name="filePath"></param>
+            <param name="image"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilPdf.InitWatermark(System.Drawing.Point,System.String)">
+            <summary>
+            初始化水印设置
+            </summary>
+            <param name="startPosition"></param>
+            <param name="waterMarkPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Office.KdUtilPdf.AddWaterMark(System.String,System.Drawing.Point,System.String)">
+            <summary>
+            添加水印
+            </summary>
+            <param name="filePath"></param>
+            <param name="startPosition"></param>
+            <param name="waterMarkPath"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

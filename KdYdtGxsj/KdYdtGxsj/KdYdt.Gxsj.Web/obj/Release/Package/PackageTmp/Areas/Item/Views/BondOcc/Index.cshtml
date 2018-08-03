@@ -1,0 +1,109 @@
+﻿@model BondOccReport
+@{
+
+}
+@using (Html.BeginPageTitle("保证金占用"))
+{
+}
+<div style="margin:8px;height:50px;" align="center" width="100%">
+    @using (Html.BeginForm("Index", "BondOcc"))
+    {
+        @Html.AntiForgeryToken()
+        <div class="col-md-4">
+            <div class="input-group kd-field-search text-left">
+                <span class="input-group-addon">任务下达时间</span>
+                <input class="form-control text-box date" data-bind="kpq_RelDate" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" data-type="date" id="kpq_RelDate" name="kpq_RelDate" role="form" type="text">
+                <span class="input-group-addon">至</span>
+                <input class="form-control text-box date" data-bind="kpq_RelDate_2" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" data-type="date" id="kpq_RelDate_2" name="kpq_RelDate_2" role="form" type="text">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" role="button">
+                <i class="glyphicon glyphicon-search" aria-hidden="true"></i>查询
+            </button>
+        </div>
+    }
+</div>
+<table class="table table-bordered table-condensed table-striped table-hover table-kd bb-data-table" style="float:left" width="100%" border="1">
+    <tr>
+        <td style="text-align:center;height:40px;width:10%" class="kd-cell-word text-nowrap kd-cell-em04"  @*rowspan="3"*@>月份</td>
+        @*<td style="text-align:center;height:40px;width:12%" colspan="4">经营方式</td>*@
+        <td style="text-align:center;height:40px;width:12%" @*rowspan="3"*@>总计金额（万元）</td>
+        <td style="text-align:center;height:40px;width:12%" @*rowspan="3"*@>总计项目数</td>
+    </tr>
+    @*<tr>
+        <td style="text-align:center;height:40px;width:12%" colspan="2">  自营 </td>
+        <td style="text-align:center;height:40px;width:12%" colspan="2">  联营 </td>
+    </tr>*@
+    @*<tr>
+        <td style="text-align:center;height:40px;width:6%">  数量 </td>
+        <td style="text-align:center;height:40px;width:6%">  金额(万元) </td>
+        <td style="text-align:center;height:40px;width:6%">  数量 </td>
+        <td style="text-align:center;height:40px;width:6%">  金额(万元) </td>
+    </tr>*@
+    @for (int i = 0; i < ViewBag.monthlength; i++)
+    {
+        <tr>
+            <td style="text-align:center;height:40px;width:10%">@ViewBag.months[i]</td>
+            @*<td style="text-align:center;height:40px;width:10%"> </td>
+            <td style="text-align:center;height:40px;width:12%"></td>
+            <td style="text-align:center;height:40px;width:10%"> </td>
+            <td style="text-align:center;height:40px;width:12%"></td>*@
+            <td style="text-align:center;height:40px;width:10%">@ViewBag.occm[i]</td>
+            <td style="text-align:center;height:40px;width:10%">@ViewBag.occn[i]</td>
+        </tr>
+
+    }
+    <tr>
+        <td style="text-align:center;height:40px;width:10%">@ViewBag.Total</td>
+        <td style="text-align:center;height:40px;width:10%">@ViewBag.occmtotal</td>
+        <td style="text-align:center;height:40px;width:10%">@ViewBag.occntotal</td>
+    </tr>
+    @*@for (int i = 0; i < ViewBag.monthlength; i++)
+        {
+            <tr>
+                <td style="text-align:center;height:40px;width:10%" rowspan="3">@ViewBag.months[i]</td>
+                <td  style="text-align:center;height:40px;width:10%" > 10天</td>
+                <td style="text-align:center;height:40px;width:12%" >@ViewBag.occm[i]</td>
+                <td style="text-align:center;height:40px;width:10%"> </td>
+                <td style="text-align:center;height:40px;width:12%"  rowspan="3">@ViewBag.occm[i]</td>
+                <td style="text-align:center;height:40px;width:10%"  rowspan="3">@ViewBag.occn[i]</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;height:40px;width:10%">20天 </td>
+                <td style="text-align:center;height:40px;width:12%">@ViewBag.occm[i]</td>
+                <td style="text-align:center;height:40px;width:12%"></td>
+            </tr>
+            <tr>
+                <td style="text-align:center;height:40px;width:10%">30天 </td>
+                <td style="text-align:center;height:40px;width:12%">@ViewBag.occm[i]</td>
+                <td style="text-align:center;height:40px;width:12%"></td>
+            </tr>
+
+        }*@
+</table>
+
+@*@using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(false))
+        {
+            @Html.BbTHeadRow(false, "月份", "占用金额", "占用天数")
+        }
+        using (Html.BeginDataTableBody())
+        {
+            foreach (BondOccReport item in Model)
+            {
+                using (Html.BeginDataTableRow(item, false))
+                {
+                    @Html.TdWord("")
+                    @Html.TdWord(item.OccAmount)
+                    @Html.TdWord(item.OccDays)
+                }
+            }
+            <tr>
+                <td>总计</td>
+                <td>@ViewBag.ItemSums</td>
+                <td>@ViewBag.BidSums</td>
+            </tr>
+        }
+    }*@

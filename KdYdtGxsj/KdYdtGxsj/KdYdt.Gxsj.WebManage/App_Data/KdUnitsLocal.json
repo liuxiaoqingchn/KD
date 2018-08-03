@@ -1,0 +1,1956 @@
+﻿{
+  "Home": {
+    "UnitName": "HomeController",
+    "UnitCode": "Home",
+    "UnitTitle": "HomeController",
+    "UnitSign": "Home",
+    "SortNum": 0,
+    "UnitBaseMode": "WebMVC",
+    "UnitCategories": [
+      "KD_MVC_BASE"
+    ],
+    "ClientSupport": 1,
+    "UnitSource": "Local",
+    "UnitPath": "~/Home",
+    "UrlPathTemplate": "~/Home/{action}/{id}",
+    "MenuIgnore": true,
+    "ClrAssemblyName": "KdYdt.Gxsj.WebManage",
+    "ClrClassName": "KdYdt.Gxsj.WebManage.Controllers.HomeController",
+    "Actions": [
+      {
+        "SortNum": 1000,
+        "ActionName": "查阅",
+        "ActionCode": "Index",
+        "EveryOne": true,
+        "UrlPath": "~/Home/Index/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.HomeController.Index"
+        ],
+        "ActionTitle": "HomeController > 查阅",
+        "ActionSign": "Home^Index"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "系统登录",
+        "ActionCode": "Login",
+        "EveryOne": true,
+        "UrlPath": "~/Home/Login/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.HomeController.Login"
+        ],
+        "ActionTitle": "HomeController > 系统登录",
+        "ActionSign": "Home^Login"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "注销登录",
+        "ActionCode": "Logout",
+        "EveryUser": true,
+        "UrlPath": "~/Home/Logout/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.HomeController.Logout"
+        ],
+        "ActionTitle": "HomeController > 注销登录",
+        "ActionSign": "Home^Logout"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "更新说明",
+        "ActionCode": "KdVerExplain",
+        "EveryOne": true,
+        "UrlPath": "~/Home/KdVerExplain/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.HomeController.KdVerExplain"
+        ],
+        "ActionTitle": "HomeController > 更新说明",
+        "ActionSign": "Home^KdVerExplain"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "未授权提示",
+        "ActionCode": "Denied",
+        "EveryOne": true,
+        "UrlPath": "~/Home/Denied/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.HomeController.Denied"
+        ],
+        "ActionTitle": "HomeController > 未授权提示",
+        "ActionSign": "Home^Denied"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "HTTPS测试",
+        "ActionCode": "CertSSL",
+        "EveryOne": true,
+        "UrlPath": "~/Home/CertSSL/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.HomeController.CertSSL"
+        ],
+        "ActionTitle": "HomeController > HTTPS测试",
+        "ActionSign": "Home^CertSSL"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "同步设置",
+        "ActionCode": "Reinit",
+        "EveryOne": true,
+        "UrlPath": "~/Home/Reinit/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.HomeController.Reinit"
+        ],
+        "ActionTitle": "HomeController > 同步设置",
+        "ActionSign": "Home^Reinit"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "用户令牌",
+        "ActionCode": "UserToken",
+        "EveryOne": true,
+        "UrlPath": "~/Home/UserToken/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.HomeController.UserToken"
+        ],
+        "ActionTitle": "HomeController > 用户令牌",
+        "ActionSign": "Home^UserToken"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "图片验证码",
+        "ActionCode": "ImgVerify",
+        "EveryOne": true,
+        "UrlPath": "~/Home/ImgVerify/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.HomeController.ImgVerify"
+        ],
+        "ActionTitle": "HomeController > 图片验证码",
+        "ActionSign": "Home^ImgVerify"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "刷新个人设置",
+        "ActionCode": "MyReload",
+        "EveryUser": true,
+        "UrlPath": "~/Home/MyReload/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.HomeController.MyReload"
+        ],
+        "ActionTitle": "HomeController > 刷新个人设置",
+        "ActionSign": "Home^MyReload"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "修改密码",
+        "ActionCode": "ChgPwd",
+        "EveryUser": true,
+        "UrlPath": "~/Home/ChgPwd/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.HomeController.ChgPwd"
+        ],
+        "ActionTitle": "HomeController > 修改密码",
+        "ActionSign": "Home^ChgPwd"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "系统提醒消息",
+        "ActionCode": "UserNotify",
+        "EveryUser": true,
+        "UrlPath": "~/Home/UserNotify/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.HomeController.UserNotify"
+        ],
+        "ActionTitle": "HomeController > 系统提醒消息",
+        "ActionSign": "Home^UserNotify"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "人员选择",
+        "ActionCode": "KdPickUsers",
+        "EveryUser": true,
+        "UrlPath": "~/Home/KdPickUsers/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.HomeController.KdPickUsers"
+        ],
+        "ActionTitle": "HomeController > 人员选择",
+        "ActionSign": "Home^KdPickUsers"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickItems",
+        "EveryUser": true,
+        "UrlPath": "~/Home/KdPickItems/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.HomeController.KdPickItems"
+        ],
+        "ActionTitle": "HomeController > 数据选择",
+        "ActionSign": "Home^KdPickItems"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickNodes",
+        "EveryUser": true,
+        "UrlPath": "~/Home/KdPickNodes/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.HomeController.KdPickNodes"
+        ],
+        "ActionTitle": "HomeController > 数据选择",
+        "ActionSign": "Home^KdPickNodes"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "操作确认",
+        "ActionCode": "UserConfirm",
+        "EveryOne": true,
+        "UrlPath": "~/Home/UserConfirm/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.HomeController.UserConfirm"
+        ],
+        "ActionTitle": "HomeController > 操作确认",
+        "ActionSign": "Home^UserConfirm"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "附件计数",
+        "ActionCode": "FilesCount",
+        "EveryUser": true,
+        "UrlPath": "~/Home/FilesCount/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.HomeController.FilesCount"
+        ],
+        "ActionTitle": "HomeController > 附件计数",
+        "ActionSign": "Home^FilesCount"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "保持会话连接",
+        "ActionCode": "HttpKeepAlive",
+        "EveryOne": true,
+        "UrlPath": "~/Home/HttpKeepAlive/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.HomeController.HttpKeepAlive"
+        ],
+        "ActionTitle": "HomeController > 保持会话连接",
+        "ActionSign": "Home^HttpKeepAlive"
+      }
+    ]
+  },
+  "Profile": {
+    "UnitName": "个人设置",
+    "UnitCode": "Profile",
+    "UnitTitle": "个人设置",
+    "UnitSign": "Profile",
+    "SortNum": 50000,
+    "UnitBaseMode": "WebMVC",
+    "UnitCategories": [
+      "KD_MVC_BASE"
+    ],
+    "ClientSupport": 1,
+    "UnitSource": "Local",
+    "UnitPath": "~/Profile",
+    "UrlPathTemplate": "~/Profile/{action}/{id}",
+    "ClrAssemblyName": "KdYdt.Gxsj.WebManage",
+    "ClrClassName": "KdYdt.Gxsj.WebManage.Controllers.ProfileController",
+    "Actions": [
+      {
+        "SortNum": 1000,
+        "ActionName": "查阅",
+        "ActionCode": "Index",
+        "EveryUser": true,
+        "UrlPath": "~/Profile/Index/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.ProfileController.Index"
+        ],
+        "ActionTitle": "个人设置 > 查阅",
+        "ActionSign": "Profile^Index"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "人员选择",
+        "ActionCode": "KdPickUsers",
+        "EveryUser": true,
+        "UrlPath": "~/Profile/KdPickUsers/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.ProfileController.KdPickUsers"
+        ],
+        "ActionTitle": "个人设置 > 人员选择",
+        "ActionSign": "Profile^KdPickUsers"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickItems",
+        "EveryUser": true,
+        "UrlPath": "~/Profile/KdPickItems/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.ProfileController.KdPickItems"
+        ],
+        "ActionTitle": "个人设置 > 数据选择",
+        "ActionSign": "Profile^KdPickItems"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickNodes",
+        "EveryUser": true,
+        "UrlPath": "~/Profile/KdPickNodes/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.ProfileController.KdPickNodes"
+        ],
+        "ActionTitle": "个人设置 > 数据选择",
+        "ActionSign": "Profile^KdPickNodes"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "操作确认",
+        "ActionCode": "UserConfirm",
+        "EveryOne": true,
+        "UrlPath": "~/Profile/UserConfirm/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.ProfileController.UserConfirm"
+        ],
+        "ActionTitle": "个人设置 > 操作确认",
+        "ActionSign": "Profile^UserConfirm"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "附件计数",
+        "ActionCode": "FilesCount",
+        "EveryUser": true,
+        "UrlPath": "~/Profile/FilesCount/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.ProfileController.FilesCount"
+        ],
+        "ActionTitle": "个人设置 > 附件计数",
+        "ActionSign": "Profile^FilesCount"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "保持会话连接",
+        "ActionCode": "HttpKeepAlive",
+        "EveryOne": true,
+        "UrlPath": "~/Profile/HttpKeepAlive/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.ProfileController.HttpKeepAlive"
+        ],
+        "ActionTitle": "个人设置 > 保持会话连接",
+        "ActionSign": "Profile^HttpKeepAlive"
+      }
+    ]
+  },
+  "WorkDays": {
+    "UnitName": "工作日配置",
+    "UnitCode": "WorkDays",
+    "UnitTitle": "工作日配置",
+    "UnitSign": "WorkDays",
+    "SortNum": 50200,
+    "UnitBaseMode": "WebMVC",
+    "UnitCategories": [
+      "KD_MVC_BASE"
+    ],
+    "ClientSupport": 1,
+    "UnitSource": "Local",
+    "UnitPath": "~/WorkDays",
+    "UrlPathTemplate": "~/WorkDays/{action}/{id}",
+    "ClrAssemblyName": "KdYdt.Gxsj.WebManage",
+    "ClrClassName": "KdYdt.Gxsj.WebManage.Controllers.WorkDaysController",
+    "Actions": [
+      {
+        "SortNum": 1000,
+        "ActionName": "查阅",
+        "ActionCode": "Index",
+        "IgnoreDeptScope": true,
+        "UrlPath": "~/WorkDays/Index/{id}",
+        "WorkCodes": [
+          "Edit"
+        ],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.WorkDaysController.Index"
+        ],
+        "ActionTitle": "工作日配置 > 查阅",
+        "ActionSign": "WorkDays^Index"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "重置缓存",
+        "ActionCode": "Reset",
+        "IgnoreDeptScope": true,
+        "UrlPath": "~/WorkDays/Reset/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.WorkDaysController.Reset"
+        ],
+        "ActionTitle": "工作日配置 > 重置缓存",
+        "ActionSign": "WorkDays^Reset"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "导出Word",
+        "ActionCode": "ExportWord",
+        "EveryOne": true,
+        "UrlPath": "~/WorkDays/ExportWord/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.WorkDaysController.ExportWord"
+        ],
+        "ActionTitle": "工作日配置 > 导出Word",
+        "ActionSign": "WorkDays^ExportWord"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "导出Excel",
+        "ActionCode": "ExportExcel",
+        "EveryOne": true,
+        "UrlPath": "~/WorkDays/ExportExcel/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.WorkDaysController.ExportExcel"
+        ],
+        "ActionTitle": "工作日配置 > 导出Excel",
+        "ActionSign": "WorkDays^ExportExcel"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "人员选择",
+        "ActionCode": "KdPickUsers",
+        "EveryUser": true,
+        "UrlPath": "~/WorkDays/KdPickUsers/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.WorkDaysController.KdPickUsers"
+        ],
+        "ActionTitle": "工作日配置 > 人员选择",
+        "ActionSign": "WorkDays^KdPickUsers"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickItems",
+        "EveryUser": true,
+        "UrlPath": "~/WorkDays/KdPickItems/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.WorkDaysController.KdPickItems"
+        ],
+        "ActionTitle": "工作日配置 > 数据选择",
+        "ActionSign": "WorkDays^KdPickItems"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickNodes",
+        "EveryUser": true,
+        "UrlPath": "~/WorkDays/KdPickNodes/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.WorkDaysController.KdPickNodes"
+        ],
+        "ActionTitle": "工作日配置 > 数据选择",
+        "ActionSign": "WorkDays^KdPickNodes"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "操作确认",
+        "ActionCode": "UserConfirm",
+        "EveryOne": true,
+        "UrlPath": "~/WorkDays/UserConfirm/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.WorkDaysController.UserConfirm"
+        ],
+        "ActionTitle": "工作日配置 > 操作确认",
+        "ActionSign": "WorkDays^UserConfirm"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "附件计数",
+        "ActionCode": "FilesCount",
+        "EveryUser": true,
+        "UrlPath": "~/WorkDays/FilesCount/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.WorkDaysController.FilesCount"
+        ],
+        "ActionTitle": "工作日配置 > 附件计数",
+        "ActionSign": "WorkDays^FilesCount"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "保持会话连接",
+        "ActionCode": "HttpKeepAlive",
+        "EveryOne": true,
+        "UrlPath": "~/WorkDays/HttpKeepAlive/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.WorkDaysController.HttpKeepAlive"
+        ],
+        "ActionTitle": "工作日配置 > 保持会话连接",
+        "ActionSign": "WorkDays^HttpKeepAlive"
+      }
+    ]
+  },
+  "Dicts": {
+    "UnitName": "数据字典",
+    "UnitCode": "Dicts",
+    "UnitTitle": "数据字典",
+    "UnitSign": "Dicts",
+    "SortNum": 50300,
+    "UnitBaseMode": "WebMVC",
+    "UnitCategories": [
+      "KD_MVC_BASE"
+    ],
+    "ClientSupport": 1,
+    "UnitSource": "Local",
+    "UnitPath": "~/Dicts",
+    "UrlPathTemplate": "~/Dicts/{action}/{id}",
+    "ClrAssemblyName": "KdYdt.Gxsj.WebManage",
+    "ClrClassName": "KdYdt.Gxsj.WebManage.Controllers.DictsController",
+    "Actions": [
+      {
+        "SortNum": 1000,
+        "ActionName": "查阅",
+        "ActionCode": "Index",
+        "UrlPath": "~/Dicts/Index/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.DictsController.Index"
+        ],
+        "ActionTitle": "数据字典 > 查阅",
+        "ActionSign": "Dicts^Index"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "编辑",
+        "ActionCode": "Edit",
+        "UrlPath": "~/Dicts/Edit/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [
+          "List",
+          "Index",
+          "Search",
+          "Query",
+          "Detail"
+        ],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.DictsController.Edit"
+        ],
+        "ActionTitle": "数据字典 > 编辑",
+        "ActionSign": "Dicts^Edit"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "删除",
+        "ActionCode": "Delete",
+        "UrlPath": "~/Dicts/Delete/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.DictsController.Delete"
+        ],
+        "ActionTitle": "数据字典 > 删除",
+        "ActionSign": "Dicts^Delete"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "重置缓存",
+        "ActionCode": "Reinit",
+        "IgnoreDeptScope": true,
+        "UrlPath": "~/Dicts/Reinit/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.DictsController.Reinit"
+        ],
+        "ActionTitle": "数据字典 > 重置缓存",
+        "ActionSign": "Dicts^Reinit"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "FrontAsync",
+        "ActionCode": "FrontAsync",
+        "UrlPath": "~/Dicts/FrontAsync/{id}",
+        "WorkCodes": [
+          "Edit"
+        ],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.DictsController.FrontAsync"
+        ],
+        "ActionTitle": "数据字典 > FrontAsync",
+        "ActionSign": "Dicts^FrontAsync"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "备份配置",
+        "ActionCode": "Backup",
+        "IgnoreDeptScope": true,
+        "UrlPath": "~/Dicts/Backup/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.DictsController.Backup"
+        ],
+        "ActionTitle": "数据字典 > 备份配置",
+        "ActionSign": "Dicts^Backup"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "重新初始化",
+        "ActionCode": "Load",
+        "IgnoreDeptScope": true,
+        "UrlPath": "~/Dicts/Load/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.DictsController.Load"
+        ],
+        "ActionTitle": "数据字典 > 重新初始化",
+        "ActionSign": "Dicts^Load"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "人员选择",
+        "ActionCode": "KdPickUsers",
+        "EveryUser": true,
+        "UrlPath": "~/Dicts/KdPickUsers/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.DictsController.KdPickUsers"
+        ],
+        "ActionTitle": "数据字典 > 人员选择",
+        "ActionSign": "Dicts^KdPickUsers"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickItems",
+        "EveryUser": true,
+        "UrlPath": "~/Dicts/KdPickItems/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.DictsController.KdPickItems"
+        ],
+        "ActionTitle": "数据字典 > 数据选择",
+        "ActionSign": "Dicts^KdPickItems"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickNodes",
+        "EveryUser": true,
+        "UrlPath": "~/Dicts/KdPickNodes/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.DictsController.KdPickNodes"
+        ],
+        "ActionTitle": "数据字典 > 数据选择",
+        "ActionSign": "Dicts^KdPickNodes"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "操作确认",
+        "ActionCode": "UserConfirm",
+        "EveryOne": true,
+        "UrlPath": "~/Dicts/UserConfirm/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.DictsController.UserConfirm"
+        ],
+        "ActionTitle": "数据字典 > 操作确认",
+        "ActionSign": "Dicts^UserConfirm"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "附件计数",
+        "ActionCode": "FilesCount",
+        "EveryUser": true,
+        "UrlPath": "~/Dicts/FilesCount/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.DictsController.FilesCount"
+        ],
+        "ActionTitle": "数据字典 > 附件计数",
+        "ActionSign": "Dicts^FilesCount"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "保持会话连接",
+        "ActionCode": "HttpKeepAlive",
+        "EveryOne": true,
+        "UrlPath": "~/Dicts/HttpKeepAlive/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.DictsController.HttpKeepAlive"
+        ],
+        "ActionTitle": "数据字典 > 保持会话连接",
+        "ActionSign": "Dicts^HttpKeepAlive"
+      }
+    ]
+  },
+  "Users": {
+    "UnitName": "用户管理",
+    "UnitCode": "Users",
+    "UnitTitle": "用户管理",
+    "UnitSign": "Users",
+    "SortNum": 50400,
+    "UnitBaseMode": "WebMVC",
+    "UnitCategories": [
+      "KD_MVC_BASE"
+    ],
+    "ClientSupport": 1,
+    "UnitSource": "Local",
+    "UnitPath": "~/Users",
+    "UrlPathTemplate": "~/Users/{action}/{id}",
+    "DeptScope": true,
+    "ClrAssemblyName": "KdYdt.Gxsj.WebManage",
+    "ClrClassName": "KdYdt.Gxsj.WebManage.Controllers.UsersController",
+    "Actions": [
+      {
+        "SortNum": 1000,
+        "ActionName": "查阅",
+        "ActionCode": "Index",
+        "UrlPath": "~/Users/Index/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.UsersController.Index"
+        ],
+        "ActionTitle": "用户管理 > 查阅",
+        "ActionSign": "Users^Index"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "编辑",
+        "ActionCode": "Edit",
+        "UrlPath": "~/Users/Edit/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [
+          "List",
+          "Index",
+          "Search",
+          "Query",
+          "Detail"
+        ],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.UsersController.Edit"
+        ],
+        "ActionTitle": "用户管理 > 编辑",
+        "ActionSign": "Users^Edit"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "删除",
+        "ActionCode": "Delete",
+        "UrlPath": "~/Users/Delete/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.UsersController.Delete"
+        ],
+        "ActionTitle": "用户管理 > 删除",
+        "ActionSign": "Users^Delete"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "ChgPwd",
+        "ActionCode": "ChgPwd",
+        "UrlPath": "~/Users/ChgPwd/{id}",
+        "WorkCodes": [
+          "Edit"
+        ],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.UsersController.ChgPwd"
+        ],
+        "ActionTitle": "用户管理 > ChgPwd",
+        "ActionSign": "Users^ChgPwd"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "UnlockPwd",
+        "ActionCode": "UnlockPwd",
+        "UrlPath": "~/Users/UnlockPwd/{id}",
+        "WorkCodes": [
+          "Edit"
+        ],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.UsersController.UnlockPwd"
+        ],
+        "ActionTitle": "用户管理 > UnlockPwd",
+        "ActionSign": "Users^UnlockPwd"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "数据整理",
+        "ActionCode": "Refresh",
+        "IgnoreDeptScope": true,
+        "UrlPath": "~/Users/Refresh/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.UsersController.Refresh"
+        ],
+        "ActionTitle": "用户管理 > 数据整理",
+        "ActionSign": "Users^Refresh"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "更新拼音",
+        "ActionCode": "Spell",
+        "IgnoreDeptScope": true,
+        "UrlPath": "~/Users/Spell/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.UsersController.Spell"
+        ],
+        "ActionTitle": "用户管理 > 更新拼音",
+        "ActionSign": "Users^Spell"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "备份用户",
+        "ActionCode": "Backup",
+        "IgnoreDeptScope": true,
+        "UrlPath": "~/Users/Backup/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.UsersController.Backup"
+        ],
+        "ActionTitle": "用户管理 > 备份用户",
+        "ActionSign": "Users^Backup"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "重新初始化",
+        "ActionCode": "Load",
+        "IgnoreDeptScope": true,
+        "UrlPath": "~/Users/Load/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.UsersController.Load"
+        ],
+        "ActionTitle": "用户管理 > 重新初始化",
+        "ActionSign": "Users^Load"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "导出Word",
+        "ActionCode": "ExportWord",
+        "EveryOne": true,
+        "UrlPath": "~/Users/ExportWord/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.UsersController.ExportWord"
+        ],
+        "ActionTitle": "用户管理 > 导出Word",
+        "ActionSign": "Users^ExportWord"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "导出Excel",
+        "ActionCode": "ExportExcel",
+        "EveryOne": true,
+        "UrlPath": "~/Users/ExportExcel/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.UsersController.ExportExcel"
+        ],
+        "ActionTitle": "用户管理 > 导出Excel",
+        "ActionSign": "Users^ExportExcel"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "人员选择",
+        "ActionCode": "KdPickUsers",
+        "EveryUser": true,
+        "UrlPath": "~/Users/KdPickUsers/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.UsersController.KdPickUsers"
+        ],
+        "ActionTitle": "用户管理 > 人员选择",
+        "ActionSign": "Users^KdPickUsers"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickItems",
+        "EveryUser": true,
+        "UrlPath": "~/Users/KdPickItems/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.UsersController.KdPickItems"
+        ],
+        "ActionTitle": "用户管理 > 数据选择",
+        "ActionSign": "Users^KdPickItems"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickNodes",
+        "EveryUser": true,
+        "UrlPath": "~/Users/KdPickNodes/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.UsersController.KdPickNodes"
+        ],
+        "ActionTitle": "用户管理 > 数据选择",
+        "ActionSign": "Users^KdPickNodes"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "操作确认",
+        "ActionCode": "UserConfirm",
+        "EveryOne": true,
+        "UrlPath": "~/Users/UserConfirm/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.UsersController.UserConfirm"
+        ],
+        "ActionTitle": "用户管理 > 操作确认",
+        "ActionSign": "Users^UserConfirm"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "附件计数",
+        "ActionCode": "FilesCount",
+        "EveryUser": true,
+        "UrlPath": "~/Users/FilesCount/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.UsersController.FilesCount"
+        ],
+        "ActionTitle": "用户管理 > 附件计数",
+        "ActionSign": "Users^FilesCount"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "保持会话连接",
+        "ActionCode": "HttpKeepAlive",
+        "EveryOne": true,
+        "UrlPath": "~/Users/HttpKeepAlive/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.UsersController.HttpKeepAlive"
+        ],
+        "ActionTitle": "用户管理 > 保持会话连接",
+        "ActionSign": "Users^HttpKeepAlive"
+      }
+    ]
+  },
+  "Roles": {
+    "UnitName": "角色管理",
+    "UnitCode": "Roles",
+    "UnitTitle": "角色管理",
+    "UnitSign": "Roles",
+    "SortNum": 50500,
+    "UnitBaseMode": "WebMVC",
+    "UnitCategories": [
+      "KD_MVC_BASE"
+    ],
+    "ClientSupport": 1,
+    "UnitSource": "Local",
+    "UnitPath": "~/Roles",
+    "UrlPathTemplate": "~/Roles/{action}/{id}",
+    "ClrAssemblyName": "KdYdt.Gxsj.WebManage",
+    "ClrClassName": "KdYdt.Gxsj.WebManage.Controllers.RolesController",
+    "Actions": [
+      {
+        "SortNum": 1000,
+        "ActionName": "查阅",
+        "ActionCode": "Index",
+        "UrlPath": "~/Roles/Index/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.RolesController.Index"
+        ],
+        "ActionTitle": "角色管理 > 查阅",
+        "ActionSign": "Roles^Index"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "编辑",
+        "ActionCode": "Edit",
+        "UrlPath": "~/Roles/Edit/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [
+          "List",
+          "Index",
+          "Search",
+          "Query",
+          "Detail"
+        ],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.RolesController.Edit"
+        ],
+        "ActionTitle": "角色管理 > 编辑",
+        "ActionSign": "Roles^Edit"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "删除",
+        "ActionCode": "Delete",
+        "UrlPath": "~/Roles/Delete/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.RolesController.Delete"
+        ],
+        "ActionTitle": "角色管理 > 删除",
+        "ActionSign": "Roles^Delete"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "权限设置",
+        "ActionCode": "Config",
+        "IgnoreDeptScope": true,
+        "UrlPath": "~/Roles/Config/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.RolesController.Config"
+        ],
+        "ActionTitle": "角色管理 > 权限设置",
+        "ActionSign": "Roles^Config"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "授权用户",
+        "ActionCode": "Users",
+        "UrlPath": "~/Roles/Users/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.RolesController.Users"
+        ],
+        "ActionTitle": "角色管理 > 授权用户",
+        "ActionSign": "Roles^Users"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "备份设置",
+        "ActionCode": "Backup",
+        "IgnoreDeptScope": true,
+        "UrlPath": "~/Roles/Backup/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.RolesController.Backup"
+        ],
+        "ActionTitle": "角色管理 > 备份设置",
+        "ActionSign": "Roles^Backup"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "重新初始化",
+        "ActionCode": "Load",
+        "IgnoreDeptScope": true,
+        "UrlPath": "~/Roles/Load/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.RolesController.Load"
+        ],
+        "ActionTitle": "角色管理 > 重新初始化",
+        "ActionSign": "Roles^Load"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "导出Word",
+        "ActionCode": "ExportWord",
+        "EveryOne": true,
+        "UrlPath": "~/Roles/ExportWord/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.RolesController.ExportWord"
+        ],
+        "ActionTitle": "角色管理 > 导出Word",
+        "ActionSign": "Roles^ExportWord"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "导出Excel",
+        "ActionCode": "ExportExcel",
+        "EveryOne": true,
+        "UrlPath": "~/Roles/ExportExcel/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.RolesController.ExportExcel"
+        ],
+        "ActionTitle": "角色管理 > 导出Excel",
+        "ActionSign": "Roles^ExportExcel"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "人员选择",
+        "ActionCode": "KdPickUsers",
+        "EveryUser": true,
+        "UrlPath": "~/Roles/KdPickUsers/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.RolesController.KdPickUsers"
+        ],
+        "ActionTitle": "角色管理 > 人员选择",
+        "ActionSign": "Roles^KdPickUsers"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickItems",
+        "EveryUser": true,
+        "UrlPath": "~/Roles/KdPickItems/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.RolesController.KdPickItems"
+        ],
+        "ActionTitle": "角色管理 > 数据选择",
+        "ActionSign": "Roles^KdPickItems"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickNodes",
+        "EveryUser": true,
+        "UrlPath": "~/Roles/KdPickNodes/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.RolesController.KdPickNodes"
+        ],
+        "ActionTitle": "角色管理 > 数据选择",
+        "ActionSign": "Roles^KdPickNodes"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "操作确认",
+        "ActionCode": "UserConfirm",
+        "EveryOne": true,
+        "UrlPath": "~/Roles/UserConfirm/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.RolesController.UserConfirm"
+        ],
+        "ActionTitle": "角色管理 > 操作确认",
+        "ActionSign": "Roles^UserConfirm"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "附件计数",
+        "ActionCode": "FilesCount",
+        "EveryUser": true,
+        "UrlPath": "~/Roles/FilesCount/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.RolesController.FilesCount"
+        ],
+        "ActionTitle": "角色管理 > 附件计数",
+        "ActionSign": "Roles^FilesCount"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "保持会话连接",
+        "ActionCode": "HttpKeepAlive",
+        "EveryOne": true,
+        "UrlPath": "~/Roles/HttpKeepAlive/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.RolesController.HttpKeepAlive"
+        ],
+        "ActionTitle": "角色管理 > 保持会话连接",
+        "ActionSign": "Roles^HttpKeepAlive"
+      }
+    ]
+  },
+  "Menus": {
+    "UnitName": "菜单管理",
+    "UnitCode": "Menus",
+    "UnitTitle": "菜单管理",
+    "UnitSign": "Menus",
+    "SortNum": 50800,
+    "UnitBaseMode": "WebMVC",
+    "UnitCategories": [
+      "KD_MVC_BASE"
+    ],
+    "ClientSupport": 1,
+    "UnitSource": "Local",
+    "UnitPath": "~/Menus",
+    "UrlPathTemplate": "~/Menus/{action}/{id}",
+    "ClrAssemblyName": "KdYdt.Gxsj.WebManage",
+    "ClrClassName": "KdYdt.Gxsj.WebManage.Controllers.MenusController",
+    "Actions": [
+      {
+        "SortNum": 1000,
+        "ActionName": "查阅",
+        "ActionCode": "Index",
+        "IgnoreDeptScope": true,
+        "UrlPath": "~/Menus/Index/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.MenusController.Index"
+        ],
+        "ActionTitle": "菜单管理 > 查阅",
+        "ActionSign": "Menus^Index"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "编辑",
+        "ActionCode": "Edit",
+        "IgnoreDeptScope": true,
+        "UrlPath": "~/Menus/Edit/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [
+          "List",
+          "Index",
+          "Search",
+          "Query",
+          "Detail"
+        ],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.MenusController.Edit"
+        ],
+        "ActionTitle": "菜单管理 > 编辑",
+        "ActionSign": "Menus^Edit"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "删除",
+        "ActionCode": "Delete",
+        "IgnoreDeptScope": true,
+        "UrlPath": "~/Menus/Delete/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.MenusController.Delete"
+        ],
+        "ActionTitle": "菜单管理 > 删除",
+        "ActionSign": "Menus^Delete"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "重置缓存",
+        "ActionCode": "Reinit",
+        "IgnoreDeptScope": true,
+        "UrlPath": "~/Menus/Reinit/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.MenusController.Reinit"
+        ],
+        "ActionTitle": "菜单管理 > 重置缓存",
+        "ActionSign": "Menus^Reinit"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "FrontAsync",
+        "ActionCode": "FrontAsync",
+        "UrlPath": "~/Menus/FrontAsync/{id}",
+        "WorkCodes": [
+          "Edit"
+        ],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.MenusController.FrontAsync"
+        ],
+        "ActionTitle": "菜单管理 > FrontAsync",
+        "ActionSign": "Menus^FrontAsync"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "人员选择",
+        "ActionCode": "KdPickUsers",
+        "EveryUser": true,
+        "UrlPath": "~/Menus/KdPickUsers/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.MenusController.KdPickUsers"
+        ],
+        "ActionTitle": "菜单管理 > 人员选择",
+        "ActionSign": "Menus^KdPickUsers"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickItems",
+        "EveryUser": true,
+        "UrlPath": "~/Menus/KdPickItems/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.MenusController.KdPickItems"
+        ],
+        "ActionTitle": "菜单管理 > 数据选择",
+        "ActionSign": "Menus^KdPickItems"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickNodes",
+        "EveryUser": true,
+        "UrlPath": "~/Menus/KdPickNodes/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.MenusController.KdPickNodes"
+        ],
+        "ActionTitle": "菜单管理 > 数据选择",
+        "ActionSign": "Menus^KdPickNodes"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "操作确认",
+        "ActionCode": "UserConfirm",
+        "EveryOne": true,
+        "UrlPath": "~/Menus/UserConfirm/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.MenusController.UserConfirm"
+        ],
+        "ActionTitle": "菜单管理 > 操作确认",
+        "ActionSign": "Menus^UserConfirm"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "附件计数",
+        "ActionCode": "FilesCount",
+        "EveryUser": true,
+        "UrlPath": "~/Menus/FilesCount/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.MenusController.FilesCount"
+        ],
+        "ActionTitle": "菜单管理 > 附件计数",
+        "ActionSign": "Menus^FilesCount"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "保持会话连接",
+        "ActionCode": "HttpKeepAlive",
+        "EveryOne": true,
+        "UrlPath": "~/Menus/HttpKeepAlive/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.MenusController.HttpKeepAlive"
+        ],
+        "ActionTitle": "菜单管理 > 保持会话连接",
+        "ActionSign": "Menus^HttpKeepAlive"
+      }
+    ]
+  },
+  "SysCfg": {
+    "UnitName": "系统配置",
+    "UnitCode": "SysCfg",
+    "UnitTitle": "系统配置",
+    "UnitSign": "SysCfg",
+    "SortNum": 50900,
+    "UnitBaseMode": "WebMVC",
+    "UnitCategories": [
+      "KD_MVC_BASE"
+    ],
+    "ClientSupport": 1,
+    "UnitSource": "Local",
+    "UnitPath": "~/SysCfg",
+    "UrlPathTemplate": "~/SysCfg/{action}/{id}",
+    "ClrAssemblyName": "KdYdt.Gxsj.WebManage",
+    "ClrClassName": "KdYdt.Gxsj.WebManage.Controllers.SysCfgController",
+    "Actions": [
+      {
+        "SortNum": 1000,
+        "ActionName": "查阅",
+        "ActionCode": "Index",
+        "IgnoreCorpScope": true,
+        "UrlPath": "~/SysCfg/Index/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.SysCfgController.Index"
+        ],
+        "ActionTitle": "系统配置 > 查阅",
+        "ActionSign": "SysCfg^Index"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "修改",
+        "ActionCode": "Modify",
+        "IgnoreCorpScope": true,
+        "UrlPath": "~/SysCfg/Modify/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [
+          "List",
+          "Index",
+          "Search",
+          "Query",
+          "Detail"
+        ],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.SysCfgController.Modify"
+        ],
+        "ActionTitle": "系统配置 > 修改",
+        "ActionSign": "SysCfg^Modify"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "重置缓存",
+        "ActionCode": "Reinit",
+        "UrlPath": "~/SysCfg/Reinit/{id}",
+        "WorkCodes": [
+          "Modify"
+        ],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.SysCfgController.Reinit"
+        ],
+        "ActionTitle": "系统配置 > 重置缓存",
+        "ActionSign": "SysCfg^Reinit"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "前端同步",
+        "ActionCode": "FrontAsync",
+        "UrlPath": "~/SysCfg/FrontAsync/{id}",
+        "WorkCodes": [
+          "Modify"
+        ],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.SysCfgController.FrontAsync"
+        ],
+        "ActionTitle": "系统配置 > 前端同步",
+        "ActionSign": "SysCfg^FrontAsync"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "人员选择",
+        "ActionCode": "KdPickUsers",
+        "EveryUser": true,
+        "UrlPath": "~/SysCfg/KdPickUsers/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.SysCfgController.KdPickUsers"
+        ],
+        "ActionTitle": "系统配置 > 人员选择",
+        "ActionSign": "SysCfg^KdPickUsers"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickItems",
+        "EveryUser": true,
+        "UrlPath": "~/SysCfg/KdPickItems/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.SysCfgController.KdPickItems"
+        ],
+        "ActionTitle": "系统配置 > 数据选择",
+        "ActionSign": "SysCfg^KdPickItems"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickNodes",
+        "EveryUser": true,
+        "UrlPath": "~/SysCfg/KdPickNodes/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.SysCfgController.KdPickNodes"
+        ],
+        "ActionTitle": "系统配置 > 数据选择",
+        "ActionSign": "SysCfg^KdPickNodes"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "操作确认",
+        "ActionCode": "UserConfirm",
+        "EveryOne": true,
+        "UrlPath": "~/SysCfg/UserConfirm/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.SysCfgController.UserConfirm"
+        ],
+        "ActionTitle": "系统配置 > 操作确认",
+        "ActionSign": "SysCfg^UserConfirm"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "附件计数",
+        "ActionCode": "FilesCount",
+        "EveryUser": true,
+        "UrlPath": "~/SysCfg/FilesCount/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.SysCfgController.FilesCount"
+        ],
+        "ActionTitle": "系统配置 > 附件计数",
+        "ActionSign": "SysCfg^FilesCount"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "保持会话连接",
+        "ActionCode": "HttpKeepAlive",
+        "EveryOne": true,
+        "UrlPath": "~/SysCfg/HttpKeepAlive/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.SysCfgController.HttpKeepAlive"
+        ],
+        "ActionTitle": "系统配置 > 保持会话连接",
+        "ActionSign": "SysCfg^HttpKeepAlive"
+      }
+    ]
+  },
+  "Logs": {
+    "UnitName": "系统日志",
+    "UnitCode": "Logs",
+    "UnitTitle": "系统日志",
+    "UnitSign": "Logs",
+    "SortNum": 95000,
+    "UnitBaseMode": "WebMVC",
+    "UnitCategories": [
+      "KD_MVC_BASE"
+    ],
+    "ClientSupport": 1,
+    "UnitSource": "Local",
+    "UnitPath": "~/Logs",
+    "UrlPathTemplate": "~/Logs/{action}/{id}",
+    "ClrAssemblyName": "KdYdt.Gxsj.WebManage",
+    "ClrClassName": "KdYdt.Gxsj.WebManage.Controllers.LogsController",
+    "Actions": [
+      {
+        "SortNum": 500,
+        "ActionName": "查阅",
+        "ActionCode": "Index",
+        "UrlPath": "~/Logs/Index/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.LogsController.Index"
+        ],
+        "ActionTitle": "系统日志 > 查阅",
+        "ActionSign": "Logs^Index"
+      },
+      {
+        "SortNum": 500,
+        "ActionName": "详细",
+        "ActionCode": "Detail",
+        "UrlPath": "~/Logs/Detail/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.LogsController.Detail"
+        ],
+        "ActionTitle": "系统日志 > 详细",
+        "ActionSign": "Logs^Detail"
+      },
+      {
+        "SortNum": 500,
+        "ActionName": "删除",
+        "ActionCode": "Delete",
+        "UrlPath": "~/Logs/Delete/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.LogsController.Delete"
+        ],
+        "ActionTitle": "系统日志 > 删除",
+        "ActionSign": "Logs^Delete"
+      },
+      {
+        "SortNum": 500,
+        "ActionName": "清除过期",
+        "ActionCode": "Clear",
+        "UrlPath": "~/Logs/Clear/{id}",
+        "Description": "可清理已经超过 3 个月以上的日志记录，以减少日志数据存储占用空间",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.LogsController.Clear"
+        ],
+        "ActionTitle": "系统日志 > 清除过期",
+        "ActionSign": "Logs^Clear"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "人员选择",
+        "ActionCode": "KdPickUsers",
+        "EveryUser": true,
+        "UrlPath": "~/Logs/KdPickUsers/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.LogsController.KdPickUsers"
+        ],
+        "ActionTitle": "系统日志 > 人员选择",
+        "ActionSign": "Logs^KdPickUsers"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickItems",
+        "EveryUser": true,
+        "UrlPath": "~/Logs/KdPickItems/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.LogsController.KdPickItems"
+        ],
+        "ActionTitle": "系统日志 > 数据选择",
+        "ActionSign": "Logs^KdPickItems"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickNodes",
+        "EveryUser": true,
+        "UrlPath": "~/Logs/KdPickNodes/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.LogsController.KdPickNodes"
+        ],
+        "ActionTitle": "系统日志 > 数据选择",
+        "ActionSign": "Logs^KdPickNodes"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "操作确认",
+        "ActionCode": "UserConfirm",
+        "EveryOne": true,
+        "UrlPath": "~/Logs/UserConfirm/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.LogsController.UserConfirm"
+        ],
+        "ActionTitle": "系统日志 > 操作确认",
+        "ActionSign": "Logs^UserConfirm"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "附件计数",
+        "ActionCode": "FilesCount",
+        "EveryUser": true,
+        "UrlPath": "~/Logs/FilesCount/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.LogsController.FilesCount"
+        ],
+        "ActionTitle": "系统日志 > 附件计数",
+        "ActionSign": "Logs^FilesCount"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "保持会话连接",
+        "ActionCode": "HttpKeepAlive",
+        "EveryOne": true,
+        "UrlPath": "~/Logs/HttpKeepAlive/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.LogsController.HttpKeepAlive"
+        ],
+        "ActionTitle": "系统日志 > 保持会话连接",
+        "ActionSign": "Logs^HttpKeepAlive"
+      }
+    ]
+  },
+  "Files": {
+    "UnitName": "上传下载",
+    "UnitCode": "Files",
+    "UnitTitle": "上传下载",
+    "UnitSign": "Files",
+    "SortNum": 98000,
+    "UnitBaseMode": "WebMVC",
+    "UnitCategories": [
+      "KD_MVC_BASE"
+    ],
+    "ClientSupport": 1,
+    "UnitSource": "Local",
+    "UnitPath": "~/Files",
+    "UrlPathTemplate": "~/Files/{action}/{id}",
+    "MenuIgnore": true,
+    "ClrAssemblyName": "KdYdt.Gxsj.WebManage",
+    "ClrClassName": "KdYdt.Gxsj.WebManage.Controllers.FilesController",
+    "Actions": [
+      {
+        "SortNum": 1000,
+        "ActionName": "上传文件",
+        "ActionCode": "Upload",
+        "EveryOne": true,
+        "UrlPath": "~/Files/Upload/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.FilesController.Upload"
+        ],
+        "ActionTitle": "上传下载 > 上传文件",
+        "ActionSign": "Files^Upload"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "下载文件",
+        "ActionCode": "Download",
+        "EveryOne": true,
+        "UrlPath": "~/Files/Download/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.FilesController.Download"
+        ],
+        "ActionTitle": "上传下载 > 下载文件",
+        "ActionSign": "Files^Download"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "获取缩略图",
+        "ActionCode": "Thumbnail",
+        "EveryOne": true,
+        "UrlPath": "~/Files/Thumbnail/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.FilesController.Thumbnail"
+        ],
+        "ActionTitle": "上传下载 > 获取缩略图",
+        "ActionSign": "Files^Thumbnail"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "预览查看",
+        "ActionCode": "Preview",
+        "EveryOne": true,
+        "UrlPath": "~/Files/Preview/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.FilesController.Preview"
+        ],
+        "ActionTitle": "上传下载 > 预览查看",
+        "ActionSign": "Files^Preview"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "查询文件数量",
+        "ActionCode": "Count",
+        "EveryOne": true,
+        "UrlPath": "~/Files/Count/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.FilesController.Count"
+        ],
+        "ActionTitle": "上传下载 > 查询文件数量",
+        "ActionSign": "Files^Count"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "删除文件",
+        "ActionCode": "Delete",
+        "EveryUser": true,
+        "UrlPath": "~/Files/Delete/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.FilesController.Delete"
+        ],
+        "ActionTitle": "上传下载 > 删除文件",
+        "ActionSign": "Files^Delete"
+      },
+      {
+        "SortNum": 1000,
+        "ActionName": "添加水印",
+        "ActionCode": "Watermark",
+        "EveryUser": true,
+        "UrlPath": "~/Files/Watermark/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.FilesController.Watermark"
+        ],
+        "ActionTitle": "上传下载 > 添加水印",
+        "ActionSign": "Files^Watermark"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "人员选择",
+        "ActionCode": "KdPickUsers",
+        "EveryUser": true,
+        "UrlPath": "~/Files/KdPickUsers/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.FilesController.KdPickUsers"
+        ],
+        "ActionTitle": "上传下载 > 人员选择",
+        "ActionSign": "Files^KdPickUsers"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickItems",
+        "EveryUser": true,
+        "UrlPath": "~/Files/KdPickItems/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.FilesController.KdPickItems"
+        ],
+        "ActionTitle": "上传下载 > 数据选择",
+        "ActionSign": "Files^KdPickItems"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "数据选择",
+        "ActionCode": "KdPickNodes",
+        "EveryUser": true,
+        "UrlPath": "~/Files/KdPickNodes/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.FilesController.KdPickNodes"
+        ],
+        "ActionTitle": "上传下载 > 数据选择",
+        "ActionSign": "Files^KdPickNodes"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "操作确认",
+        "ActionCode": "UserConfirm",
+        "EveryOne": true,
+        "UrlPath": "~/Files/UserConfirm/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.FilesController.UserConfirm"
+        ],
+        "ActionTitle": "上传下载 > 操作确认",
+        "ActionSign": "Files^UserConfirm"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "附件计数",
+        "ActionCode": "FilesCount",
+        "EveryUser": true,
+        "UrlPath": "~/Files/FilesCount/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.FilesController.FilesCount"
+        ],
+        "ActionTitle": "上传下载 > 附件计数",
+        "ActionSign": "Files^FilesCount"
+      },
+      {
+        "SortNum": 5000,
+        "ActionName": "保持会话连接",
+        "ActionCode": "HttpKeepAlive",
+        "EveryOne": true,
+        "UrlPath": "~/Files/HttpKeepAlive/{id}",
+        "WorkCodes": [],
+        "ViewCodes": [],
+        "MethodSigns": [
+          "KdYdt.Gxsj.WebManage.Controllers.FilesController.HttpKeepAlive"
+        ],
+        "ActionTitle": "上传下载 > 保持会话连接",
+        "ActionSign": "Files^HttpKeepAlive"
+      }
+    ]
+  }
+}

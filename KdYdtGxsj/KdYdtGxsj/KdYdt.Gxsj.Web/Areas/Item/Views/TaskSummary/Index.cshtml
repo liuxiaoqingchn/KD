@@ -1,0 +1,52 @@
+﻿@model  List<TaskSummaryReport>
+
+@using (Html.BeginPageTitle("任务汇总"))
+{
+}
+<div style="margin:8px;height:50px;" align="center" width="100%">
+    @using (Html.BeginForm("Index", "TaskSummary"))
+    {
+        @Html.AntiForgeryToken()
+        <div class="col-md-4">
+            <div class="input-group kd-field-search text-left">
+                <span class="input-group-addon">任务下达日期</span>
+                <input class="form-control text-box date" data-bind="kpq_RelDate" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" data-type="date" id="kpq_RelDate" name="kpq_RelDate" role="form" type="text">
+                <span class="input-group-addon">至</span>
+                <input class="form-control text-box date" data-bind="kpq_RelDate_2" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" data-type="date" id="kpq_RelDate_2" name="kpq_RelDate_2" role="form" type="text">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary" data-kd-ride="kpq" data-kd-role="search" data-kd-type="bbDataGrid" role="button">
+                <i class="glyphicon glyphicon-search" aria-hidden="true"></i>查询
+            </button>
+        </div>
+    }
+</div>
+
+@using (Html.BeginDataTable())
+{
+    using (Html.BeginDataTableHeader(false))
+    {
+        @Html.BbTHeadRow(false, "姓名", "投标数量", "商务标", "技术标", "封标", "资信标", "设计标","总计")
+    }
+    using (Html.BeginDataTableBody())
+    {
+        foreach (TaskSummaryReport item in Model)
+        {
+            using (Html.BeginDataTableRow(item, false))
+            {
+                @Html.TdWord(item.Manage)
+                @Html.TdWord(item.Bid)
+                @Html.TdWord(item.BusinessBid)
+                @Html.TdWord(item.TechBid)
+                @Html.TdWord(item.SealBid)
+                @Html.TdWord(item.CreditBid)
+                @Html.TdWord(item.DesignBid)
+                @Html.TdWord(item.BidSum)
+            }
+        }
+    }
+}
+<div class="bb-grid-message">
+        <p>注明：默认显示上个月的任务汇总；</p>
+</div>

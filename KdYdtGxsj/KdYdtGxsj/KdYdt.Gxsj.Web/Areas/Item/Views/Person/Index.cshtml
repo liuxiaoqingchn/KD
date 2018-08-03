@@ -1,0 +1,54 @@
+﻿@{
+    Layout = null;
+}
+
+
+@model  KdDataResponse<PrjPerson>
+
+@using (Html.BeginPageTitle())
+{
+    @Html.BbBtnLinkAdd()
+    @Html.BbBtnGridDelete(this.Model)
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch(this.Model, true))
+    {
+        @Html.BbSearchFor(x => x.PersonName)
+        @Html.BbSearchFor(x => x.PersonNumberID)
+        @Html.BbSearchFor(x => x.CorpName)
+        @Html.BbSearchFor(x=>x.ISLocking, "是否有在建工程")
+        @Html.BbSearchFor(x => x.Rank)
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(true))
+        {
+            @Html.BbTHeadFor(x => x.PersonName)
+            @Html.BbTHeadFor(x => x.PersonNumberID)
+            @Html.BbTHeadFor(x => x.PersonSex)
+            @Html.BbTHeadFor(x => x.CorpName)
+            @Html.BbTHeadFor(x => x.LinkPhone)
+            @Html.BbTHeadFor(x => x.CredentialID)
+            @Html.BbTHeadFor(x => x.Rank)
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (PrjPerson item in Model)
+            {
+                using (Html.BeginDataTableRow(item, true))
+                {
+                    <td>@Html.ActionLink(item.PersonName, "Edit", new { id = item.Id })</td>
+                    <td>@item.PersonNumberID</td>
+                    <td>@item.PersonSex</td>
+                    <td>@item.CorpName</td>
+                    <td>@item.LinkPhone</td>
+                    <td>@item.CredentialID</td>
+                    <td>@item.Rank</td>
+                }
+            }
+        }
+    }
+}

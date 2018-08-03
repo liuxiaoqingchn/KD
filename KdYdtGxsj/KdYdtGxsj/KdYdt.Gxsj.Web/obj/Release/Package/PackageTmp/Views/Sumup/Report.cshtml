@@ -1,0 +1,39 @@
+﻿@model OaSumupReport
+
+@Html.PageTitle()
+
+@using (Html.BeginDataGrid())
+{ 
+    @Html.NavBreadcrumbWithSearch(new KdListItem("查询统计"))
+
+    @Html.TabHeader()
+
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(false))
+        {
+            @Html.BbTHead("所属部门")
+            @Html.BbTHead("姓名")
+            @Html.BbTHead("实交")
+            @Html.BbTHead("补交")
+            @Html.BbTHead("应审批")
+            @Html.BbTHead("实际审批")
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (OaSumupReportItem item in Model)
+            {
+                using (Html.BeginDataTableRow(item, false))
+                {
+                    @Html.TdWord(item.DeptName)
+                    @Html.TdWord(item.RealName)
+                    @Html.TdWord(item.CountSubmitted)
+                    @Html.TdWord(item.CountDelayed)
+                    @Html.TdWord(item.CountReview)
+                    @Html.TdWord(item.CountReviewed)
+                }
+            }
+        }
+    }
+} 

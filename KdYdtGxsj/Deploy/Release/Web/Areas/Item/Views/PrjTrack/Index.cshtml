@@ -1,0 +1,53 @@
+﻿@model  KdDataResponse<PrjPlan>
+@{
+    Layout = null;
+}
+@using (Html.BeginPageTitle())
+{
+    @*@Html.BbBtnLinkAdd()*@
+    @Html.BbBtnGridDelete(this.Model)
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch(this.Model, true))
+    {
+        @Html.BbSearchFor(x => x.PrjName)
+        @Html.BbSearchFor(x => x.TenderUnit)
+        @Html.BbSearchFor(x => x.EngScale)
+        @Html.BbSearchFor(x => x.ProjectDate)
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(true))
+        {
+            @Html.BbTHeadFor(x => x.PrjStatus)
+            @Html.BbTHeadFor(x => x.PrjName)
+            @Html.BbTHeadFor(x => x.BuildUnit)
+            @Html.BbTHeadFor(x => x.TenderMthod)
+            @Html.BbTHeadFor(x => x.ManageMode)
+            @Html.BbTHeadFor(x => x.PrjNature)
+            @Html.BbTHeadFor(x => x.EngScale)
+            @Html.BbTHeadFor(x => x.ProjectDate)
+
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (PrjPlan item in Model)
+            {
+                using (Html.BeginDataTableRow(item, true))
+                {
+                    <td>@item.PrjStatus</td>
+                        <td>@Html.ActionLink(item.PrjName, "Edit", new { id = item.Id })</td>
+                        <td>@item.BuildUnit</td>
+                        <td>@item.TenderMthod</td>
+                        <td>@item.ManageMode</td>
+                        <td>@item.PrjNature</td>
+                        <td>@item.EngScale</td>
+                        <td>@item.ProjectDate.ToDateString()</td>
+                }
+            }
+        }
+    }
+}

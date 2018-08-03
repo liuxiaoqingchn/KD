@@ -1,0 +1,30 @@
+﻿@model KdDataResponse<KdUserTask>
+
+@using (Html.BeginDataList())
+{
+    foreach (KdUserTask item in Model)
+    {
+        using (Html.BeginDataListItem(item, true))
+        {
+            <dd class="item-icon">
+                @Html.ToIcon(item.TaskIsOvered())
+            </dd>
+            <dt>
+                <a href="@Url.GetUrlReturn(item.TaskUrl)">@item.SourceName</a>
+            </dt>
+            <dl>
+                <dd title="@item.HandleContent">【@item.StatusDesc】</dd>
+                <dt>类型</dt>
+                <dd class="text-success">@item.ItemName</dd>
+                @if (Html.IsAdminUser())
+                {
+                    <dt>接收人</dt>
+                    <dd class="text-danger">@item.ReceiverTitle</dd>
+                }
+            </dl>
+            <dd class="item-row item-notes">
+                @string.Format("由 {0} 于 {1} 发布", item.CreateName, item.CreateTime)
+            </dd>
+        }
+    }
+}

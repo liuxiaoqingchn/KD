@@ -1,0 +1,162 @@
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdYdt.Gxsj.Oa.Domains.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdYdt.Gxsj.Oa.Domains.pdb
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\EntityFramework.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\EntityFramework.SqlServer.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Base.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Data.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Data.EntityFramework.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.DbParts.Commons.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.DbParts.UserExts.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Newtonsoft.Json.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\EntityFramework.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\EntityFramework.SqlServer.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Base.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Data.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Data.EntityFramework.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.DbParts.Commons.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.DbParts.UserExts.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Newtonsoft.Json.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\obj\Debug\KdYdt.Gxsj.Oa.Domains.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\obj\Debug\KdYdt.Gxsj.Oa.Domains.pdb
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Office.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OOXML.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OpenXml4Net.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OpenXmlFormats.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Office.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OOXML.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OpenXml4Net.xml
+E:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\obj\Debug\KdYdt.Gxsj.Oa.Domains.csprojResolveAssemblyReference.cache
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdYdt.Gxsj.Oa.Domains.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdYdt.Gxsj.Oa.Domains.pdb
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\EntityFramework.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\EntityFramework.SqlServer.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Base.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Data.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Data.EntityFramework.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.DbParts.Commons.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.DbParts.UserExts.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Office.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Newtonsoft.Json.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OOXML.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OpenXml4Net.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\EntityFramework.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\EntityFramework.SqlServer.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Base.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Data.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Data.EntityFramework.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.DbParts.Commons.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.DbParts.UserExts.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Office.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Newtonsoft.Json.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OOXML.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OpenXml4Net.xml
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\obj\Debug\KdYdt.Gxsj.Oa.Domains.csproj.CoreCompileInputs.cache
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\obj\Debug\KdYdt.Gxsj.Oa.Domains.dll
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\obj\Debug\KdYdt.Gxsj.Oa.Domains.pdb
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\obj\Debug\KdYdt.Gxsj.Oa.Domains.csproj.CopyComplete
+D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\obj\Debug\KdYdt.Gxsj.Oa.Domains.csprojAssemblyReference.cache
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdYdt.Gxsj.Oa.Domains.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdYdt.Gxsj.Oa.Domains.pdb
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\EntityFramework.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\EntityFramework.SqlServer.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Base.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Data.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Data.EntityFramework.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.DbParts.Commons.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.DbParts.UserExts.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Office.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Newtonsoft.Json.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OOXML.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OpenXml4Net.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OpenXmlFormats.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\ICSharpCode.SharpZipLib.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\EntityFramework.xml
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\EntityFramework.SqlServer.xml
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Base.xml
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Data.xml
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Data.EntityFramework.xml
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.DbParts.Commons.xml
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.DbParts.UserExts.xml
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Office.xml
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.xml
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Newtonsoft.Json.xml
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.xml
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OOXML.xml
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OpenXml4Net.xml
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\zh-Hans\EntityFramework.resources.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\obj\Debug\KdYdt.Gxsj.Oa.Domains.csprojAssemblyReference.cache
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\obj\Debug\KdYdt.Gxsj.Oa.Domains.csproj.CoreCompileInputs.cache
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\obj\Debug\KdYdt.Gxsj.Oa.Domains.csproj.CopyComplete
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\obj\Debug\KdYdt.Gxsj.Oa.Domains.dll
+G:\桌面\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\obj\Debug\KdYdt.Gxsj.Oa.Domains.pdb
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdYdt.Gxsj.Oa.Domains.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdYdt.Gxsj.Oa.Domains.pdb
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\EntityFramework.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\EntityFramework.SqlServer.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Base.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Data.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Data.EntityFramework.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.DbParts.Commons.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.DbParts.UserExts.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Office.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Newtonsoft.Json.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OOXML.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OpenXml4Net.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OpenXmlFormats.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\ICSharpCode.SharpZipLib.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\EntityFramework.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\EntityFramework.SqlServer.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Base.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Data.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Data.EntityFramework.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.DbParts.Commons.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.DbParts.UserExts.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\KdCore.Office.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\Newtonsoft.Json.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OOXML.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\NPOI.OpenXml4Net.xml
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\zh-Hans\EntityFramework.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\obj\Debug\KdYdt.Gxsj.Oa.Domains.csprojAssemblyReference.cache
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\obj\Debug\KdYdt.Gxsj.Oa.Domains.csproj.CoreCompileInputs.cache
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\obj\Debug\KdYdt.Gxsj.Oa.Domains.csproj.CopyComplete
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\obj\Debug\KdYdt.Gxsj.Oa.Domains.dll
+G:\桌面\凯德\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Oa.Domains\obj\Debug\KdYdt.Gxsj.Oa.Domains.pdb

@@ -1,0 +1,68 @@
+﻿
+@model  PrjCorp
+
+
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnSubmit()
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">企业信息</span>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.CorpCode, 4, 0, null, null, null, new { required = true })
+                @Html.BbTextBoxFor(x => x.CorpName, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.LinkMan, 4)
+                @Html.BbTextBoxFor(x => x.LinkPhone, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Fax, 4)
+                @Html.BbTextBoxFor(x => x.Email, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.RegFund, 4)
+                @Html.BbTextBoxFor(x => x.RegDate, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.LegalPerson, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.RegAddress, 10)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.CorpWebSite, 10)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Remark, 10)
+            </div>
+
+            @Html.AnnexUnit()
+            @Html.RowModifier()
+        </div>
+    </div>
+    @Html.Partial("_Persons", this.Model.Persons)
+    @Html.Partial("_Aptitudes", this.Model.Aptitudes)
+    @Html.Partial("_Facilitys", this.Model.Facilitys)
+    @Html.Partial("_Praises", this.Model.Praises)
+
+
+
+
+
+
+}
+
+@Html.AnnexUpload()

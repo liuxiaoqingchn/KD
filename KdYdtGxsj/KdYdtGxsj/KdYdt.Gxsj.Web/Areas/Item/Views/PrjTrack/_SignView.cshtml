@@ -1,0 +1,35 @@
+﻿@model   PrjSign
+<div class="panel panel-info">
+    <div class="panel-heading"><span class="panel-title">投标报名</span></div>
+    <div class="panel-body">
+        <div class="row">
+            @Html.SjPickPrjPlanFor(x => x.ProjectId, x => x.PrjCode, 1)
+            @Html.BbTextBoxFor(x => x.PrjName, 10)
+        </div>
+        <div class="row">
+            @Html.BbTextBoxFor(x => x.BondMoney, null, "万元", 2)
+            @Html.BbTextBoxFor(x => x.BondReturnDate, 2)
+            @Html.BbRadioListFor(x => x.IsBond, 2)
+        </div>
+        <div class="row">
+            @Html.BbTextBoxFor(x => x.SignStartData)
+            @Html.BbTextBoxFor(x => x.SignEndData)
+        </div>
+        <div class="row">
+            @Html.BbTextBoxFor(x => x.SignAddress)
+            @Html.BbRadioListFor(x => x.IsTender)
+        </div>
+        <div class="row">
+            @Html.BbTextBoxFor(x => x.QualAuditMode)
+            @Html.BbTextBoxFor(x => x.ReviewDate)
+        </div>
+        <div class="row">
+            @Html.BbTextBoxFor(x => x.SignDate)
+        </div>
+        <div class="row">
+            @Html.BbTextBoxFor(x => x.BidExplain, 10)
+        </div>
+        @Html.AnnexUnit()
+        @Html.RowModifier()
+    </div>
+</div>

@@ -1,0 +1,3 @@
+﻿2018-03-23 10:28:44.35667 [T00082][ Alert  ] HomeController - 【Session:0zchm1npz0n1lg5vrhgflexq】【HttpGET:54SA37T339WR】[DataScope:HandleFull]
+              已耗时：10.6142711秒 http://localhost:63384/Home/Login?from=%2fMenus
+              【请求处理】执行时间 10.6143 秒【缓慢】

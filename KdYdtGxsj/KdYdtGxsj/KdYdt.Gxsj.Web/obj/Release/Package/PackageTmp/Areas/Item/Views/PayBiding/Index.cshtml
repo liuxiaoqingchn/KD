@@ -1,0 +1,50 @@
+﻿@model  KdDataResponse<PayBiding>
+
+@using (Html.BeginPageTitle())
+{
+    @Html.BbBtnLinkAdd()
+    @Html.BbBtnLinkDelete()
+}
+
+@using (Html.BeginDataGrid())
+{
+    using (Html.BeginNavBreadcrumbWithSearch(this.Model, true))
+    {
+        @Html.BbSearchFor(x => x.PrjCode)
+        @Html.BbSearchFor(x => x.PrjName)
+        @Html.BbSearchFor(x => x.BidMode)
+        @Html.BbSearchFor(x => x.TenderUnit)
+        @Html.BbSearchFor(x => x.EngScale)
+        @Html.BbSearchFor(x => x.TotalMoney)
+    }
+    using (Html.BeginDataTable())
+    {
+        using (Html.BeginDataTableHeader(true))
+        {
+            @Html.BbTHeadFor(x => x.PrjCode)
+            @Html.BbTHeadFor(x => x.PrjName)
+            @Html.BbTHeadFor(x => x.BidModeName)
+            @Html.BbTHeadFor(x => x.TenderUnit)
+            @Html.BbTHeadFor(x => x.EngScale)
+            @Html.BbTHeadFor(x => x.TotalMoney)
+            @Html.BbTHeadFor(x => x.HandlingDate)
+        }
+
+        using (Html.BeginDataTableBody())
+        {
+            foreach (PayBiding item in Model)
+            {
+                using (Html.BeginDataTableRow(item, true))
+                {
+                    <td>@item.PrjCode</td>
+                    <td>@Html.ActionLink(item.PrjName, "Edit", new { id = item.Id })</td>
+                    <td>@item.BidModeName</td>
+                    <td>@item.TenderUnit</td>
+                    <td>@item.EngScale</td>
+                    <td>@item.TotalMoney</td>
+                    <td>@item.HandlingDate</td>
+                }
+            }
+        }
+    }
+}

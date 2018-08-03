@@ -1,0 +1,1865 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KdCore.Data.EntityFramework</name>
+    </assembly>
+    <members>
+        <member name="T:KdCore.Data.EntityFramework.BbDbEnvironment">
+            <summary>
+            数据库环境相关参数封装
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbEnvironment.Create(System.Data.Common.DbConnection)">
+            <summary>
+            基于指定的 DbConnection 检索数据库相关环境参数。
+            </summary>
+            <param name="connection"></param>
+            <returns></returns>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbEnvironment.Connection">
+            <summary>
+            数据库连接
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbEnvironment.ProviderFactory">
+            <summary>
+            当前连接的 <see cref="T:System.Data.Common.DbProviderFactory"/>
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbEnvironment.ProviderServices">
+            <summary>
+            当前连接的 <see cref="T:System.Data.Entity.Core.Common.DbProviderServices"/>
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbEnvironment.ProviderManifest">
+            <summary>
+            当前连接的 <see cref="T:System.Data.Entity.Core.Common.DbProviderManifest"/>
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbEnvironment.Version">
+            <summary>
+            数据库版本
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbEnvironment.NamespaceName">
+            <summary>
+            数据提供程序命名空间
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbEnvironment.Detect(System.Data.Common.DbConnection)">
+            <summary>
+            数据库环境检测
+            </summary>
+            <param name="connection"></param>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.BbDynamicDbConfiguration">
+            <summary>
+            动态自动生成的实体框架 <see cref="T:System.Data.Entity.DbConfiguration" /> 的配置
+            </summary>
+        </member>
+        <member name="F:KdCore.Data.EntityFramework.BbDynamicDbConfiguration.ProviderName_MySql">
+            <summary>
+            MySql 数据库的数据提供程序标识名称
+            </summary>
+        </member>
+        <member name="F:KdCore.Data.EntityFramework.BbDynamicDbConfiguration.ProviderName_Oracle">
+            <summary>
+            Oracle 数据库的数据提供程序标识名称
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDynamicDbConfiguration.#ctor(System.String[])">
+            <summary>
+            构造方法
+            </summary>
+            <param name="providerNames"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDynamicDbConfiguration.DynamicConfigs(System.String[])">
+            <summary>
+            根据数据提供程序标识名称动态处理实体框架所需配置
+            </summary>
+            <param name="providerNames"></param>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDynamicDbConfiguration.DomainAssemblies">
+            <summary>
+            获取已加载到此应用程序域的执行上下文中的程序集。
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDynamicDbConfiguration.GetAppDomainAssembly(System.String)">
+            <summary>
+            查找指定名称的程序
+            </summary>
+            <param name="assemblyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDynamicDbConfiguration.HandleOracleConfigs(System.String)">
+            <summary>
+            处理 Oracle 数据库所需配置
+            </summary>
+            <param name="providerName"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDynamicDbConfiguration.HandleMySQLConfigs(System.String)">
+            <summary>
+            处理 MySQL 数据库所需配置
+            </summary>
+            <param name="providerName"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDynamicDbConfiguration.CreateMySQLFuncSqlGenerator(System.Type)">
+            <summary>
+            动态生成 MySQL 数据模型迁移/初始化时 索引的 SQL语句生成处理。
+            官方提供的处理中默认采用 Hash 类型的索引，会导致索引创建失败
+            </summary>
+            <param name="baseSqlGeneratorType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDynamicDbConfiguration.MySQLTrimSchemaPrefix(System.String)">
+            <summary>
+            MySQL 特殊处理方法
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDynamicDbConfiguration.MySQLIndexGenerate(System.Data.Entity.Migrations.Model.CreateIndexOperation)">
+            <summary>
+            修复默认采用Hash格式的Index，数据库不支持，造成错误
+            </summary>
+            <param name="op"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.MySQLHistoryContext">
+            <summary>
+            MySQL 官方接口中提供的 <see cref="T:System.Data.Entity.Migrations.History.HistoryContext"/>。
+            因 <see cref="T:System.Data.Entity.Migrations.History.HistoryContext"/> 必须与 <see cref="T:System.Data.Entity.DbConfiguration"/> 在同一程序集，故复制到此
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.MySQLHistoryContext.#ctor(System.Data.Common.DbConnection,System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="existingConnection"></param>
+            <param name="defaultSchema"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.MySQLHistoryContext.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            重写基类方法
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.Conventions.BbPropertyColumnConvention">
+            <summary>
+            根据 <see cref="T:KdCore.DataBase.BbDbTableConfigs"/> 的设置，对属性映射列进行顺序等设置
+            </summary>
+        </member>
+        <member name="F:KdCore.Data.EntityFramework.Conventions.BbPropertyColumnConvention.notSetIndex">
+            <summary>
+            未进行设置的列在生成表结构时的先后顺序序号
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.Conventions.BbPropertyColumnConvention.ApplyType(System.Data.Entity.ModelConfiguration.Configuration.ConventionTypeConfiguration)">
+            <summary>
+            类型配置处理
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.Conventions.BbPropertyColumnConvention.ApplyProperty(System.Data.Entity.ModelConfiguration.Configuration.ConventionPrimitivePropertyConfiguration)">
+            <summary>
+            属性配置处理
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.Conventions.BbPropertyBaseConvention">
+            <summary>
+            自动设置属性生成列的配置转换
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.Conventions.BbPropertyBaseConvention.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.Conventions.BbPropertyBaseConvention.ApplyType(System.Data.Entity.ModelConfiguration.Configuration.ConventionTypeConfiguration)">
+            <summary>
+            类型配置处理
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.Conventions.BbPropertyBaseConvention.ApplyProperty(System.Data.Entity.ModelConfiguration.Configuration.ConventionPrimitivePropertyConfiguration)">
+            <summary>
+            属性配置处理
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.Conventions.BbPropertyAutoMaxLengthConvention">
+            <summary>
+            根据属性名称自动进行设置字符串类型字段的最大长度
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.Conventions.BbPropertyAutoMaxLengthConvention.Apply(System.Data.Entity.Core.Metadata.Edm.EntityType,System.Data.Entity.Infrastructure.DbModel)">
+            <summary>
+            根据属性名称自动进行设置字符串类型字段的最大长度
+            </summary>
+            <param name="item"></param>
+            <param name="model"></param>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.Conventions.KdTimestampAttributeConvention">
+            <summary>
+            指示 <see cref="T:System.ComponentModel.DataAnnotations.TimestampAttribute"/> 行版本标识的属性映射的列不使用数据库自动复制，进行代码处理
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.Conventions.KdTimestampAttributeConvention.Apply(System.Data.Entity.ModelConfiguration.Configuration.ConventionPrimitivePropertyConfiguration,System.ComponentModel.DataAnnotations.TimestampAttribute)">
+            <summary>
+            属性映射列的转换设置
+            </summary>
+            <param name="configuration"></param>
+            <param name="attribute"></param>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.Conventions.KdIndexAttributeConvention">
+            <summary>
+            指示 <see cref="T:KdCore.Data.Entity.KdIndexAttribute"/> 索引标识的属性映射的列的映射处理
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.Conventions.KdIndexAttributeConvention.ConvertTo(KdCore.Data.Entity.KdIndexAttribute,System.Reflection.PropertyInfo)">
+            <summary>
+            转换为 EntityFramework 的 索引特性标注
+            </summary>
+            <param name="kdIndex"></param>
+            <param name="property"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.Conventions.KdIndexAttributeConvention.CreateAnnotation(System.Reflection.PropertyInfo,System.Collections.Generic.IList{KdCore.Data.Entity.KdIndexAttribute})">
+            <summary>
+            转换为 EntityFramework 的 索引特性标注
+            </summary>
+            <param name="property"></param>
+            <param name="kdIndexes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.Conventions.KdIndexAttributeConvention.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.BbDbSqlLogFormatter">
+            <summary>
+            EntityFramework 的 SQL 日志输出格式化工具类
+            </summary>
+        </member>
+        <member name="F:KdCore.Data.EntityFramework.BbDbSqlLogFormatter._isBatchMode">
+            <summary>
+            是否将多行日志做为一个批次一次性输出
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.#ctor(System.Action{System.String})">
+            <summary>
+            构造方法
+            </summary> 
+            <param name="writeAction"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.#ctor(System.Data.Entity.DbContext,System.Action{System.String})">
+            <summary>
+            构造方法
+            </summary>
+            <param name="context"></param>
+            <param name="writeAction"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.BatchPreare">
+            <summary>
+            为输出一个日志批次做准备
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.BatchOpen(System.Data.Common.DbConnection,System.Data.Entity.Infrastructure.Interception.MutableInterceptionContext)">
+            <summary>
+            开始输出一个日志批次
+            </summary>
+            <param name="connection"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.BatchOpen``1(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{``0})">
+            <summary>
+            开始输出一个日志批次
+            </summary>
+            <typeparam name="TResult"></typeparam>
+            <param name="command"></param>
+            <param name="interceptionContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.BatchOpen(System.Data.Common.DbConnection,System.Data.Entity.Infrastructure.Interception.BeginTransactionInterceptionContext)">
+            <summary>
+            开始输出一个日志批次
+            </summary>
+            <param name="connection"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.BatchOpen(System.Data.Common.DbTransaction,System.Data.Entity.Infrastructure.Interception.DbTransactionInterceptionContext)">
+            <summary>
+            开始输出一个日志批次
+            </summary>
+            <param name="transaction"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.BatchClose">
+            <summary>
+            完成一个日志批次的输出
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.MergeLogLines(System.String)">
+            <summary>
+            合并日志消息的字符串行
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.GetLineStartWord(System.String)">
+            <summary>
+            解析一行 SQL 的开头单词
+            </summary>
+            <param name="line"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.MergeSqlLines(System.String)">
+            <summary>
+            合并SQL语句的字符串行
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.FlushBatchLines">
+            <summary>
+            处理并输出已缓存的多行日志语句
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.Write(System.String)">
+            <summary>
+            重写基类日志输出方法，进行拦截，并处理为批量输出
+            </summary>
+            <param name="output"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.WriteFinal(System.String)">
+            <summary>
+            最终的日志输出方法
+            </summary>
+            <param name="output"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.Opened(System.Data.Common.DbConnection,System.Data.Entity.Infrastructure.Interception.DbConnectionInterceptionContext)">
+            <summary>
+            重写基类方法：打开数据库连接
+            </summary>
+            <param name="connection"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.Closed(System.Data.Common.DbConnection,System.Data.Entity.Infrastructure.Interception.DbConnectionInterceptionContext)">
+            <summary>
+            重写基类方法：关闭数据库连接
+            </summary>
+            <param name="connection"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.LogCommand``1(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{``0})">
+            <summary>
+            重写基类方法：开始执行 DbCommand 时的日志输出
+            </summary>
+            <typeparam name="TResult"></typeparam>
+            <param name="command"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.LogResult``1(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{``0})">
+            <summary>
+            重写基类方法：DbCommand 执行完成时的日志输出
+            </summary>
+            <typeparam name="TResult"></typeparam>
+            <param name="command"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.BeganTransaction(System.Data.Common.DbConnection,System.Data.Entity.Infrastructure.Interception.BeginTransactionInterceptionContext)">
+            <summary>
+            重写基类方法：启动事务时的日志输出
+            </summary>
+            <param name="connection"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.Committed(System.Data.Common.DbTransaction,System.Data.Entity.Infrastructure.Interception.DbTransactionInterceptionContext)">
+            <summary>
+            重写基类方法：事务提交时的日志输出
+            </summary>
+            <param name="transaction"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.RolledBack(System.Data.Common.DbTransaction,System.Data.Entity.Infrastructure.Interception.DbTransactionInterceptionContext)">
+            <summary>
+            重写基类方法：事务回滚时的日志输出
+            </summary>
+            <param name="transaction"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.Disposing(System.Data.Common.DbConnection,System.Data.Entity.Infrastructure.Interception.DbConnectionInterceptionContext)">
+            <summary>
+            重写基类方法：释放资源时的日志输出
+            </summary>
+            <param name="connection"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbSqlLogFormatter.Disposing(System.Data.Common.DbTransaction,System.Data.Entity.Infrastructure.Interception.DbTransactionInterceptionContext)">
+            <summary>
+            重写基类方法：释放资源时的日志输出
+            </summary>
+            <param name="transaction"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.BbUtilModelVersion">
+            <summary>
+            DbContext 版本更新处理工具
+            </summary>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.EfHistoryRowComparer">
+            <summary>
+            更新记录比较，忽略迁移ID和EF版本号，进比较 ContextKey 和 Models
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.EfHistoryRowComparer.Equals(System.Data.Entity.Migrations.History.HistoryRow,System.Data.Entity.Migrations.History.HistoryRow)">
+            <summary>
+            确定指定的对象是否相等。
+            </summary>
+            <param name="x">要比较的第一个 EfMigrationHistory 对象。</param>
+            <param name="y">要比较的第二个 EfMigrationHistory 对象。</param>
+            <returns>如果指定的对象相等，则为 true；否则为 false。</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.EfHistoryRowComparer.GetHashCode(System.Data.Entity.Migrations.History.HistoryRow)">
+            <summary>
+            返回指定对象的哈希代码。
+            </summary>
+            <param name="obj">将为其返回哈希代码的 EfMigrationHistory。</param>
+            <returns>指定对象的哈希代码。</returns>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.KdDbAutoMigrateAttribute">
+            <summary>
+            自动更新数据模型定义的标识属性
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.KdDbAutoMigrateAttribute.AutoMigrate">
+            <summary>
+            获取或设置是否自动更新数据模型定义
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbAutoMigrateAttribute.#ctor">
+            <summary>
+            构造方法，设置为自动更新数据模型定义
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbAutoMigrateAttribute.#ctor(System.Boolean)">
+            <summary>
+            构造方法，指定是否自动更新数据模型定义
+            </summary>
+            <param name="autoMigrate"></param>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.BbDbContext">
+            <summary>
+            实体框架数据操作模型上下文的基本扩展基类；因不做过多的表结构处理，可使用于现有的旧数据库上
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.DbLogAutoMergeSqlLines">
+            <summary>
+            获取或设置在数据SQL语句日志时是否使用单行模式
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.DbLogAutoMigrationSQL">
+            <summary>
+            获取或设置在数据模型有更改时是否记录数据结构自动迁移的更新　SQL　语句
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.AutoMigrationAllowDataLoss">
+            <summary>
+            获取或设置在数据模型有更改时是否允许在丢失数据的情况下也自动更新数据库结构
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.AutoMigrationSaveXmlFile">
+            <summary>
+            获取或设置在数据模型有更改时是否将更新后的数据模型记录保存为 XML 文件，可在比对数据结构变化时使用
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.AutoMigrationSaveJsonFile">
+            <summary>
+            获取或设置在数据模型有更改时是否将更新后的数据模型记录保存为 JSON 文件，可在部署更新时使用
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.AutoMigrationLoadJsonFile">
+            <summary>
+            获取或设置是否直接从JSON文件中加载数据模型的迁移更新记录
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.UseDbManageIndexes">
+            <summary>
+            获取或设置是否禁用索引映射约定，不在代码中进行索引创建等处理；默认值为 false
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.UseDbNullSemantics">
+            <summary>
+            获取或设置一个值，该值指示当比较两个操作数，而它们都可能为 null 时，是否展示数据库 null 语义。默认值为 false。
+            例如：UseDatabaseNullSemantics 为 true，则 (operand1 == operand2) 将转换为 (operand1 = operand2)；
+            UseDatabaseNullSemantics 为 false，则将转换为 (((operand1 = operand2) AND (NOT (operand1 IS NULL OR operand2 IS NULL))) OR ((operand1 IS NULL) AND (operand2 IS NULL)))。
+            这里是全局默认设置，可在 DbService 中重新设置
+            </summary>
+            <remarks>如果启用数据库 null 比较行为，则为 true；否则为 false。</remarks>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.FixBugModelIndexes">
+            <summary>
+            获取或设置是否修复数据模型更新记录中的 Index 配置错误；默认值为 false
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.#ctor(System.Data.Entity.Infrastructure.DbCompiledModel)">
+            <summary>
+            使用约定构造一个新的上下文实例以创建将连接到的数据库的名称，并从给定模型初始化该名称。
+            按照约定，该名称是派生上下文类的全名（命名空间与类名称的组合）。
+            请参见有关这如何用于创建连接的类备注。
+            </summary>
+            <param name="model">支持此上下文的模型。 </param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.#ctor(System.String)">
+            <summary>
+            可以将给定字符串用作将连接到的数据库的名称或连接字符串来构造一个新的上下文实例。
+            请参见有关这如何用于创建连接的类备注。
+            </summary>
+            <param name="nameOrConnectionString">数据库名称或连接字符串。</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.#ctor(System.Data.Common.DbConnection,System.Boolean)">
+            <summary>
+            通过现有连接来连接到数据库以构造一个新的上下文实例。
+            如果 contextOwnsConnection 为 false，则在释放上下文时将不释放该连接。
+            </summary>
+            <param name="existingConnection">要用于新的上下文的现有连接。</param>
+            <param name="contextOwnsConnection">如果设置为 true，则释放上下文时将释放该连接；否则调用方必须释放该连接。 </param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.#ctor(System.Data.Entity.Core.Objects.ObjectContext,System.Boolean)">
+            <summary>
+            围绕现有 ObjectContext 构造一个新的上下文实例。
+            </summary>
+            <param name="objectContext">要使用新的上下文包装的现有 ObjectContext。</param>
+            <param name="dbContextOwnsObjectContext">如果设置为 true，则释放 DbContext 时将释放 ObjectContext；否则调用方必须释放该连接。</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.#ctor(System.String,System.Data.Entity.Infrastructure.DbCompiledModel)">
+            <summary>
+            可以将给定字符串用作将连接到的数据库的名称或连接字符串来构造一个新的上下文实例，并从给定模型初始化该实例。
+            请参见有关这如何用于创建连接的类备注。
+            </summary>
+            <param name="nameOrConnectionString">数据库名称或连接字符串。</param>
+            <param name="model">支持此上下文的模型。 </param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.#ctor(System.Data.Common.DbConnection,System.Data.Entity.Infrastructure.DbCompiledModel,System.Boolean)">
+            <summary>
+            通过使用现有连接来连接到数据库以构造一个新的上下文实例，并从给定模型初始化该实例。
+            如果 contextOwnsConnection 为 false，则在释放上下文时将不释放该连接。
+            </summary>
+            <param name="existingConnection">要用于新的上下文的现有连接。</param>
+            <param name="model">支持此上下文的模型。</param>
+            <param name="contextOwnsConnection">如果设置为 true，则释放上下文时将释放该连接；否则调用方必须释放该连接。</param>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.Logger">
+            <summary>
+            日志记录类
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.Id">
+            <summary>
+            获取或设置当前实体模型的识别标识
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.CurrUser">
+            <summary>
+            获取或设置当前操作数据的用户
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.BatchTag">
+            <summary>
+            获取或设置当前操作数据的批次标识（或可视为事务标识）
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.TimeStamp">
+            <summary>
+            初始化时间戳
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.DebugMode">
+            <summary>
+            获取或设置是否调试模式，调式模式下会输出更多的日志信息等
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.DbRowSizeLimited">
+            <summary>
+            获取或设置当前实体模型对应的数据库是否对数据行有尺寸限制；
+            SQL Server 暂未发现有限制，
+            MySQL 有限制
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.DbIncompatibleRowVersion">
+            <summary>
+            获取或设置当前实体模型对应的数据库是否不支持 RowVersion；
+            SQL Server 支持，使用 timestamp 数据类型
+            MySQL 不支持
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.DbIncompatibleIndexes">
+            <summary>
+            获取或设置当前实体模型对应的数据库是否不支持索引（与EF协作的索引）；
+            SQL Server 支持
+            MySQL 自动生成时会出错，尚未处理好索引支持
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.DbSelfManageIndexes">
+            <summary>
+            获取或设置当前实体模型的数据库是否自行管理索引，不需要在代码中进行索引处理；默认值为 false
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.DataSourceName">
+            <summary>
+            获取或设置输出日志时用来代替【数据库连接字符串】的字符串
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.DataSourcePath">
+            <summary>
+            获取当前数据库连接字符串
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.DataSourceObject">
+            <summary>
+            获取当前的数据源
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.Connection">
+            <summary>
+            获取当前数据库连接
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.DbEnvironment">
+            <summary>
+            获取或设置当前操作的数据库类型
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.AutoDetectChangesEnabled">
+            <summary>
+            获取或设置一个值，该值指示是否通过 DbContext 和相关类的方法自动调用 DetectChanges() 方法。默认值为 true。
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.DataLogsDetails">
+            <summary>
+            获取或设置是否启用用户操作自动日志（保存到数据库的日志）（EntityFramework 每次CURD操作的详细日志）
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.DataLogsBaseSerial">
+            <summary>
+            获取或设置用户操作自动日志（保存到数据库的日志）的批次序号基数
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.DataLogsUnify">
+            <summary>
+            获取或设置用户操作自动日志的统一格式化设置
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.DataLogWrite">
+            <summary>
+            获取或设置数据库操作日志输出方法
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.SqlLogged">
+            <summary>
+            获取是否记录SQL日志
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.BbDbContext.ObjContext">
+            <summary>
+            封装了CLR和数据库之间的连接, 作为数据的创建、读取、更新和删除操作接口的顶级对象
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.EnsureConfigInited">
+            <summary>
+            初始化唯一标识
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.DetectDatabase">
+            <summary>
+            数据库的兼容支持情况检测
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.OnDetectDatabase(KdCore.Data.EntityFramework.BbDbEnvironment)">
+            <summary>
+            数据库的兼容支持情况检测
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            模型创建事件处理；非特殊情况下不建议在子类中重写
+            </summary>
+            <param name="modelBuilder">数据模型构造器实例</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.DbSupportHandle(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            数据库的兼容支持情况的特殊处理
+            </summary>
+            <param name="modelBuilder">数据模型构造器实例</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.OnCreateModelPrepare(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            创建数据模型之前的准备工作
+            </summary>
+            <param name="builder">数据模型构造器实例</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.CreateModel(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            创建数据模型
+            可在子类中重写，以确定具体需要的映射配置；
+            添加映射的数据库表，以及详细的映射配置
+            </summary>
+            <param name="builder">数据模型构造器实例</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.OnCreateModelComplate(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            创建数据模型时，添加数据库表映射之后的处理
+            </summary>
+            <param name="builder">数据模型构造器实例</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.OnCreateModelComplated(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            创建数据模型基本完成后的处理
+            </summary>
+            <param name="builder">数据模型构造器实例</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.OnModelCreated(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            创建数据模型全部完成之后的处理
+            </summary>
+            <param name="builder">数据模型构造器实例</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.OnModelCreatedInternal(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            创建数据模型全部完成之后的处理
+            </summary>
+            <param name="builder">数据模型构造器实例</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.RegEntityType(System.Data.Entity.ModelConfiguration.Configuration.ConventionTypeConfiguration)">
+            <summary>
+            注册数据类型所在的数据模型的类型
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.BuildUserActionLogs">
+            <summary>
+            创建用户操作日志
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.SaveUserActionLogs(System.Collections.Generic.List{KdCore.Data.Users.KdUserAction})">
+            <summary>
+            保存用户操作日志
+            </summary>
+            <param name="logActions"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.FormatLogContent(System.String)">
+            <summary>
+            日志输出前的格式化处理
+            </summary>
+            <param name="logContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.LogExceptionOnlyMessage(System.Exception)">
+            <summary>
+            输出数据操作异常日志标记，不包含异常详细信息
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.Set(System.Type)">
+            <summary>
+            针对对上下文和基础存储中给定类型的实体的访问返回一个非泛型 DbSet 实例。
+            </summary>
+            <param name="entityType">实体的类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.Set``1">
+            <summary>
+            针对对上下文和基础存储中给定类型的实体的访问返回一个 DbSet(TEntity) 实例。
+            </summary>
+            <typeparam name="TEntity">实体的类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.OnShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)">
+            <summary>
+            在提交数据时，在执行 EF 自动验证数据库设置前的数据处理
+            </summary>
+            <param name="entityEntry"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)">
+            <summary>
+            判断是否需要验证数据字段值的有效性、合法性
+            </summary>
+            <param name="entityEntry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry,System.Collections.Generic.IDictionary{System.Object,System.Object})">
+            <summary>
+            数据验证
+            </summary>
+            <param name="entityEntry"></param>
+            <param name="items"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.OnSaveChanges">
+            <summary>
+            提交保存前的数据处理
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.SaveChanges">
+            <summary>
+            提交此上下文中所做的所有更改保存到基础数据库。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.SaveChangesAsync(System.Threading.CancellationToken)">
+            <summary>
+            异步提交数据修改到数据源
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.SqlInsert(System.String,System.String[],System.Object[])">
+            <summary>
+            新增数据
+            </summary>
+            <param name="tableName">表名</param>
+            <param name="fieldNames">字段名数值，为null或空时，表示所有字段</param>
+            <param name="fieldValues">要新增的字段值</param>
+            <returns>新增的数据条数</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.SqlInsert(System.String,System.Object[])">
+            <summary>
+            新增数据
+            </summary>
+            <param name="tableName">表名</param>
+            <param name="fieldValues">要新增的字段值</param>
+            <returns>新增的数据条数，-1表示出现错误</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.SqlInsert``1(``0,System.String[])">
+            <summary>
+            根据实体类中的数据，在数据库中新增记录
+            </summary>
+            <param name="entity">实体类对象</param>
+            <param name="excludeFields">要排除的属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.SqlUpdate(System.String,System.String[],System.Object[],System.String)">
+            <summary>
+            修改数据
+            </summary>
+            <param name="tableName">表名</param>
+            <param name="fieldNames">修改字段名</param>
+            <param name="fieldValues">修改后的字段值</param>
+            <param name="updateWhere">更新数据的where条件，不需要where关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.SqlDelete(System.String,System.String,System.String)">
+            <summary>
+            根据主键，删除表中数据
+            </summary>
+            <param name="tableName">表名</param>
+            <param name="id">主键值</param>
+            <param name="keyName">主键字段名称，默认为Id</param>
+            <returns>成功删除的数量</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.SqlDelete(System.String)">
+            <summary>
+            删除表中所有数据
+            </summary>
+            <param name="tableName">表名</param>
+            <returns>成功删除的数量</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.SqlDelete(System.String,System.Collections.IEnumerable,System.String)">
+            <summary>
+            根据主键，一次性删除多条数据
+            </summary>
+            <param name="tableName">表名</param>
+            <param name="keyName">主键字段名称，默认为Id</param>
+            <param name="ids">要删除的主键值</param>
+            <returns>成功删除的数量</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.GetNextSortNum(System.String,System.String)">
+            <summary>
+            获取表中下一个显示顺序
+            </summary>
+            <param name="tableName">表名</param>
+            <param name="sortFieldName">保存显示顺序的字段名称，要求数据类型为int</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.GetNextSortNum(System.String,System.String,System.Nullable{System.Int32},System.String)">
+            <summary>
+            获取表中下一个显示顺序
+            </summary>
+            <param name="tableName">表名</param>
+            <param name="sortFieldName">保存显示顺序的字段名称，要求数据类型为int</param>
+            <param name="stepNum">每个显示顺序之间的步长，不输入默认为10</param>
+            <param name="sqlWhere">查询条件，不需要带where关键字</param>
+            <returns>下一个显示顺序</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.TestContext(System.Boolean)">
+            <summary>
+            数据库连接测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.DbAttach``1(``0)">
+            <summary>
+            将给定实体附加到集的基础上下文中。 也就是说，将实体以“未更改”的状态放置到上下文中，就好像从数据库读取了该实体一样。
+            Attach 用于在上下文中重新填充数据库中已存在的实体。 SaveChanges 不会尝试将已附加的实体插入到数据库中，因为假定该实体存在于数据库中。 请注意，上下文中已处于其他状态的实体会将它们的状态设置为“未更改”。
+            如果该实体在上下文中已处于“未更改”状态，则 Attach 不执行任何操作。
+            </summary>
+            <typeparam name="TEntity">附加实体数据类型</typeparam> 
+            <param name="entity">附加的实体</param>
+            <returns>附加后的实体</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.DbAdd(System.Object,System.Type)">
+            <summary>
+            添加实体数据
+            </summary>
+            <param name="entity">添加的实体</param> 
+            <param name="entityType">保存的实体类型</param>
+            <returns>添加的实体</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.DbUpdate(System.Object,System.Type)">
+            <summary>
+            更新实体数据
+            </summary>
+            <param name="entity">更新的实体</param>
+            <param name="entityType">更新的实体类型</param>
+            <returns>更新的实体</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.DbDelete(System.Object,System.Type)">
+            <summary>
+            将给定实体标记为“已删除”（数据库不再存在）；
+            这样一来，当调用 SaveChanges 时，将从数据库中删除该实体。
+            </summary>
+            <param name="entity">将被删除的实体</param>
+            <param name="entityType">要删除的数据类型</param>
+            <returns>将被删除的实体</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.DbGet(System.Type,System.Object[])">
+            <summary>
+            通过主键方式获取数据
+            </summary>
+            <param name="entityType">查询数据返回实体类型</param> 
+            <param name="keyValues">主键</param>
+            <returns>查询结果实体，没有符合条件的结果时返回null</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbContext.DbQuery``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}[])">
+            <summary>
+            查询满足条件的数据
+            </summary>
+            <typeparam name="TEntity">查询数据返回实体类型</typeparam> 
+            <param name="predicates">筛选条件</param>
+            <returns>查询结果</returns>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.KdDbConfiguration">
+            <summary>
+            实体框架 <see cref="T:System.Data.Entity.DbConfiguration" /> 配置管理。
+            必须在使用任何实体框架功能之前在应用程序启动时对此进行设置，并且在之后应被视作只读的。 
+            </summary>
+        </member>
+        <member name="E:KdCore.Data.EntityFramework.KdDbConfiguration.EfConfigLoaded">
+            <summary>
+            EntityFramework 加载配置事件
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.KdDbConfiguration.Func_BuildLogFormatter">
+            <summary>
+            获取或设置 EntityFramework 的 SQL 语句输出格式化处理对象
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.KdDbConfiguration.Func_GetDbConfiguration">
+            <summary>
+            获取或设置当前系统中 EntityFramework 的 <see cref="T:System.Data.Entity.DbConfiguration" /> 的初始化获取方法，传入参数为需要支持的数据库提供程序
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbConfiguration.BuildLogFormatter(System.Data.Entity.DbContext,System.Action{System.String})">
+            <summary>
+            创建一个 EntityFramework 的 SQL 语句输出格式化处理对象
+            </summary>
+            <param name="context"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbConfiguration.EnsureInitedConfigs">
+            <summary>
+            确认已初始化 EntityFramework 实体框架的 <see cref="T:System.Data.Entity.DbConfiguration" /> 配置。
+            </summary> 
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbConfiguration.SetConfiguration(System.Data.Entity.DbConfiguration)">
+            <summary>
+            设置当前程序的 <see cref="T:System.Data.Entity.DbConfiguration" /> 的单一实例。 
+            可以在使用任何实体框架功能之前在应用程序启动时对此进行设置，并且在之后应被视作只读的。 
+            使用此方法配置的目的是为了改写 SQL 语句输出的格式
+            </summary>
+            <param name="configuration">此应用程序域的使用的 <see cref="T:System.Data.Entity.DbConfiguration" /> 的实例。</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbConfiguration.Set``1">
+            <summary>
+            设置当前程序的 <see cref="T:System.Data.Entity.DbConfiguration" /> 的实例。
+            可以在使用任何实体框架功能之前在应用程序启动时对此进行设置，并且在之后应被视作只读的。 
+            使用此方法配置的目的是为了改写 SQL 语句输出的格式 
+            </summary>
+            <typeparam name="TDbConfiguration"></typeparam>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbConfiguration.InternalGetDynamicConfigs(System.String[])">
+            <summary>
+            获取根据数据提供程序标识名称动态生成的实体框架 <see cref="T:System.Data.Entity.DbConfiguration" /> 的配置
+            </summary>
+            <param name="providerNames">数据提供程序标识名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbConfiguration.AutoInitConfiguration">
+            <summary>
+            依据现有设置，尝试自动进行初始化  <see cref="T:System.Data.Entity.DbConfiguration" /> 的配置。
+            </summary>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.KdDbContextFactory">
+            <summary>
+            DbContext 初始化工厂
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.KdDbContextFactory.Logger">
+            <summary>
+            日志记录对象
+            </summary>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.KdDbContextFactory.DbContextFactoryCaches">
+            <summary>
+            DbContext生成方法的缓存字典
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContextFactory.Register``1(System.Func{System.String,``0},System.String,System.Action{System.Data.Entity.DbContext},System.Nullable{System.Int32})">
+            <summary>
+            设置DbContent的初始化方法
+            </summary>
+            <typeparam name="TDbContext">DbContent类型参数</typeparam>
+            <param name="funcCreateDbContext">初始化方法</param> 
+            <param name="directory">自动更新数据模型时指定更新的配置文件目录</param>
+            <param name="seedAction">自动更新数据模型后执行更新种子数据</param>
+            <param name="timeout">数据执行超时时间设置（单位：秒），设置 null 时使用默认值</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContextFactory.DbRegister``1(System.Func{System.String},System.String,System.Action{System.Data.Entity.DbContext},System.Nullable{System.Int32})">
+            <summary>
+            设置数据模型的数据库连接获取方法
+            </summary>
+            <typeparam name="TDbContext">数据模型的类型参数</typeparam>
+            <param name="funcGetDbNameOrConnectionString">获取数据库连接名称或连接字符串的方法</param> 
+            <param name="directory">自动更新数据模型时指定更新的配置文件目录</param>
+            <param name="seedAction">自动更新数据模型后执行更新种子数据</param>
+            <param name="timeout">数据执行超时时间设置（单位：秒），设置 null 时使用默认值</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContextFactory.DbRegister``1(System.String,System.String,System.Action{System.Data.Entity.DbContext},System.Nullable{System.Int32})">
+            <summary>
+            设置数据模型的数据库连接获取方法
+            </summary>
+            <typeparam name="TDbContext">数据模型的类型参数</typeparam>
+            <param name="dbNameOrConnectionString">获取数据库连接名称或连接字符串的方法</param> 
+            <param name="directory">自动更新数据模型时指定更新的配置文件目录</param>
+            <param name="seedAction">自动更新数据模型后执行更新种子数据</param>
+            <param name="timeout">数据执行超时时间设置（单位：秒），设置 null 时使用默认值</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContextFactory.GetDbContext``1(System.String,System.Boolean)">
+            <summary>
+            获取DbContent的初始化方法
+            </summary>
+            <typeparam name="TDbContext">DbContent类型参数</typeparam>
+            <param name="dbNameOrConnectionString">数据库连接字符串或连接字符串配置名称</param>
+            <param name="isNullUseDbDefault">未获取到连接字符串时，是否使用默认数据库配置的连接字符串</param>
+            <returns>初始化方法</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContextFactory.DbInitialize``1">
+            <summary>
+            测试 DbContent 的初始化方法是否能正常调用获取到 DbContext
+            </summary>
+            <typeparam name="TDbContext">DbContent类型参数</typeparam>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.KdDbContext">
+            <summary>
+            实体框架数据库操作上下文的新建项目常用扩展基类；会自动处理一些表结构设置，一般不可使用于已有数据的数据库上
+            </summary>
+        </member>
+        <member name="F:KdCore.Data.EntityFramework.KdDbContext.actionsOnCreateModel">
+            <summary>
+            获取或设置在创建数据模型时的额外配置处理
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContext.GetActionOnCreateModel(System.Type)">
+            <summary>
+            获取在创建数据模型时的额外配置处理
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContext.SetActionOnCreateModel(System.Type,System.Action{System.Data.Entity.DbModelBuilder,KdCore.Data.EntityFramework.KdDbContext})">
+            <summary>
+            设置在创建数据模型时的额外配置处理
+            </summary>
+            <param name="type"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContext.OnCreateModel``1(System.Action{System.Data.Entity.DbModelBuilder,KdCore.Data.EntityFramework.KdDbContext})">
+            <summary>
+            设置在创建数据模型时的额外配置处理
+            </summary>
+            <typeparam name="TKdDbContext"></typeparam>
+            <param name="action"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContext.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContext.#ctor(System.Data.Entity.Infrastructure.DbCompiledModel)">
+            <summary>
+            使用约定构造一个新的上下文实例以创建将连接到的数据库的名称，并从给定模型初始化该名称。
+            按照约定，该名称是派生上下文类的全名（命名空间与类名称的组合）。
+            请参见有关这如何用于创建连接的类备注。
+            </summary>
+            <param name="model">支持此上下文的模型。 </param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContext.#ctor(System.String)">
+            <summary>
+            可以将给定字符串用作将连接到的数据库的名称或连接字符串来构造一个新的上下文实例。
+            请参见有关这如何用于创建连接的类备注。
+            </summary>
+            <param name="nameOrConnectionString">数据库名称或连接字符串。</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContext.#ctor(System.Data.Common.DbConnection,System.Boolean)">
+            <summary>
+            通过现有连接来连接到数据库以构造一个新的上下文实例。
+            如果 contextOwnsConnection 为 false，则在释放上下文时将不释放该连接。
+            </summary>
+            <param name="existingConnection">要用于新的上下文的现有连接。</param>
+            <param name="contextOwnsConnection">如果设置为 true，则释放上下文时将释放该连接；否则调用方必须释放该连接。 </param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContext.#ctor(System.Data.Entity.Core.Objects.ObjectContext,System.Boolean)">
+            <summary>
+            围绕现有 ObjectContext 构造一个新的上下文实例。
+            </summary>
+            <param name="objectContext">要使用新的上下文包装的现有 ObjectContext。</param>
+            <param name="dbContextOwnsObjectContext">如果设置为 true，则释放 DbContext 时将释放 ObjectContext；否则调用方必须释放该连接。</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContext.#ctor(System.String,System.Data.Entity.Infrastructure.DbCompiledModel)">
+            <summary>
+            可以将给定字符串用作将连接到的数据库的名称或连接字符串来构造一个新的上下文实例，并从给定模型初始化该实例。
+            请参见有关这如何用于创建连接的类备注。
+            </summary>
+            <param name="nameOrConnectionString">数据库名称或连接字符串。</param>
+            <param name="model">支持此上下文的模型。 </param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContext.#ctor(System.Data.Common.DbConnection,System.Data.Entity.Infrastructure.DbCompiledModel,System.Boolean)">
+            <summary>
+            通过使用现有连接来连接到数据库以构造一个新的上下文实例，并从给定模型初始化该实例。
+            如果 contextOwnsConnection 为 false，则在释放上下文时将不释放该连接。
+            </summary>
+            <param name="existingConnection">要用于新的上下文的现有连接。</param>
+            <param name="model">支持此上下文的模型。</param>
+            <param name="contextOwnsConnection">如果设置为 true，则释放上下文时将释放该连接；否则调用方必须释放该连接。</param>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.KdDbContext.TablePrefix">
+            <summary>
+            获取当前数据模型在替换表名前缀时默认使用的前缀名称
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContext.OnCreateModelPrepare(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            创建数据模型之前的准备工作
+            </summary>
+            <param name="builder">数据模型构造器实例</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContext.OnCreateModelComplated(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            创建数据模型之后的处理
+            </summary>
+            <param name="builder">数据模型构造器实例</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContext.OnCreateModelIndexes(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            设置列索引时的处理
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContext.OnCreateModelSetColumnTypes(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            设置列数据类型时的处理（暂时仅在存在行大小限制时执行）
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContext.EntityPrefix``1(System.Data.Entity.DbModelBuilder,System.String,System.String)">
+            <summary>
+            替换表名前缀
+            </summary>
+            <typeparam name="TEntityType"></typeparam>
+            <param name="builder"></param>
+            <param name="addPrefix"></param>
+            <param name="removePrefix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContext.SetUserMark(KdCore.Data.Users.IKdUser,System.Object)">
+            <summary>
+            设置用户修改标识
+            </summary>
+            <param name="markUser"></param>
+            <param name="entity"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbContext.SetUserMark(System.Data.Entity.Infrastructure.DbEntityEntry,KdCore.Data.Users.IKdUser)">
+            <summary>
+            设置用户修改标识
+            </summary>
+            <param name="entityEntry"></param>
+            <param name="markUser"></param>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.BbDbService`1">
+            <summary>
+            与 <see cref="T:KdCore.Data.EntityFramework.BbDbContext"/> 相配套的数据管理服务程序的基类
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbService`1.CreateDataContext">
+            <summary>
+            创建当前数据库上下文类型的一个实例对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbService`1.OnDataContextCreated(`0)">
+            <summary>
+            创建数据库上下文后的后续处理
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbService`1.OnSaveChangesResultException(KdCore.Data.KdDataResult,System.Exception)">
+            <summary>
+            提交数据修改到数据源，并返回数据处理结果时发生的错误异常处理
+            </summary>
+            <param name="result">当前的数据处理结果</param>
+            <param name="ex">发生的错误异常</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbService`1.ExecuteNonQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            执行SQL语句
+            </summary>
+            <param name="commandText">SQL执行语句</param>
+            <param name="parameters">SQL执行语句的相关参数，字典的键为参数名，值为参数值</param>
+            <returns>执行后影响的数据条数</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbService`1.ExecuteReader(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            执行SQL查询，并返回查询所返回的结果集的 IDataReader 对象。
+            </summary>
+            <param name="commandText">SQL查询语句</param>
+            <param name="parameters">SQL查询语句的相关参数，字典的键为参数名，值为参数值</param>
+            <returns>System.Data.IDataReader 对象。</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbService`1.ExecuteScalar(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            执行SQL查询，并返回查询所返回的结果集中第一行的第一列。 忽略额外的列或行。
+            </summary>
+            <param name="commandText">SQL查询语句</param>
+            <param name="parameters">SQL查询语句的相关参数，字典的键为参数名，值为参数值</param>
+            <returns>结果集中第一行的第一列。</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbService`1.ExecuteInteger(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            执行SQL查询，并返回查询所返回的结果集中第一行的第一列的整数形式。 忽略额外的列或行。
+            </summary>
+            <param name="commandText">SQL查询语句</param>
+            <param name="parameters">SQL查询语句的相关参数，字典的键为参数名，值为参数值</param>
+            <returns>结果集中第一行的第一列的整数形式值。</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbService`1.SqlQuery``1(System.String,System.Object[])">
+            <summary>
+            表示实体的一个 SQL 查询，该查询从 DbContext 创建并通过该上下文中的连接来执行。
+            此类的实例是从该实体类型的 DbSet&lt;TEntity&gt;实例中获取的。
+            创建此对象时不会执行该查询；只要枚举该查询，该查询就会执行（例如，使用 foreach）。
+            非实体的 SQL 查询是使用 SqlQuery&lt;TElement&gt;(String,Object[]) 创建的。
+            </summary>
+            <typeparam name="TEntity">查询数据返回实体类型</typeparam>  
+            <param name="sql">查询SQL语句</param>
+            <param name="prameters">查询中需要的参数</param>
+            <returns>EF的 实体 SQL 查询，仅支持异步操作</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbService`1.RawSqlQuery``1(System.String,System.Object[])">
+            <summary>
+            表示非实体的一个 SQL 查询，该查询从 DbContext 创建并通过该上下文中的连接来执行。
+            此类的实例是从 Database 实例中获取的。
+            创建此对象时不会执行该查询；只要枚举该查询，该查询就会执行（例如，使用 foreach）。
+            实体的 SQL 查询是使用 SqlQuery(String,Object[]) 创建的。
+            </summary>
+            <typeparam name="TElement">查询数据返回实体类型</typeparam>  
+            <param name="sql">查询SQL语句</param>
+            <param name="prameters">查询中需要的参数</param>
+            <returns>EF的 实体 SQL 查询，仅支持异步操作</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbService`1.RawSqlRespond``1(KdCore.Data.KdDataRequest{``0},System.String,System.Object[])">
+            <summary>
+            根据分页查询参数进行查询
+            </summary>
+            <typeparam name="TElement">返回结果对应的数据类型</typeparam> 
+            <param name="request"></param>
+            <param name="sqlQuery"></param>
+            <param name="sqlParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbDbService`1.RawSqlRespond``1(KdCore.Data.KdDataRequest{``0},System.String,System.String,System.Object[])">
+            <summary>
+            根据分页查询参数进行查询
+            </summary>
+            <typeparam name="TElement">返回结果对应的数据类型</typeparam> 
+            <param name="request"></param>
+            <param name="sqlQuery"></param>
+            <param name="sqlColumns"></param>
+            <param name="sqlParams"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.KdDbService`1">
+            <summary>
+            与 <see cref="T:KdCore.Data.EntityFramework.KdDbContext"/> 配套使用的数据管理服务程序的实现基类
+            </summary>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.KdDbAutoMigrate`1">
+            <summary>
+            数据模型自动更新配置
+            </summary>
+            <typeparam name="TDbContext"></typeparam>
+        </member>
+        <member name="P:KdCore.Data.EntityFramework.KdDbAutoMigrate`1.Logger">
+            <summary>
+            日志记录对象
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbAutoMigrate`1.AutoMigrate(System.Nullable{System.Boolean},System.String,System.Action{System.Data.Entity.DbContext},System.Nullable{System.Int32})">
+            <summary>
+            自动更新数据模型
+            </summary>
+            <param name="allowDataLoss">自动更新数据模型时是否忽略数据丢失</param>
+            <param name="directory">自动更新数据模型时指定更新的配置文件目录</param>
+            <param name="seedAction">数据库更新后执行更新种子数据</param>
+            <param name="timeout">终止尝试并生成错误之前在尝试建立连接时所等待的时间（以秒为单位）。设置 null 时使用默认值。SqlConnection 默认值为 15 秒。</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbAutoMigrate`1.TDbMigrationsConfiguration.GetHistoryContext(`0)">
+            <summary>
+            获取当前实体数据模型 DbContext 的迁移记录的数据模型
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbAutoMigrate`1.TDbMigrationsConfiguration.QueryHistory(`0)">
+            <summary>
+            查询当前实体数据模型 DbContext 的迁移记录
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbAutoMigrate`1.TDbMigrationsConfiguration.SaveHistoryRows(`0)">
+            <summary>
+            保存当前实体数据模型 DbContext 的最新迁移记录到文件
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbAutoMigrate`1.TDbMigrateToLastVersion.#ctor">
+            <summary>
+            Initializes a new instance of the MigrateDatabaseToLatestVersion class that will use
+            the connection information from a context constructed using the default constructor 
+            or registered factory if applicable
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbAutoMigrate`1.TDbMigrateToLastVersion.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the MigrateDatabaseToLatestVersion class specifying whether to
+            use the connection information from the context that triggered initialization to perform the migration.
+            </summary>
+            <param name="useSuppliedContext">
+            If set to <c>true</c> the initializer is run using the connection information from the context that 
+            triggered initialization. Otherwise, the connection information will be taken from a context constructed 
+            using the default constructor or registered factory if applicable. 
+            </param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbAutoMigrate`1.TDbMigrateToLastVersion.#ctor(System.Boolean,KdCore.Data.EntityFramework.KdDbAutoMigrate{`0}.TDbMigrationsConfiguration)">
+            <summary>
+            Initializes a new instance of the MigrateDatabaseToLatestVersion class specifying whether to
+            use the connection information from the context that triggered initialization to perform the migration.
+            Also allows specifying migrations configuration to use during initialization.
+            </summary>
+            <param name="useSuppliedContext">
+            If set to <c>true</c> the initializer is run using the connection information from the context that
+            triggered initialization. Otherwise, the connection information will be taken from a context constructed
+            using the default constructor or registered factory if applicable.
+            </param>
+            <param name="configuration"> Migrations configuration to use during initialization. </param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbAutoMigrate`1.TDbMigrateToLastVersion.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the MigrateDatabaseToLatestVersion class that will
+            use a specific connection string from the configuration file to connect to
+            the database to perform the migration.
+            </summary>
+            <param name="connectionStringName"> The name of the connection string to use for migration. </param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbAutoMigrate`1.TDbMigrateToLastVersion.InitializeDatabase(`0)">
+            <summary>
+            初始化给定上下文的数据库。
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbAutoMigrate`1.TDbMigrateToLastVersion.UpdateJsonModels(`0)">
+            <summary>
+            检查加载当前实体数据模型 DbContext 的最新迁移 JSON 记录
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.KdDbAutoMigrate`1.TDbMigrateToLastVersion.FixBugModelIndexes(`0)">
+            <summary>
+            修复索引配置错误
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:KdCore.Data.EntityFramework.BbUtilDbContext">
+            <summary>
+            DbContext 等 EF 扩展
+            </summary>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.GetObjectContext(System.Data.Entity.DbContext)">
+            <summary>
+            获取当前数据库的顶级对象ObjectContext
+            </summary>
+            <param name="dbContext">当前数据库上下文</param>
+            <returns>ObjectContext对象实例</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.GetDbContexts(System.Data.Entity.DbContext)">
+            <summary>
+            获取与当前 DbContext 相关联的 DbContext 枚举
+            </summary>
+            <param name="dbContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.GetEfService``1(System.Object)">
+            <summary>
+            尝试为给定的协定类型和可选的给定键解析依赖项。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.GetEfServices``1(System.Object)">
+            <summary>
+            尝试为给定的协定类型和可选的给定键解析依赖项。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.GetEfProviderInvariantName(System.Data.Common.DbProviderFactory)">
+            <summary>
+            检索 EntityFramework 配置中，获取 DbProviderFactory 的 InvariantName (可以以编程方式用于引用数据提供程序的名称)
+            </summary>
+            <param name="factory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.GetEfProviderInvariantName(System.Data.Common.DbConnection)">
+            <summary>
+            检索基于指定 DbConnection 的 DbProviderFactory 的 InvariantName (可以以编程方式用于引用数据提供程序的名称)
+            </summary>
+            <param name="connection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.GetEfProviderFactory(System.Data.Common.DbConnection)">
+            <summary>
+            检索基于指定 DbConnection 的 DbProviderFactory。
+            </summary>
+            <param name="connection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.GetEfProviderServices(System.Data.Common.DbConnection)">
+            <summary>
+            检索基于指定 DbConnection 的 DbProviderFactory。
+            </summary>
+            <param name="connection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.GetEfManifest(System.Data.Common.DbConnection)">
+            <summary>
+            检索 EntityFramework 配置中基于指定 DbConnection 的数据库提供程序清单。
+            </summary>
+            <param name="connection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.GetEfManifestName(System.Data.Common.DbConnection)">
+            <summary>
+            检索 EntityFramework 配置中基于指定 DbConnection 的数据库标识名称。
+            </summary>
+            <param name="connection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.GetEfManifestToken(System.Data.Common.DbConnection)">
+            <summary>
+            检索 EntityFramework 配置中基于指定 DbConnection 的数据库提供程序清单。
+            </summary>
+            <param name="connection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.GetStoreTypeFromName(System.Data.Common.DbProviderManifest,System.String)">
+            <summary>
+            基元类型查询
+            </summary>
+            <param name="providerManifest"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.GetErrorMessage(System.Data.Entity.Validation.DbValidationError,System.Data.Entity.Infrastructure.DbEntityEntry,System.String)">
+            <summary>
+            实体验证错误信息
+            </summary>
+            <param name="error">验证错误。可以是实体级别或属性级别验证错误。</param>
+            <param name="typeName">实体类型的名称</param>
+            <param name="entry">验证实体的当前属性值。</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.GetValidationErrorMessages(System.Data.Entity.Validation.DbEntityValidationResult)">
+            <summary>
+            记录实体验证错误日志
+            </summary>
+            <param name="result">表示单个实体的验证结果。</param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.ToTablePrefix``1(System.Data.Entity.ModelConfiguration.EntityTypeConfiguration{``0},System.String,System.String)">
+            <summary>
+            将指定类型的默认类型名称替换前缀后，作为数据库表名
+            </summary>
+            <typeparam name="TEntityType"></typeparam>
+            <param name="configuration"></param>
+            <param name="addPrefix"></param>
+            <param name="removePrefix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.EntityPrefix``1(System.Data.Entity.DbModelBuilder,System.String,System.String)">
+            <summary>
+            将指定类型的默认类型名称替换前缀后，作为数据库表名
+            </summary>
+            <typeparam name="TEntityType"></typeparam>
+            <param name="builder"></param>
+            <param name="addPrefix"></param>
+            <param name="removePrefix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.SetColumnType(System.Data.Entity.DbModelBuilder,System.String,System.Func{System.Reflection.PropertyInfo,System.Boolean})">
+            <summary>
+            设置属性在数据库中映射列的数据类型。
+            </summary>
+            <param name="builder"></param>
+            <param name="columnDataType"></param>
+            <param name="predicate"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.SetColumnIndex(System.Data.Entity.DbModelBuilder,System.Func{System.Reflection.PropertyInfo,System.Boolean})">
+            <summary>
+            设置属性在数据库中映射列的索引。
+            </summary>
+            <param name="builder"></param>
+            <param name="predicate"></param>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.CreateIndexAnnotation(System.String,System.Nullable{System.Int32})">
+            <summary>
+            创建一个用于表示实体框架模型中数据库索引的特性实例
+            </summary>
+            <param name="name"></param>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.HasKdIndex(System.Data.Entity.ModelConfiguration.Configuration.PrimitivePropertyConfiguration,System.String,System.Nullable{System.Int32})">
+            <summary>
+            配置属性对应列的索引。
+            </summary>
+            <param name="propertyConfiguration">模型中的实体类型的属性配置</param> 
+            <param name="name">索引名称</param>
+            <param name="order">一个将用于确定多列索引的列顺序的数字。</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.HasKdIndex``2(System.Data.Entity.ModelConfiguration.EntityTypeConfiguration{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.String,System.Nullable{System.Int32})">
+            <summary>
+            配置属性对应列的索引。
+            </summary>
+            <typeparam name="TDbEntity">模型中的实体类型</typeparam>
+            <typeparam name="TProperty">模型中的实体类型的属性类型</typeparam>
+            <param name="entityTypeConfiguration">模型中的实体类型配置</param>
+            <param name="propertyExpression">实体类型中属性的表达式</param>
+            <param name="name">索引名称</param>
+            <param name="order">一个将用于确定多列索引的列顺序的数字。</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.HasKdIndex``2(System.Data.Entity.ModelConfiguration.EntityTypeConfiguration{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{``1}}},System.String,System.Nullable{System.Int32})">
+            <summary>
+            配置属性对应列的索引。
+            </summary>
+            <typeparam name="TDbEntity">模型中的实体类型</typeparam>
+            <typeparam name="TProperty">模型中的实体类型的属性类型</typeparam>
+            <param name="entityTypeConfiguration">模型中的实体类型配置</param>
+            <param name="propertyExpression">实体类型中属性的表达式</param>
+            <param name="name">索引名称</param>
+            <param name="order">一个将用于确定多列索引的列顺序的数字。</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.HasKdIndex``1(System.Data.Entity.ModelConfiguration.EntityTypeConfiguration{``0},System.Linq.Expressions.Expression{System.Func{``0,System.String}},System.String,System.Nullable{System.Int32})">
+            <summary>
+            配置属性对应列的索引。
+            </summary>
+            <typeparam name="TDbEntity">模型中的实体类型</typeparam>
+            <param name="entityTypeConfiguration">模型中的实体类型配置</param>
+            <param name="propertyExpression">实体类型中属性的表达式</param>
+            <param name="name">索引名称</param>
+            <param name="order">一个将用于确定多列索引的列顺序的数字。</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.HasKdIndex``1(System.Data.Entity.ModelConfiguration.EntityTypeConfiguration{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Data.Entity.Spatial.DbGeography}},System.String,System.Nullable{System.Int32})">
+            <summary>
+            配置属性对应列的索引。
+            </summary>
+            <typeparam name="TDbEntity">模型中的实体类型</typeparam>
+            <param name="entityTypeConfiguration">模型中的实体类型配置</param>
+            <param name="propertyExpression">实体类型中属性的表达式</param>
+            <param name="name">索引名称</param>
+            <param name="order">一个将用于确定多列索引的列顺序的数字。</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.HasKdIndex``1(System.Data.Entity.ModelConfiguration.EntityTypeConfiguration{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Data.Entity.Spatial.DbGeometry}},System.String,System.Nullable{System.Int32})">
+            <summary>
+            配置属性对应列的索引。
+            </summary>
+            <typeparam name="TDbEntity">模型中的实体类型</typeparam>
+            <param name="entityTypeConfiguration">模型中的实体类型配置</param>
+            <param name="propertyExpression">实体类型中属性的表达式</param>
+            <param name="name">索引名称</param>
+            <param name="order">一个将用于确定多列索引的列顺序的数字。</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.HasMaxLength``1(System.Data.Entity.ModelConfiguration.EntityTypeConfiguration{``0},System.Linq.Expressions.Expression{System.Func{``0,System.String}},System.Int32)">
+            <summary>
+            配置属性的字符串最大长度。
+            </summary>
+            <typeparam name="TDbEntity">模型中的实体类型</typeparam>
+            <param name="entityTypeConfiguration">模型中的实体类型配置</param>
+            <param name="propertyExpression">实体类型中属性的表达式</param>
+            <param name="maxLength">字符串最大长度。</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.HasPrecision``1(System.Data.Entity.ModelConfiguration.EntityTypeConfiguration{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Decimal}},System.Byte,System.Byte)">
+            <summary>
+            配置属性的精度和小数位数。
+            </summary>
+            <typeparam name="TDbEntity">模型中的实体类型</typeparam>
+            <param name="entityTypeConfiguration">模型中的实体类型配置</param>
+            <param name="propertyExpression">实体类型中属性的表达式</param>
+            <param name="scale">属性的小数位数。</param>
+            <param name="precision">属性的精度。</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.HasPrecision``1(System.Data.Entity.ModelConfiguration.EntityTypeConfiguration{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Decimal}}},System.Byte,System.Byte)">
+            <summary>
+            配置属性的精度和小数位数。
+            </summary>
+            <typeparam name="TDbEntity">模型中的实体类型</typeparam>
+            <param name="entityTypeConfiguration">模型中的实体类型配置</param>
+            <param name="propertyExpression">实体类型中属性的表达式</param>
+            <param name="scale">属性的小数位数。</param>
+            <param name="precision">属性的精度。</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.GetDbLogString(System.Data.Entity.Infrastructure.DbEntityEntry)">
+            <summary>
+            生成数据操作的日志文本
+            </summary>
+            <param name="entry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.ToActionLog(System.Data.Entity.Infrastructure.DbEntityEntry,KdCore.Data.Users.IKdUser)">
+            <summary>
+            生成用户操作记录的基本数据
+            </summary>
+            <param name="entry"></param>
+            <param name="logUser">数据操作人</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.SqlQuery``1(System.Data.Entity.DbContext,System.String,System.Object[])">
+            <summary>
+            表示实体的一个 SQL 查询，该查询从 DbContext 创建并通过该上下文中的连接来执行。
+            此类的实例是从该实体类型的 DbSet&lt;TEntity&gt;实例中获取的。
+            创建此对象时不会执行该查询；只要枚举该查询，该查询就会执行（例如，使用 foreach）。
+            非实体的 SQL 查询是使用 Set&lt;TEntity&gt;().SqlQuery(string,object[]) 创建的。
+            </summary>
+            <typeparam name="TEntity">查询数据返回实体类型</typeparam> 
+            <param name="context">当前的数据库上下文</param>
+            <param name="sql">查询SQL语句</param>
+            <param name="prameters">查询中需要的参数</param>
+            <returns>EF的 实体 SQL 查询，仅支持异步操作</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.RawSqlQuery``1(System.Data.Entity.DbContext,System.String,System.Object[])">
+            <summary>
+            表示非实体的一个 SQL 查询，该查询从 DbContext 创建并通过该上下文中的连接来执行。
+            此类的实例是从 Database 实例中获取的。
+            创建此对象时不会执行该查询；只要枚举该查询，该查询就会执行（例如，使用 foreach）。
+            原始 SQL 查询是使用 Database.SqlQuery&lt;TEntity&gt;(string,object[]) 创建的。
+            </summary>
+            <typeparam name="TElement">查询数据返回实体类型</typeparam> 
+            <param name="context">当前的数据库上下文</param>
+            <param name="sql">查询SQL语句</param>
+            <param name="prameters">查询中需要的参数</param>
+            <returns>EF的 实体 SQL 查询，仅支持异步操作</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.CreateCommand(System.Data.Entity.DbContext,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.CommandType)">
+            <summary>
+            构建 IDbCommand 对象
+            </summary>
+            <param name="context">当前的数据库上下文</param>
+            <param name="commandText">SQL执行命令</param>
+            <param name="parameters">SQL执行命令相关参数，字典的键为参数名，值为参数值</param>
+            <param name="type">执行命令的类型，SQL语句或存储过程</param>
+            <returns>IDbCommand 对象</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.ExecuteNonQuery(System.Data.Entity.DbContext,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            执行SQL语句
+            </summary>
+            <param name="context">当前的数据库上下文</param>
+            <param name="commandText">SQL执行语句</param>
+            <param name="parameters">SQL执行语句的相关参数，字典的键为参数名，值为参数值</param>
+            <returns>执行后影响的数据条数</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.ExecuteReader(System.Data.Entity.DbContext,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            执行SQL查询，并返回查询所返回的结果集的 IDataReader 对象。
+            </summary>
+            <param name="context">当前的数据库上下文</param>
+            <param name="commandText">SQL查询语句</param>
+            <param name="parameters">SQL查询语句的相关参数，字典的键为参数名，值为参数值</param>
+            <returns>System.Data.IDataReader 对象。</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.ExecuteScalar(System.Data.Entity.DbContext,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            执行SQL查询，并返回查询所返回的结果集中第一行的第一列。 忽略额外的列或行。
+            </summary>
+            <param name="context">当前的数据库上下文</param>
+            <param name="commandText">SQL查询语句</param>
+            <param name="parameters">SQL查询语句的相关参数，字典的键为参数名，值为参数值</param>
+            <returns>结果集中第一行的第一列。</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.ExecuteInteger(System.Data.Entity.DbContext,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            执行SQL查询，并返回查询所返回的结果集中第一行的第一列的整数形式。 忽略额外的列或行。
+            </summary>
+            <param name="context">当前的数据库上下文</param>
+            <param name="commandText">SQL查询语句</param>
+            <param name="parameters">SQL查询语句的相关参数，字典的键为参数名，值为参数值</param>
+            <returns>结果集中第一行的第一列的整数形式值。</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.CreateDataAdapter(System.Data.Entity.DbContext,System.String)">
+            <summary>
+            根据connection类型获取DataAdapter
+            </summary>
+            <param name="context">当前的数据库上下文</param>
+            <param name="providerName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.ExecuteProcedure(System.Data.Entity.DbContext,System.String,System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="context">当前的数据库上下文</param>
+            <param name="procedureText">存储过程名称</param> 
+            <param name="isQuery">是否执行查询，如果是执行查询返回DataTable,否则返回受影响的记录数</param>
+            <param name="parameters">SQL执行命令相关参数，字典的键为参数名，值为参数值</param>
+            <returns>返回存储执行结果，isQuery 为 true 时返回 DataTable, false 时返回 int</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.ProcedureNonQuery(System.Data.Entity.DbContext,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            执行存储过程，返回受影响的记录数
+            </summary>
+            <param name="context">当前的数据库上下文</param>
+            <param name="procedureText">存储过程名称</param>
+            <param name="parameters">SQL执行命令相关参数，字典的键为参数名，值为参数值</param> 
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.ProcedureQuery(System.Data.Entity.DbContext,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            执行存储过程，返回查询结果
+            </summary>
+            <param name="context">当前的数据库上下文</param>
+            <param name="procedureText">存储过程名称</param>
+            <param name="parameters">SQL执行命令相关参数，字典的键为参数名，值为参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.SqlExists(System.Data.Entity.DbContext,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            执行SQL查询，查询是否存在符合条件的记录
+            </summary>
+            <param name="context">当前的数据库上下文</param>
+            <param name="commandText">SQL查询语句</param>
+            <param name="parameters">SQL查询语句的相关参数，字典的键为参数名，值为参数值</param>
+            <returns>存在返回true，否则返回false</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.SqlDataSet(System.Data.Entity.DbContext,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            执行SQL查询，获取DataSet类型的查询结果
+            </summary>
+            <param name="context">当前的数据库上下文</param>
+            <param name="commandText">SQL查询语句</param>
+            <param name="parameters">SQL查询语句的相关参数，字典的键为参数名，值为参数值</param>
+            <returns>DataSet 对象的查询结果</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.SqlDataTable(System.Data.Entity.DbContext,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            执行SQL查询，获取DataTable类型的查询结果
+            </summary>
+            <param name="context">当前的数据库上下文</param>
+            <param name="commandText">SQL查询语句</param>
+            <param name="parameters">SQL查询语句的相关参数，字典的键为参数名，值为参数值</param>
+            <returns>DataTable 对象的查询结果</returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.RawSqlRespond``1(System.Data.Entity.DbContext,KdCore.Data.KdDataRequest{``0},System.String,System.Object[])">
+            <summary>
+            根据分页查询参数进行查询
+            </summary>
+            <typeparam name="TElement">返回结果对应的数据类型</typeparam>
+            <param name="context"></param>
+            <param name="request"></param>
+            <param name="sqlQuery"></param>
+            <param name="sqlParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.RawSqlRespond``1(System.Data.Entity.DbContext,KdCore.Data.KdDataRequest{``0},System.String,System.String,System.Object[])">
+            <summary>
+            根据分页查询参数进行查询
+            </summary>
+            <typeparam name="TElement">返回结果对应的数据类型</typeparam>
+            <param name="context"></param>
+            <param name="request"></param>
+            <param name="sqlQuery"></param>
+            <param name="sqlColumns"></param>
+            <param name="sqlParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.RawSqlRespondNoPage``1(System.Data.Entity.DbContext,KdCore.Data.KdDataRequest{``0},System.String,System.String,System.Object[])">
+            <summary>
+            根据分页查询参数进行查询
+            </summary>
+            <typeparam name="TElement">返回结果对应的数据类型</typeparam>
+            <param name="context"></param>
+            <param name="request"></param>
+            <param name="sqlQuery"></param>
+            <param name="sqlColumns"></param>
+            <param name="sqlParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.Data.EntityFramework.BbUtilDbContext.RawSqlRespondPage``1(System.Data.Entity.DbContext,KdCore.Data.KdDataRequest{``0},System.String,System.String,System.Object[])">
+            <summary>
+            根据分页查询参数进行查询
+            </summary>
+            <typeparam name="TElement">返回结果对应的数据类型</typeparam>
+            <param name="context"></param>
+            <param name="request"></param>
+            <param name="sqlQuery"></param>
+            <param name="sqlColumns"></param>
+            <param name="sqlParams"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

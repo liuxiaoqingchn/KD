@@ -1,0 +1,30 @@
+﻿@model KdDataResponse<PrjSign>
+
+@{Layout = null;}
+@using (Html.BeginDlgSelect())
+{
+    @Html.BbDlgSearchHeader(true, "中标项目")
+    <div class="modal-body">
+        <div class="row">
+            @Html.BbSearchFor(x => x.PrjCode)
+            @Html.BbSearchFor(x => x.PrjName)
+        </div>
+        @using (Html.BeginDataTable())
+        {
+            @Html.BbTHeadRow(true, "项目编号", "项目名称")
+
+            using (Html.BeginDataTableBody())
+            {
+                foreach (PrjSign item in Model)
+                {
+                    using (Html.BeginDataSelectRow(item))
+                    {
+                        @Html.TdText(item.PrjCode)
+                        @Html.TdText(item.PrjName)
+                    }
+                }
+            }
+        }
+    </div>
+    @Html.BbDlgFooter(true)
+}

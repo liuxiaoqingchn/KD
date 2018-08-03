@@ -1,0 +1,446 @@
+﻿@model   PrjPlan
+
+<style>
+    /*横向轴*/
+    ul li {
+        list-style: none;
+    }
+
+    .stepInfo {
+        position: relative;
+        margin: 2.5%;
+    }
+
+        .stepInfo li {
+            margin-top: 13px;
+            float: left;
+            width: 16%;
+            height: 0.6em;
+            background: #45a0f3;
+        }
+
+            .stepInfo li:last-child {
+                width: 16%;
+            }
+
+        .stepInfo .info {
+            clear: both;
+        }
+
+
+    .stepIco {
+        border-radius: 88px;
+        padding: 15px;
+        background: #45a0f3;
+        text-align: center;
+        line-height: 1.4em;
+        color: #fff;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    .active .stepText {
+        color: red;
+    }
+
+    .stepIco i {
+        font-size: 1.6em;
+    }
+
+    .stepIco1 {
+        top: -0.7em;
+        left: 0;
+    }
+
+    .stepIco2 {
+        top: -0.7em;
+        left: 16%;
+    }
+
+    .stepIco3 {
+        top: -0.7em;
+        left: 32%;
+    }
+
+    .stepIco4 {
+        top: -0.7em;
+        left: 48%;
+    }
+
+    .stepIco5 {
+        top: -0.7em;
+        left: 64%;
+    }
+
+    .stepIco6 {
+        top: -0.7em;
+        left: 80%;
+    }
+
+
+
+    .stepText {
+        color: #666;
+        margin-top: 22px;
+        width: 5em;
+        text-align: center;
+        margin-left: -23px;
+        cursor: pointer;
+    }
+
+        .stepText span {
+            display: block;
+            line-height: 28px;
+            font-size: 12px;
+        }
+
+    .box {
+        width: 100%;
+        margin-top: 80px;
+        height: auto;
+        border: 1px solid #99bbe8;
+        overflow: hidden;
+    }
+
+        .box > div {
+            width: 100%;
+            height: auto;
+            padding: 20px;
+        }
+
+        .box .item {
+            padding: 10px !important;
+        }
+
+    .graph > div {
+        padding-top: 30px;
+        width: 412px;
+        height: 450px;
+    }
+
+    .graph .item {
+        padding: 0 !important;
+    }
+</style>
+@section scripts{
+    <script>
+        function supervise() {
+            $("#isSupervise").val(true);
+        }
+    </script>
+    <script>
+        /*tab切换*/
+        $(function () {
+
+            var sign = '@Model.SignItem.IsNull()';
+            var task = '@Model.TaskItem.IsNull()';
+            var bid = '@Model.PrjBidItem.IsEmpty()';
+            var result = '@Model.ResultItem.IsNull()';
+            var pact = '@Model.PactItem.IsNull()';
+            $(".box > div").eq(0).show().siblings().hide();
+            $(".info .stepIco").click(function () {
+                var index = $(this).index();
+                showTabs(index);
+            });
+
+            if (pact == 'False') {
+                inx = 5;
+            } else if (result == 'False') {
+                inx = 4;
+            } else if (bid == 'False') {
+                inx = 3;
+            } else if (task == 'False') {
+                inx = 2;
+            } else if (sign == 'False') {
+                inx = 1;
+            } else {
+                inx = 0;
+            }
+            var tabIndex = GetQueryString("tabIndex");
+            if (tabIndex == null || tabIndex == '') {
+                tabIndex = 0;
+            }
+            showTabs(inx);
+        });
+
+        function showTabs(index) {
+            $(".info .stepIco").eq(index).addClass("active").siblings().removeClass("active");
+            $(".box > div").eq(index).show().siblings().hide();
+        }
+
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+    </script>
+}
+@{ Model.AllowedEdit = false;}
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+    <div class="stepInfo">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="info">
+            <div class="stepIco stepIco1 active">
+                <i class="fa fa-file-text-o"></i>
+                <div class="stepText">立项信息</div>
+            </div>
+            <div class="stepIco stepIco2 ">
+                <i class="fa fa-indent"></i>
+                <div class="stepText">投标报名</div>
+            </div>
+            <div class="stepIco stepIco3">
+                <i class="fa fa-calendar"></i>
+                <div class="stepText">任务安排</div>
+            </div>
+            <div class="stepIco stepIco4">
+                <i class="fa fa-folder-open"></i>
+                <div class="stepText">标书信息</div>
+            </div>
+            <div class="stepIco stepIco5">
+                <i class="fa fa-clipboard"></i>
+                <div class="stepText">结果跟踪</div>
+            </div>
+            <div class="stepIco stepIco6">
+                <i class="fa fa-thumbs-up"></i>
+                <div class="stepText">(签订合同)结束</div>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <span class="panel-title">项目信息</span>
+                    </div>
+                    <div class="panel-body">
+                        <div id="content">
+                            <div class="row">
+                                @Html.BfHiddenFor(x => x.PrjStatus)
+                            </div>
+                            <div class="row">
+                                @Html.SjPickPrjFor(x => x.ProjectId, x => x.PrjName, 1)
+                                @Html.BbTextBoxFor(x => x.PrjCode, 4)
+                            </div>
+                            <div class="row">
+                                @Html.BbRadioListFor(x => x.IsOpen)
+                                @Html.BbRadioListFor(x => x.IsCons)
+                            </div>
+                            <div class="row">
+                                @Html.BbTextBoxFor(x => x.TenderUnit, 10)
+                            </div>
+                            <div class="row">
+                                @Html.BbTextBoxFor(x => x.BuildUnit, 4)
+                                @Html.BbDictRadioListFor(x => x.TenderMthod, 4)
+                            </div>
+                            <div class="row">
+                                @Html.BbDictRadioListFor(x => x.ManageMode, "ManageMode")
+                                @Html.BbDictRadioListFor(x => x.PrjNature, 4)
+                                @Html.BbTextBoxFor(x => x.EngScale, null, "万元", 4)
+                                @Html.BbTextBoxFor(x => x.BondMoney, null, "万元", 4)
+                            </div>
+                        </div>
+                        <div class="row">
+                            @Html.SjPickPrjManFor(x => x.PrjPersonId, x => x.PrjPersonName, 1)
+                        </div>
+                        <div class="row">
+                            @Html.SjPickCorpFor(x => x.DeliId, x => x.DeliUnit, 1)
+                        </div>
+                        <div class="row">
+                            @Html.BbTextBoxFor(x => x.PrjManagement, null, "%", 4)
+                            @Html.BbTextBoxFor(x => x.MaterialsCost, null, "万元", 4)
+                        </div>
+                        <div class="row">
+                            @Html.BbUserPickFor(x => x.PrjPeopleId, x => x.PrjPeopleName, 1)
+                            @Html.BbTextBoxFor(x => x.ProjectDate, 4)
+                        </div>
+                        <div class="row">
+                            @Html.BbTextBoxFor(x => x.Remarks, 10)
+                        </div>
+                        @Html.RowModifier()
+                    </div>
+                </div>
+            </div>
+            <div>
+                @if (Model.SignItem != null)
+                {
+                    @Html.Partial("_SignView", Model.SignItem)
+                }
+            </div>
+            <div style="display:none">
+                @if (Model.TaskItem != null)
+                {
+                    @Html.Partial("_TaskView", Model.TaskItem)
+                }
+
+            </div>
+            <div>
+                @if (Model.PrjBidItem != null)
+                {
+                    foreach (PrjBiding item in Model.PrjBidItem)
+                    {
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <span class="panel-title">@item.BidingType</span>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-field-readonly form-group field-group field-group-md" id="kdfg_group_BusinessId">
+                                            <div class="field-group-head control-label col-md-4" id="kdfg_group_head_BusinessId">
+                                                <label for="BusinessId">  项目名称 </label>
+                                            </div>
+                                            <div class="field-group-body col-md-8" id="kdfg_group_body_BusinessId">
+                                                <span class="form-control-static" id="BusinessName">@item.PrjName</span>
+                                            </div>
+                                            <p class="help-block"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-field-readonly form-group field-group field-group-md" id="kdfg_group_BusinessTime">
+                                            <div class="field-group-head control-label col-md-4" id="kdfg_group_head_BusinessTime">
+                                                <label for=""> 项目编号 </label>
+                                            </div>
+                                            <div class="field-group-body col-md-8" id="kdfg_group_body_BusinessTime">
+                                                <div class="text-field form-control-static text-custom" data-bb-bind="BusinessTime" id="BusinessTime" name="BusinessTime">
+                                                    @item.PrjCode
+                                                </div>
+                                            </div>
+                                            <p class="help-block"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-field-readonly form-group field-group field-group-md" id="kdfg_group_BusinessId">
+                                            <div class="field-group-head control-label col-md-4" id="kdfg_group_head_BusinessId">
+                                                <label for="BusinessId">
+                                                    任务下达人姓名
+                                                </label>
+                                            </div>
+                                            <div class="field-group-body col-md-8" id="kdfg_group_body_BusinessId">
+                                                <span class="form-control-static" id="BusinessName">@item.TaskPersonName</span>
+                                            </div>
+                                            <p class="help-block"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-field-readonly form-group field-group field-group-md" id="kdfg_group_BusinessTime">
+                                            <div class="field-group-head control-label col-md-4" id="kdfg_group_head_BusinessTime">
+                                                <label for="">  任务下达时间 </label>
+                                            </div>
+                                            <div class="field-group-body col-md-8" id="kdfg_group_body_BusinessTime">
+                                                <div class="text-field form-control-static text-custom" data-bb-bind="BusinessTime" id="BusinessTime" name="BusinessTime">
+                                                    @item.TaskTime
+                                                </div>
+                                            </div>
+                                            <p class="help-block"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-field-readonly form-group field-group field-group-md" id="kdfg_group_BusinessId">
+                                            <div class="field-group-head control-label col-md-4" id="kdfg_group_head_BusinessId">
+                                                <label for="BusinessId"> 制作人姓名</label>
+                                            </div>
+                                            <div class="field-group-body col-md-8" id="kdfg_group_body_BusinessId">
+                                                <span class="form-control-static" id="BusinessName">@item.MakeName</span>
+                                            </div>
+                                            <p class="help-block"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-field-readonly form-group field-group field-group-md" id="kdfg_group_BusinessTime">
+                                            <div class="field-group-head control-label col-md-4" id="kdfg_group_head_BusinessTime">
+                                                <label for=""> 计划完成时间 </label>
+                                            </div>
+                                            <div class="field-group-body col-md-8" id="kdfg_group_body_BusinessTime">
+                                                <div class="text-field form-control-static text-custom" data-bb-bind="BusinessTime" id="BusinessTime" name="BusinessTime">
+                                                    @item.PlanTime
+                                                </div>
+                                            </div>
+                                            <p class="help-block"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-field-readonly form-group field-group field-group-md" id="kdfg_group_BusinessId">
+                                            <div class="field-group-head control-label col-md-4" id="kdfg_group_head_BusinessId">
+                                                <label for="BusinessId"> 当前制作进度</label>
+                                            </div>
+                                            <div class="field-group-body col-md-8" id="kdfg_group_body_BusinessId">
+                                                <span class="form-control-static" id="BusinessName">@item.TaskStatus</span>
+                                            </div>
+                                            <p class="help-block"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-field-readonly form-group field-group field-group-md" id="kdfg_group_BusinessTime">
+                                            <div class="field-group-head control-label col-md-4" id="kdfg_group_head_BusinessTime">
+                                                <label for=""> 实际完成时间 </label>
+                                            </div>
+                                            <div class="field-group-body col-md-8" id="kdfg_group_body_BusinessTime">
+                                                <div class="text-field form-control-static text-custom" data-bb-bind="BusinessTime" id="BusinessTime" name="BusinessTime">
+                                                    @item.ActualTime
+                                                </div>
+                                            </div>
+                                            <p class="help-block"></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-field-readonly form-group field-group field-group-md" id="kdfg_group_BusinessTime">
+                                            <div class="field-group-head control-label col-md-4" id="kdfg_group_head_BusinessTime">
+                                                <label for=""> 备注 </label>
+                                            </div>
+                                            <div class="field-group-body col-md-8" id="kdfg_group_body_BusinessTime">
+                                                <div class="text-field form-control-static text-custom" data-bb-bind="BusinessTime" id="BusinessTime" name="BusinessTime">
+                                                    @item.Remarks
+                                                </div>
+                                            </div>
+                                            <p class="help-block"></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+            <div>
+                @if (Model.ResultItem != null)
+                {
+                    @Html.Partial("_ResultView", Model.ResultItem)
+                }
+            </div>
+            <div>
+                @if (Model.PactItem != null)
+                {
+                    @Html.Partial("_PactView", Model.PactItem)
+                }
+            </div>
+        </div>
+    </div>
+}
+@Html.AnnexUpload()

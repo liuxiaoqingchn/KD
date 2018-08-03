@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80951A2A-9B85-4FEB-98C8-B095305D535F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KdWeb.Library</RootNamespace>
+    <AssemblyName>KdWeb.Library</AssemblyName>
+    <BaseIntermediateOutputPath>$(temp)\VsBuild\_KdWeb.Library\obj</BaseIntermediateOutputPath>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(temp)\VsBuild\_KdWeb.Library\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(temp)\VsBuild\_KdWeb.Library\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KdLib\KdCore.Base.dll" />
+    <None Include="KdLib\KdCore.Base.XML" />
+    <None Include="KdLib\KdCore.Data.dll" />
+    <None Include="KdLib\KdCore.Flow.Signs.dll" />
+    <None Include="KdLib\KdCore.Flow.Signs.XML" />
+    <None Include="KdLib\KdCore.Office.dll" />
+    <None Include="KdLib\KdCore.Office.XML" />
+    <None Include="KdLib\KdCore.UITheme.dll" />
+    <None Include="KdLib\KdCore.UITheme.XML" />
+    <None Include="KdLib\KdCore.Web.Mvc.dll" />
+    <None Include="KdLib\KdCore.Web.Mvc.XML" />
+    <None Include="KdLib\kdliccod.key" />
+    <None Include="KdLib\KdWeb.Common.dll" />
+    <None Include="KdLib\KdWeb.Common.FlowSigns.dll" />
+    <None Include="KdLib\KdWeb.Common.FlowSigns.XML" />
+    <None Include="KdLib\KdWeb.Common.XML" />
+    <None Include="RefLib\Antlr3.Runtime.dll" />
+    <None Include="RefLib\AutoMapper.dll" />
+    <None Include="RefLib\AutoMapper.xml" />
+    <None Include="RefLib\EntityFramework.dll" />
+    <None Include="RefLib\EntityFramework.SqlServer.dll" />
+    <None Include="RefLib\EntityFramework.SqlServer.xml" />
+    <None Include="RefLib\EntityFramework.xml" />
+    <None Include="RefLib\ICSharpCode.SharpZipLib.dll" />
+    <None Include="RefLib\itextsharp.dll" />
+    <None Include="RefLib\itextsharp.xml" />
+    <None Include="RefLib\log4net.dll" />
+    <None Include="RefLib\log4net.xml" />
+    <None Include="RefLib\Microsoft.OData.Core.dll" />
+    <None Include="RefLib\Microsoft.OData.Core.xml" />
+    <None Include="RefLib\Microsoft.OData.Edm.dll" />
+    <None Include="RefLib\Microsoft.OData.Edm.xml" />
+    <None Include="RefLib\Microsoft.Spatial.dll" />
+    <None Include="RefLib\Microsoft.Spatial.xml" />
+    <None Include="RefLib\Microsoft.Threading.Tasks.dll" />
+    <None Include="RefLib\Microsoft.Threading.Tasks.Extensions.Desktop.dll" />
+    <None Include="RefLib\Microsoft.Threading.Tasks.Extensions.Desktop.xml" />
+    <None Include="RefLib\Microsoft.Threading.Tasks.Extensions.dll" />
+    <None Include="RefLib\Microsoft.Threading.Tasks.Extensions.xml" />
+    <None Include="RefLib\Microsoft.Threading.Tasks.xml" />
+    <None Include="RefLib\Microsoft.Web.Infrastructure.dll" />
+    <None Include="RefLib\Newtonsoft.Json.dll" />
+    <None Include="RefLib\Newtonsoft.Json.xml" />
+    <None Include="RefLib\NPOI.dll" />
+    <None Include="RefLib\NPOI.OOXML.dll" />
+    <None Include="RefLib\NPOI.OOXML.xml" />
+    <None Include="RefLib\NPOI.OpenXml4Net.dll" />
+    <None Include="RefLib\NPOI.OpenXml4Net.xml" />
+    <None Include="RefLib\NPOI.OpenXmlFormats.dll" />
+    <None Include="RefLib\NPOI.xml" />
+    <None Include="RefLib\RestSharp.dll" />
+    <None Include="RefLib\RestSharp.xml" />
+    <None Include="RefLib\System.Collections.Concurrent.dll" />
+    <None Include="RefLib\System.Collections.dll" />
+    <None Include="RefLib\System.ComponentModel.Annotations.dll" />
+    <None Include="RefLib\System.ComponentModel.EventBasedAsync.dll" />
+    <None Include="RefLib\System.Diagnostics.Debug.dll" />
+    <None Include="RefLib\System.Diagnostics.Tracing.dll" />
+    <None Include="RefLib\System.Dynamic.Runtime.dll" />
+    <None Include="RefLib\System.Globalization.dll" />
+    <None Include="RefLib\System.IO.dll" />
+    <None Include="RefLib\System.Linq.Expressions.dll" />
+    <None Include="RefLib\System.Net.Http.Extensions.dll" />
+    <None Include="RefLib\System.Net.Http.Extensions.xml" />
+    <None Include="RefLib\System.Net.Http.Formatting.dll" />
+    <None Include="RefLib\System.Net.Http.Formatting.xml" />
+    <None Include="RefLib\System.Net.Http.Primitives.dll" />
+    <None Include="RefLib\System.Net.Http.Primitives.xml" />
+    <None Include="RefLib\System.Net.NetworkInformation.dll" />
+    <None Include="RefLib\System.Net.Primitives.dll" />
+    <None Include="RefLib\System.Net.Requests.dll" />
+    <None Include="RefLib\System.ObjectModel.dll" />
+    <None Include="RefLib\System.Reflection.dll" />
+    <None Include="RefLib\System.Runtime.dll" />
+    <None Include="RefLib\System.Runtime.Extensions.dll" />
+    <None Include="RefLib\System.Runtime.InteropServices.dll" />
+    <None Include="RefLib\System.Runtime.Serialization.Primitives.dll" />
+    <None Include="RefLib\System.Runtime.Serialization.Xml.dll" />
+    <None Include="RefLib\System.ServiceModel.Http.dll" />
+    <None Include="RefLib\System.Text.Encoding.dll" />
+    <None Include="RefLib\System.Text.Encoding.Extensions.dll" />
+    <None Include="RefLib\System.Text.RegularExpressions.dll" />
+    <None Include="RefLib\System.Threading.dll" />
+    <None Include="RefLib\System.Threading.Tasks.dll" />
+    <None Include="RefLib\System.Web.Helpers.dll" />
+    <None Include="RefLib\System.Web.Helpers.xml" />
+    <None Include="RefLib\System.Web.Http.dll" />
+    <None Include="RefLib\System.Web.Http.SelfHost.dll" />
+    <None Include="RefLib\System.Web.Http.SelfHost.xml" />
+    <None Include="RefLib\System.Web.Http.Tracing.dll" />
+    <None Include="RefLib\System.Web.Http.Tracing.xml" />
+    <None Include="RefLib\System.Web.Http.WebHost.dll" />
+    <None Include="RefLib\System.Web.Http.WebHost.xml" />
+    <None Include="RefLib\System.Web.Http.xml" />
+    <None Include="RefLib\System.Web.Mvc.dll" />
+    <None Include="RefLib\System.Web.Mvc.xml" />
+    <None Include="RefLib\System.Web.OData.dll" />
+    <None Include="RefLib\System.Web.OData.xml" />
+    <None Include="RefLib\System.Web.Optimization.dll" />
+    <None Include="RefLib\System.Web.Optimization.xml" />
+    <None Include="RefLib\System.Web.Razor.dll" />
+    <None Include="RefLib\System.Web.Razor.xml" />
+    <None Include="RefLib\System.Web.WebPages.Deployment.dll" />
+    <None Include="RefLib\System.Web.WebPages.Deployment.xml" />
+    <None Include="RefLib\System.Web.WebPages.dll" />
+    <None Include="RefLib\System.Web.WebPages.Razor.dll" />
+    <None Include="RefLib\System.Web.WebPages.Razor.xml" />
+    <None Include="RefLib\System.Web.WebPages.xml" />
+    <None Include="RefLib\System.Xml.ReaderWriter.dll" />
+    <None Include="RefLib\System.Xml.XDocument.dll" />
+    <None Include="RefLib\System.Xml.XmlSerializer.dll" />
+    <None Include="RefLib\WebGrease.dll" />
+    <None Include="RefLib\zh-Hans\EntityFramework.resources.dll" />
+    <None Include="RefLib\zh-Hans\EntityFramework.SqlServer.resources.dll" />
+    <None Include="RefLib\zh-Hans\Microsoft.OData.Core.resources.dll" />
+    <None Include="RefLib\zh-Hans\Microsoft.OData.Edm.resources.dll" />
+    <None Include="RefLib\zh-Hans\Microsoft.Spatial.resources.dll" />
+    <None Include="RefLib\zh-Hans\System.Net.Http.Formatting.resources.dll" />
+    <None Include="RefLib\zh-Hans\System.Web.Helpers.resources.dll" />
+    <None Include="RefLib\zh-Hans\System.Web.Http.resources.dll" />
+    <None Include="RefLib\zh-Hans\System.Web.Http.SelfHost.resources.dll" />
+    <None Include="RefLib\zh-Hans\System.Web.Http.Tracing.resources.dll" />
+    <None Include="RefLib\zh-Hans\System.Web.Http.WebHost.resources.dll" />
+    <None Include="RefLib\zh-Hans\System.Web.Mvc.resources.dll" />
+    <None Include="RefLib\zh-Hans\System.Web.OData.resources.dll" />
+    <None Include="RefLib\zh-Hans\System.Web.Optimization.resources.dll" />
+    <None Include="RefLib\zh-Hans\System.Web.Razor.resources.dll" />
+    <None Include="RefLib\zh-Hans\System.Web.WebPages.Deployment.resources.dll" />
+    <None Include="RefLib\zh-Hans\System.Web.WebPages.Razor.resources.dll" />
+    <None Include="RefLib\zh-Hans\System.Web.WebPages.resources.dll" />
+    <None Include="RefLib\zh-Hant\Microsoft.OData.Core.resources.dll" />
+    <None Include="RefLib\zh-Hant\Microsoft.OData.Edm.resources.dll" />
+    <None Include="RefLib\zh-Hant\Microsoft.Spatial.resources.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="KdLib\KdCore.Data.EntityFramework.dll" />
+    <Content Include="KdLib\KdCore.Data.EntityFramework.XML" />
+    <Content Include="KdLib\KdCore.Data.XML" />
+    <Content Include="KdLib\KdCore.DbParts.Commons.dll" />
+    <Content Include="KdLib\KdCore.DbParts.Commons.XML" />
+    <Content Include="KdLib\KdCore.DbParts.UserExts.dll" />
+    <Content Include="KdLib\KdCore.DbParts.UserExts.XML" />
+    <Content Include="Resources\KdCore.Web.Resource.dll" />
+    <Content Include="Resources\KdCore.Web.Resource.XML" />
+    <Content Include="KdLib\KdCore.Wechat.dll" />
+    <Content Include="KdLib\KdCore.Wechat.XML" />
+    <Content Include="KdLib\KdWeb.Common.Resource.dll" />
+    <Content Include="KdLib\KdWeb.Common.Resource.XML" />
+    <Content Include="KdLib\KdWeb.Common.UserExts.dll" />
+    <Content Include="KdLib\KdWeb.Common.UserExts.XML" />
+    <Content Include="RefLib\HtmlAgilityPack.dll" />
+    <Content Include="RefLib\HtmlAgilityPack.pdb" />
+    <Content Include="RefLib\HtmlAgilityPack.XML" />
+    <Content Include="RefLib\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="RefLib\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

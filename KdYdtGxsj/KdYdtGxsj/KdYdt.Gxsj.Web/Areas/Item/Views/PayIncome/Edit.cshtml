@@ -1,0 +1,57 @@
+﻿
+@model  PayIncome
+
+
+@using (Html.BbBeginForm())
+{
+    using (@Html.BeginPageTitle())
+    {
+        @Html.BbBtnSubmit()
+        @Html.BbBtnLinkReturn()
+    }
+
+    @Html.NavBreadcrumb()
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Id)
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <span class="panel-title">费用收入</span>
+        </div>
+        <div class="panel-body" >
+            <div class="row">
+                @Html.SjPickPrjFor(x => x.ProjectId, x => x.PrjName, 1)
+                @*@Html.BbDlgPickerFor(x => x.ProjectId, "PrjSignPick", x => x.PrjName, 1, "#content", 4, "项目名称", new { controller = "PrjPicks" }, null, null)*@
+                @Html.BbTextBoxFor(x => x.PrjCode)
+                @Html.HiddenFor(x => x.PrjCode)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.TechniqueCost, null, "元", 4)        
+                @Html.BbTextBoxFor(x => x.BusinessCost, null, "元", 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.DataCost, null, "元", 4)
+                @Html.BbTextBoxFor(x => x.ManagerCost, null, "元", 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Management, null, "元", 4)
+                @Html.BbTextBoxFor(x => x.OthersCost, null, "元", 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.ExpectedProfit, null, "元", 4)
+                @Html.BbTextBoxFor(x => x.TotalCost, null, "元", 4)
+            </div>
+            <div class="row">
+                @Html.BbUserPickFor(x => x.HandlingId, x => x.HandlingName, 1)
+                @Html.BbTextBoxFor(x => x.HandlingData, 4)
+            </div>
+            <div class="row">
+                @Html.BbTextBoxFor(x => x.Explain, 10)
+            </div>
+            @Html.AnnexUnit()
+            @Html.RowModifier()
+        </div>
+    </div>
+}
+@Html.AnnexUpload()

@@ -1,0 +1,50 @@
+﻿2018-04-11 17:31:19.61108 [T00001][Critical] KdAppContext - 加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-04-11 17:31:33.60674 [T00001][Critical] KdWebContext - RegisterWebMvc Namespaces: 
+              KdYdt.Gxsj.WebManage.Controllers
+2018-04-11 17:31:33.61276 [T00001][ Major  ] KdUnitManager - 初始化系统功能模块设置……
+2018-04-11 17:31:33.84236 [T00001][ Major  ] KdUnitManager - 从本地运行程序中识别出功能模块：10 个
+2018-04-11 17:31:33.90950 [T00001][ Major  ] KdUnitManager - 从远程获取到文件中识别功能模块定义：39 个
+2018-04-11 17:31:33.91451 [T00001][ Major  ] KdUnitManager - 初始化功能模块：10 个，功能操作：224 个
+2018-04-11 17:31:33.91451 [T00001][ Major  ] KdUnitManager - 初始化系统模块设置结束
+2018-04-11 17:31:33.91652 [T00001][ Major  ] KdMenu - 初始化系统菜单……
+2018-04-11 17:31:34.43339 [T00001][ Major  ] KdMenu - 共计初始化系统菜单：3 个
+2018-04-11 17:31:34.43439 [T00001][ Major  ] KdMenu - 菜单 系统主菜单[__MAIN__] 共计加载菜单项 21 个
+2018-04-11 17:31:34.43439 [T00001][ Major  ] KdMenu - 菜单 后台管理菜单[__ADMIN__] 共计加载菜单项 8 个
+2018-04-11 17:31:34.98031 [T00001][ Major  ] KdMenu - 菜单 项目管理[PrjManage] 共计加载菜单项 32 个
+2018-04-11 17:31:34.98031 [T00001][ Major  ] KdMenu - 初始化系统菜单设置结束
+2018-04-11 17:31:35.49675 [T00001][Critical] BbMvcManager - 当前系统运行环境：
+              IIS Version: 10.0
+              Integrated Pipeline: True
+              TargetFramework: 4.6
+              BinDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\bin\
+              AppDomainAppVirtualPath: /
+              VirtualPathRoot: /
+              AppData VirtualPath: ~\App_Data;
+              AppData PhysicsPath: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data;
+              系统全局配置文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile;
+              数据字典配置文件路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdDict;
+              系统主菜单配置文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdMenu\KdAppMenus.json;
+              系统菜单配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdMenu;
+              系统运行日志文件: ;
+              数据库初始化JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataInit;
+              数据库备份JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\DataBackup;
+              用户个人文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Data_User;
+              报表模板默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Templates;
+              报表输出默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\Reports;
+              附件上传默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\User_Uploads;
+              文件覆盖时自动备份的文件夹名称: History;
+2018-04-11 17:31:46.61949 [T00061][ Severe ] HomeController - 【Session:yy5bc4d2z3c4z1rvlxo0ogl4】【HttpGET:55BHJCHPJSSF】[DataScope:HandleFull]
+              已耗时：7.0068398秒 http://localhost:63384/Home/Login?from=%2fHome%2fLogout
+              【请求处理】执行时间 7.0068 秒【较慢】
+2018-04-11 17:40:07.28530 [T00059][ Alert  ] HomeController - 【Session:yy5bc4d2z3c4z1rvlxo0ogl4】【HttpGET:55BH4U2V7MAK】[DataScope:HandleFull]
+              已耗时：10.7796117秒 http://localhost:63384/Home/Login
+              【请求处理】执行时间 10.7796 秒【缓慢】
+2018-04-11 17:52:42.09604 [T00061][ Severe ] UsersController - 【Session:yy5bc4d2z3c4z1rvlxo0ogl4】【HttpGET:55BH5M7AJ020】管理员（内置）[DataScope:ViewFull, HandleFull]
+              已耗时：6.6536054秒 http://localhost:63384/Users
+              【请求处理】执行时间 6.6536 秒【较慢】
+2018-04-11 18:24:27.85694 [T00061][Critical] KdAppContext - 加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.WebManage\App_Data\KdGlobal.profile
+2018-04-11 18:24:27.85994 [T00061][ Major  ] KdUnitManager - 初始化系统功能模块设置……
+2018-04-11 18:24:27.90758 [T00061][ Major  ] KdUnitManager - 从本地运行程序中识别出功能模块：10 个
+2018-04-11 18:24:27.91108 [T00061][ Major  ] KdUnitManager - 从远程获取到文件中识别功能模块定义：39 个
+2018-04-11 18:24:27.91309 [T00061][ Major  ] KdUnitManager - 初始化功能模块：10 个，功能操作：224 个
+2018-04-11 18:24:27.91309 [T00061][ Major  ] KdUnitManager - 初始化系统模块设置结束

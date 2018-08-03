@@ -1,0 +1,37 @@
+﻿
+@model   PrjFacility
+
+
+
+
+@{Layout = null; }
+
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        @using (Html.BbAjaxForm())
+        {
+            @Html.BbDlgHeader("机械设备")
+            @Html.HiddenFor(x => x.Id)
+            <div class="modal-body">
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.CorpName, 4,new { ReadOnly=true})
+                    @Html.BbTextBoxFor(x => x.CorpCode, 4, new { ReadOnly = true })
+                </div>
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.FacilityName, 4, new { ReadOnly = true })
+                    @Html.BbTextBoxFor(x => x.FacilitySpec, 4, new { ReadOnly = true })
+                </div>
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.FacilitySum, 4, new { ReadOnly = true })
+                </div>
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.Remark, 10, new { ReadOnly = true })
+                </div>
+                @Html.AnnexUnit()
+                @Html.RowModifier()
+            </div>
+            @Html.BbDlgFooter()
+        }
+    </div>
+</div>

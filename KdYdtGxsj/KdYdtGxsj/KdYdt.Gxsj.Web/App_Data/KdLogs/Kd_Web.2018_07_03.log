@@ -1,0 +1,369 @@
+﻿2018-07-03 11:12:21.72414 [T00038][CodeMark] InsertPrjItemController - 【Http-POST:57MB9VK0MQPE】已耗时：0.0019940秒【Session:mxciwbsxon3ab0c1pexsqxk0】[1D4127BA876C99A]
+              [Url] http://localhost:6382/Item/InsertPrjItem/InsertData
+              [User: 未登录用户][DataScope: Default]
+              【请求接收】接收到用户请求
+2018-07-03 11:12:21.73013 [T00038][CodeMark] InsertPrjItemController - 【Http-POST:57MB9VK0MQPE】已耗时：0.0019940秒【Session:mxciwbsxon3ab0c1pexsqxk0】[1D4127BA876C99A]
+              [Url] http://localhost:6382/Item/InsertPrjItem/InsertData
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 0.0070 秒
+2018-07-03 11:12:26.64598 [T00125][CodeMark] InsertPrjItemController - 【Http-POST:57MBYC5K9V6Y】已耗时：0.0049877秒【Session:ewbbhbjbkaikq3045ddgetmd】[1D4127BAB6557F6]
+              [Url] http://localhost:6382/Item/InsertPrjItem/InsertData
+              [User: 未登录用户][DataScope: Default]
+              【请求接收】接收到用户请求
+2018-07-03 11:12:26.67989 [T00125][CodeMark] InsertPrjItemController - 【Http-POST:57MBYC5K9V6Y】已耗时：0.0049877秒【Session:ewbbhbjbkaikq3045ddgetmd】[1D4127BAB6557F6]
+              [Url] http://localhost:6382/Item/InsertPrjItem/InsertData
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 0.0389 秒
+2018-07-03 11:14:11.38195 [T00020][CodeMark] InsertPrjItemController - 【Http-POST:57MB101HGSOU】已耗时：0.0119669秒【Session:goji1jj3h4o1je2eu2xzmw30】[1D4127BE9D1B855]
+              [Url] http://localhost:6382/Item/InsertPrjItem/InsertData
+              [User: 未登录用户][DataScope: Default]
+              【请求接收】接收到用户请求
+2018-07-03 11:14:27.31526 [T00020][CodeMark] InsertPrjItemController - 【Http-POST:57MB101HGSOU】已耗时：0.0119669秒【Session:goji1jj3h4o1je2eu2xzmw30】[1D4127BE9D1B855]
+              [Url] http://localhost:6382/Item/InsertPrjItem/InsertData
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 15.9443 秒【异常缓慢】
+2018-07-03 11:20:16.84827 [T00129][CodeMark] InsertPrjItemController - 【Http-POST:57MBNI0SNN2Q】已耗时：0.0029912秒【Session:pfoadsunwbakgrpv0jf41rfl】[1D4127CC3A8D2F2]
+              [Url] http://localhost:6382/Item/InsertPrjItem/InsertData
+              [User: 未登录用户][DataScope: Default]
+              【请求接收】接收到用户请求
+2018-07-03 11:20:29.92031 [T00129][CodeMark] InsertPrjItemController - 【Http-POST:57MBNI0SNN2Q】已耗时：0.0029912秒【Session:pfoadsunwbakgrpv0jf41rfl】[1D4127CC3A8D2F2]
+              [Url] http://localhost:6382/Item/InsertPrjItem/InsertData
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 13.0750 秒【异常缓慢】
+2018-07-03 11:22:20.79999 [T00049][CodeMark] InsertPrjItemController - 【Http-POST:57MBR0AKPICI】已耗时：0.0029906秒【Session:cdulo3vsjtxqe4qjbaiow2fn】[1D4127D0D8A5AD0]
+              [Url] http://localhost:6382/Item/InsertPrjItem/InsertData
+              [User: 未登录用户][DataScope: Default]
+              【请求接收】接收到用户请求
+2018-07-03 11:22:39.95748 [T00049][CodeMark] InsertPrjItemController - 【Http-POST:57MBR0AKPICI】已耗时：0.0029906秒【Session:cdulo3vsjtxqe4qjbaiow2fn】[1D4127D0D8A5AD0]
+              [Url] http://localhost:6382/Item/InsertPrjItem/InsertData
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 19.1605 秒【异常缓慢】
+2018-07-03 11:22:46.57578 [T00049][CodeMark] InsertPrjItemController - 【Http-POST:57MBL7QLA2WN】已耗时：0.0029682秒【Session:jp3zfhdqxkov2hkmt4seliey】[1D4127D1CE76EAF]
+              [Url] http://localhost:6382/Item/InsertPrjItem/InsertData
+              [User: 未登录用户][DataScope: Default]
+              【请求接收】接收到用户请求
+2018-07-03 11:23:03.08829 [T00049] [Error]   PrjDbItemContext - [DC_57MBGB0TV74M][Batch:DS_57MBCVI2L7VC]DbUpdateException Entries: 更新条目时出错。有关详细信息，请参阅内部异常。
+              更新条目时出错。有关详细信息，请参阅内部异常。
+              Violation of PRIMARY KEY constraint 'PK_dbo.PrjItem'. Cannot insert duplicate key in object 'dbo.PrjItem'. The duplicate key value is (201870309F7D00002F6ED8CFBB7844C18E4CA84E4F7D734D).
+              The statement has been terminated.
+                      Error Entity To Added: System.Data.Entity.DynamicProxies.PrjItem_5458F60553DF95B1863167865B23A32C67CB608B447DB2C1BF73401F90B07E06;
+                              CurrentValues: {"Id":"201870309F7D00002F6ED8CFBB7844C18E4CA84E4F7D734D","TagDeleted":false,"TagDisabled":false,"SortNum":null,"Notes":null,"Remarks":null,"Other1":null,"Other2":null,"Other3":null,"Other4":null,"Other5":null,"Other6":null,"Other7":null,"Other8":null,"CreateTime":"2018-07-03T11:20:29.87","CreatorUserId":"201870210CE3000058E6E1B578FA472082C070E0FE137C71","CreatorUserName":"张三","CreatorDeptId":"OwnerCorp","CreatorDeptName":"广西三建","CreatorDutyId":null,"CreatorDutyName":null,"CreatorCorpCode":"OwnerCorp","CreatorCorpName":"广西三建","ModifyTime":"2018-07-03T11:22:59.1847308+08:00","ModifierUserId":"201870210CE3000058E6E1B578FA472082C070E0FE137C71","ModifierUserName":"张三","ModifierDeptId":"OwnerCorp","ModifierDeptName":"广西三建","ModifierCorpCode":"OwnerCorp","ModifierCorpName":"广西三建"};
+              [KdYdt.Gxsj.Item.Domains.Services.PrjDbItemContext] DataSource:Database=[KdYdtGxsjItem]; Data Source=[.]
+2018-07-03 11:23:03.08928 [T00049] [Error]   PrjDbItemService - [DS_57MBCVI2L7VC_张三] 
+              【Exception】System.Data.Entity.Infrastructure.DbUpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.Entity.Core.UpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.SqlClient.SqlException: Violation of PRIMARY KEY constraint 'PK_dbo.PrjItem'. Cannot insert duplicate key in object 'dbo.PrjItem'. The duplicate key value is (201870309F7D00002F6ED8CFBB7844C18E4CA84E4F7D734D).
+              The statement has been terminated.
+                 在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+                 在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+                 在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+                 在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+                 在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+                 在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+                 在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+                 在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+                 在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+                 在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+                 在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+                 在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                 在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+                 在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+                 在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+                 在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+                 在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                 在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+                 在 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+                 在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+                 --- 内部异常堆栈跟踪的结尾 ---
+                 在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+                 在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+                 在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+                 在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+                 在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+                 在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+                 在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+                 在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+                 在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+                 在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+                 在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+                 在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+                 --- 内部异常堆栈跟踪的结尾 ---
+                 在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+                 在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+                 在 KdCore.Data.EntityFramework.BbDbContext.SaveChanges()
+                 在 KdCore.Data.BbDataService`1.SaveChangesImpl()
+                 在 KdCore.Data.BbDataService.SaveChanges(Boolean submitAllServicesInSameSession)
+2018-07-03 11:23:07.74285 [T00049] [Error]   InsertPrjItemController - 【Http-POST:57MBL7QLA2WN】已耗时：0.0029682秒【Session:jp3zfhdqxkov2hkmt4seliey】[1D4127D1CE76EAF]
+              [Url] http://localhost:6382/Item/InsertPrjItem/InsertData
+              [User: 未登录用户][DataScope: HandleFull]
+              【Exception】System.Data.Entity.Infrastructure.DbUpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.Entity.Core.UpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.SqlClient.SqlException: Violation of PRIMARY KEY constraint 'PK_dbo.PrjItem'. Cannot insert duplicate key in object 'dbo.PrjItem'. The duplicate key value is (201870309F7D00002F6ED8CFBB7844C18E4CA84E4F7D734D).
+              The statement has been terminated.
+                 在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+                 在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+                 在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+                 在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+                 在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+                 在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+                 在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+                 在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+                 在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+                 在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+                 在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+                 在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                 在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+                 在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+                 在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+                 在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+                 在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                 在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+                 在 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+                 在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+                 --- 内部异常堆栈跟踪的结尾 ---
+                 在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+                 在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+                 在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+                 在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+                 在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+                 在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+                 在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+                 在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+                 在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+                 在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+                 在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+                 在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+                 --- 内部异常堆栈跟踪的结尾 ---
+                 在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+                 在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+                 在 KdCore.Data.EntityFramework.BbDbContext.SaveChanges()
+                 在 KdCore.Data.BbDataService`1.SaveChangesImpl()
+                 在 KdCore.Data.BbDataService.SaveChanges(Boolean submitAllServicesInSameSession)
+                 在 KdCore.Data.BbDataService.SaveChanges()
+                 在 KdYdt.Gxsj.Item.Mvc.Areas.Item.Controllers.InsertPrjItemController.InsertData(String loginUser, String jsons) 位置 D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Item.Mvc\Areas\Item\Controllers\InsertPrjItemController.cs:行号 64
+2018-07-03 11:23:07.74783 [T00049][CodeMark] InsertPrjItemController - 【Http-POST:57MBL7QLA2WN】已耗时：0.0029682秒【Session:jp3zfhdqxkov2hkmt4seliey】[1D4127D1CE76EAF]
+              [Url] http://localhost:6382/Item/InsertPrjItem/InsertData
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 21.1750 秒【异常缓慢】
+2018-07-03 11:40:14.05505 [T00132][Critical] KdAppContext - 已加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdGlobal.profile
+2018-07-03 11:40:16.40779 [T00132][Critical] KdWebContext - RegisterWebMvc Namespaces: 
+                      KdCore.Web.Errors.Controllers
+                      KdYdt.Gxsj.Oa.Mvc.Controllers
+2018-07-03 11:40:16.41175 [T00132] [Major]   KdUnitManager - 初始化系统功能模块设置……
+2018-07-03 11:40:16.52046 [T00132] [Major]   KdUnitManager - 初始化系统模块设置结束
+              从本地运行程序中识别出功能模块：56 个
+              初始化功能模块：56 个，功能操作：1290 个
+2018-07-03 11:40:16.52345 [T00132] [Major]   KdMenu - 初始化系统菜单……
+2018-07-03 11:40:16.72591 [T00132] [Major]   KdMenu - 共计初始化系统菜单：3 个
+2018-07-03 11:40:16.72691 [T00132] [Major]   KdMenu - 菜单 OA系统菜单[Default] 共计加载菜单项 21 个
+2018-07-03 11:40:16.88548 [T00132] [Major]   KdMenu - 菜单 项目管理菜单[PrjManage] 共计加载菜单项 46 个
+2018-07-03 11:40:16.91640 [T00132] [Major]   KdMenu - 菜单 后台管理菜单[Admin] 共计加载菜单项 8 个
+2018-07-03 11:40:16.91640 [T00132] [Major]   KdMenu - 初始化系统菜单设置结束。
+2018-07-03 11:40:16.92737 [T00132][Critical] BbMvcManager - 当前系统运行环境：
+                      IIS Version: 10.0
+                      Integrated Pipeline: True
+                      TargetFramework: 4.6
+                      BaseDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\
+                      BinDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\bin\
+                      AppDomainAppVirtualPath: /
+                      RootPathVirtual: ~
+                      RootPathPhysics: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\
+                      AppData VirtualPath: ~/App_Data;
+                      AppData PhysicsPath: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data;
+                      系统全局配置文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdGlobal.profile;
+                      数据字典配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdDict;
+                      系统菜单配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdMenu;
+                      系统默认菜单文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdMenu\KdMenu_Default.json;
+                      系统运行日志文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdLogs\Kd_Web.2018_07_03.log;
+                      数据库初始化JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\DataInit;
+                      数据库备份JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\DataBackup;
+                      用户个人文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\Data_User;
+                      报表模板默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\Templates;
+                      报表输出默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\Reports;
+                      附件上传默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\User_Uploads;
+                      文件覆盖时自动备份的文件夹名称: History;
+2018-07-03 11:40:17.11985 [T00026][CodeMark] InsertPrjItemController - 【Http-POST:57MB86OAT6KL】已耗时：0.1146942秒【Session:223vcsg4gnrkpnk5pf2qnhzu】[1D4127F8F02D73E]
+              [Url] http://localhost:6382/Item/InsertPrjItem/InsertData
+              [User: 未登录用户][DataScope: Default]
+              【请求接收】接收到用户请求
+2018-07-03 11:40:17.13584 [T00026][Critical] KdUtil - 调试模式运行，忽略版本更新检测
+2018-07-03 11:40:18.28275 [T00026][CodeMark] InsertPrjItemController - 【Http-POST:57MB86OAT6KL】已耗时：0.1146942秒【Session:223vcsg4gnrkpnk5pf2qnhzu】[1D4127F8F02D73E]
+              [Url] http://localhost:6382/Item/InsertPrjItem/InsertData
+              [User: 未登录用户][DataScope: HandleFull]
+              【请求处理完成】执行时间 1.2766 秒
+2018-07-03 14:13:09.40967 [T00001][Critical] KdAppContext - 已加载全局配置文件：D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdGlobal.profile
+2018-07-03 14:13:14.83927 [T00001][Critical] KdWebContext - RegisterWebMvc Namespaces: 
+                      KdCore.Web.Errors.Controllers
+                      KdYdt.Gxsj.Oa.Mvc.Controllers
+2018-07-03 14:13:14.85320 [T00001] [Major]   KdUnitManager - 初始化系统功能模块设置……
+2018-07-03 14:13:15.16835 [T00001] [Major]   KdUnitManager - 初始化系统模块设置结束
+              从本地运行程序中识别出功能模块：56 个
+              初始化功能模块：56 个，功能操作：1290 个
+2018-07-03 14:13:15.17035 [T00001] [Major]   KdMenu - 初始化系统菜单……
+2018-07-03 14:13:15.53039 [T00001] [Major]   KdMenu - 共计初始化系统菜单：3 个
+2018-07-03 14:13:15.53138 [T00001] [Major]   KdMenu - 菜单 OA系统菜单[Default] 共计加载菜单项 21 个
+2018-07-03 14:13:15.69295 [T00001] [Major]   KdMenu - 菜单 项目管理菜单[PrjManage] 共计加载菜单项 46 个
+2018-07-03 14:13:15.75781 [T00001] [Major]   KdMenu - 菜单 后台管理菜单[Admin] 共计加载菜单项 8 个
+2018-07-03 14:13:15.75781 [T00001] [Major]   KdMenu - 初始化系统菜单设置结束。
+2018-07-03 14:13:15.83757 [T00001][Critical] BbMvcManager - 当前系统运行环境：
+                      IIS Version: 10.0
+                      Integrated Pipeline: True
+                      TargetFramework: 4.6
+                      BaseDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\
+                      BinDirectory: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\bin\
+                      AppDomainAppVirtualPath: /
+                      RootPathVirtual: ~
+                      RootPathPhysics: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\
+                      AppData VirtualPath: ~/App_Data;
+                      AppData PhysicsPath: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data;
+                      系统全局配置文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdGlobal.profile;
+                      数据字典配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdDict;
+                      系统菜单配置文件夹: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdMenu;
+                      系统默认菜单文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdMenu\KdMenu_Default.json;
+                      系统运行日志文件: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\KdLogs\Kd_Web.2018_07_03.log;
+                      数据库初始化JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\DataInit;
+                      数据库备份JSON文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\DataBackup;
+                      用户个人文件默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\Data_User;
+                      报表模板默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\Templates;
+                      报表输出默认路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\Reports;
+                      附件上传默认保存路径: D:\工作项目\一点通网站\1 源代码\1.1 系统代码\广西三建项目管理系统\KdYdtGxsj\KdYdtGxsj\KdYdt.Gxsj.Web\App_Data\User_Uploads;
+                      文件覆盖时自动备份的文件夹名称: History;
+2018-07-03 14:13:16.71821 [T00010][CodeMark] HomeController - 【Http-GET:57MEHRFBWX1Q】已耗时：0.2622969秒【Session:eyui54r21gwkuf4xkusxej12】[1D41294EE63DE49]
+              [Url] http://localhost:6382/
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+2018-07-03 14:13:16.74020 [T00010][Critical] KdUtil - 调试模式运行，忽略版本更新检测
+2018-07-03 14:13:17.54301 [T00010][CodeMark] HomeController - 【Http-GET:57MEHRFBWX1Q】已耗时：0.2622969秒【Session:eyui54r21gwkuf4xkusxej12】[1D41294EE63DE49]
+              [Url] http://localhost:6382/
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求处理完成】执行时间 1.0861 秒
+2018-07-03 14:13:17.58392 [T00008][CodeMark] ItemHomeController - 【Http-GET:57ME42WJO8MJ】已耗时：0.0040172秒【Session:eyui54r21gwkuf4xkusxej12】[1D41294EF0F603D]
+              [Url] http://localhost:6382/Item/ItemHome
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求接收】接收到用户请求
+2018-07-03 14:13:31.43539 [T00008][CodeMark] ItemHomeController - 【Http-GET:57ME42WJO8MJ】已耗时：0.0040172秒【Session:eyui54r21gwkuf4xkusxej12】[1D41294EF0F603D]
+              [Url] http://localhost:6382/Item/ItemHome
+              [User: 管理员（内置）][DataScope: HandleFull]
+              【请求处理完成】执行时间 13.8545 秒【异常缓慢】
+2018-07-03 14:14:02.01760 [T00011][CodeMark] PrjItemController - 【Http-GET:57ME91DNH24U】已耗时：0.0059839秒【Session:eyui54r21gwkuf4xkusxej12】[1D41295098AF6FC]
+              [Url] http://localhost:6382/Item/PrjItem
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/ItemHome
+2018-07-03 14:14:03.84671 [T00011][CodeMark] PrjItemController - 【Http-GET:57ME91DNH24U】已耗时：0.0059839秒【Session:eyui54r21gwkuf4xkusxej12】[1D41295098AF6FC]
+              [Url] http://localhost:6382/Item/PrjItem
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 1.8351 秒
+2018-07-03 14:14:14.02899 [T00011][CodeMark] PrjItemController - 【Http-GET:57MEAKKRB01C】已耗时：0.0059856秒【Session:eyui54r21gwkuf4xkusxej12】[1D4129510B3C1DA]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PrjItem
+2018-07-03 14:14:18.63168 [T00011][CodeMark] PrjItemController - 【Http-GET:57MEAKKRB01C】已耗时：0.0059856秒【Session:eyui54r21gwkuf4xkusxej12】[1D4129510B3C1DA]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 4.6087 秒【稍慢】
+2018-07-03 14:15:26.89013 [T00019][CodeMark] PrjItemController - 【Http-GET:57METM1A79QE】已耗时：0.0069814秒【Session:eyui54r21gwkuf4xkusxej12】[1D412953C215544]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PrjItem
+2018-07-03 14:15:27.91340 [T00019][CodeMark] PrjItemController - 【Http-GET:57METM1A79QE】已耗时：0.0069814秒【Session:eyui54r21gwkuf4xkusxej12】[1D412953C215544]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 1.0302 秒
+2018-07-03 14:16:47.62771 [T00035][CodeMark] PrjItemController - 【Http-GET:57MET3J51BM6】已耗时：0.0059858秒【Session:eyui54r21gwkuf4xkusxej12】[1D412956C410FE8]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PrjItem
+2018-07-03 14:16:48.66992 [T00035][CodeMark] PrjItemController - 【Http-GET:57MET3J51BM6】已耗时：0.0059858秒【Session:eyui54r21gwkuf4xkusxej12】[1D412956C410FE8]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 1.0482 秒
+2018-07-03 14:17:15.72058 [T00033][CodeMark] PrjItemController - 【Http-GET:57ME90PTI6OD】已耗时：0.0069823秒【Session:eyui54r21gwkuf4xkusxej12】[1D412957CFFB1A0]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PrjItem
+2018-07-03 14:17:16.81266 [T00033][CodeMark] PrjItemController - 【Http-GET:57ME90PTI6OD】已耗时：0.0069823秒【Session:eyui54r21gwkuf4xkusxej12】[1D412957CFFB1A0]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 1.0981 秒
+2018-07-03 14:17:53.14549 [T00050][CodeMark] PrjItemController - 【Http-GET:57ME0HO2V14V】已耗时：0.0049860秒【Session:eyui54r21gwkuf4xkusxej12】[1D41295934E6F37]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PrjItem
+2018-07-03 14:17:54.08997 [T00050][CodeMark] PrjItemController - 【Http-GET:57ME0HO2V14V】已耗时：0.0049860秒【Session:eyui54r21gwkuf4xkusxej12】[1D41295934E6F37]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.9485 秒
+2018-07-03 14:18:06.74512 [T00052][CodeMark] PrjItemController - 【Http-GET:57MEZ51FG9WW】已耗时：0.0039902秒【Session:eyui54r21gwkuf4xkusxej12】[1D412959B69B9AE]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PrjItem
+2018-07-03 14:18:07.68561 [T00052][CodeMark] PrjItemController - 【Http-GET:57MEZ51FG9WW】已耗时：0.0039902秒【Session:eyui54r21gwkuf4xkusxej12】[1D412959B69B9AE]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.9445 秒
+2018-07-03 14:18:30.05578 [T00066][CodeMark] PrjItemController - 【Http-GET:57MEQZIBMZ2C】已耗时：0.0039910秒【Session:eyui54r21gwkuf4xkusxej12】[1D41295A94EA64C]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PrjItem
+2018-07-03 14:18:31.01023 [T00066][CodeMark] PrjItemController - 【Http-GET:57MEQZIBMZ2C】已耗时：0.0039910秒【Session:eyui54r21gwkuf4xkusxej12】[1D41295A94EA64C]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.9584 秒
+2018-07-03 14:19:21.56565 [T00071][CodeMark] PrjItemController - 【Http-GET:57MELIEMBVYD】已耗时：0.0049854秒【Session:eyui54r21gwkuf4xkusxej12】[1D41295C80247B2]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PrjItem
+2018-07-03 14:19:22.54802 [T00071][CodeMark] PrjItemController - 【Http-GET:57MELIEMBVYD】已耗时：0.0049854秒【Session:eyui54r21gwkuf4xkusxej12】[1D41295C80247B2]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.9874 秒
+2018-07-03 14:19:41.93019 [T00081][CodeMark] PrjItemController - 【Http-POST:57ME5O0P75A8】已耗时：0.0049871秒【Session:eyui54r21gwkuf4xkusxej12】[1D41295D425A96C]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+2018-07-03 14:19:42.30219 [T00081][CodeMark] PrjItemController - 【Http-POST:57ME5O0P75A8】已耗时：0.0049871秒【Session:eyui54r21gwkuf4xkusxej12】[1D41295D425A96C]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.3770 秒
+2018-07-03 14:19:42.31616 [T00077][CodeMark] PrjItemController - 【Http-GET:57MEA410F9TR】已耗时：0.0019934秒【Session:eyui54r21gwkuf4xkusxej12】[1D41295D461033C]
+              [Url] http://localhost:6382/Item/PrjItem?isback=True
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+2018-07-03 14:19:42.36004 [T00077][CodeMark] PrjItemController - 【Http-GET:57MEA410F9TR】已耗时：0.0019934秒【Session:eyui54r21gwkuf4xkusxej12】[1D41295D461033C]
+              [Url] http://localhost:6382/Item/PrjItem?isback=True
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.0459 秒
+2018-07-03 14:19:42.37400 [T00076][CodeMark] PrjItemController - 【Http-GET:57ME1JF1XSPI】已耗时：0.0009978秒【Session:eyui54r21gwkuf4xkusxej12】[1D41295D469FDB0]
+              [Url] http://localhost:6382/Item/PrjItem
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+2018-07-03 14:19:43.60970 [T00076][CodeMark] PrjItemController - 【Http-GET:57ME1JF1XSPI】已耗时：0.0009978秒【Session:eyui54r21gwkuf4xkusxej12】[1D41295D469FDB0]
+              [Url] http://localhost:6382/Item/PrjItem
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 1.2367 秒
+2018-07-03 14:20:53.42798 [T00053][CodeMark] PrjItemController - 【Http-GET:57MEMC0GCVLO】已耗时：0.0049866秒【Session:eyui54r21gwkuf4xkusxej12】[1D41295FEC35BC9]
+              [Url] http://localhost:6382/Item/PrjItem
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00017F1C0A65BABA492F9558C15B11E6C7CA
+2018-07-03 14:20:54.37847 [T00053][CodeMark] PrjItemController - 【Http-GET:57MEMC0GCVLO】已耗时：0.0049866秒【Session:eyui54r21gwkuf4xkusxej12】[1D41295FEC35BC9]
+              [Url] http://localhost:6382/Item/PrjItem
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.9555 秒
+2018-07-03 14:23:35.10238 [T00040][CodeMark] PrjItemController - 【Http-GET:57MEM5N46WH5】已耗时：0.0069814秒【Session:eyui54r21gwkuf4xkusxej12】[1D412965F209C10]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00003D48083D806543DAB6328711B1A03C17
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求接收】接收到用户请求
+              [Request.UrlReferrer] http://localhost:6382/Item/PrjItem
+2018-07-03 14:23:35.24101 [T00040][CodeMark] PrjItemController - 【Http-GET:57MEM5N46WH5】已耗时：0.0069814秒【Session:eyui54r21gwkuf4xkusxej12】[1D412965F209C10]
+              [Url] http://localhost:6382/Item/PrjItem/Edit/201870309FFF00003D48083D806543DAB6328711B1A03C17
+              [User: 管理员（内置）][DataScope: ViewFull, HandleFull]
+              【请求处理完成】执行时间 0.1456 秒

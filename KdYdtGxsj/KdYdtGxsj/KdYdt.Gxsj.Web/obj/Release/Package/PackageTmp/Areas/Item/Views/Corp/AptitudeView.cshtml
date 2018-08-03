@@ -1,0 +1,46 @@
+﻿
+
+
+@model   PrjAptitude
+
+
+@{Layout = null; }
+
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        @using (Html.BbAjaxForm())
+        {
+            @Html.BbDlgHeader("企业资质")
+            @Html.HiddenFor(x => x.Id)
+            <div class="modal-body">
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.CorpName, 4, new { ReadOnly = true })
+                    @Html.BbTextBoxFor(x => x.CorpCode, 4, new { ReadOnly = true })
+                </div>
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.AptitudeName, 4, new { ReadOnly = true })
+                    @Html.BbTextBoxFor(x => x.AptitudeID, 4, new { ReadOnly = true })
+                </div>
+                <div class="row">
+                    @Html.BbRadioListFor(x => x.AptitudeType, 4)
+                    @Html.BbRadioListFor(x => x.AptitudeClass, 4)
+                </div>
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.CredentialDate, 4, new { ReadOnly = true })
+                    @Html.BbTextBoxFor(x => x.GrantDate, 4, new { ReadOnly = true })
+
+                </div>
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.OfficeName, 4, new { ReadOnly = true })
+                </div>
+                <div class="row">
+                    @Html.BbTextBoxFor(x => x.Remark, 10, new { ReadOnly = true })
+                </div>
+                @Html.AnnexUnit()
+                @Html.RowModifier()
+            </div>
+            @Html.BbDlgFooter()
+        }
+    </div>
+</div>

@@ -1,0 +1,881 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KdCore.UITheme</name>
+    </assembly>
+    <members>
+        <member name="T:KdCore.UITheme.BbActionPattern">
+            <summary>
+            带有视觉外观模式的数据操作封装
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbActionPattern.IsRepairedActionPattern">
+            <summary>
+            获取是否根据 Action 属性及 ActionName 属性自动修正过缺失的参数
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbActionPattern.DataAction">
+            <summary>
+            数据操作类型
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbActionPattern.ActionName">
+            <summary>
+            数据操作类型识别名称
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbActionPattern.Text">
+            <summary>
+            数据操作类型界面显示文字
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbActionPattern.Tooltip">
+            <summary>
+            数据操作类型界面提示说明
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbActionPattern.Pattern">
+            <summary>
+            显示外观模式
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbActionPattern.AriaRole">
+            <summary>
+            Aria 富标记 Role 类型
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbActionPattern.DataRole">
+            <summary>
+            数据操作 Role 类型
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbActionPattern.OnClick">
+            <summary>
+            点击事件处理函数
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbActionPattern.Href">
+            <summary>
+            有关链接URL地址
+            </summary>
+        </member>
+        <member name="M:KdCore.UITheme.BbActionPattern.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:KdCore.UITheme.BbActionPattern.#ctor(KdCore.BbShowPattern,System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="pattern"></param>
+            <param name="href"></param>
+        </member>
+        <member name="M:KdCore.UITheme.BbActionPattern.#ctor(KdCore.Data.BbDataAction)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="dataAction"></param>
+        </member>
+        <member name="M:KdCore.UITheme.BbActionPattern.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="actionName"></param>
+        </member>
+        <member name="M:KdCore.UITheme.BbActionPattern.#ctor(KdCore.Data.BbDataAction,System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="dataAction"></param>
+            <param name="actionName"></param>
+        </member>
+        <member name="M:KdCore.UITheme.BbActionPattern.RepairDataActionInner">
+            <summary>
+            根据 Action 属性及 ActionName 属性自动修正过缺失的参数
+            </summary>
+        </member>
+        <member name="M:KdCore.UITheme.BbActionPattern.RepairDataAction">
+            <summary>
+            根据 Action 属性及 ActionName 属性自动修正过缺失的参数
+            </summary>
+        </member>
+        <member name="T:KdCore.UITheme.Icon.IconAwesome">
+            <summary>
+            FontAwesome 4.7.0 图标字体库枚举
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.Icon.IconAwesome.NoneKD">
+            <summary>
+            不设置图标，添加KD结尾避免将来命名冲突
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.Icon.IconAwesome.AutoKD">
+            <summary>
+            系统根据上下文自行判断选择初始化过的合适图标，添加KD结尾避免将来命名冲突
+            </summary>
+        </member>
+        <member name="T:KdCore.UITheme.Icon.IconAwesome463">
+            <summary>
+            FontAwesome 4.6.3 图标字体库枚举
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.Icon.IconAwesome463.NoneKD">
+            <summary>
+            不设置图标，添加KD结尾避免将来命名冲突
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.Icon.IconAwesome463.AutoKD">
+            <summary>
+            系统根据上下文自行判断选择初始化过的合适图标，添加KD结尾避免将来命名冲突
+            </summary>
+        </member>
+        <member name="T:KdCore.UITheme.Icon.IconGlyphicons">
+            <summary>
+            Glyphicons提供的可选图标枚举
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.Icon.IconGlyphicons.NoneKD">
+            <summary>
+            不设置图标，添加KD结尾避免将来命名冲突
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.Icon.IconGlyphicons.AutoKD">
+            <summary>
+            系统根据上下文自行判断选择初始化过的合适图标，添加KD结尾避免将来命名冲突
+            </summary>
+        </member>
+        <member name="T:KdCore.UITheme.KdUtilUI">
+            <summary>
+            图标字体应用工具
+            </summary>
+        </member>
+        <member name="M:KdCore.UITheme.KdUtilUI.ToCssSuffix(KdCore.UITheme.BbUISize)">
+            <summary>
+            获取带有尺寸大小的样式名称
+            </summary>
+            <param name="size"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.UITheme.KdUtilUI.GetCssClass(KdCore.UITheme.BbUISize,System.String)">
+            <summary>
+            获取带有尺寸大小的样式名称
+            </summary>
+            <param name="size"></param>
+            <param name="cssBase"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.UITheme.KdUtilUI.GetCssClassGroup(KdCore.UITheme.BbUISize,System.String)">
+            <summary>
+            获取带有尺寸大小的样式名称组合
+            </summary>
+            <param name="size"></param>
+            <param name="cssBase"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.UITheme.KdUtilIcon">
+            <summary>
+            图标字体应用工具
+            </summary>
+        </member>
+        <member name="M:KdCore.UITheme.KdUtilIcon.ToHtml(KdCore.UITheme.Icon.IconGlyphicons)">
+            <summary>
+            获取 HTML 字符串
+            </summary>
+            <param name="icon"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.UITheme.KdUtilIcon.ToHtml(KdCore.UITheme.Icon.IconAwesome)">
+            <summary>
+            获取 HTML 字符串
+            </summary>
+            <param name="icon"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.UITheme.KdUtilIcon.GetIconGlyphicons(KdCore.Data.BbDataAction)">
+            <summary>
+            获取数据操作在系统中使用 Glyphicons 风格的默认图标
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.UITheme.KdUtilIcon.GetIconAwesome(KdCore.Data.BbDataAction)">
+            <summary>
+            获取数据操作在系统中使用 FontAwesome 风格的默认图标
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.UITheme.KdUtilIcon.GetIconNamesGlyphicons">
+            <summary>
+            获取系统中已定义的全部 Glyphicons 图标名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.UITheme.KdUtilIcon.GetIconNamesAwesome">
+            <summary>
+            获取系统中已定义的全部 FontAwesome 图标名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.UITheme.BbTextStyles">
+            <summary>
+            页面显示文本的各种类型
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbTextStyles.Small">
+            <summary>
+            小字体文本 class=small
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbTextStyles.Lead">
+            <summary>
+            大字体文本  class=lead
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbTextStyles.Left">
+            <summary>
+            class=text-left
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbTextStyles.Center">
+            <summary>
+            text-center
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbTextStyles.Right">
+            <summary>
+            text-right
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbTextStyles.Muted">
+            <summary>
+            text-muted
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbTextStyles.Primary">
+            <summary>
+            text-primary
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbTextStyles.Success">
+            <summary>
+            text-success
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbTextStyles.Info">
+            <summary>
+            text-info
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbTextStyles.Warning">
+            <summary>
+            text-warning
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbTextStyles.Danger">
+            <summary>
+            text-danger
+            </summary>
+        </member>
+        <member name="T:KdCore.UITheme.BbFormLayout">
+            <summary>
+            页面表单布局样式
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.Default">
+            <summary>
+            系统默认表单布局
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameIconRequired">
+            <summary>
+            HTML标签常量：必填标识
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.HtmlIconNull">
+            <summary>
+            HTML标签常量：空值时显示的图标
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.HtmlIconTrue">
+            <summary>
+            HTML标签常量：值为 True 时显示的图标
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.HtmlIconFalse">
+            <summary>
+            HTML标签常量：值为 False 时显示的图标
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.HtmlIconTrueInvert">
+            <summary>
+            HTML标签常量：值为 True 时显示的反色图标
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.HtmlIconFalseInvert">
+            <summary>
+            HTML标签常量：值为 False 时显示的反色图标
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameRow">
+            <summary>
+            获取或设置一行的的 CSS 类的名称。
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameDisabled">
+            <summary>
+            获取或设置禁用表单的 CSS 类的名称。
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameForm">
+            <summary>
+            获取或设置表单总体的 CSS 类的名称。
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameFormGroup">
+            <summary>
+            获取或设置默认编辑页的输入项分组的 CSS 类的名称。
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameFormLabel">
+            <summary>
+            获取或设置默认编辑页的输入项分组的 CSS 类的名称。
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameFormStatic">
+            <summary>
+            获取或设置表单控件只读时显示为纯文本的 CSS 类的名称。
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameFormControl">
+            <summary>
+            获取或设置表单控件基本 CSS 类的名称。
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameFormReadOnly">
+            <summary>
+            获取或设置表单控件只读模式时的 CSS 类的名称。
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameFormHelp">
+            <summary>
+            获取或设置表单控件填写帮助说明的 CSS 类的名称。
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameInputGroup">
+            <summary>
+            获取或设置编辑页的输入框组的 CSS 类的名称。
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameInputGroupButton">
+            <summary>
+            获取或设置编辑页的输入框组中的Button的 CSS 类的名称。
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameInputPrefix">
+            <summary>
+            获取或设置编辑页的输入框组的前缀span的 CSS 类的名称。
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameInputSuffix">
+            <summary>
+            获取或设置编辑页的输入框组的后缀span的 CSS 类的名称。
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameInputInset">
+            <summary>
+            获取或设置嵌入在一组组件中（分页框）的 INPUT 表单的 CSS 类的名称。
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameFormHorizontal">
+            <summary>
+            表单水平布局时自动对 form 添加的 class 样式名称
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameFormVertical">
+            <summary>
+            表单竖向布局时自动对 form 添加的 class 样式名称
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameDialogMode">
+            <summary>
+            对话框模式下自动对 form 添加的 class 样式名称
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameInlineMode">
+            <summary>
+            inline模式下自动对 form 添加的 class 样式名称
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameNoLabelMode">
+            <summary>
+            不显示表单文本标签内容时自动对 form 添加的 class 样式名称
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameLabelHidden">
+            <summary>
+            隐藏文本标签显示时自动对 label 添加的 class 样式名称
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameSelect">
+            <summary>
+            自动对 select 添加的 class 样式名称
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameInputCheckbox">
+            <summary>
+            自动对 input[type=checkbox] 添加的 class 样式名称
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameInputCheckboxInline">
+            <summary>
+            自动对 inline 模式下的 input[type=checkbox] 添加的 class 样式名称
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameInputRadio">
+            <summary>
+            自动对 input[type=radio] 添加的 class 样式名称
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameInputRadioInline">
+            <summary> 
+            自动对 inline 模式下的 input[type=radio] 添加的 class 样式名称
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameCheckboxList">
+            <summary> 
+            自动对多个选项模式下的 input[type=checkbox] 添加的 class 样式名称
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.ClassNameRadioList">
+            <summary> 
+            自动对多个选项模式下的 input[type=radio] 添加的 class 样式名称
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.LayoutName">
+            <summary>
+            布局识别名称
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.FormStyle">
+            <summary>
+            表单样式
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.DialogMode">
+            <summary>
+            获取或设置表单是否在对话框中显示
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.DialogSize">
+            <summary>
+            获取或设置当前对话框的尺寸设置
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.InlineMode">
+            <summary>
+            获取或设置表单是否在行内中显示
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.IsHorizontal">
+            <summary>
+            字段名称标签与表单控件的布局方向
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.WithoutLabel">
+            <summary>
+            是否显示字段名称标签文本
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.WithDescription">
+            <summary>
+            显示描述说明
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.WithValidation">
+            <summary>
+            显示输入验证结果
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbFormLayout._cssForm">
+            <summary>
+            表单使用的 class 名称
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbFormLayout._cssFormGroup">
+            <summary>
+            普通表单分组使用的 calss 名称
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbFormLayout._cssColGroupFullRow">
+            <summary>
+            占据整行界面的表单分组使用的 calss 名称
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbFormLayout._cssFormLabel">
+            <summary>
+            表单分组中文字标签使用的 class 名称
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbFormLayout._cssFormLabelFullRow">
+            <summary>
+            占据整行界面的表单分组中文字标签使用的 class 名称
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbFormLayout._cssFormFieldGroup">
+            <summary>
+            表单分组中表单输入部分使用的 class 名称
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbFormLayout._cssFormFieldGroupFullRow">
+            <summary>
+            占据整行界面的表单分组中表单输入部分使用的 class 名称
+            </summary>
+        </member>
+        <member name="M:KdCore.UITheme.BbFormLayout.ResetCaches">
+            <summary>
+            重置缓存数据
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbFormLayout.CssForm">
+            <summary>
+            获取整个表单应用的样式
+            </summary>
+        </member>
+        <member name="M:KdCore.UITheme.BbFormLayout.GetColCss(KdCore.UITheme.BbUISize,System.Int32)">
+            <summary>
+            获取列 CSS 样式名称
+            </summary>
+            <param name="size"></param>
+            <param name="col"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KdCore.UITheme.BbFormLayout.GetColCssFormLabel(KdCore.UITheme.BbUISize,System.Int32)">
+            <summary>
+            获取 Form 中 Label 的列 CSS 样式名称
+            </summary>
+            <param name="size"></param>
+            <param name="colSpan"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.UITheme.BbUISize">
+            <summary>
+            界面 UI 使用的相对尺寸
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbUISize.None">
+            <summary>
+            默认, 相当于 Medium
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbUISize.ExtraSmall">
+            <summary>
+            适用于屏幕Width&lt;768px
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbUISize.Small">
+            <summary>
+            适用于屏幕Width≥768px
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbUISize.Medium">
+            <summary>
+            适用于屏幕Width≥992px
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbUISize.Large">
+            <summary>
+            适用于屏幕Width≥1200px
+            </summary>
+        </member>
+        <member name="F:KdCore.UITheme.BbUISize.Full">
+            <summary>
+            全屏幕尺寸
+            </summary>
+        </member>
+        <member name="T:KdCore.UITheme.BbWebTheme">
+            <summary>
+            Web 系统主题样式
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbWebTheme.GridColumns">
+            <summary>
+            栅格定义：页面布局总列数
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbWebTheme.HalfGridColumns">
+            <summary>
+            栅格定义：页面布局总列数
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbWebTheme.Default">
+            <summary>
+            默认系统主题样式
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbWebTheme.ThemeName">
+            <summary>
+            主题名称
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbWebTheme.ThemeType">
+            <summary>
+            主题类型
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbWebTheme.ThemeSize">
+            <summary>
+            主题相对尺寸大小
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbWebTheme.LayoutName">
+            <summary>
+            布局名称
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbWebTheme.PageSize">
+            <summary>
+            页面内容相对尺寸大小
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbWebTheme.MenuLayout">
+            <summary>
+            菜单布局
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbWebTheme.MenuSize">
+            <summary>
+            菜单使用相对尺寸大小
+            </summary>
+        </member>
+        <member name="P:KdCore.UITheme.BbWebTheme.FormLayout">
+            <summary>
+            表单布局
+            </summary>
+        </member>
+        <member name="M:KdCore.UITheme.BbWebTheme.GetColCssName(KdCore.UITheme.BbUISize,System.Int32)">
+            <summary>
+            获取栅格系统中栏宽样式名称
+            </summary>
+            <param name="size"></param>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KdCore.W3C.W3cDataAttr">
+            <summary>
+            W3C 常用Data属性扩展枚举
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.NoneKD">
+            <summary>
+            不设置图标，添加KD结尾避免将来命名冲突
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.AutoKD">
+            <summary>
+            系统根据上下文自行判断选择初始化过的合适图标，添加KD结尾避免将来命名冲突
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Animation">
+            <summary>
+            动画
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Backdrop">
+            <summary>
+            背景板；交流声；舞台背景
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Bind">
+            <summary>
+            绑定；约束；捆绑；系；装订
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Container">
+            <summary>
+            容器；包装容器；货箱
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Content">
+            <summary>
+            内容；含量；容量；目录
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Delay">
+            <summary>
+            延迟
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Dismiss">
+            <summary>
+            解除、解散、驳回
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Html">
+            <summary>
+            HTML
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Interval">
+            <summary>
+            时间间隔
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Key">
+            <summary>
+            键，标识，关键字
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Keyboard">
+            <summary>
+            键盘，按键
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Loading_Text">
+            <summary>
+            加载文本，加载提示文本
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Offset">
+            <summary>
+            偏移；抵消；弥补；补偿
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Offset_Bottom">
+            <summary>
+            底部偏移
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Offset_Top">
+            <summary>
+            顶部偏移
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Parent">
+            <summary>
+            上一级，父亲
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Path">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Pause">
+            <summary>
+            暂停
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Placement">
+            <summary>
+            放置、位置、布局
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Ride">
+            <summary>
+            骑；乘坐；骑马；搭乘
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Selector">
+            <summary>
+            选择器
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Show">
+            <summary>
+            演出；表现；展览会；样子
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Slide">
+            <summary>
+            幻灯片；滑动；滑梯；山崩
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Slide_To">
+            <summary>
+            滑到；滑动目标
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Spy">
+            <summary>
+            监视；监控
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Target">
+            <summary>
+            目标
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Template">
+            <summary>
+            模板
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Theme">
+            <summary>
+            主题
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Toggle">
+            <summary>
+            转换开关
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Track_Theme">
+            <summary>
+            轨道；车辙；小径；路线
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Trigger">
+            <summary>
+            触发器
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Viewport">
+            <summary>
+            视图、视口
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.W3cDataAttr.Data_Wrap">
+            <summary>
+            包裹包围，换行
+            </summary>
+        </member>
+        <member name="T:KdCore.W3C.WaiAria">
+            <summary>
+            W3C Accessible Rich Internet Applications (WAI-ARIA) aria 状态和属性定义枚举
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.WaiAria.NoneKD">
+            <summary>
+            不设置图标，添加KD结尾避免将来命名冲突
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.WaiAria.AutoKD">
+            <summary>
+            系统根据上下文自行判断选择初始化过的合适图标，添加KD结尾避免将来命名冲突
+            </summary>
+        </member>
+        <member name="T:KdCore.W3C.WaiAriaRole">
+            <summary>
+            W3C Accessible Rich Internet Applications (WAI-ARIA) Role 角色定义枚举
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.WaiAriaRole.NoneKD">
+            <summary>
+            不设置图标，添加KD结尾避免将来命名冲突
+            </summary>
+        </member>
+        <member name="F:KdCore.W3C.WaiAriaRole.AutoKD">
+            <summary>
+            系统根据上下文自行判断选择初始化过的合适图标，添加KD结尾避免将来命名冲突
+            </summary>
+        </member>
+    </members>
+</doc>
